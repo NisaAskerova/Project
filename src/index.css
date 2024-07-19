@@ -38,7 +38,7 @@
 #SecureImg {
   width: 845px;
   height: 100vh;
-  background-image: url(./public/Rectangle\ 3463273.png);
+  background-image: url("public/Rectangle\ 3463273.png");
   background-clip: inherit;
   background-size: cover;
 }
@@ -193,7 +193,7 @@ button[type='submit'] {
 #asignSecure {
   width: 845px;
   height: 100vh;
-  background-image: url(..//public/Rectangle\ 3463272.png);
+  background-image: url("public/Rectangle\ 3463272.png");
   background-size: cover;
 }
 
@@ -620,7 +620,7 @@ footer h3 {
 /* ************************************HOME-SERCICES********************** */
 #HomeServices {
   width: 100%;
-  padding: 110px 230px 150px;
+  padding: 125px 230px 150px;
   /* height: 100vh; */
 }
 
