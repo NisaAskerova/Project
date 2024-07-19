@@ -1,0 +1,25 @@
+[
+    {
+      "title": "Choose Your Service",
+      "description": "It is a long established fact that a reader will be distracted.",
+      "icon": "../home2.svg",
+      "line":true
+    },
+    {
+      "title": "Make An Appointment",
+      "description": "It is a long established fact that a reader will be distracted.",
+      "icon": "../calendarBig.svg",
+      "line":true
+    },
+    {
+      "title": "Pay Your Service",
+      "description": "It is a long established fact that a reader will be distracted.",
+      "icon": "../ecommers.svg",
+      "line":true
+    },
+    {
+      "title": "Enjoy With Your Bodyguards",
+      "description": "It is a long established fact that a reader will be distracted.",
+      "icon": "../user.svg"
+    }
+  ]

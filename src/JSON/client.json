@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Leslie Alexander",
+        "title": "Founder",
+        "rating": 5,
+        "review": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "image": "../Oval.jpg",
+        "icon": "../star.svg"
+        
+    },
+    {
+        "name": "Jacob Jones",
+        "title": "Co-Founder",
+        "rating": 5,
+        "review": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "image": "../Oval (1).jpg",
+        "icon": "../star.svg"
+    },
+    {
+        "name": "Jenny Wilson",
+        "title": "Chief Marketing Officer",
+        "rating": 5,
+        "review": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "image": "../Oval (2).jpg",
+        "icon": "../star.svg"
+    }
+]
