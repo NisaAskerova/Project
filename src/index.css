@@ -38,7 +38,7 @@
 #SecureImg {
   width: 845px;
   height: 100vh;
-  background-image: url("public/Rectangle\ 3463273.png");
+  background-image: url(..//Rectangle3463273.png);
   background-clip: inherit;
   background-size: cover;
 }
@@ -198,7 +198,7 @@ button[type='submit'] {
 #asignSecure {
   width: 845px;
   height: 100vh;
-  background-image: url("public/Rectangle\ 3463272.png");
+  background-image: url(..//Rectangle3463272.png);
   background-size: cover;
 }
 
@@ -1049,7 +1049,7 @@ strong {
 #aboutHero {
   width: 100%;
   height: 550px;
-  background-image: url("Rectangle 346242331.png");
+  background-image: url(..//Rectangle346242331.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
