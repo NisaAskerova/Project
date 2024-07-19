@@ -62,13 +62,15 @@
   line-height: 34px;
   margin-top: 50px;
 }
-.title+span{
-  color:  #B4B2AD;
-font-family: Epilogue;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 30px; /* 187.5% */
+
+.title+span {
+  color: #B4B2AD;
+  font-family: Epilogue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  /* 187.5% */
 }
 
 .same {
@@ -118,14 +120,17 @@ form {
   width: 100%;
   margin-top: 30px;
 }
-.rightBox>form>label{
+
+.rightBox>form>label {
   color: #15140F;
   font-family: Epilogue;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 133.333% */
+  line-height: 16px;
+  /* 133.333% */
 }
+
 button[type='submit'] {
   display: flex;
   width: 100%;
@@ -203,13 +208,15 @@ button[type='submit'] {
   gap: 10px;
 
 }
-.rightBox>label{
+
+.rightBox>label {
   color: #15140F;
   font-family: Epilogue;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 133.333% */
+  line-height: 16px;
+  /* 133.333% */
 
 }
 
@@ -229,7 +236,7 @@ button[type='submit'] {
 #hed {
   width: 100%;
   height: 90px;
-  padding: 0 150px;
+  padding: 0 189px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -265,7 +272,7 @@ button[type='submit'] {
   align-items: flex-start;
 }
 
-.info span:nth-of-type(150) {
+.info span:nth-of-type(2) {
   color: #15140F;
   text-align: center;
 
@@ -282,7 +289,7 @@ nav {
   width: 100%;
   height: 76px;
   background: #FEE747;
-  padding: 0 150px;
+  padding: 0 189px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -387,7 +394,7 @@ footer {
   width: 100%;
   height: 482px;
   background: rgba(180, 178, 173, 0.05);
-  padding: 161px 150px 0;
+  padding: 161px 189px 0;
 }
 
 #information {
@@ -396,7 +403,7 @@ footer {
 }
 
 #footerLeft {
-  width: 30%;
+  width: 35%;
 }
 
 #footerLeft>p {
@@ -483,12 +490,12 @@ footer h3 {
 }
 
 #heroLeft {
-  width: 43%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-left: 150px;
+  padding-left: 189px;
 }
 
 #heroLeft>h3 {
@@ -537,7 +544,7 @@ footer h3 {
 #heroRight img:nth-of-type(2) {
   position: absolute;
   bottom: 0;
-  right:150px;
+  right: 150px;
 
 }
 
@@ -547,7 +554,7 @@ footer h3 {
   display: flex;
   gap: 50px;
   justify-content: space-between;
-  padding: 100px 150px 0;
+  padding: 100px 189px 0;
 }
 
 #titleDiv>h2 {
@@ -563,7 +570,7 @@ footer h3 {
 
 #homePage2Left {
   width: 55%;
- padding-bottom: 125px;
+  padding-bottom: 125px;
 }
 
 #titleDiv {
@@ -620,33 +627,29 @@ footer h3 {
 /* ************************************HOME-SERCICES********************** */
 #HomeServices {
   width: 100%;
-  padding: 125px 150px 150px;
-  background-color: #B4B2AD;
-  /* height: 100vh; */
+  padding: 0 189px 150px;
 }
 
 .firstDivServices {
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .divlinee {
   width: 1px;
   background-color: rgba(21, 20, 15, 0.20);
-  height: 100%
+  height: 1050px;
 }
 
 #serviceBoxes {
   width: 100%;
-  height: 100%;
+  height: 1050px;
   display: flex;
-  /* gap: 38px; */
   margin-top: 50px;
   position: relative;
   align-items: center;
-  /* background-color: aquamarine; */
   justify-content: space-between;
 
 }
@@ -716,7 +719,7 @@ footer h3 {
 #journey {
   width: 100%;
   height: 426px;
-  padding: 80px 150px;
+  padding: 80px 189px;
   background: #FEE747;
   display: flex;
   align-items: center;
@@ -738,7 +741,7 @@ footer h3 {
 }
 
 #journeyLeft {
-  width: 43%;
+  width: 45%;
 }
 
 #journeyRight {
@@ -776,9 +779,9 @@ footer h3 {
 #work {
   width: 100%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 50px;
-  padding: 150px 150px ;
+  padding: 150px 189px;
   justify-content: space-between;
 }
 
@@ -837,7 +840,7 @@ footer h3 {
   width: 100%;
   height: 574px;
   background: #FEE747;
-  padding: 80px 150px;
+  padding: 80px 189px;
 }
 
 #client>div>h2 {
@@ -882,7 +885,7 @@ strong {
 /* *************************HOME-BLOGS*************************** */
 #homeBlogs {
   width: 100%;
-  padding: 150px 150px 100px;
+  padding: 150px 189px 100px;
 }
 
 #homeBlogs>h2,
@@ -955,11 +958,17 @@ strong {
 }
 
 /* *********************************CONTACT US********************************* */
-
+#foot{
+  margin-top: 150px;
+  width: 100%;
+  position: relative;
+}
 #contactUs {
   width: 100%;
   height: 222px;
-  padding: 0 150px;
+  padding: 0 189px;
+  position: absolute;
+  top: -260px;
 }
 
 #contactUs>div {
@@ -1037,7 +1046,115 @@ strong {
 /* ****************************ABOUT*************************************************** */
 /* ************************************************************************************ */
 
-/* #abouHero{
+#aboutHero {
   width: 100%;
-  height: 100vh;
-} */
+  height: 550px;
+  background-image: url("Rectangle 346242331.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about>div>span {
+  color: #FFF;
+  font-family: Epilogue;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#about>div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+#about>h2 {
+  color: #FFF;
+  text-align: center;
+  font-family: Epilogue;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  /* 130% */
+}
+
+/* ******************************ABOUT_SECURA*************************** */
+#aboutSecura {
+  width: 100%;
+  padding: 100px 189px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#aboySecuraLeft {
+  width: 45%;
+}
+
+#aboySecuraLeft>h2 {
+  margin: 10px 0;
+}
+
+#aboySecuraLeft>button {
+  width: 133px;
+  height: 56px;
+  border-radius: 10px;
+  background: #FEE747;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.contuactus {
+  margin-top: 150px;
+}
+
+/* ************************TEAM*************************************** */
+#team {
+  width: 100%;
+  padding: 0 189px 150px;
+}
+
+#teamBoxes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.teamBox {
+  width: 367px;
+  height: 384px;
+  margin-top: 50px;
+}
+
+.teamBox>div>h4 {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  /* 120% */
+  margin: 20px 0 10px;
+}
+

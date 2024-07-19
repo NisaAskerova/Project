@@ -21,7 +21,7 @@ export default function Home() {
       <Work />
       <Client />
       <HomeBlogs />
-      <ContactUs />
+      {/* <ContactUs /> */}
       <Footer />
     </div>
   )

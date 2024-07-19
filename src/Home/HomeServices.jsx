@@ -27,7 +27,9 @@ export default function HomeServices() {
           </>
         ))}
         </div>
+
         <div className='divlinee'></div>
+
         <div className='firstDivServices'>
         {secontDiv.map((item)=>(
           <>
@@ -46,7 +48,9 @@ export default function HomeServices() {
         ))}
 
         </div>
+
         <div className='divlinee'></div>
+        
         <div className='firstDivServices'>
         {thirdDiv.map((item)=>(
           <>

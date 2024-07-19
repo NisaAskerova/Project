@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Trained Agents",
+        "description": "It is a long established fact that a reader will be distracted.",
+        "icon":"users.svg"
+    },
+    {
+        "title": "Quality Products",
+        "description": "It is a long established fact that a reader will be distracted.",
+        "icon":"box.svg"
+    },
+    {
+        "title": "24/7 Customer Support",
+        "description": "It is a long established fact that a reader will be distracted.",
+        "icon":"multimedia.svg"
+    }
+]
