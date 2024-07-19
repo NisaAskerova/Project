@@ -229,7 +229,7 @@ button[type='submit'] {
 #hed {
   width: 100%;
   height: 90px;
-  padding: 0 230px;
+  padding: 0 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -265,7 +265,7 @@ button[type='submit'] {
   align-items: flex-start;
 }
 
-.info span:nth-of-type(2) {
+.info span:nth-of-type(150) {
   color: #15140F;
   text-align: center;
 
@@ -282,7 +282,7 @@ nav {
   width: 100%;
   height: 76px;
   background: #FEE747;
-  padding: 0 230px;
+  padding: 0 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -387,7 +387,7 @@ footer {
   width: 100%;
   height: 482px;
   background: rgba(180, 178, 173, 0.05);
-  padding: 161px 230px 0;
+  padding: 161px 150px 0;
 }
 
 #information {
@@ -488,7 +488,7 @@ footer h3 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-left: 230px;
+  padding-left: 150px;
 }
 
 #heroLeft>h3 {
@@ -537,7 +537,7 @@ footer h3 {
 #heroRight img:nth-of-type(2) {
   position: absolute;
   bottom: 0;
-  right:230px;
+  right:150px;
 
 }
 
@@ -547,7 +547,7 @@ footer h3 {
   display: flex;
   gap: 50px;
   justify-content: space-between;
-  padding: 100px 230px 0;
+  padding: 100px 150px 0;
 }
 
 #titleDiv>h2 {
@@ -620,7 +620,8 @@ footer h3 {
 /* ************************************HOME-SERCICES********************** */
 #HomeServices {
   width: 100%;
-  padding: 125px 230px 150px;
+  padding: 125px 150px 150px;
+  background-color: #B4B2AD;
   /* height: 100vh; */
 }
 
@@ -639,12 +640,14 @@ footer h3 {
 
 #serviceBoxes {
   width: 100%;
-  height: 1030px;
+  height: 100%;
   display: flex;
-  gap: 41px;
+  /* gap: 38px; */
   margin-top: 50px;
   position: relative;
   align-items: center;
+  /* background-color: aquamarine; */
+  justify-content: space-between;
 
 }
 
@@ -713,7 +716,7 @@ footer h3 {
 #journey {
   width: 100%;
   height: 426px;
-  padding: 80px 230px;
+  padding: 80px 150px;
   background: #FEE747;
   display: flex;
   align-items: center;
@@ -775,7 +778,7 @@ footer h3 {
   display: flex;
   align-items: center;
   gap: 50px;
-  padding: 150px 230px ;
+  padding: 150px 150px ;
   justify-content: space-between;
 }
 
@@ -834,7 +837,7 @@ footer h3 {
   width: 100%;
   height: 574px;
   background: #FEE747;
-  padding: 80px 230px;
+  padding: 80px 150px;
 }
 
 #client>div>h2 {
@@ -879,7 +882,7 @@ strong {
 /* *************************HOME-BLOGS*************************** */
 #homeBlogs {
   width: 100%;
-  padding: 150px 230px 100px;
+  padding: 150px 150px 100px;
 }
 
 #homeBlogs>h2,
@@ -956,7 +959,7 @@ strong {
 #contactUs {
   width: 100%;
   height: 222px;
-  padding: 0 230px;
+  padding: 0 150px;
 }
 
 #contactUs>div {
