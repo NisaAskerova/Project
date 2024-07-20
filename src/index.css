@@ -102,9 +102,10 @@
   line-height: 30px;
 }
 
-.rightBox>form>label {
+.rightBox>form>label,
+#appointmentRight>form label {
   color: #15140F;
-
+  display: block;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -544,13 +545,14 @@ footer h3 {
 #heroRight img:nth-of-type(2) {
   position: absolute;
   bottom: 0;
-  right: 150px;
+  right: 189px;
 
 }
 
 /* ***********************HOMEPAGE2******************** */
 #homepage2 {
   width: 100%;
+  height: 135vh;
   display: flex;
   gap: 50px;
   justify-content: space-between;
@@ -627,7 +629,7 @@ footer h3 {
 /* ************************************HOME-SERCICES********************** */
 #HomeServices {
   width: 100%;
-  padding: 0 189px 150px;
+  padding: 100px 189px 100px;
 }
 
 .firstDivServices {
@@ -781,7 +783,7 @@ footer h3 {
   display: flex;
   /* align-items: center; */
   gap: 50px;
-  padding: 150px 189px;
+  padding: 100px 189px;
   justify-content: space-between;
 }
 
@@ -885,7 +887,7 @@ strong {
 /* *************************HOME-BLOGS*************************** */
 #homeBlogs {
   width: 100%;
-  padding: 150px 189px 100px;
+  padding: 100px 189px;
 }
 
 #homeBlogs>h2,
@@ -897,6 +899,7 @@ strong {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 50px;
 }
 
@@ -958,11 +961,12 @@ strong {
 }
 
 /* *********************************CONTACT US********************************* */
-#foot{
-  margin-top: 150px;
+#foot {
+  margin-top: 100px;
   width: 100%;
   position: relative;
 }
+
 #contactUs {
   width: 100%;
   height: 222px;
@@ -1058,7 +1062,7 @@ strong {
   justify-content: center;
 }
 
-#about>div>span {
+#heroTitle>div>span {
   color: #FFF;
   font-family: Epilogue;
   font-size: 14px;
@@ -1067,7 +1071,8 @@ strong {
   line-height: 22px;
 }
 
-#about {
+#heroTitle,
+#services {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1075,13 +1080,15 @@ strong {
   gap: 10px;
 }
 
-#about>div {
+#heroTitle>div,
+#services>div {
   display: flex;
   align-items: center;
   gap: 7px;
 }
 
-#about>h2 {
+#heroTitle>h2,
+#services>h2 {
   color: #FFF;
   text-align: center;
   font-family: Epilogue;
@@ -1125,13 +1132,13 @@ strong {
 }
 
 .contuactus {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 /* ************************TEAM*************************************** */
 #team {
   width: 100%;
-  padding: 0 189px 150px;
+  padding: 0 189px 100px;
 }
 
 #teamBoxes {
@@ -1158,3 +1165,107 @@ strong {
   margin: 20px 0 10px;
 }
 
+/* ************************************************************************ */
+/* ***************************SERVICES*************************************** */
+
+#servicesHero {
+  width: 100%;
+  height: 550px;
+  background-image: url(..//Rectangle346242332.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* **************************APPOINTMENT************************* */
+
+#appointment {
+  width: 100%;
+  height: 565px;
+  background: #FEE747;
+  display: flex;
+  padding: 80px 189px;
+  margin-bottom: 300px;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+#appointmentLeft {
+  width: 52%;
+  height: 100%;
+}
+
+#appointmentRight {
+  width: 50%;
+  height: 100%;
+
+}
+
+#appointmentRight>form {
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+}
+
+#formDivTop {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#appointmentRight>form input {
+  display: flex;
+  width: 255px;
+  height: 56px;
+  padding: 16px 16px 10px 16px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #15140F;
+  background-color: transparent;
+  outline: none;
+  margin-top: 6px;
+}
+
+#appointmentRight>form input::placeholder,
+#appointmentRight>form textarea::placeholder {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  /* 187.5% */
+}
+
+#appointmentRight>form textarea {
+  width: 530px;
+  height: 94px;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid #15140F;
+  background-color: transparent;
+  padding: 16px;
+  margin-top: 6px;
+  outline: none;
+
+}
+
+#formDivBottom {
+  margin-top: 20px;
+}
+
+#formDivBottom>button {
+  width: 188px;
+  height: 56px;
+  border-radius: 10px;
+  background: #FFF;
+  border: none;
+  outline: none;
+  margin-top: 30px;
+  cursor: pointer;
+}

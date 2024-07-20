@@ -1,15 +1,15 @@
 import React from 'react'
 
-export default function AboutHero() {
+export default function ServicesHero() {
   return (
-    <div id='aboutHero'>
-      <div className='heroTitle'>
+    <div id='servicesHero'>
+      <div id='heroTitle'>
         <div>
           <span>Home</span>
           <img src="./arrows.svg" alt="" />
-          <span>About Us</span>
+          <span>services</span>
         </div>
-        <h2>About Us</h2>
+        <h2>Services</h2>
       </div>
     </div>
   )

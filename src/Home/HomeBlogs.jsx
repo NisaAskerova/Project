@@ -2,15 +2,15 @@ import React from 'react'
 import homeBlogs from '../JSON/homeBlogs.json'
 
 export default function HomeBlogs() {
+  const blogs=homeBlogs.slice(0, 3)
   return (
     <div id='homeBlogs'>
-     
       <span className="same">OUR BLOG</span>
       <h2 className="theck">Our Latest Blogs</h2>
       <p className="same">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
         The point of using Lorem Ipsum.</p>
       <div id='blogBoxes'>
-        {homeBlogs.map((e, index) => (
+        {blogs.map((e, index) => (
           <div className='blogBox' key={index}>
             <div>
               <img src={e.image} alt="" />

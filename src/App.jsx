@@ -5,6 +5,7 @@ import Signup from './Pages/Signup';
 import Home from './Home/Home';
 import ContactUs from './Home/ContactUs';
 import About from './about/About';
+import Services from './sevices/Services';
 
 export default function App() {
   const MyContext = createContext();
@@ -16,8 +17,8 @@ export default function App() {
           <Route path='/' element={<Login />} />
           <Route path='signup' element={<Signup />} />
           <Route path='/home' element={<Home />} />
-          <Route path='/contact' element={<ContactUs />} />
           <Route path='/about' element={<About />} />
+          <Route path='/services' element={<Services />} />
         </Routes>
       </Router>
 
