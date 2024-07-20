@@ -887,7 +887,7 @@ strong {
 /* *************************HOME-BLOGS*************************** */
 #homeBlogs {
   width: 100%;
-  padding: 100px 189px;
+  padding: 100px 189px 0;
 }
 
 #homeBlogs>h2,
@@ -964,7 +964,12 @@ strong {
 #foot {
   margin-top: 100px;
   width: 100%;
+  height: 85vh;
   position: relative;
+  /* background-color: #B4B2AD; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 #contactUs {
@@ -972,7 +977,7 @@ strong {
   height: 222px;
   padding: 0 189px;
   position: absolute;
-  top: -260px;
+  margin-bottom: 375px;
 }
 
 #contactUs>div {
@@ -1062,7 +1067,7 @@ strong {
   justify-content: center;
 }
 
-#heroTitle>div>span {
+.heroTitle>div>span {
   color: #FFF;
   font-family: Epilogue;
   font-size: 14px;
@@ -1071,8 +1076,7 @@ strong {
   line-height: 22px;
 }
 
-#heroTitle,
-#services {
+.heroTitle {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1080,15 +1084,13 @@ strong {
   gap: 10px;
 }
 
-#heroTitle>div,
-#services>div {
+.heroTitle>div {
   display: flex;
   align-items: center;
   gap: 7px;
 }
 
-#heroTitle>h2,
-#services>h2 {
+.heroTitle>h2 {
   color: #FFF;
   text-align: center;
   font-family: Epilogue;
@@ -1187,8 +1189,7 @@ strong {
   height: 565px;
   background: #FEE747;
   display: flex;
-  padding: 80px 189px;
-  margin-bottom: 300px;
+  padding: 80px 189px ;
   gap: 50px;
   justify-content: space-between;
 }
@@ -1268,4 +1269,28 @@ strong {
   outline: none;
   margin-top: 30px;
   cursor: pointer;
+}
+
+
+/* ****************************************************************** */
+/* *********************BLOGHERO************************************** */
+#blogHero {
+  width: 100%;
+  height: 550px;
+  background-image: url(..//Rectangle346242333.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blog {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 189px 0;
+  column-gap: 20px;
+  row-gap: 30px;
 }

@@ -6,6 +6,7 @@ import Home from './Home/Home';
 import ContactUs from './Home/ContactUs';
 import About from './about/About';
 import Services from './sevices/Services';
+import Blog from './blog/Blog';
 
 export default function App() {
   const MyContext = createContext();
@@ -19,6 +20,7 @@ export default function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />
+          <Route path='blog' element={<Blog/>}/>
         </Routes>
       </Router>
 
