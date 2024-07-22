@@ -3,7 +3,7 @@ import homePage2 from '../JSON/homePage2.json'
 export default function HomePage2() {
     return (
 
-        <div id='homepage2' className='container'>
+        <div id='homepage2' className='padding'>
             <div id="homePage2Left">
             <div id='titleDiv'>
                 <span className='same'>WHO WE ARE</span>

@@ -9,7 +9,6 @@ export default function Work() {
             <h2 className='thick'>Our Service Process</h2>
             <p className='same'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
                  The point of using Lorem Ipsum.</p>
-                
             </div>
             {work.map((e, index)=>(
                 <>
@@ -27,8 +26,6 @@ export default function Work() {
                             </div>
                         ) : null}                </>
             ))}
-
-      
             </div>
 
 

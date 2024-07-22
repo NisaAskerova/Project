@@ -12,6 +12,7 @@
         "title": "Modern System",
         "description": "It is a long established fact that a reader will be distracted.",
         "icon":"../system.svg",
+        "color":"#fff",
         "iconDivColor":"rgba(180, 178, 173, 0.10)",
         "border":"1px solid rgba(180, 178, 173, 0.20)"
       },
@@ -19,6 +20,7 @@
         "title": "24/7 Customer Support",
         "description": "It is a long established fact that a reader will be distracted.",
         "icon":"../audio.svg",
+        "color":"#fff",
         "iconDivColor":"rgba(180, 178, 173, 0.10)",
         "border":"1px solid rgba(180, 178, 173, 0.20)"
       },
@@ -26,6 +28,7 @@
         "title": "Expert Bodyguards",
         "description": "It is a long established fact that a reader will be distracted.",
          "icon":"../user.svg",
+         "color":"#fff",
          "iconDivColor":"rgba(180, 178, 173, 0.10)",
          "border":"1px solid rgba(180, 178, 173, 0.20)"
       }
