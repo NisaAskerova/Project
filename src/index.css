@@ -1055,7 +1055,8 @@ strong {
 /* ****************************ABOUT*************************************************** */
 /* ************************************************************************************ */
 
-#aboutHero {
+#aboutHero,
+#shopHero {
   width: 100%;
   height: 550px;
   background-image: url(..//Rectangle346242331.png);
@@ -1295,6 +1296,108 @@ strong {
   row-gap: 30px;
 }
 
+/* ****************************************************************** */
+/* ********************SHOP****************************************** */
+
+#productPage {
+  width: 100%;
+  padding: 100px 189px;
+}
+
+#shopTitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+
+#shopTitle div:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#shopTitle div:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  width: 138px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.shopBoxes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.imgDiv {
+  width: 100%;
+  height: 330px;
+  border: 1px solid rgba(21, 20, 15, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopIcons {
+  width: 40px;
+  height: 140px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+
+}
+
+.shopIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+
+.shopBox {
+  width: 262px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.shopBox>div>h3 {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  /* 187.5% */
+  transition: all 0.3s ease-in-out;
+}
+
+.shopBox:hover .imgDiv {
+  background: rgba(180, 178, 173, 0.10);
+}
+
+.shopBox:hover .shopIcons {
+  visibility: visible;
+}
+
+
 /* **************************************************************** */
 /* **************************************************************** */
 /* *************************TABLET********************************* */
@@ -1471,9 +1574,11 @@ strong {
   #workLeft {
     width: 100%;
   }
-  #wirkRight{
+
+  #wirkRight {
     margin-top: 20px;
   }
+
   #wirkRight>img {
 
     width: 100%;
@@ -1481,55 +1586,66 @@ strong {
   }
 
   /* ****************HOME-BLOGS************* */
-  #homeBlogs{
+  #homeBlogs {
     padding: 50px;
     height: 110vh;
   }
-  .blogBox{
+
+  .blogBox {
     width: 45%;
   }
-  #blogBoxes{
+
+  #blogBoxes {
     height: 95%;
   }
+
   /* ***************CLIENT*********************** */
-  #client{
+  #client {
     display: none;
   }
-/* *******************FOOTER********************* */
-footer{
-  padding: 50px 50px 0;
-  height: 382px;
-  margin-bottom: 0;
-}
-#foot{
-  /* background-color: aquamarine; */
-  height: 50vh;
-}
-#contactUs{
-  padding: 0 50px;
-  margin-top: 0;
-}
-#leftContact{
-  width: 100%;
-  gap: 0;
-}
-#leftContact>h2{
-  font-size: 32px;
-}
-#leftContact>span,
-#leftContact>p
-{
-  font-size: 13px;
-}
-#contactUs>div{
-  /* display: block; */
-  margin-top: 0;
-  padding: 20px;
-}
-#rightContact>div>input{
-  width: 280px;
-}
-#rightContact>div>button{
-  width: 100px;
-}
+
+  /* *******************FOOTER********************* */
+  footer {
+    padding: 50px 50px 0;
+    height: 382px;
+    margin-bottom: 0;
+  }
+
+  #foot {
+    /* background-color: aquamarine; */
+    height: 50vh;
+  }
+
+  #contactUs {
+    padding: 0 50px;
+    margin-top: 0;
+  }
+
+  #leftContact {
+    width: 100%;
+    gap: 0;
+  }
+
+  #leftContact>h2 {
+    font-size: 32px;
+  }
+
+  #leftContact>span,
+  #leftContact>p {
+    font-size: 13px;
+  }
+
+  #contactUs>div {
+    /* display: block; */
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  #rightContact>div>input {
+    width: 280px;
+  }
+
+  #rightContact>div>button {
+    width: 100px;
+  }
 }

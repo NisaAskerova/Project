@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "brand": "Igloohome",
+      "name": "High Vision Camera",
+      "price": "$80.00",
+      "image": "../image 17.png"
+    },
+    {
+      "id": 2,
+      "brand": "HK Vision",
+      "name": "Full HD WiFi Camera",
+      "price": "$100.00",
+      "image": "../PngItem_4760952.png"
+    },
+    {
+      "id": 3,
+      "brand": "Ezviz",
+      "name": "Smart Door Lock",
+      "price": "$70.00",
+      "image": "../PngItem_4124313.png"
+    },
+    {
+      "id": 4,
+      "brand": "HK Vision",
+      "name": "Ultra HDR Camera",
+      "price": "$120.00",
+      "image": "../PngItem_5335869.png"
+    },
+    {
+      "id": 5,
+      "brand": "Igloohome CHAIR",
+      "name": "Wireless Camera",
+      "price": "$89.00",
+      "image": "../PngItem_5989470.png"
+    },
+    {
+      "id": 6,
+      "brand": "Samsung",
+      "name": "Vision Pro Camera",
+      "price": "$140.00",
+      "image": "../PngItem_2018403.png"
+    },
+    {
+      "id": 7,
+      "brand": "Igloohome CHAIR",
+      "name": "Wide Angle Smart Camera",
+      "price": "$90.00",
+      "image": "../PngItem_3521561.png"
+    },
+    {
+      "id": 8,
+      "brand": "Ezviz",
+      "name": "Dome Camera",
+      "price": "$89.00",
+      "image": "../PngItem_5335828.png"
+    },
+    {
+      "id": 9,
+      "brand": "HK Vision",
+      "name": "Wireless Security Camera",
+      "price": "$75.00",
+      "image": "../PngItem_5335637.png"
+    },
+    {
+      "id": 10,
+      "brand": "D-Link",
+      "name": "Smart Desk Camera",
+      "price": "$50.00",
+      "image": "../PngItem_2560501.png"
+    },
+    {
+      "id": 11,
+      "brand": "HK Vision",
+      "name": "High Vision HD Camera",
+      "price": "$130.00",
+      "image": "../PngItem_5335451.png"
+    },
+    {
+      "id": 12,
+      "brand": "D-Link",
+      "name": "Smart HDR WiFi Camera",
+      "price": "$100.00",
+      "image": "../PngItem_2839997.png"
+    }
+  ]
+}

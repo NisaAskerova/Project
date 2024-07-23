@@ -15,7 +15,6 @@ export default function BlogPage2() {
             </div>
             <p className='same'>{e.description}</p>
             <button className='same'>{e.buttonText} <img src={e.buttonIcon} alt="" /></button>
-
           </div>
         ))}
     </div>
