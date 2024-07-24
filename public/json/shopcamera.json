@@ -4,85 +4,609 @@
       "id": 1,
       "brand": "Igloohome",
       "name": "High Vision Camera",
-      "price": "$80.00",
-      "image": "../image 17.png"
+      "price": "$89.00",
+      "image": "../image 17.png",
+      "stock": true,
+      "images": [
+        "../image 17.png",
+        "../image 17.png",
+        "../image 17.png",
+        "../image 17.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "High Vision Camera offers crisp and clear video recording with night vision capabilities.",
+      "SKU": "IGL-HVC-001",
+      "categories": [
+        "Camera",
+        "Security"
+      ],
+      "tags": [
+        "high vision",
+        "camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.5,
+        "comment": "Excellent video quality and easy to install."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Mark Williams",
+          "rating": 5,
+          "comment": "Excellent Camera, I Really Like It 😍",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Alexa Johnson",
+          "rating": 5,
+          "comment": "My Family is very much happy with this product",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "John Doe",
+          "rating": 4,
+          "comment": "Good camera, but could have better battery life.",
+          "date": "September 2, 2023"
+        }
+      ]
     },
     {
       "id": 2,
       "brand": "HK Vision",
       "name": "Full HD WiFi Camera",
       "price": "$100.00",
-      "image": "../PngItem_4760952.png"
+      "image": "../PngItem_4760952.png",
+      "stock": true,
+      "images": [
+        "../PngItem_4760952.png",
+        "../PngItem_4760952.png ",
+        "../PngItem_4760952.png",
+        "../PngItem_4760952.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Full HD WiFi Camera provides high-definition video with seamless wireless connectivity.",
+      "SKU": "HKV-FHDW-002",
+      "categories": [
+        "Camera",
+        "Security",
+        "WiFi"
+      ],
+      "tags": [
+        "full HD",
+        "WiFi",
+        "camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.0,
+        "comment": "Great WiFi range and picture quality, but setup was a bit complicated."
+      },
+      "customerReviews": [
+        {
+          "name": "Jane Smith",
+          "rating": 4,
+          "comment": "Great WiFi range and picture quality, but setup was a bit complicated.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "John Doe",
+          "rating": 4.3,
+          "comment": "Good video quality, but the WiFi connection can be inconsistent.",
+          "date": "August 18, 2023"
+        }
+      ]
     },
     {
       "id": 3,
       "brand": "Ezviz",
       "name": "Smart Door Lock",
       "price": "$70.00",
-      "image": "../PngItem_4124313.png"
+      "image": "../PngItem_4124313.png",
+      "stock": true,
+      "images": [
+        "../PngItem_4124313.png",
+        "../PngItem_4124313.png",
+        "../PngItem_4124313.png",
+        "../PngItem_4124313.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Smart Door Lock offers advanced security features with easy installation and smartphone control.",
+      "SKU": "EZV-SDL-003",
+      "categories": [
+        "Lock",
+        "Smart Home"
+      ],
+      "tags": [
+        "smart lock",
+        "door lock",
+        "security",
+        "smart home"
+      ],
+      "review": {
+        "rating": 4.2,
+        "comment": "Easy to use and reliable, but the app could be better."
+      },
+      "customerReviews": [
+        {
+          "name": "Michael Brown",
+          "rating": 4,
+          "comment": "Easy to use and reliable, but the app could be better.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Emily Davis",
+          "rating": 5,
+          "comment": "Excellent product! Very secure and easy to install.",
+          "date": "September 10, 2023"
+        },
+        {
+          "name": "Obama",
+          "rating": 4.3,
+          "comment": "Convenient and secure, but the app needs some improvements.",
+          "date": "August 18, 2023"
+        }
+      ]
     },
     {
       "id": 4,
       "brand": "HK Vision",
       "name": "Ultra HDR Camera",
       "price": "$120.00",
-      "image": "../PngItem_5335869.png"
+      "image": "../PngItem_5335869.png",
+      "stock": true,
+      "images": [
+        "../PngItem_5335869.png",
+        "../PngItem_5335869.png",
+        "../PngItem_5335869.png",
+        "../PngItem_5335869.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Ultra HDR Camera delivers stunning high dynamic range video for detailed surveillance.",
+      "SKU": "HKV-UHDR-004",
+      "categories": [
+        "Camera",
+        "Security",
+        "HDR"
+      ],
+      "tags": [
+        "ultra HDR",
+        "camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.8,
+        "comment": "Incredible video quality and very reliable performance."
+      },
+      "customerReviews": [
+        {
+          "name": "Anna Wilson",
+          "rating": 5,
+          "comment": "Incredible video quality and very reliable performance.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "John Doe",
+          "rating": 4.7,
+          "comment": "Excellent HDR performance, but a bit pricey.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Alexa Johnson",
+          "rating": 4.9,
+          "comment": "Outstanding clarity and detail, worth every penny.",
+          "date": "August 18, 2023"
+        }
+      ]
     },
     {
       "id": 5,
       "brand": "Igloohome CHAIR",
       "name": "Wireless Camera",
       "price": "$89.00",
-      "image": "../PngItem_5989470.png"
+      "image": "../PngItem_5989470.png",
+      "stock": true,
+      "images": [
+        "../PngItem_5989470.png",
+        "../PngItem_5989470.png",
+        "../PngItem_5989470.png",
+        "../PngItem_5989470.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Wireless Camera provides seamless connectivity and high-definition video recording.",
+      "SKU": "IGL-WC-005",
+      "categories": [
+        "Camera",
+        "Security",
+        "Wireless"
+      ],
+      "tags": [
+        "wireless",
+        "camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.3,
+        "comment": "Very convenient and easy to set up, though battery life could be longer."
+      },
+      "customerReviews": [
+        {
+          "name": "Anna Wilson",
+          "rating": 5,
+          "comment": "Incredible video quality and very reliable performance.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Tom Davis",
+          "rating": 4.2,
+          "comment": "Works well, but the battery life is shorter than expected.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Jane Doe",
+          "rating": 4.4,
+          "comment": "Great for wireless needs, setup is a breeze.",
+          "date": "August 18, 2023"
+        }
+      ]
     },
     {
       "id": 6,
       "brand": "Samsung",
       "name": "Vision Pro Camera",
       "price": "$140.00",
-      "image": "../PngItem_2018403.png"
+      "image": "../PngItem_2018403.png",
+      "stock": true,
+      "images": [
+        "../PngItem_2018403.png",
+        "../PngItem_2018403.png",
+        "../PngItem_2018403.png",
+        "../PngItem_2018403.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Vision Pro Camera offers professional-grade video quality with advanced features.",
+      "SKU": "SAM-VPC-006",
+      "categories": [
+        "Camera",
+        "Security",
+        "Professional"
+      ],
+      "tags": [
+        "vision pro",
+        "camera",
+        "security",
+        "professional"
+      ],
+      "review": {
+        "rating": 4.9,
+        "comment": "Top-notch video quality and features, highly recommended for professional use."
+      },
+      "customerReviews": [
+        {
+          "name": "Chris Johnson",
+          "rating": 4,
+          "comment": "Very convenient and easy to set up, though battery life could be longer.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Patricia Taylor",
+          "rating": 5,
+          "comment": "Top-notch video quality and features, highly recommended for professional use.",
+          "date": "August 18, 2023"
+        }
+      ]
     },
     {
       "id": 7,
       "brand": "Igloohome CHAIR",
       "name": "Wide Angle Smart Camera",
       "price": "$90.00",
-      "image": "../PngItem_3521561.png"
+      "image": "../PngItem_3521561.png",
+      "stock": true,
+      "images": [
+        "../PngItem_3521561.png",
+        "../PngItem_3521561.png",
+        "../PngItem_3521561.png",
+        "../PngItem_3521561.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Wide Angle Smart Camera provides a broad field of view with smart connectivity.",
+      "SKU": "IGL-WASC-007",
+      "categories": [
+        "Camera",
+        "Security",
+        "Smart Home"
+      ],
+      "tags": [
+        "wide angle",
+        "smart camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.4,
+        "comment": "Wide coverage and smart features are very useful, but occasional connectivity issues."
+      },
+      "customerReviews": [
+        {
+          "name": "George Harris",
+          "rating": 4,
+          "comment": "Very good camera with a wide field of view, but could be more intuitive.",
+          "date": "August 18, 2023"
+        }
+      ]
     },
     {
       "id": 8,
       "brand": "Ezviz",
       "name": "Dome Camera",
       "price": "$89.00",
-      "image": "../PngItem_5335828.png"
+      "image": "../PngItem_5335828.png",
+      "stock": true,
+      "images": [
+        "../PngItem_5335828.png",
+        "../PngItem_5335828.png",
+        "../PngItem_5335828.png",
+        "../PngItem_5335828.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Dome Camera offers a sleek design with high-definition video and 360-degree coverage.",
+      "SKU": "EZV-DC-008",
+      "categories": [
+        "Camera",
+        "Security",
+        "Dome"
+      ],
+      "tags": [
+        "dome camera",
+        "security",
+        "360-degree"
+      ],
+      "review": {
+        "rating": 4.6,
+        "comment": "Great coverage and easy to install, but night vision could be better."
+      },
+      "customerReviews": [
+        {
+          "name": "David Miller",
+          "rating": 5,
+          "comment": "Amazing integration with Apple products and great video quality.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Anna Svitch",
+          "rating": 4.5,
+          "comment": "Excellent design and video quality, but night vision is lacking.",
+          "date": "August 18, 2023"
+        }
+      ]
     },
     {
       "id": 9,
       "brand": "HK Vision",
       "name": "Wireless Security Camera",
       "price": "$75.00",
-      "image": "../PngItem_5335637.png"
+      "image": "../PngItem_5335637.png",
+      "stock": true,
+      "images": [
+        "../PngItem_5335637.png",
+        "../PngItem_5335637.png",
+        "../PngItem_5335637.png",
+        "../PngItem_5335637.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Wireless Security Camera ensures reliable wireless connectivity with high-definition recording.",
+      "SKU": "HKV-WSC-009",
+      "categories": [
+        "Camera",
+        "Security",
+        "Wireless"
+      ],
+      "tags": [
+        "wireless security",
+        "camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.1,
+        "comment": "Good value for the price, but sometimes the connection drops."
+      },
+      "customerReviews": [
+        {
+          "name": "Jane Doe",
+          "rating": 4.7,
+          "comment": "Nice coverage and easy setup, would prefer better night vision.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Chris Davis",
+          "rating": 4.3,
+          "comment": "Decent camera with a good price, occasional connection issues."
+        },
+        {
+          "name": "Chris Johnson",
+          "rating": 4.2,
+          "comment": "Affordable and works well, but connection stability could improve."
+        }
+      ]
     },
     {
       "id": 10,
       "brand": "D-Link",
       "name": "Smart Desk Camera",
       "price": "$50.00",
-      "image": "../PngItem_2560501.png"
+      "image": "../PngItem_2560501.png",
+      "stock": true,
+      "images": [
+        "../PngItem_2560501.png",
+        "../PngItem_2560501.png",
+        "../PngItem_2560501.png",
+        "../PngItem_2560501.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Smart Desk Camera offers affordable, high-definition video for home and office use.",
+      "SKU": "DL-SDC-010",
+      "categories": [
+        "Camera",
+        "Smart Home",
+        "Office"
+      ],
+      "tags": [
+        "smart desk camera",
+        "office",
+        "home",
+        "security"
+      ],
+      "review": {
+        "rating": 4.0,
+        "comment": "Affordable and effective for basic surveillance needs."
+      },
+      "customerReviews": [
+        {
+          "name": "Tom Davis",
+          "rating": 4.2,
+          "comment": "Works well, but the battery life is shorter than expected.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Jane Doe",
+          "rating": 4.4,
+          "comment": "Great for wireless needs, setup is a breeze.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Olivia Wilson",
+          "rating": 4.1,
+          "comment": "Works well for simple tasks, but not for high-definition needs.",
+          "date": "August 18, 2023"
+        }
+      ]
     },
     {
       "id": 11,
       "brand": "HK Vision",
       "name": "High Vision HD Camera",
       "price": "$130.00",
-      "image": "../PngItem_5335451.png"
+      "image": "../PngItem_5335451.png",
+      "stock": true,
+      "images": [
+        "../PngItem_5335451.png",
+        "../PngItem_5335451.png",
+        "../PngItem_5335451.png",
+        "../PngItem_5335451.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "High Vision HD Camera delivers clear and detailed high-definition video with advanced features.",
+      "SKU": "HKV-HVHD-011",
+      "categories": [
+        "Camera",
+        "Security",
+        "HD"
+      ],
+      "tags": [
+        "high vision",
+        "HD camera",
+        "security "
+      ],
+      "review": {
+        "rating": 4.7,
+        "comment": "Excellent video quality and very reliable for home security."
+      },
+      "customerReviews": [
+        {
+          "name": "Liam Smith",
+          "rating": 4.7,
+          "comment": "Excellent video quality and very reliable for home security.",
+          "date": "September 10, 2023"
+        },
+        {
+          "name": "Michael Brown",
+          "rating": 4,
+          "comment": "Easy to use and reliable, but the app could be better.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Emily Davis",
+          "rating": 5,
+          "comment": "Excellent product! Very secure and easy to install.",
+          "date": "September 10, 2023"
+        }
+      ]
     },
     {
       "id": 12,
       "brand": "D-Link",
       "name": "Smart HDR WiFi Camera",
       "price": "$100.00",
-      "image": "../PngItem_2839997.png"
+      "image": "../PngItem_2839997.png",
+      "stock": true,
+      "images": [
+        "../PngItem_2839997.png",
+        "../PngItem_2839997.png",
+        "../PngItem_2839997.png",
+        "../PngItem_2839997.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Smart HDR WiFi Camera offers high dynamic range video with seamless WiFi connectivity.",
+      "SKU": "DL-SHWC-012",
+      "categories": [
+        "Camera",
+        "Security",
+        "WiFi",
+        "HDR"
+      ],
+      "tags": [
+        "smart HDR. ",
+        "WiFi camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.5,
+        "comment": "Great video quality and easy to set up, though the app could be more user-friendly."
+      },
+      "customerReviews": [
+        {
+          "name": "Sophia Davis",
+          "rating": 4.5,
+          "comment": "Great video quality and easy to set up, though the app could be more user-friendly.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Liam Smith",
+          "rating": 4.4,
+          "comment": "Good HDR performance, but the WiFi setup was tricky.",
+          "date": "August 18, 2023"
+        }
+      ]
     }
   ]
 }

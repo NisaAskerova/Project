@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { MyContext } from '../App';
 
 export default function ProductPage() {
-    const { setProduct, products } = useContext(MyContext);
+    const { setProducts, products } = useContext(MyContext);
     const [loading, setLoading] = useState(true);
     const [shot, setShot] = useState(true);
 
@@ -12,7 +12,7 @@ export default function ProductPage() {
         try {
             const response = await axios.get('/json/shopcamera.json');
             console.log(response.data.products);
-            setProduct(response.data.products);
+            setProducts(response.data.products);
         } catch (error) {
             console.error(error);
         } finally {
@@ -43,7 +43,7 @@ export default function ProductPage() {
                 ) : products && products.length > 0 ? (
                     products.map((product) => (
                         <div className='shopBox' key={product.id}>
-                            <div className='imgDiv'><img src={product.image} alt={product.name} /></div>
+                            <div className='imgDiv'><img src={product.image} alt='' /></div>
                             <div>
                                 <span className='same'>{product.brand}</span>
                                 <h3>{product.name}</h3>
