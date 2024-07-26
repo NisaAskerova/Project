@@ -42,6 +42,8 @@ export default function Product() {
                     ))}
                 </div>
             </div >
+
+
             <div id="rightProduct">
                 <div>
                     <div id='stockDiv'>
@@ -60,14 +62,14 @@ export default function Product() {
                             <img key={i} src={product.emptyStar} alt="empty star" />
                         ))}
                         <div>
-                        <span>{product.review.rating}</span>
-                        <span>({product.customerReviews.length} Reviews)</span>
+                            <span>{product.review.rating}</span>
+                            <span>({product.customerReviews.length} Reviews)</span>
                         </div>
                     </div>
                 </div>
                 <span className='productPrice'>{product.price}</span>
-                <div>
-                    <p className='same'>{product.description}</p>
+                <div className='productDescription'>
+                    <p className='same'>{product.description.slice(0,200)}...</p>
                 </div>
                 <table>
                     <tbody>
@@ -85,21 +87,30 @@ export default function Product() {
                         </tr>
                     </tbody>
                 </table>
-                <div>
+                <div className='productButtons'>
                     <div>
-                        <button disabled={!product.stock}>-</button>
-                        <input type="text" readOnly value={1} />
-                        <button disabled={!product.stock}>+</button>
+                        <button disabled={!product.stock}><img src="/minus.svg" alt="" /></button>
+                        <input className='same' type="text" readOnly value={1} />
+                        <button disabled={!product.stock}><img src="/plus.svg" alt="" /></button>
                     </div>
-                    <button disabled={!product.stock}>Add to Cart</button>
-                    <img src="/favory.svg" alt="" />
+                    <button className='addButton' disabled={!product.stock}>Add to Cart</button>
+                    <div className='favoriteButton'>
+                        <img src="/favory.svg" alt="" />
+                    </div>
                 </div>
-                <div>
+                <div id='shereMedia'>
+                    <h3 id='shere'>Share</h3>
                     {product.sosial?.map((e, i) => (
-                        <div key={i}>
-                            {e.facebook && <img src={e.facebook} alt="Facebook" />}
-                            {e.instagram && <img src={e.instagram} alt="Instagram" />}
-                            {e.twitter && <img src={e.twitter} alt="Twitter" />}
+                        <div className='media' key={i}>
+                            <div>
+                                {e.facebook && <img src={e.facebook} alt="Facebook" />}
+                            </div>
+                            <div>
+                                {e.instagram && <img src={e.instagram} alt="Instagram" />}
+                            </div>
+                            <div>
+                                {e.twitter && <img src={e.twitter} alt="Twitter" />}
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -23,11 +23,11 @@ export default function HomeServices() {
               </div>
               <img className='serviceSecuryImg' src={item.image} alt={item.title} />
             </div>
-            <div style={{ borderBottom: item.underLine ? "1px solid rgba(21, 20, 15, 0.20)" : "transparent", marginTop: "20px", width:"1px", height:"100%"}}></div>
-            {/* <div className='divlinee'></div> */}
+            <div style={{ borderBottom: item.underLine ? "1px solid rgba(21, 20, 15, 0.20)" : "transparent", marginTop: "20px" }}></div>
           </>
           ))}
         </div>
+          <div className='divlinee'></div>
         <div className='firstDivServices'>
           {secontDiv.map((item) => (
             <>
@@ -40,11 +40,12 @@ export default function HomeServices() {
                 </div>
               </div>
               <div style={{ borderBottom: item.underLine ? "1px solid rgba(21, 20, 15, 0.20)" : "transparent", marginTop: "20px" }}></div>
-              {/* <div className='divlinee'></div> */}
             </>
           ))}
 
         </div>
+          <div className='divlinee'></div>
+        
         <div className='firstDivServices'>
           {thirdDiv.map((item) => (
             <>
@@ -58,7 +59,6 @@ export default function HomeServices() {
                 <img className='serviceSecuryImg' src={item.image} alt={item.title} />
               </div>
               <div style={{ borderBottom: item.underLine ? "1px solid rgba(21, 20, 15, 0.20)" : "transparent", marginTop: "20px" }}></div>
-              {/* <div className='divlinee'></div> */}
             </>
           ))}
 
