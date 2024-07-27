@@ -1,0 +1,269 @@
+{
+  "products": [
+  {
+    "id": 1,
+    "brand": "Nest",
+    "name": "Protect Smoke + CO Alarm",
+    "price": "$119.00",
+    "image": "../pngwing.com.png",
+    "stock": true,
+    "images": [
+      "../pngwing.com.png",
+      "../pngwing.com.png",
+      "../pngwing.com.png",
+      "../pngwing.com.png"
+    ],
+    "star": "../yellowStar.svg",
+    "halfStar": "../halfStar.svg",
+    "emptyStar": "../emptyStar.svg",
+    "description": "The Nest Protect Smoke + CO Alarm is designed to keep you safe from both smoke and carbon monoxide. It features a split-spectrum sensor that detects smoke from both fast-burning and slow-smoldering fires. With voice alerts and a mobile app for remote monitoring, it’s a modern solution for home safety.",
+    "SKU": "NEST-CO-001",
+    "categories": [
+      "Alarm",
+      "Safety"
+    ],
+    "tags": [
+      "smoke detector",
+      "carbon monoxide",
+      "home safety"
+    ],
+    "review": {
+      "rating": 4.7,
+      "comment": "Reliable and easy to use. Excellent safety feature."
+    },
+    "sosial": [
+      {
+        "facebook": "../face.svg",
+        "instagram": "../instagram.svg",
+        "twitter": "../twitter.svg"
+      }
+    ],
+    "customerReviews": [
+      {
+        "name": "Emily Clarke",
+        "rating": 5,
+        "comment": "A must-have for every home. Very efficient!",
+        "date": "July 10, 2023"
+      },
+      {
+        "name": "Michael Brown",
+        "rating": 4,
+        "comment": "Works great, but a bit pricey.",
+        "date": "July 15, 2023"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "brand": "Kidde",
+    "name": "Kidde KN-COSM-BA Smoke & CO Alarm",
+    "price": "$79.00",
+    "image": "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
+    "stock": true,
+    "images": [
+      "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
+      "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
+      "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
+      "../Kidde KN-COSM-BA Smoke & CO Alarm.png"
+    ],
+    "star": "../yellowStar.svg",
+    "halfStar": "../halfStar.svg",
+    "emptyStar": "../emptyStar.svg",
+    "description": "The Kidde KN-COSM-BA Smoke & CO Alarm provides protection from both smoke and carbon monoxide. It features a battery backup and an advanced alarm system that ensures you are alerted even during power outages.",
+    "SKU": "KIDDE-CO-002",
+    "categories": [
+      "Alarm",
+      "Safety"
+    ],
+    "tags": [
+      "smoke alarm",
+      "carbon monoxide",
+      "battery backup"
+    ],
+    "review": {
+      "rating": 4.3,
+      "comment": "Good value for money and easy to install."
+    },
+    "sosial": [
+      {
+        "facebook": "../face.svg",
+        "instagram": "../instagram.svg",
+        "twitter": "../twitter.svg"
+      }
+    ],
+    "customerReviews": [
+      {
+        "name": "Sarah Green",
+        "rating": 4,
+        "comment": "Reliable and straightforward.",
+        "date": "June 20, 2023"
+      },
+      {
+        "name": "David Lee",
+        "rating": 5,
+        "comment": "Excellent alarm with great features.",
+        "date": "June 25, 2023"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "brand": "First Alert",
+    "name": "First Alert Onelink Safe & Sound",
+    "price": "$299.00",
+    "image": "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
+    "stock": false,
+    "images": [
+      "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
+      "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
+      "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
+      "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png"
+    ],
+    "star": "../yellowStar.svg",
+    "halfStar": "../halfStar.svg",
+    "emptyStar": "../emptyStar.svg",
+    "description": "The First Alert Onelink Safe & Sound is a smart smoke and carbon monoxide alarm with a built-in Alexa speaker. It integrates with your smart home system to provide voice alerts and allows you to control it through voice commands.",
+    "SKU": "FIRST-ALERT-003",
+    "categories": [
+      "Alarm",
+      "Smart Home"
+    ],
+    "tags": [
+      "smart alarm",
+      "carbon monoxide",
+      "Alexa"
+    ],
+    "review": {
+      "rating": 4.8,
+      "comment": "Innovative features with excellent sound quality."
+    },
+    "sosial": [
+      {
+        "facebook": "../face.svg",
+        "instagram": "../instagram.svg",
+        "twitter": "../twitter.svg"
+      }
+    ],
+    "customerReviews": [
+      {
+        "name": "Linda Roberts",
+        "rating": 5,
+        "comment": "Love the Alexa integration and smart features.",
+        "date": "May 15, 2023"
+      },
+      {
+        "name": "James Smith",
+        "rating": 4,
+        "comment": "Great functionality but a bit expensive.",
+        "date": "May 20, 2023"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "brand": "Eve",
+    "name": "Eve Room Carbon Monoxide Alarm",
+    "price": "$89.00",
+    "image": "../EVE_Room_Fahrenheit_09-min.jpg",
+    "stock": true,
+    "images": [
+      "../EVE_Room_Fahrenheit_09-min.jpg",
+      "../EVE_Room_Fahrenheit_09-min.jpg",
+      "../EVE_Room_Fahrenheit_09-min.jpg",
+      "../EVE_Room_Fahrenheit_09-min.jpg"
+    ],
+    "star": "../yellowStar.svg",
+    "halfStar": "../halfStar.svg",
+    "emptyStar": "../emptyStar.svg",
+    "description": "The Eve Room Carbon Monoxide Alarm provides advanced CO detection with a sleek, modern design. It features a built-in display that shows current CO levels and integrates with your smart home system for notifications and control.",
+    "SKU": "EVE-CO-004",
+    "categories": [
+      "Alarm",
+      "Smart Home"
+    ],
+    "tags": [
+      "carbon monoxide",
+      "smart alarm",
+      "CO levels"
+    ],
+    "review": {
+      "rating": 4.6,
+      "comment": "Effective CO detection with a stylish design."
+    },
+    "sosial": [
+      {
+        "facebook": "../face.svg",
+        "instagram": "../instagram.svg",
+        "twitter": "../twitter.svg"
+      }
+    ],
+    "customerReviews": [
+      {
+        "name": "Anna Wilson",
+        "rating": 5,
+        "comment": "Very sleek and reliable!",
+        "date": "April 10, 2023"
+      },
+      {
+        "name": "Robert Johnson",
+        "rating": 4,
+        "comment": "Good product but could be more affordable.",
+        "date": "April 15, 2023"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "brand": "Honeywell",
+    "name": "Honeywell Smoke & Carbon Monoxide Detector",
+    "price": "$99.00",
+    "image": "../5800COMBO_hi__36261.jpg",
+    "stock": true,
+    "images": [
+      "../5800COMBO_hi__36261.jpg",
+      "../5800COMBO_hi__36261.jpg",
+      "../5800COMBO_hi__36261.jpg",
+      "../5800COMBO_hi__36261.jpg"
+    ],
+    "star": "../yellowStar.svg",
+    "halfStar": "../halfStar.svg",
+    "emptyStar": "../emptyStar.svg",
+    "description": "The Honeywell Smoke & Carbon Monoxide Detector offers dual protection with both smoke and CO detection. It has a user-friendly interface and provides reliable alerts with an easy-to-read display and loud alarm.",
+    "SKU": "HONEY-CO-005",
+    "categories": [
+      "Alarm",
+      "Safety"
+    ],
+    "tags": [
+      "smoke detector",
+      "carbon monoxide",
+      "safety"
+    ],
+    "review": {
+      "rating": 4.4,
+      "comment": "Reliable and easy to use."
+    },
+    "sosial": [
+      {
+        "facebook": "../face.svg",
+        "instagram": "../instagram.svg",
+        "twitter": "../twitter.svg"
+      }
+    ],
+    "customerReviews": [
+      {
+        "name": "Paul Adams",
+        "rating": 4,
+        "comment": "Good quality but the alarm is a bit loud.",
+        "date": "March 5, 2023"
+      },
+      {
+        "name": "Laura Davis",
+        "rating": 5,
+        "comment": "Great detector, very satisfied.",
+        "date": "March 10, 2023"
+      }
+    ]
+  }
+]
+}

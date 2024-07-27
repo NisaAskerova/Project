@@ -1,0 +1,524 @@
+[
+    {
+      "id": 1,
+      "brand": "Samsung",
+      "name": "Samsung SmartCam HD Pro",
+      "price": "$150.00",
+      "image": "../smartcam_hd_pro.png",
+      "stock": true,
+      "images": [
+        "../smartcam_hd_pro.png",
+        "../smartcam_hd_pro_1.png",
+        "../smartcam_hd_pro_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung SmartCam HD Pro offers 1080p HD video, wide-angle lens, and two-way audio. It includes integrated cloud storage for secure video recording.",
+      "SKU": "SAMS-SC-HD-PRO-001",
+      "categories": [
+        "Camera",
+        "Security"
+      ],
+      "tags": [
+        "HD video",
+        "two-way audio",
+        "cloud storage"
+      ],
+      "review": {
+        "rating": 4.6,
+        "comment": "Excellent video quality and easy to use. Great cloud storage feature."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "John Smith",
+          "rating": 5,
+          "comment": "Perfect camera with clear video and great features.",
+          "date": "April 15, 2024"
+        },
+        {
+          "name": "Alice Johnson",
+          "rating": 4,
+          "comment": "Good quality but a bit pricey.",
+          "date": "April 20, 2024"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "brand": "Samsung",
+      "name": "Samsung SmartCam HD",
+      "price": "$120.00",
+      "image": "../smartcam_hd.png",
+      "stock": true,
+      "images": [
+        "../smartcam_hd.png",
+        "../smartcam_hd_1.png",
+        "../smartcam_hd_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung SmartCam HD offers 720p HD video, IR night vision, and motion and sound detection. Ideal for both indoor and outdoor use.",
+      "SKU": "SAMS-SC-HD-002",
+      "categories": [
+        "Camera",
+        "Security"
+      ],
+      "tags": [
+        "HD video",
+        "night vision",
+        "motion detection"
+      ],
+      "review": {
+        "rating": 4.4,
+        "comment": "Good camera with decent night vision and motion detection."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Emily Davis",
+          "rating": 5,
+          "comment": "Great value for the price. Works well.",
+          "date": "May 10, 2024"
+        },
+        {
+          "name": "Michael Lee",
+          "rating": 4,
+          "comment": "Good performance but setup was a bit tricky.",
+          "date": "May 15, 2024"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "brand": "Samsung",
+      "name": "Samsung Wisenet TID-4220R",
+      "price": "$250.00",
+      "image": "../wisenet_tid.png",
+      "stock": true,
+      "images": [
+        "../wisenet_tid.png",
+        "../wisenet_tid_1.png",
+        "../wisenet_tid_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung Wisenet TID-4220R features 4MP HD video, IR night vision, and an IP67 rating for weather resistance. Ideal for outdoor security.",
+      "SKU": "SAMS-WIS-TID-003",
+      "categories": [
+        "Camera",
+        "Outdoor"
+      ],
+      "tags": [
+        "4MP HD video",
+        "weatherproof",
+        "night vision"
+      ],
+      "review": {
+        "rating": 4.7,
+        "comment": "Excellent outdoor camera with high-resolution video and weather resistance."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Sarah Wilson",
+          "rating": 5,
+          "comment": "Great outdoor camera with superb video quality.",
+          "date": "June 1, 2024"
+        },
+        {
+          "name": "James Brown",
+          "rating": 4,
+          "comment": "Good camera but installation could be easier.",
+          "date": "June 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "brand": "Samsung",
+      "name": "Samsung SmartThings Hub",
+      "price": "$80.00",
+      "image": "../smartthings_hub.png",
+      "stock": true,
+      "images": [
+        "../smartthings_hub.png",
+        "../smartthings_hub_1.png",
+        "../smartthings_hub_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung SmartThings Hub connects and controls various IoT devices, supporting Zigbee, Z-Wave, and Wi-Fi. It enables automation and remote control.",
+      "SKU": "SAMS-ST-HUB-004",
+      "categories": [
+        "Hub",
+        "Home Automation"
+      ],
+      "tags": [
+        "IoT",
+        "Zigbee",
+        "Z-Wave",
+        "Wi-Fi"
+      ],
+      "review": {
+        "rating": 4.5,
+        "comment": "Versatile hub for home automation with wide device support."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Laura Smith",
+          "rating": 5,
+          "comment": "Works perfectly with all my smart home devices.",
+          "date": "July 1, 2024"
+        },
+        {
+          "name": "Robert Johnson",
+          "rating": 4,
+          "comment": "Effective hub but configuration was a bit complex.",
+          "date": "July 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "brand": "Samsung",
+      "name": "Samsung SmartThings Motion Sensor",
+      "price": "$30.00",
+      "image": "../smartthings_motion_sensor.png",
+      "stock": true,
+      "images": [
+        "../smartthings_motion_sensor.png",
+        "../smartthings_motion_sensor_1.png",
+        "../smartthings_motion_sensor_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung SmartThings Motion Sensor detects movement and integrates with the SmartThings Hub for automation. It is battery-operated and easy to install.",
+      "SKU": "SAMS-ST-MOTION-005",
+      "categories": [
+        "Sensor",
+        "Home Automation"
+      ],
+      "tags": [
+        "motion detection",
+        "battery-operated",
+        "automation"
+      ],
+      "review": {
+        "rating": 4.3,
+        "comment": "Effective motion sensor with reliable performance."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Daniel Miller",
+          "rating": 5,
+          "comment": "Great sensor for home automation. Works as expected.",
+          "date": "August 1, 2024"
+        },
+        {
+          "name": "Sophia Martinez",
+          "rating": 4,
+          "comment": "Good motion detection but battery life could be better.",
+          "date": "August 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "brand": "Samsung",
+      "name": "Samsung SmartThings Multipurpose Sensor",
+      "price": "$25.00",
+      "image": "../smartthings_multipurpose_sensor.png",
+      "stock": true,
+      "images": [
+        "../smartthings_multipurpose_sensor.png",
+        "../smartthings_multipurpose_sensor_1.png",
+        "../smartthings_multipurpose_sensor_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung SmartThings Multipurpose Sensor detects door and window openings, temperature changes, and vibrations. It integrates seamlessly with SmartThings Hub.",
+      "SKU": "SAMS-ST-MULTI-006",
+      "categories": [
+        "Sensor",
+        "Home Automation"
+      ],
+      "tags": [
+        "door sensor",
+        "temperature",
+        "vibration"
+      ],
+      "review": {
+        "rating": 4.4,
+        "comment": "Versatile sensor with multiple functions for home security."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Oliver Wilson",
+          "rating": 5,
+          "comment": "Excellent multipurpose sensor. Very useful for home security.",
+          "date": "September 1, 2024"
+        },
+        {
+          "name": "Mia Davis",
+          "rating": 4,
+          "comment": "Good sensor but could use better integration options.",
+          "date": "September 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "brand": "Samsung",
+      "name": "Samsung SmartThings Water Leak Sensor",
+      "price": "$40.00",
+      "image": "../smartthings_water_leak_sensor.png",
+      "stock": true,
+      "images": [
+        "../smartthings_water_leak_sensor.png",
+        "../smartthings_water_leak_sensor_1.png",
+        "../smartthings_water_leak_sensor_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung SmartThings Water Leak Sensor detects water leaks and sends notifications to your mobile device. It helps prevent water damage in your home.",
+      "SKU": "SAMS-ST-WATER-007",
+      "categories": [
+        "Sensor",
+        "Home Automation"
+      ],
+      "tags": [
+        "water leak detection",
+        "notifications",
+        "prevention"
+      ],
+      "review": {
+        "rating": 4.6,
+        "comment": "Very effective at detecting leaks. Provides timely alerts."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Ethan Brown",
+          "rating": 5,
+          "comment": "Excellent sensor for preventing water damage. Highly recommended.",
+          "date": "October 1, 2024"
+        },
+        {
+          "name": "Isabella Garcia",
+          "rating": 4,
+          "comment": "Works well but a bit expensive.",
+          "date": "October 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "brand": "Samsung",
+      "name": "Samsung SmartThings Smart Plug",
+      "price": "$20.00",
+      "image": "../smartthings_smart_plug.png",
+      "stock": true,
+      "images": [
+        "../smartthings_smart_plug.png",
+        "../smartthings_smart_plug_1.png",
+        "../smartthings_smart_plug_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung SmartThings Smart Plug allows you to control your appliances remotely via the SmartThings app. It supports energy monitoring and scheduling.",
+      "SKU": "SAMS-ST-PLUG-008",
+      "categories": [
+        "Plug",
+        "Home Automation"
+      ],
+      "tags": [
+        "remote control",
+        "energy monitoring",
+        "scheduling"
+      ],
+      "review": {
+        "rating": 4.7,
+        "comment": "Great smart plug with reliable performance and easy setup."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Aiden Martinez",
+          "rating": 5,
+          "comment": "Excellent smart plug with useful features. Easy to use.",
+          "date": "November 1, 2024"
+        },
+        {
+          "name": "Olivia Anderson",
+          "rating": 4,
+          "comment": "Works well but could use more advanced features.",
+          "date": "November 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "brand": "Samsung",
+      "name": "Samsung SmartThings Leak Sensor",
+      "price": "$35.00",
+      "image": "../smartthings_leak_sensor.png",
+      "stock": true,
+      "images": [
+        "../smartthings_leak_sensor.png",
+        "../smartthings_leak_sensor_1.png",
+        "../smartthings_leak_sensor_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung SmartThings Leak Sensor detects leaks and floods, sending alerts to your smartphone to help protect your home.",
+      "SKU": "SAMS-ST-LEAK-009",
+      "categories": [
+        "Sensor",
+        "Home Automation"
+      ],
+      "tags": [
+        "leak detection",
+        "alerts",
+        "flood prevention"
+      ],
+      "review": {
+        "rating": 4.5,
+        "comment": "Reliable sensor for detecting leaks with timely notifications."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Lucas King",
+          "rating": 5,
+          "comment": "Effective leak sensor. Prevented potential water damage.",
+          "date": "December 1, 2024"
+        },
+        {
+          "name": "Megan Lee",
+          "rating": 4,
+          "comment": "Good performance but a bit pricey.",
+          "date": "December 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "brand": "Samsung",
+      "name": "Samsung SmartThings Indoor Camera",
+      "price": "$170.00",
+      "image": "../smartthings_indoor_camera.png",
+      "stock": true,
+      "images": [
+        "../smartthings_indoor_camera.png",
+        "../smartthings_indoor_camera_1.png",
+        "../smartthings_indoor_camera_2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Samsung SmartThings Indoor Camera provides 1080p HD video, two-way audio, and motion detection. Ideal for monitoring indoor spaces.",
+      "SKU": "SAMS-ST-IN-CAM-010",
+      "categories": [
+        "Camera",
+        "Indoor"
+      ],
+      "tags": [
+        "HD video",
+        "two-way audio",
+        "motion detection"
+      ],
+      "review": {
+        "rating": 4.6,
+        "comment": "Great indoor camera with clear video and good audio quality."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Hannah Scott",
+          "rating": 5,
+          "comment": "Excellent indoor camera with reliable performance.",
+          "date": "January 1, 2025"
+        },
+        {
+          "name": "Ethan Clark",
+          "rating": 4,
+          "comment": "Good camera but the setup was a bit complicated.",
+          "date": "January 5, 2025"
+        }
+      ]
+    }
+  ]
+  

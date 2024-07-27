@@ -9,13 +9,27 @@ import Blog from './blog/Blog';
 import Shop from './shop/Shop';
 import ProductDetail from './shop/ProductDetail';
 import Description from './shop/Description';
+import CarbonAlarmDetail from './shop/CarbonAlarmDetail';
+import LeakageDetectorDetail from './shop/LeakageDetectorDetail';
+
 
 export const MyContext = createContext();
 
 export default function App() {
   const [products, setProducts] = useState([]);
-  const [cart, setCurt] = useState([]);
-  const data = { products, setProducts, cart, setCurt }
+  const [detector, setDetector] = useState([]);
+  const [smoke, setSmoke] = useState([]);
+  const [home, setHome] = useState([]);
+  const [carbon, setCarbon] = useState([]);
+  const [cart, setCart] = useState([]);
+  const data = {
+    products, setProducts,
+    cart, setCart,
+    carbon, setCarbon,
+    detector, setDetector,
+    home, setHome,
+    smoke, setSmoke
+  };
 
   return (
     <MyContext.Provider value={data}>
@@ -28,13 +42,13 @@ export default function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/shop' element={<Shop />} />
+          <Route path="/carbon_alarm_product/:id" element={<CarbonAlarmDetail />} />
+          <Route path="/leakage_detector/:id" element={<LeakageDetectorDetail />} />
           <Route path="/product/:id" element={<ProductDetail />} >
-            <Route path='desctiption' element={<Description />} />
+            <Route path='description' element={<Description />} />
           </Route>
         </Routes>
       </Router>
-
-
     </MyContext.Provider>
   );
 }

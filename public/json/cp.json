@@ -1,0 +1,107 @@
+[
+    {
+      "id": 1,
+      "brand": "CP Plus",
+      "name": "CP Plus CP-UNC-2201 HD Bullet Camera",
+      "price": "$129.00",
+      "image": "../image1.png",
+      "stock": true,
+      "images": [
+        "../image1.png",
+        "../image1.png",
+        "../image1.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The CP Plus CP-UNC-2201 is an HD bullet camera offering 1080p resolution, night vision up to 30 meters, and motion detection. Ideal for both indoor and outdoor use.",
+      "SKU": "CP-UNC-2201-001",
+      "categories": [
+        "Camera",
+        "Security"
+      ],
+      "tags": [
+        "HD video",
+        "night vision",
+        "motion detection"
+      ],
+      "review": {
+        "rating": 4.5,
+        "comment": "High-quality camera with good night vision and solid build."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Michael Green",
+          "rating": 5,
+          "comment": "Excellent camera with clear video and effective night vision.",
+          "date": "March 10, 2024"
+        },
+        {
+          "name": "Jessica Turner",
+          "rating": 4,
+          "comment": "Good camera but installation instructions were unclear.",
+          "date": "March 15, 2024"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "brand": "CP Plus",
+      "name": "CP Plus CP-PAR-2204 PTZ Camera",
+      "price": "$249.00",
+      "image": "../image2.png",
+      "stock": true,
+      "images": [
+        "../image2.png",
+        "../image2.png",
+        "../image2.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The CP Plus CP-PAR-2204 is a PTZ camera with 4x optical zoom and 720p resolution. It offers remote pan, tilt, and zoom control, night vision up to 50 meters, and advanced motion detection.",
+      "SKU": "CP-PAR-2204-002",
+      "categories": [
+        "Camera",
+        "PTZ"
+      ],
+      "tags": [
+        "optical zoom",
+        "PTZ",
+        "night vision"
+      ],
+      "review": {
+        "rating": 4.7,
+        "comment": "Versatile PTZ camera with excellent zoom capabilities and night vision."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "David Brown",
+          "rating": 5,
+          "comment": "Amazing camera with great zoom and control features.",
+          "date": "April 5, 2024"
+        },
+        {
+          "name": "Emily Lewis",
+          "rating": 4,
+          "comment": "Effective PTZ camera but the setup took longer than expected.",
+          "date": "April 10, 2024"
+        }
+      ]
+    }
+  ]
+  

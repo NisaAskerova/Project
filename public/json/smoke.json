@@ -1,0 +1,522 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "brand": "Nest",
+      "name": "Nest Protect",
+      "price": "$119.00",
+      "image": "../714dK+uZTUL.jpg",
+      "stock": true,
+      "images": [
+        "../714dK+uZTUL.jpg",
+        "../714dK+uZTUL.jpg",
+        "../714dK+uZTUL.jpg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "Nest Protect is a smart smoke and carbon monoxide alarm that offers voice alerts, a mobile app, and integrates with Google Home. It features both smoke and CO detection, and provides real-time alerts to your smartphone.",
+      "SKU": "NEST-PROTECT-001",
+      "categories": [
+        "Smoke Alarm",
+        "Smart Home"
+      ],
+      "tags": [
+        "smart alarm",
+        "voice alerts",
+        "Google Home"
+      ],
+      "review": {
+        "rating": 4.8,
+        "comment": "Excellent features with reliable performance."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Oliver Smith",
+          "rating": 5,
+          "comment": "Very reliable and easy to set up. Love the integration with Google Home.",
+          "date": "April 10, 2024"
+        },
+        {
+          "name": "Isabella Johnson",
+          "rating": 4,
+          "comment": "Good product but a bit expensive.",
+          "date": "April 15, 2024"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "brand": "Kidde",
+      "name": "Kidde Smoke & Carbon Monoxide Detector",
+      "price": "$79.00",
+      "image": "../61tI9Tu-zIL.jpg",
+      "stock": true,
+      "images": [
+        "../61tI9Tu-zIL.jpg",
+        "../61tI9Tu-zIL.jpg",
+        "../61tI9Tu-zIL.jpg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Kidde Smoke & Carbon Monoxide Detector offers dual protection with smoke and carbon monoxide detection. It features an easy-to-read display, test/reset button, and battery backup.",
+      "SKU": "KIDDE-SMOKE-002",
+      "categories": [
+        "Smoke Alarm",
+        "Carbon Monoxide Detector"
+      ],
+      "tags": [
+        "dual detection",
+        "battery backup",
+        "easy-to-read display"
+      ],
+      "review": {
+        "rating": 4.6,
+        "comment": "Reliable and effective with clear display."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Emma Davis",
+          "rating": 5,
+          "comment": "Great dual detector with a clear display and reliable performance.",
+          "date": "May 1, 2024"
+        },
+        {
+          "name": "Liam Martinez",
+          "rating": 4,
+          "comment": "Good product, but the alarm could be louder.",
+          "date": "May 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "brand": "First Alert",
+      "name": "First Alert Smoke Alarm with Voice Location",
+      "price": "$89.00",
+      "image": "../7010LBL-247x296.jpg",
+      "stock": true,
+      "images": [
+        "../7010LBL-247x296.jpg",
+        "../7010LBL-247x296.jpg",
+        "../7010LBL-247x296.jpg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The First Alert Smoke Alarm with Voice Location provides voice alerts with the specific location of the smoke or fire. It features a battery backup and a loud alarm for safety.",
+      "SKU": "FIRST-ALERT-003",
+      "categories": [
+        "Smoke Alarm",
+        "Voice Alerts"
+      ],
+      "tags": [
+        "voice alerts",
+        "specific location",
+        "battery backup"
+      ],
+      "review": {
+        "rating": 4.7,
+        "comment": "Voice location feature is very helpful for locating the source of smoke."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Aiden White",
+          "rating": 5,
+          "comment": "Excellent alarm with helpful voice alerts for location.",
+          "date": "June 1, 2024"
+        },
+        {
+          "name": "Sophia Lee",
+          "rating": 4,
+          "comment": "Good alarm but could use a more noticeable alarm sound.",
+          "date": "June 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "brand": "Honeywell",
+      "name": "Honeywell Smart Smoke Detector",
+      "price": "$109.00",
+      "image": "../400445-4f7732bdcb9805d47c8b75adb0bbd0aa.jpg",
+      "stock": true,
+      "images": [
+        "../400445-4f7732bdcb9805d47c8b75adb0bbd0aa.jpg",
+        "../400445-4f7732bdcb9805d47c8b75adb0bbd0aa.jpg",
+        "../400445-4f7732bdcb9805d47c8b75adb0bbd0aa.jpg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Honeywell Smart Smoke Detector offers smoke detection with smart features such as remote notifications and integration with Honeywell's smart home systems. It includes a battery backup and a loud alarm.",
+      "SKU": "HONEYWELL-SMOKE-004",
+      "categories": [
+        "Smoke Alarm",
+        "Smart Home"
+      ],
+      "tags": [
+        "smart smoke detector",
+        "remote notifications",
+        "integration"
+      ],
+      "review": {
+        "rating": 4.8,
+        "comment": "Great smart features and reliable smoke detection."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "James Brown",
+          "rating": 5,
+          "comment": "Excellent smart smoke detector with reliable notifications.",
+          "date": "July 1, 2024"
+        },
+        {
+          "name": "Olivia Wilson",
+          "rating": 4,
+          "comment": "Good product but setup could be simpler.",
+          "date": "July 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "brand": "Etekcity",
+      "name": "Etekcity Smoke Detector with LED Indicator",
+      "price": "$59.00",
+      "image": "../images (2).jpeg",
+      "stock": true,
+      "images": [
+        "../image5.png",
+        "../image5.png",
+        "../image5.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Etekcity Smoke Detector features an LED indicator and a loud alarm to alert you of smoke. It is easy to install and provides reliable performance with a test/reset button.",
+      "SKU": "ETEKCITY-SMOKE-005",
+      "categories": [
+        "Smoke Alarm"
+      ],
+      "tags": [
+        "LED indicator",
+        "easy installation",
+        "loud alarm"
+      ],
+      "review": {
+        "rating": 4.5,
+        "comment": "Reliable performance with a helpful LED indicator."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Lucas Adams",
+          "rating": 5,
+          "comment": "Great alarm with LED indicator and easy installation.",
+          "date": "August 1, 2024"
+        },
+        {
+          "name": "Mia Miller",
+          "rating": 4,
+          "comment": "Effective smoke alarm but a bit noisy.",
+          "date": "August 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "brand": "Brinks",
+      "name": "Brinks Smoke and Fire Alarm",
+      "price": "$89.00",
+      "image": "../images (3).jpeg",
+      "stock": true,
+      "images": [
+        "../images (3).jpeg",
+        "../images (3).jpeg",
+        "../images (3).jpeg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Brinks Smoke and Fire Alarm offers comprehensive smoke and fire detection with a loud alarm and battery backup. It includes a test/reset button and is easy to install.",
+      "SKU": "BRINKS-SMOKE-006",
+      "categories": [
+        "Smoke Alarm",
+        "Fire Alarm"
+      ],
+      "tags": [
+        "smoke detection",
+        "fire detection",
+        "battery backup"
+      ],
+      "review": {
+        "rating": 4.6,
+        "comment": "Effective smoke and fire alarm with a loud alarm."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Ethan Harris",
+          "rating": 5,
+          "comment": "Reliable smoke and fire alarm with a loud alarm.",
+          "date": "September 1, 2024"
+        },
+        {
+          "name": "Ava Roberts",
+          "rating": 4,
+          "comment": "Good alarm but installation instructions could be clearer.",
+          "date": "September 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "brand": "X-Sense",
+      "name": "X-Sense Smoke Detector",
+      "price": "$69.00",
+      "image": "../X-Sense Smoke Detector.webp",
+      "stock": true,
+      "images": [
+        "../X-Sense Smoke Detector.webp",
+        "../X-Sense Smoke Detector.webp",
+        "../X-Sense Smoke Detector.webp"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The X-Sense Smoke Detector features a reliable smoke detection system with a loud alarm and battery backup. It is designed for easy installation and includes a test button.",
+      "SKU": "X-SENSE-SMOKE-007",
+      "categories": [
+        "Smoke Alarm"
+      ],
+      "tags": [
+        "reliable detection",
+        "loud alarm",
+        "battery backup"
+      ],
+      "review": {
+        "rating": 4.5,
+        "comment": "Good smoke detector with reliable performance."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "William Green",
+          "rating": 5,
+          "comment": "Reliable smoke detector with easy installation.",
+          "date": "October 1, 2024"
+        },
+        {
+          "name": "Emma White",
+          "rating": 4,
+          "comment": "Effective but a bit loud.",
+          "date": "October 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "brand": "Netatmo",
+      "name": "Netatmo Smart Smoke Alarm",
+      "price": "$129.00",
+      "image": "../fm=f_jpg.jpeg",
+      "stock": true,
+      "images": [
+        "../fm=f_jpg.jpeg",
+        "../fm=f_jpg.jpeg",
+        "../fm=f_jpg.jpeg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Netatmo Smart Smoke Alarm provides real-time alerts and integrates with the Netatmo Smart Home system. It includes a loud alarm, battery backup, and easy setup through a mobile app.",
+      "SKU": "NETATMO-SMOKE-008",
+      "categories": [
+        "Smoke Alarm",
+        "Smart Home"
+      ],
+      "tags": [
+        "smart smoke alarm",
+        "real-time alerts",
+        "battery backup"
+      ],
+      "review": {
+        "rating": 4.7,
+        "comment": "Smart features with good integration and reliable alerts."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Noah Scott",
+          "rating": 5,
+          "comment": "Great integration with my smart home system and reliable alerts.",
+          "date": "November 1, 2024"
+        },
+        {
+          "name": "Isabella Adams",
+          "rating": 4,
+          "comment": "Good product but a bit pricey.",
+          "date": "November 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "brand": "GROVE",
+      "name": "GROVE Smoke Detector with Smart Alerts",
+      "price": "$99.00",
+      "image": "../IN0271000012.jpg",
+      "stock": true,
+      "images": [
+        "../IN0271000012.jpg",
+        "../IN0271000012.jpg",
+        "../IN0271000012.jpg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The GROVE Smoke Detector features smart alerts and integrates with various smart home platforms. It includes a loud alarm, battery backup, and a user-friendly app for monitoring.",
+      "SKU": "GROVE-SMOKE-009",
+      "categories": [
+        "Smoke Alarm",
+        "Smart Home"
+      ],
+      "tags": [
+        "smart alerts",
+        "integration",
+        "user-friendly app"
+      ],
+      "review": {
+        "rating": 4.6,
+        "comment": "Smart features with effective smoke detection."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Lucas Turner",
+          "rating": 5,
+          "comment": "Excellent smoke detector with smart alerts and good app integration.",
+          "date": "December 1, 2024"
+        },
+        {
+          "name": "Mia Clark",
+          "rating": 4,
+          "comment": "Effective but could use a more noticeable alarm sound.",
+          "date": "December 5, 2024"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "brand": "Arlo",
+      "name": "Arlo Smart Smoke Detector",
+      "price": "$139.00",
+      "image": "../41fNXeanItL.jpg",
+      "stock": true,
+      "images": [
+        "../41fNXeanItL.jpg",
+        "../41fNXeanItL.jpg",
+        "../41fNXeanItL.jpg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Arlo Smart Smoke Detector offers advanced smoke detection with real-time notifications and integration with Arlo’s security system. It includes a loud alarm, battery backup, and a mobile app for easy monitoring.",
+      "SKU": "ARLO-SMOKE-010",
+      "categories": [
+        "Smoke Alarm",
+        "Smart Home"
+      ],
+      "tags": [
+        "advanced smoke detection",
+        "real-time notifications",
+        "Arlo integration"
+      ],
+      "review": {
+        "rating": 4.8,
+        "comment": "Excellent smoke detection with real-time notifications and Arlo integration."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Benjamin King",
+          "rating": 5,
+          "comment": "Great smoke detector with advanced features and good integration.",
+          "date": "January 1, 2025"
+        },
+        {
+          "name": "Ava Lee",
+          "rating": 4,
+          "comment": "Good performance but a bit on the expensive side.",
+          "date": "January 5, 2025"
+        }
+      ]
+    }
+  ]
+}
