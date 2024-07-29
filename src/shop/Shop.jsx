@@ -3,14 +3,14 @@ import Header from '../Pages/Header';
 import ShopHero from './ShopHero';
 import Footer from '../Pages/Footer';
 import ProductPage from './ProductPage';
-import CarbonAlarm from './CarbonAlarm'; // CarbonAlarm komponentini import edin
+import CarbonAlarm from './CarbonAlarm'; //
 import Smoke from './Smoke';
 import ProductCategories from './ProductCategories';
 import Detector from './Detector';
 import SmartHome from './SmartHome';
 
 export default function Shop() {
-  const [selectedCategory, setSelectedCategory] = useState('productPage'); // İlk səhifə olaraq productPage
+  const [selectedCategory, setSelectedCategory] = useState('productPage'); 
 
   const renderContent = () => {
     switch (selectedCategory) {

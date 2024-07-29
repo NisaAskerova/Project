@@ -1704,3 +1704,246 @@ justify-content: space-between;
 /* **************************************************************** */
 /* **************************************************************** */
 /* *************************TABLET********************************* */
+@media (max-width: 960px) {
+
+  #hed,
+  nav {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  #navLeft>.navUl {
+    display: none;
+  }
+
+  #navBar {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 90px;
+    left: 0;
+    left: -50%;
+    width: 50%;
+    padding: 50px 30px;
+    background-color: #FEE747;
+    transition: left 0.3s;
+    z-index: 999;
+    position: fixed;
+
+  }
+
+  #navBar>ul>li a {
+    line-height: 20px;
+    display: block;
+    padding: 15px;
+    display: block;
+    border-bottom: 1px solid #B4B2AD;
+    color: #15140F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  #navBar>ul {
+    margin-top: 50px;
+  }
+
+  #burgerDiv {
+    display: block;
+  }
+
+  #navBar.open {
+    left: 0;
+  }
+
+  #closeDiv {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* ***********HOME*************** */
+  .padding {
+    padding: 0 50px;
+  }
+
+  #homeHero {
+    width: 100%;
+    background-position: center;
+    display: block;
+  }
+
+  #heroLeft {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 100px;
+  }
+
+  #heroRight {
+    display: none;
+  }
+
+  /* ********************home-pahe2************* */
+
+  #homepage2 {
+    width: 100%;
+    height: 150vh;
+    padding: 80px 50px ;
+    display: block;
+    /* background-color: #d13939; */
+  }
+
+  #homePage2Left {
+    width: 100%;
+
+  }
+
+  #titleDiv {
+    width: 100%;
+  }
+
+  .homeBox {
+    width: 48%;
+    height: 280px;
+    padding: 30px 40px 30px 30px;
+  }
+
+  #homePage2Right {
+    display: none;
+  }
+
+  /* **************SERVICES************ */
+  #HomeServices {
+    height: 360vh;
+    padding: 50px;
+  }
+
+  .firstDivServices {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 50%;
+  }
+
+  #serviceBoxes {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .serviceBox {
+    width: 50%;
+  }
+
+  .divlinee {
+    width: 100%;
+    background-color: rgba(21, 20, 15, 0.20);
+    height: 1px;
+    margin-top: 40px;
+  }
+
+  /* .divLinE {
+    width: 1px;
+    height: 100%;
+  } */
+
+  /* **************JOURNEY***************** */
+  #journey {
+    padding: 50px;
+    height: 600px;
+  }
+
+  #journeyLeft>h2,
+  #journeyRight h3 {
+    font-size: 35px;
+    margin: 10px 0;
+
+  }
+
+  /* *************WORK****************** */
+  #work {
+    padding: 50px;
+    display: block;
+  }
+
+  #workLeft {
+    width: 100%;
+  }
+
+  #wirkRight {
+    margin-top: 20px;
+  }
+
+  #wirkRight>img {
+
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* ****************HOME-BLOGS************* */
+  #homeBlogs {
+    padding: 50px;
+    height: 110vh;
+  }
+
+  .blogBox {
+    width: 45%;
+  }
+
+  #blogBoxes {
+    height: 95%;
+  }
+
+  /* ***************CLIENT*********************** */
+ #client {
+    display: none;
+  }
+
+  /* *******************FOOTER********************* */
+  footer {
+    padding: 50px 50px 0;
+    height: 382px;
+    margin-bottom: 0;
+  }
+
+  #foot {
+    height: 50vh;
+  }
+
+  #contactUs {
+    padding: 0 50px;
+    margin-top: 0;
+  }
+
+  #leftContact {
+    width: 100%;
+    gap: 0;
+  }
+
+  #leftContact>h2 {
+    font-size: 32px;
+  }
+
+  #leftContact>span,
+  #leftContact>p {
+    font-size: 13px;
+  }
+
+  #contactUs>div {
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  #rightContact>div>input {
+    width: 280px;
+  }
+
+  #rightContact>div>button {
+    width: 100px;
+  }
+}
+

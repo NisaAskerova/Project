@@ -22,13 +22,24 @@ export default function App() {
   const [home, setHome] = useState([]);
   const [carbon, setCarbon] = useState([]);
   const [cart, setCart] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedBrand, setSelectedBrand] = useState("");
+  const [priceRange, setPriceRange] = useState([0, 2000]);
+  const [selectedTags, setSelectedTags] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  
   const data = {
     products, setProducts,
     cart, setCart,
     carbon, setCarbon,
     detector, setDetector,
     home, setHome,
-    smoke, setSmoke
+    smoke, setSmoke,
+    selectedCategory, setSelectedCategory,
+    selectedBrand, setSelectedBrand,
+    priceRange, setPriceRange,
+    selectedTags, setSelectedTags,
+    filteredProducts, setFilteredProducts
   };
 
   return (

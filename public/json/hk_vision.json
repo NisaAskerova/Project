@@ -1,0 +1,508 @@
+{
+    "products": [
+      {
+      "id": 1,
+      "brand": "HIK Vision",
+      "name": "Full HD WiFi Camera",
+      "price": "$100.00",
+      "image": "../PngItem_4760952.png",
+      "stock": true,
+      "images": [
+        "../PngItem_4760952.png",
+        "../PngItem_4760952.png",
+        "../PngItem_4760952.png",
+        "../PngItem_4760952.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Full HD WiFi Camera provides high-definition video with seamless wireless connectivity. It is designed to offer clear and detailed surveillance footage, making it ideal for home or office security.",
+      "SKU": "HIKV-FHDW-001",
+      "categories": ["Camera", "Security", "WiFi"],
+      "tags": ["full HD", "WiFi", "camera", "security"],
+      "review": {
+        "rating": 4.0,
+        "comment": "Great WiFi range and picture quality, but setup was a bit complicated."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Jane Smith",
+          "rating": 4,
+          "comment": "Great WiFi range and picture quality, but setup was a bit complicated.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "John Doe",
+          "rating": 4.3,
+          "comment": "Good video quality, but the WiFi connection can be inconsistent.",
+          "date": "August 18, 2023"
+        }
+      ]
+    },
+    {
+        "id": 2,
+        "brand": "HK Vision",
+        "name": "Wireless Security Camera",
+        "price": "$75.00",
+        "image": "../PngItem_5335637.png",
+        "stock": true,
+        "images": [
+          "../PngItem_5335637.png",
+          "../PngItem_5335637.png",
+          "../PngItem_5335637.png",
+          "../PngItem_5335637.png"
+        ],
+        "star": "../yellowStar.svg",
+        "halfStar": "../halfStar.svg",
+        "emptyStar": "../emptyStar.svg",
+        "description": "The Wireless Security Camera from HK Vision provides dependable performance with its wireless connectivity and high-definition recording. This camera is designed to offer flexible placement options and easy installation, making it a convenient choice for both residential and commercial security needs. It delivers clear video quality and features reliable wireless transmission to ensure seamless monitoring. Although the camera is praised for its value and performance, occasional connectivity issues have been noted. Overall, it's a solid choice for those seeking a budget-friendly option with essential security features.",
+        "SKU": "HKV-WSC-009",
+        "categories": [
+          "Camera",
+          "Security",
+          "Wireless"
+        ],
+        "tags": [
+          "wireless security",
+          "camera",
+          "security"
+        ],
+        "review": {
+          "rating": 4.1,
+          "comment": "Good value for the price, but sometimes the connection drops."
+        },
+        "sosial": [
+          {
+            "facebook": "../face.svg",
+            "instagram": "../instagram.svg",
+            "twitter": "../twitter.svg"
+          }
+        ],
+        "customerReviews": [
+          {
+            "name": "Jane Doe",
+            "rating": 4.7,
+            "comment": "Nice coverage and easy setup, would prefer better night vision.",
+            "date": "August 18, 2023"
+          },
+          {
+            "name": "Chris Davis",
+            "rating": 4.3,
+            "comment": "Decent camera with a good price, occasional connection issues."
+          },
+          {
+            "name": "Chris Johnson",
+            "rating": 4.2,
+            "comment": "Affordable and works well, but connection stability could improve."
+          }
+        ]
+      },
+    {
+      "id": 3,
+      "brand": "HIK Vision",
+      "name": "Indoor PTZ Camera",
+      "price": "$120.00",
+      "image": "../de4axxxiw_0.png",
+      "stock": true,
+      "images": [
+        "../de4axxxiw_0.png",
+        "../de4axxxiw_0.png",
+        "../de4axxxiw_0.png",
+        "../de4axxxiw_0.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Indoor PTZ Camera features pan, tilt, and zoom capabilities for comprehensive indoor surveillance. It includes two-way audio and motion detection for added security.",
+      "SKU": "HIKV-PTZ-001",
+      "categories": ["Camera", "Security", "PTZ"],
+      "tags": ["PTZ", "camera", "indoor", "security"],
+      "review": {
+        "rating": 4.2,
+        "comment": "Great features and flexibility, but the setup is a bit complex."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Robert Green",
+          "rating": 4.2,
+          "comment": "Great features and flexibility, but the setup is a bit complex.",
+          "date": "June 30, 2023"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "brand": "HIK Vision",
+      "name": "Outdoor Bullet Camera",
+      "price": "$110.00",
+      "image": "../31oxc6fTd0L._AC_UF894,1000_QL80_.jpg",
+      "stock": true,
+      "images": [
+        "../31oxc6fTd0L._AC_UF894,1000_QL80_.jpg",
+        "../31oxc6fTd0L._AC_UF894,1000_QL80_.jpg",
+        "../31oxc6fTd0L._AC_UF894,1000_QL80_.jpg",
+        "../31oxc6fTd0L._AC_UF894,1000_QL80_.jpg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Outdoor Bullet Camera is weather-resistant and provides high-resolution video. It includes infrared night vision and motion detection, ideal for outdoor security.",
+      "SKU": "HIKV-BUL-001",
+      "categories": ["Camera", "Security", "Outdoor"],
+      "tags": ["bullet", "camera", "outdoor", "security"],
+      "review": {
+        "rating": 4.3,
+        "comment": "Reliable outdoor camera with good night vision."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Emily White",
+          "rating": 4.3,
+          "comment": "Reliable outdoor camera with good night vision.",
+          "date": "May 15, 2023"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "brand": "HIK Vision",
+      "name": "Smart Doorbell Camera",
+      "price": "$130.00",
+      "image": "../images (11).jpeg",
+      "stock": true,
+      "images": [
+        "../images (11).jpeg",
+        "../images (11).jpeg",
+        "../images (11).jpeg",
+        "../images (11).jpeg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Smart Doorbell Camera allows you to see and communicate with visitors from your smartphone. It features high-definition video and two-way audio for added convenience.",
+      "SKU": "HIKV-DB-001",
+      "categories": ["Camera", "Security", "Doorbell"],
+      "tags": ["doorbell", "camera", "smart", "security"],
+      "review": {
+        "rating": 4.4,
+        "comment": "Convenient and high-quality, but the app needs improvement."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Lucas Gray",
+          "rating": 4.4,
+          "comment": "Convenient and high-quality, but the app needs improvement.",
+          "date": "April 10, 2023"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "brand": "HIK Vision",
+      "name": "Wireless NVR System",
+      "price": "$200.00",
+      "image": "../61i8RUdZNFL.jpg",
+      "stock": true,
+      "images": [
+        "../61i8RUdZNFL.jpg",
+        "../61i8RUdZNFL.jpg",
+        "../61i8RUdZNFL.jpg",
+        "../61i8RUdZNFL.jpg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Wireless NVR System provides a complete wireless surveillance solution. It includes multiple camera support and easy setup, with high-definition recording and remote access.",
+      "SKU": "HIKV-NVR-001",
+      "categories": ["NVR", "Security", "Wireless"],
+      "tags": ["NVR", "wireless", "security", "camera"],
+      "review": {
+        "rating": 4.6,
+        "comment": "Excellent wireless system with easy setup and great support."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Sophia Lee",
+          "rating": 4.6,
+          "comment": "Excellent wireless system with easy setup and great support.",
+          "date": "March 5, 2023"
+        }
+      ]
+    },
+    {
+        "id": 7,
+        "brand": "HK Vision",
+        "name": "Ultra HDR Camera",
+        "price": "$120.00",
+        "image": "../PngItem_5335869.png",
+        "stock": true,
+        "images": [
+          "../PngItem_5335869.png",
+          "../PngItem_5335869.png",
+          "../PngItem_5335869.png",
+          "../PngItem_5335869.png"
+        ],
+        "star": "../yellowStar.svg",
+        "halfStar": "../halfStar.svg",
+        "emptyStar": "../emptyStar.svg",
+        "description": "The Ultra HDR Camera delivers stunning high dynamic range video for detailed surveillance. This camera is designed to capture the finest details in both bright and dark areas, providing exceptional clarity and depth. Ideal for both indoor and outdoor use, it ensures your property is monitored with the highest quality video. Features include motion detection, real-time alerts, and seamless integration with smart home systems. Its robust build and reliable performance make it a top choice for any security setup.",
+        "SKU": "HKV-UHDR-004",
+        "categories": [
+          "Camera",
+          "Security",
+          "HDR"
+        ],
+        "tags": [
+          "ultra HDR",
+          "camera",
+          "security"
+        ],
+        "review": {
+          "rating": 4.8,
+          "comment": "Incredible video quality and very reliable performance."
+        },
+        "sosial": [
+          {
+            "facebook": "../face.svg",
+            "instagram": "../instagram.svg",
+            "twitter": "../twitter.svg"
+          }
+        ],
+        "customerReviews": [
+          {
+            "name": "Anna Wilson",
+            "rating": 5,
+            "comment": "Incredible video quality and very reliable performance.",
+            "date": "August 18, 2023"
+          },
+          {
+            "name": "John Doe",
+            "rating": 4.7,
+            "comment": "Excellent HDR performance, but a bit pricey.",
+            "date": "August 18, 2023"
+          },
+          {
+            "name": "Alexa Johnson",
+            "rating": 4.9,
+            "comment": "Outstanding clarity and detail, worth every penny.",
+            "date": "August 18, 2023"
+          }
+        ]
+      },
+    {
+      "id": 8,
+      "brand": "HIK Vision",
+      "name": "Smart Home Camera",
+      "price": "$140.00",
+      "image": "../images (12).jpeg",
+      "stock": true,
+      "images": [
+        "../images (12).jpeg",
+        "../images (12).jpeg",
+        "../images (12).jpeg",
+        "../images (12).jpeg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Smart Home Camera integrates seamlessly with smart home systems, providing high-definition video and remote control. Ideal for modern home security setups.",
+      "SKU": "HIKV-HOME-001",
+      "categories": ["Camera", "Security", "Smart Home"],
+      "tags": ["smart", "home", "camera", "security"],
+      "review": {
+        "rating": 4.7,
+        "comment": "Perfect for smart home integration and high-quality video."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Oliver Adams",
+          "rating": 4.7,
+          "comment": "Perfect for smart home integration and high-quality video.",
+          "date": "January 30, 2023"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "brand": "HIK Vision",
+      "name": "360° Panoramic Camera",
+      "price": "$180.00",
+      "image": "../images (13).jpeg",
+      "stock": true,
+      "images": [
+        "../images (13).jpeg",
+        "../images (13).jpeg",
+        "../images (13).jpeg",
+        "../images (13).jpeg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The 360° Panoramic Camera offers full panoramic coverage with high-definition video. Ideal for capturing wide areas and providing comprehensive surveillance.",
+      "SKU": "HIKV-360-001",
+      "categories": ["Camera", "Security", "Panoramic"],
+      "tags": ["360°", "camera", "panoramic", "security"],
+      "review": {
+        "rating": 4.8,
+        "comment": "Outstanding panoramic view and video quality."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Mia Davis",
+          "rating": 4.8,
+          "comment": "Outstanding panoramic view and video quality.",
+          "date": "December 12, 2022"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "brand": "HIK Vision",
+      "name": "Baby Monitor Camera",
+      "price": "$110.00",
+      "image": "../61REiQ1uZlL.jpg",
+      "stock": true,
+      "images": [
+        "../61REiQ1uZlL.jpg",
+        "../61REiQ1uZlL.jpg",
+        "../61REiQ1uZlL.jpg",
+        "../61REiQ1uZlL.jpg"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Baby Monitor Camera is designed for monitoring infants with clear video and two-way audio. It includes temperature monitoring and lullabies for added convenience.",
+      "SKU": "HIKV-BABY-001",
+      "categories": ["Camera", "Security", "Baby"],
+      "tags": ["baby", "monitor", "camera", "security"],
+      "review": {
+        "rating": 4.3,
+        "comment": "Great for monitoring babies with good video and audio features."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Charlotte Martinez",
+          "rating": 4.3,
+          "comment": "Great for monitoring babies with good video and audio features.",
+          "date": "November 25, 2022"
+        }
+      ]
+    },
+    {
+        "id": 11,
+        "brand": "HK Vision",
+        "name": "High Vision HD Camera",
+        "price": "$130.00",
+        "image": "../PngItem_5335451.png",
+        "stock": true,
+        "images": [
+          "../PngItem_5335451.png",
+          "../PngItem_5335451.png",
+          "../PngItem_5335451.png",
+          "../PngItem_5335451.png"
+        ],
+        "star": "../yellowStar.svg",
+        "halfStar": "../halfStar.svg",
+        "emptyStar": "../emptyStar.svg",
+        "description": "The High Vision HD Camera from HK Vision provides exceptional video clarity and detail with its high-definition recording capabilities. Designed for superior performance, this camera features advanced technologies to ensure reliable and high-quality video surveillance. It offers easy installation and user-friendly controls, making it suitable for both residential and commercial security applications. The camera's robust design and dependable functionality make it a top choice for those seeking a high-performing security solution. However, users have noted that while the video quality is excellent, the accompanying app could benefit from improvements.",
+        "SKU": "HKV-HVHD-011",
+        "categories": [
+          "Camera",
+          "Security",
+          "HD"
+        ],
+        "tags": [
+          "high vision",
+          "HD camera",
+          "security"
+        ],
+        "review": {
+          "rating": 4.7,
+          "comment": "Excellent video quality and very reliable for home security."
+        },
+        "sosial": [
+          {
+            "facebook": "../face.svg",
+            "instagram": "../instagram.svg",
+            "twitter": "../twitter.svg"
+          }
+        ],
+        "customerReviews": [
+          {
+            "name": "Liam Smith",
+            "rating": 4.7,
+            "comment": "Excellent video quality and very reliable for home security.",
+            "date": "September 10, 2023"
+          },
+          {
+            "name": "Michael Brown",
+            "rating": 4,
+            "comment": "Easy to use and reliable, but the app could be better.",
+            "date": "August 18, 2023"
+          },
+          {
+            "name": "Emily Davis",
+            "rating": 5,
+            "comment": "Excellent product! Very secure and easy to install.",
+            "date": "September 10, 2023"
+          }
+        ]
+      }
+  ]
+}

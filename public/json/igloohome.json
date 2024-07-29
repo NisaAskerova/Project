@@ -1,67 +1,76 @@
-[
-    {
-      "id": 1,
-      "brand": "Igloohome",
-      "name": "Igloohome Smart Lock",
-      "price": "$149.00",
-      "image": "../image1.png",
-      "stock": true,
-      "images": [
-        "../image1.png",
-        "../image1.png",
-        "../image1.png"
-      ],
-      "star": "../yellowStar.svg",
-      "halfStar": "../halfStar.svg",
-      "emptyStar": "../emptyStar.svg",
-      "description": "Igloohome Smart Lock offers keyless entry with a PIN code or Bluetooth. It includes features such as remote access control, automatic locking, and an easy installation process.",
-      "SKU": "IGLOO-SMARTLOCK-001",
-      "categories": [
-        "Smart Lock",
-        "Security"
-      ],
-      "tags": [
-        "keyless entry",
-        "remote access",
-        "Bluetooth"
-      ],
-      "review": {
-        "rating": 4.7,
-        "comment": "Convenient and secure with easy installation."
-      },
-      "sosial": [
-        {
-          "facebook": "../face.svg",
-          "instagram": "../instagram.svg",
-          "twitter": "../twitter.svg"
-        }
-      ],
-      "customerReviews": [
-        {
-          "name": "Emma Johnson",
-          "rating": 5,
-          "comment": "Fantastic smart lock with easy setup and reliable performance.",
-          "date": "February 10, 2024"
-        },
-        {
-          "name": "Oliver Brown",
-          "rating": 4,
-          "comment": "Great lock but sometimes the Bluetooth connection is slow.",
-          "date": "February 15, 2024"
-        }
-      ]
+{
+  "products": [
+  {
+    "id": 1,
+    "brand": "Igloohome",
+    "name": "High Vision Camera",
+    "price": "$89.00",
+    "image": "../image 17.png",
+    "stock": false,
+    "images": [
+      "../image 17.png",
+      "../image 17.png",
+      "../image 17.png",
+      "../image 17.png"
+    ],
+    "star": "../yellowStar.svg",
+    "halfStar": "../halfStar.svg",
+    "emptyStar": "../emptyStar.svg",
+    "description": "High Vision Camera is the perfect solution for your security and surveillance needs. This camera offers crystal clear video recording and night vision capabilities. It's easy to use and fits into any environment with its modern design. Suitable for smart home integration, it can be easily controlled via a mobile app. Whether for indoor or outdoor use, this camera captures every moment in high quality.",
+    "SKU": "IGL-HVC-001",
+    "categories": [
+      "Camera",
+      "Security"
+    ],
+    "tags": [
+      "high vision",
+      "camera",
+      "security"
+    ],
+    "review": {
+      "rating": 4.5,
+      "comment": "Excellent video quality and easy to install."
     },
+    "sosial": [
+      {
+        "facebook": "../face.svg",
+        "instagram": "../instagram.svg",
+        "twitter": "../twitter.svg"
+      }
+    ],
+    "customerReviews": [
+      {
+        "name": "Mark Williams",
+        "rating": 5,
+        "comment": "Excellent Camera, I Really Like It 😍",
+        "date": "August 18, 2023"
+      },
+      {
+        "name": "Alexa Johnson",
+        "rating": 5,
+        "comment": "My Family is very much happy with this product",
+        "date": "August 18, 2023"
+      },
+      {
+        "name": "John Doe",
+        "rating": 4,
+        "comment": "Good camera, but could have better battery life.",
+        "date": "September 2, 2023"
+      }
+    ]
+  },
     {
       "id": 2,
       "brand": "Igloohome",
       "name": "Igloohome Keybox",
       "price": "$79.00",
-      "image": "../image2.png",
+      "image": "../Igloohome Keybox.webp",
       "stock": true,
       "images": [
-        "../image2.png",
-        "../image2.png",
-        "../image2.png"
+        "../Igloohome Keybox.webp",
+        "../Igloohome Keybox.webp",
+        "../Igloohome Keybox.webp",
+        "../Igloohome Keybox.webp"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -108,12 +117,13 @@
       "brand": "Igloohome",
       "name": "Igloohome Smart Padlock",
       "price": "$89.00",
-      "image": "../image3.png",
+      "image": "../Front-SP2.jpg",
       "stock": true,
       "images": [
-        "../image3.png",
-        "../image3.png",
-        "../image3.png"
+        "../Front-SP2.jpg",
+        "../Front-SP2.jpg",
+        "../Front-SP2.jpg",
+        "../Front-SP2.jpg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -137,6 +147,7 @@
         {
           "facebook": "../face.svg",
           "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg",
           "twitter": "../twitter.svg"
         }
       ],
@@ -160,12 +171,13 @@
       "brand": "Igloohome",
       "name": "Igloohome Smart Doorbell",
       "price": "$129.00",
-      "image": "../image4.png",
+      "image": "../igloohome-smart-home-bridge-1.png",
       "stock": true,
       "images": [
-        "../image4.png",
-        "../image4.png",
-        "../image4.png"
+        "../igloohome-smart-home-bridge-1.png",
+        "../igloohome-smart-home-bridge-1.png",
+        "../igloohome-smart-home-bridge-1.png",
+        "../igloohome-smart-home-bridge-1.png"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -210,66 +222,15 @@
     {
       "id": 5,
       "brand": "Igloohome",
-      "name": "Igloohome Smart Safe",
-      "price": "$199.00",
-      "image": "../image5.png",
-      "stock": true,
-      "images": [
-        "../image5.png",
-        "../image5.png",
-        "../image5.png"
-      ],
-      "star": "../yellowStar.svg",
-      "halfStar": "../halfStar.svg",
-      "emptyStar": "../emptyStar.svg",
-      "description": "The Igloohome Smart Safe provides secure storage with a keyless locking system. It features remote access control, a built-in alarm, and a robust design for maximum security.",
-      "SKU": "IGLOO-SAFE-005",
-      "categories": [
-        "Safe",
-        "Security"
-      ],
-      "tags": [
-        "keyless locking",
-        "remote access",
-        "built-in alarm"
-      ],
-      "review": {
-        "rating": 4.9,
-        "comment": "Highly secure with excellent features and remote access."
-      },
-      "sosial": [
-        {
-          "facebook": "../face.svg",
-          "instagram": "../instagram.svg",
-          "twitter": "../twitter.svg"
-        }
-      ],
-      "customerReviews": [
-        {
-          "name": "Mia Harris",
-          "rating": 5,
-          "comment": "Excellent safe with top-notch security and remote features.",
-          "date": "June 1, 2024"
-        },
-        {
-          "name": "Lucas Taylor",
-          "rating": 4,
-          "comment": "Great safe but a bit bulky.",
-          "date": "June 5, 2024"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "brand": "Igloohome",
       "name": "Igloohome Smart Sensor",
       "price": "$89.00",
-      "image": "../image6.png",
+      "image": "../Igloohome Smart Senso.avif",
       "stock": true,
       "images": [
-        "../image6.png",
-        "../image6.png",
-        "../image6.png"
+        "../Igloohome Smart Senso.avif",
+        "../Igloohome Smart Senso.avif",
+        "../Igloohome Smart Senso.avif",
+        "../Igloohome Smart Senso.avif"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -312,4 +273,4 @@
       ]
     }
   ]
-  
+}

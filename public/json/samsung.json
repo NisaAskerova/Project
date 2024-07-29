@@ -1,15 +1,17 @@
-[
+{
+  "products": [
     {
       "id": 1,
       "brand": "Samsung",
       "name": "Samsung SmartCam HD Pro",
       "price": "$150.00",
-      "image": "../smartcam_hd_pro.png",
+      "image": "../images (6).jpeg",
       "stock": true,
       "images": [
-        "../smartcam_hd_pro.png",
-        "../smartcam_hd_pro_1.png",
-        "../smartcam_hd_pro_2.png"
+        "../images (6).jpeg",
+        "../images (6).jpeg",
+        "../images (6).jpeg",
+        "../images (6).jpeg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -56,12 +58,13 @@
       "brand": "Samsung",
       "name": "Samsung SmartCam HD",
       "price": "$120.00",
-      "image": "../smartcam_hd.png",
+      "image": "../Pdpdefault-snh-p6410bn-600x600-C1-052016.webp",
       "stock": true,
       "images": [
-        "../smartcam_hd.png",
-        "../smartcam_hd_1.png",
-        "../smartcam_hd_2.png"
+        "../Pdpdefault-snh-p6410bn-600x600-C1-052016.webp",
+        "../Pdpdefault-snh-p6410bn-600x600-C1-052016.webp",
+        "../Pdpdefault-snh-p6410bn-600x600-C1-052016.webp",
+        "../Pdpdefault-snh-p6410bn-600x600-C1-052016.webp"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -108,12 +111,13 @@
       "brand": "Samsung",
       "name": "Samsung Wisenet TID-4220R",
       "price": "$250.00",
-      "image": "../wisenet_tid.png",
+      "image": "../Samsung Wisenet TID-4220R.jpg",
       "stock": true,
       "images": [
-        "../wisenet_tid.png",
-        "../wisenet_tid_1.png",
-        "../wisenet_tid_2.png"
+        "../Samsung Wisenet TID-4220R.jpg",
+        "../Samsung Wisenet TID-4220R.jpg",
+        "../Samsung Wisenet TID-4220R.jpg",
+        "../Samsung Wisenet TID-4220R.jpg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -160,12 +164,13 @@
       "brand": "Samsung",
       "name": "Samsung SmartThings Hub",
       "price": "$80.00",
-      "image": "../smartthings_hub.png",
+      "image": "../indir.jpeg",
       "stock": true,
       "images": [
-        "../smartthings_hub.png",
-        "../smartthings_hub_1.png",
-        "../smartthings_hub_2.png"
+        "../indir.jpeg",
+        "../indir.jpeg",
+        "../indir.jpeg",
+        "../indir.jpeg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -213,12 +218,13 @@
       "brand": "Samsung",
       "name": "Samsung SmartThings Motion Sensor",
       "price": "$30.00",
-      "image": "../smartthings_motion_sensor.png",
+      "image": "../images (7).jpeg",
       "stock": true,
       "images": [
-        "../smartthings_motion_sensor.png",
-        "../smartthings_motion_sensor_1.png",
-        "../smartthings_motion_sensor_2.png"
+        "../images (7).jpeg",
+        "../images (7).jpeg",
+        "../images (7).jpeg",
+        "../images (7).jpeg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -265,12 +271,13 @@
       "brand": "Samsung",
       "name": "Samsung SmartThings Multipurpose Sensor",
       "price": "$25.00",
-      "image": "../smartthings_multipurpose_sensor.png",
+      "image": "../uk-smartthings-sensors-plug-f-mlt-uk-v3-gp-u999sjvlaea-frontwhite-117506290.avif",
       "stock": true,
       "images": [
-        "../smartthings_multipurpose_sensor.png",
-        "../smartthings_multipurpose_sensor_1.png",
-        "../smartthings_multipurpose_sensor_2.png"
+        "../uk-smartthings-sensors-plug-f-mlt-uk-v3-gp-u999sjvlaea-frontwhite-117506290.avif",
+        "../uk-smartthings-sensors-plug-f-mlt-uk-v3-gp-u999sjvlaea-frontwhite-117506290.avif",
+        "../uk-smartthings-sensors-plug-f-mlt-uk-v3-gp-u999sjvlaea-frontwhite-117506290.avif",
+        "../uk-smartthings-sensors-plug-f-mlt-uk-v3-gp-u999sjvlaea-frontwhite-117506290.avif"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -317,12 +324,13 @@
       "brand": "Samsung",
       "name": "Samsung SmartThings Water Leak Sensor",
       "price": "$40.00",
-      "image": "../smartthings_water_leak_sensor.png",
+      "image": "../SmartThings_Water_Leak_Sensor_1_Front_LQ.png",
       "stock": true,
       "images": [
-        "../smartthings_water_leak_sensor.png",
-        "../smartthings_water_leak_sensor_1.png",
-        "../smartthings_water_leak_sensor_2.png"
+        "../SmartThings_Water_Leak_Sensor_1_Front_LQ.png",
+        "../SmartThings_Water_Leak_Sensor_1_Front_LQ.png",
+        "../SmartThings_Water_Leak_Sensor_1_Front_LQ.png",
+        "../SmartThings_Water_Leak_Sensor_1_Front_LQ.png"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -369,12 +377,13 @@
       "brand": "Samsung",
       "name": "Samsung SmartThings Smart Plug",
       "price": "$20.00",
-      "image": "../smartthings_smart_plug.png",
+      "image": "../images (8).jpeg",
       "stock": true,
       "images": [
-        "../smartthings_smart_plug.png",
-        "../smartthings_smart_plug_1.png",
-        "../smartthings_smart_plug_2.png"
+        "../images (8).jpeg",
+        "../images (8).jpeg",
+        "../images (8).jpeg",
+        "../images (8).jpeg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -421,12 +430,13 @@
       "brand": "Samsung",
       "name": "Samsung SmartThings Leak Sensor",
       "price": "$35.00",
-      "image": "../smartthings_leak_sensor.png",
+      "image": "../71ttpykJl0L.jpg",
       "stock": true,
       "images": [
-        "../smartthings_leak_sensor.png",
-        "../smartthings_leak_sensor_1.png",
-        "../smartthings_leak_sensor_2.png"
+        "../71ttpykJl0L.jpg",
+        "../71ttpykJl0L.jpg",
+        "../71ttpykJl0L.jpg",
+        "../71ttpykJl0L.jpg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -473,12 +483,13 @@
       "brand": "Samsung",
       "name": "Samsung SmartThings Indoor Camera",
       "price": "$170.00",
-      "image": "../smartthings_indoor_camera.png",
+      "image": "../images (9).jpeg",
       "stock": true,
       "images": [
-        "../smartthings_indoor_camera.png",
-        "../smartthings_indoor_camera_1.png",
-        "../smartthings_indoor_camera_2.png"
+        "../images (9).jpeg",
+        "../images (9).jpeg",
+        "../images (9).jpeg",
+        "../images (9).jpeg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -521,4 +532,4 @@
       ]
     }
   ]
-  
+}

@@ -1,15 +1,17 @@
-[
+{
+  "products": [
     {
       "id": 1,
       "brand": "D-Link",
       "name": "D-Link DCS-8600LH Outdoor Camera",
       "price": "$139.00",
-      "image": "../image1.png",
+      "image": "../DCS-8600LH-mainimage.jpg",
       "stock": true,
       "images": [
-        "../image1.png",
-        "../image1.png",
-        "../image1.png"
+        "../DCS-8600LH-mainimage.jpg",
+        "../DCS-8600LH-mainimage.jpg",
+        "../DCS-8600LH-mainimage.jpg",
+        "../DCS-8600LH-mainimage.jpg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -56,12 +58,13 @@
       "brand": "D-Link",
       "name": "D-Link DAP-1610 AC750 Wi-Fi Range Extender",
       "price": "$59.00",
-      "image": "../image2.png",
+      "image": "../DAP-1530_A1_SideL_750x.webp",
       "stock": true,
       "images": [
-        "../image2.png",
-        "../image2.png",
-        "../image2.png"
+        "../DAP-1530_A1_SideL_750x.webp",
+        "../DAP-1530_A1_SideL_750x.webp",
+        "../DAP-1530_A1_SideL_750x.webp",
+        "../DAP-1530_A1_SideL_750x.webp"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -108,12 +111,13 @@
       "brand": "D-Link",
       "name": "D-Link DIR-1960 AC1900 Wi-Fi Router",
       "price": "$109.00",
-      "image": "../image3.png",
+      "image": "../DIR_1960_Front.png",
       "stock": true,
       "images": [
-        "../image3.png",
-        "../image3.png",
-        "../image3.png"
+        "../DIR_1960_Front.png",
+        "../DIR_1960_Front.png",
+        "../DIR_1960_Front.png",
+        "../DIR_1960_Front.png"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -160,12 +164,12 @@
       "brand": "D-Link",
       "name": "D-Link DCS-936L HD Wi-Fi Camera",
       "price": "$89.00",
-      "image": "../image4.png",
+      "image": "../images (5).jpeg",
       "stock": true,
       "images": [
-        "../image4.png",
-        "../image4.png",
-        "../image4.png"
+        "../images (5).jpeg",
+        "../images (5).jpeg",
+        "../images (5).jpeg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -212,12 +216,13 @@
       "brand": "D-Link",
       "name": "D-Link DNR-202L Network Video Recorder",
       "price": "$249.00",
-      "image": "../image5.png",
+      "image": "../DNR-202L_A1.jpg",
       "stock": true,
       "images": [
-        "../image5.png",
-        "../image5.png",
-        "../image5.png"
+        "../DNR-202L_A1.jpg",
+        "../DNR-202L_A1.jpg",
+        "../DNR-202L_A1.jpg",
+        "../DNR-202L_A1.jpg"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -264,12 +269,13 @@
       "brand": "D-Link",
       "name": "D-Link DCS-2330L HD Wireless Outdoor Camera",
       "price": "$159.00",
-      "image": "../image6.png",
+      "image": "../DCS2330LA1Image HFront.png",
       "stock": true,
       "images": [
-        "../image6.png",
-        "../image6.png",
-        "../image6.png"
+        "../DCS2330LA1Image HFront.png",
+        "../DCS2330LA1Image HFront.png",
+        "../DCS2330LA1Image HFront.png",
+        "../DCS2330LA1Image HFront.png"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -312,86 +318,37 @@
       ]
     },
     {
-      "id": 7,
-      "brand": "D-Link",
-      "name": "D-Link DAP-1610 AC750 Wi-Fi Range Extender",
-      "price": "$69.00",
-      "image": "../image7.png",
-      "stock": true,
-      "images": [
-        "../image7.png",
-        "../image7.png",
-        "../image7.png"
-      ],
-      "star": "../yellowStar.svg",
-      "halfStar": "../halfStar.svg",
-      "emptyStar": "../emptyStar.svg",
-      "description": "The D-Link DAP-1610 AC750 Wi-Fi Range Extender extends your Wi-Fi coverage with speeds up to 750 Mbps. It offers a compact design and dual-band support.",
-      "SKU": "DLK-DAP-1610-007",
-      "categories": [
-        "Range Extender",
-        "Networking"
-      ],
-      "tags": [
-        "Wi-Fi boost",
-        "dual-band",
-        "compact design"
-      ],
-      "review": {
-        "rating": 4.4,
-        "comment": "Effective range extender with a compact design and good performance."
-      },
-      "sosial": [
-        {
-          "facebook": "../face.svg",
-          "instagram": "../instagram.svg",
-          "twitter": "../twitter.svg"
-        }
-      ],
-      "customerReviews": [
-        {
-          "name": "Ethan Williams",
-          "rating": 5,
-          "comment": "Works great to boost my Wi-Fi signal across the house.",
-          "date": "July 1, 2024"
-        },
-        {
-          "name": "Grace Martinez",
-          "rating": 4,
-          "comment": "Good extender but occasionally loses connection.",
-          "date": "July 5, 2024"
-        }
-      ]
-    },
-    {
       "id": 8,
       "brand": "D-Link",
-      "name": "D-Link DCS-5010L HD Pan & Tilt Camera",
-      "price": "$119.00",
-      "image": "../image8.png",
+      "name": "Smart HDR WiFi Camera",
+      "price": "$100.00",
+      "image": "../PngItem_2839997.png",
       "stock": true,
       "images": [
-        "../image8.png",
-        "../image8.png",
-        "../image8.png"
+        "../PngItem_2839997.png",
+        "../PngItem_2839997.png",
+        "../PngItem_2839997.png",
+        "../PngItem_2839997.png"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
       "emptyStar": "../emptyStar.svg",
-      "description": "The D-Link DCS-5010L HD Pan & Tilt Camera offers 720p HD video with pan and tilt functionality. It includes night vision, motion detection, and two-way audio.",
-      "SKU": "DLK-DCS-5010L-008",
+      "description": "The Smart HDR WiFi Camera by D-Link provides high dynamic range video and seamless WiFi connectivity, offering a blend of advanced features and user-friendly performance. This camera is designed to capture vivid and detailed video with enhanced contrast and color accuracy, making it ideal for both security and everyday monitoring. The integrated WiFi capability ensures easy connectivity and remote access, allowing users to monitor their premises from anywhere. While the camera offers great video quality, some users have noted that the app could be improved for a more intuitive experience. Overall, it’s a reliable choice for those needing high-definition video with HDR support.",
+      "SKU": "DL-SHWC-012",
       "categories": [
         "Camera",
-        "Home Security"
+        "Security",
+        "WiFi",
+        "HDR"
       ],
       "tags": [
-        "HD video",
-        "pan and tilt",
-        "two-way audio"
+        "smart HDR",
+        "WiFi camera",
+        "security"
       ],
       "review": {
-        "rating": 4.6,
-        "comment": "Versatile camera with good video quality and pan/tilt features."
+        "rating": 4.5,
+        "comment": "Great video quality and easy to set up, though the app could be more user-friendly."
       },
       "sosial": [
         {
@@ -402,16 +359,16 @@
       ],
       "customerReviews": [
         {
-          "name": "Mia Wilson",
-          "rating": 5,
-          "comment": "Excellent camera with great pan and tilt capabilities.",
-          "date": "August 1, 2024"
+          "name": "Sophia Davis",
+          "rating": 4.5,
+          "comment": "Great video quality and easy to set up, though the app could be more user-friendly.",
+          "date": "August 18, 2023"
         },
         {
-          "name": "Noah Taylor",
-          "rating": 4,
-          "comment": "Good camera but the app could be more user-friendly.",
-          "date": "August 5, 2024"
+          "name": "Liam Smith",
+          "rating": 4.4,
+          "comment": "Good HDR performance, but the WiFi setup was tricky.",
+          "date": "August 18, 2023"
         }
       ]
     },
@@ -423,6 +380,7 @@
       "image": "../image9.png",
       "stock": true,
       "images": [
+        "../image9.png",
         "../image9.png",
         "../image9.png",
         "../image9.png"
@@ -472,12 +430,13 @@
       "brand": "D-Link",
       "name": "D-Link DAP-1820 AC2000 Wi-Fi Range Extender",
       "price": "$89.00",
-      "image": "../image10.png",
+      "image": "../DAP1820A1Front1.png",
       "stock": true,
       "images": [
-        "../image10.png",
-        "../image10.png",
-        "../image10.png"
+        "../DAP1820A1Front1.png",
+        "../DAP1820A1Front1.png",
+        "../DAP1820A1Front1.png",
+        "../DAP1820A1Front1.png"
       ],
       "star": "../yellowStar.svg",
       "halfStar": "../halfStar.svg",
@@ -518,6 +477,67 @@
           "date": "October 5, 2024"
         }
       ]
+    },
+    {
+      "id": 10,
+      "brand": "D-Link",
+      "name": "Smart Desk Camera",
+      "price": "$50.00",
+      "image": "../PngItem_2560501.png",
+      "stock": true,
+      "images": [
+        "../PngItem_2560501.png",
+        "../PngItem_2560501.png",
+        "../PngItem_2560501.png",
+        "../PngItem_2560501.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Smart Desk Camera by D-Link provides an affordable solution for high-definition video needs, ideal for home and office environments. This camera is designed to deliver clear and crisp video quality, making it suitable for both casual and professional use. With its compact size and easy installation, the Smart Desk Camera fits seamlessly into any workspace. It offers reliable performance for basic surveillance and video conferencing, though it may not meet the needs of users requiring high-definition video for more demanding applications. Overall, it's a cost-effective choice for those seeking a simple and efficient camera solution.",
+      "SKU": "DL-SDC-010",
+      "categories": [
+        "Camera",
+        "Smart Home",
+        "Office"
+      ],
+      "tags": [
+        "smart desk camera",
+        "office",
+        "home",
+        "security"
+      ],
+      "review": {
+        "rating": 4.0,
+        "comment": "Affordable and effective for basic surveillance needs."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Tom Davis",
+          "rating": 4.2,
+          "comment": "Works well, but the battery life is shorter than expected.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Jane Doe",
+          "rating": 4.4,
+          "comment": "Great for wireless needs, setup is a breeze.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Olivia Wilson",
+          "rating": 4.1,
+          "comment": "Works well for simple tasks, but not for high-definition needs.",
+          "date": "August 18, 2023"
+        }
+      ]
     }
   ]
-  
+}

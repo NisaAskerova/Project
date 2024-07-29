@@ -6,6 +6,7 @@
       "name": "High Vision Camera",
       "price": "$89.00",
       "image": "../image 17.png",
+      "category": "Security Sistem",
       "stock": false,
       "images": [
         "../image 17.png",
@@ -65,6 +66,7 @@
       "name": "Full HD WiFi Camera",
       "price": "$100.00",
       "image": "../PngItem_4760952.png",
+      "category": "Security Sistem",
       "stock": true,
       "images": [
         "../PngItem_4760952.png",
@@ -120,6 +122,7 @@
       "name": "Smart Door Lock",
       "price": "$70.00",
       "image": "../PngItem_4124313.png",
+      "category": "Security Sistem",
       "stock": true,
       "images": [
         "../PngItem_4124313.png",
@@ -179,6 +182,7 @@
       "brand": "HK Vision",
       "name": "Ultra HDR Camera",
       "price": "$120.00",
+      "category": "Security Sistem",
       "image": "../PngItem_5335869.png",
       "stock": true,
       "images": [
@@ -239,6 +243,7 @@
       "brand": "Igloohome CHAIR",
       "name": "Wireless Camera",
       "price": "$89.00",
+      "category": "Security Sistem",
       "image": "../PngItem_5989470.png",
       "stock": true,
       "images": [
@@ -299,6 +304,7 @@
       "brand": "Samsung",
       "name": "Vision Pro Camera",
       "price": "$140.00",
+      "category": "Security Sistem",
       "image": "../PngItem_2018403.png",
       "stock": true,
       "images": [
@@ -354,6 +360,7 @@
       "brand": "Igloohome CHAIR",
       "name": "Wide Angle Smart Camera",
       "price": "$90.00",
+      "category": "Security Sistem",
       "image": "../PngItem_3521561.png",
       "stock": true,
       "images": [
@@ -402,6 +409,7 @@
       "brand": "Ezviz",
       "name": "Dome Camera",
       "price": "$89.00",
+      "category": "Security Sistem",
       "image": "../PngItem_5335828.png",
       "stock": true,
       "images": [
@@ -451,240 +459,243 @@
         }
       ]
     },
+    {
+      "id": 9,
+      "brand": "HK Vision",
+      "name": "Wireless Security Camera",
+      "price": "$75.00",
+      "category": "Security Sistem",
+      "image": "../PngItem_5335637.png",
+      "stock": true,
+      "images": [
+        "../PngItem_5335637.png",
+        "../PngItem_5335637.png",
+        "../PngItem_5335637.png",
+        "../PngItem_5335637.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Wireless Security Camera from HK Vision provides dependable performance with its wireless connectivity and high-definition recording. This camera is designed to offer flexible placement options and easy installation, making it a convenient choice for both residential and commercial security needs. It delivers clear video quality and features reliable wireless transmission to ensure seamless monitoring. Although the camera is praised for its value and performance, occasional connectivity issues have been noted. Overall, it's a solid choice for those seeking a budget-friendly option with essential security features.",
+      "SKU": "HKV-WSC-009",
+      "categories": [
+        "Camera",
+        "Security",
+        "Wireless"
+      ],
+      "tags": [
+        "wireless security",
+        "camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.1,
+        "comment": "Good value for the price, but sometimes the connection drops."
+      },
+      "sosial": [
         {
-          "id": 9,
-          "brand": "HK Vision",
-          "name": "Wireless Security Camera",
-          "price": "$75.00",
-          "image": "../PngItem_5335637.png",
-          "stock": true,
-          "images": [
-            "../PngItem_5335637.png",
-            "../PngItem_5335637.png",
-            "../PngItem_5335637.png",
-            "../PngItem_5335637.png"
-          ],
-          "star": "../yellowStar.svg",
-          "halfStar": "../halfStar.svg",
-          "emptyStar": "../emptyStar.svg",
-          "description": "The Wireless Security Camera from HK Vision provides dependable performance with its wireless connectivity and high-definition recording. This camera is designed to offer flexible placement options and easy installation, making it a convenient choice for both residential and commercial security needs. It delivers clear video quality and features reliable wireless transmission to ensure seamless monitoring. Although the camera is praised for its value and performance, occasional connectivity issues have been noted. Overall, it's a solid choice for those seeking a budget-friendly option with essential security features.",
-          "SKU": "HKV-WSC-009",
-          "categories": [
-            "Camera",
-            "Security",
-            "Wireless"
-          ],
-          "tags": [
-            "wireless security",
-            "camera",
-            "security"
-          ],
-          "review": {
-            "rating": 4.1,
-            "comment": "Good value for the price, but sometimes the connection drops."
-          },
-          "sosial": [
-            {
-              "facebook": "../face.svg",
-              "instagram": "../instagram.svg",
-              "twitter": "../twitter.svg"
-            }
-          ],
-          "customerReviews": [
-            {
-              "name": "Jane Doe",
-              "rating": 4.7,
-              "comment": "Nice coverage and easy setup, would prefer better night vision.",
-              "date": "August 18, 2023"
-            },
-            {
-              "name": "Chris Davis",
-              "rating": 4.3,
-              "comment": "Decent camera with a good price, occasional connection issues."
-            },
-            {
-              "name": "Chris Johnson",
-              "rating": 4.2,
-              "comment": "Affordable and works well, but connection stability could improve."
-            }
-          ]
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Jane Doe",
+          "rating": 4.7,
+          "comment": "Nice coverage and easy setup, would prefer better night vision.",
+          "date": "August 18, 2023"
         },
         {
-          "id": 10,
-          "brand": "D-Link",
-          "name": "Smart Desk Camera",
-          "price": "$50.00",
-          "image": "../PngItem_2560501.png",
-          "stock": true,
-          "images": [
-            "../PngItem_2560501.png",
-            "../PngItem_2560501.png",
-            "../PngItem_2560501.png",
-            "../PngItem_2560501.png"
-          ],
-          "star": "../yellowStar.svg",
-          "halfStar": "../halfStar.svg",
-          "emptyStar": "../emptyStar.svg",
-          "description": "The Smart Desk Camera by D-Link provides an affordable solution for high-definition video needs, ideal for home and office environments. This camera is designed to deliver clear and crisp video quality, making it suitable for both casual and professional use. With its compact size and easy installation, the Smart Desk Camera fits seamlessly into any workspace. It offers reliable performance for basic surveillance and video conferencing, though it may not meet the needs of users requiring high-definition video for more demanding applications. Overall, it's a cost-effective choice for those seeking a simple and efficient camera solution.",
-          "SKU": "DL-SDC-010",
-          "categories": [
-            "Camera",
-            "Smart Home",
-            "Office"
-          ],
-          "tags": [
-            "smart desk camera",
-            "office",
-            "home",
-            "security"
-          ],
-          "review": {
-            "rating": 4.0,
-            "comment": "Affordable and effective for basic surveillance needs."
-          },
-          "sosial": [
-            {
-              "facebook": "../face.svg",
-              "instagram": "../instagram.svg",
-              "twitter": "../twitter.svg"
-            }
-          ],
-          "customerReviews": [
-            {
-              "name": "Tom Davis",
-              "rating": 4.2,
-              "comment": "Works well, but the battery life is shorter than expected.",
-              "date": "August 18, 2023"
-            },
-            {
-              "name": "Jane Doe",
-              "rating": 4.4,
-              "comment": "Great for wireless needs, setup is a breeze.",
-              "date": "August 18, 2023"
-            },
-            {
-              "name": "Olivia Wilson",
-              "rating": 4.1,
-              "comment": "Works well for simple tasks, but not for high-definition needs.",
-              "date": "August 18, 2023"
-            }
-          ]
+          "name": "Chris Davis",
+          "rating": 4.3,
+          "comment": "Decent camera with a good price, occasional connection issues."
         },
         {
-          "id": 11,
-          "brand": "HK Vision",
-          "name": "High Vision HD Camera",
-          "price": "$130.00",
-          "image": "../PngItem_5335451.png",
-          "stock": true,
-          "images": [
-            "../PngItem_5335451.png",
-            "../PngItem_5335451.png",
-            "../PngItem_5335451.png",
-            "../PngItem_5335451.png"
-          ],
-          "star": "../yellowStar.svg",
-          "halfStar": "../halfStar.svg",
-          "emptyStar": "../emptyStar.svg",
-          "description": "The High Vision HD Camera from HK Vision provides exceptional video clarity and detail with its high-definition recording capabilities. Designed for superior performance, this camera features advanced technologies to ensure reliable and high-quality video surveillance. It offers easy installation and user-friendly controls, making it suitable for both residential and commercial security applications. The camera's robust design and dependable functionality make it a top choice for those seeking a high-performing security solution. However, users have noted that while the video quality is excellent, the accompanying app could benefit from improvements.",
-          "SKU": "HKV-HVHD-011",
-          "categories": [
-            "Camera",
-            "Security",
-            "HD"
-          ],
-          "tags": [
-            "high vision",
-            "HD camera",
-            "security"
-          ],
-          "review": {
-            "rating": 4.7,
-            "comment": "Excellent video quality and very reliable for home security."
-          },
-          "sosial": [
-            {
-              "facebook": "../face.svg",
-              "instagram": "../instagram.svg",
-              "twitter": "../twitter.svg"
-            }
-          ],
-          "customerReviews": [
-            {
-              "name": "Liam Smith",
-              "rating": 4.7,
-              "comment": "Excellent video quality and very reliable for home security.",
-              "date": "September 10, 2023"
-            },
-            {
-              "name": "Michael Brown",
-              "rating": 4,
-              "comment": "Easy to use and reliable, but the app could be better.",
-              "date": "August 18, 2023"
-            },
-            {
-              "name": "Emily Davis",
-              "rating": 5,
-              "comment": "Excellent product! Very secure and easy to install.",
-              "date": "September 10, 2023"
-            }
-          ]
+          "name": "Chris Johnson",
+          "rating": 4.2,
+          "comment": "Affordable and works well, but connection stability could improve."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "brand": "D-Link",
+      "name": "Smart Desk Camera",
+      "price": "$50.00",
+      "category": "Security Sistem",
+      "image": "../PngItem_2560501.png",
+      "stock": true,
+      "images": [
+        "../PngItem_2560501.png",
+        "../PngItem_2560501.png",
+        "../PngItem_2560501.png",
+        "../PngItem_2560501.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Smart Desk Camera by D-Link provides an affordable solution for high-definition video needs, ideal for home and office environments. This camera is designed to deliver clear and crisp video quality, making it suitable for both casual and professional use. With its compact size and easy installation, the Smart Desk Camera fits seamlessly into any workspace. It offers reliable performance for basic surveillance and video conferencing, though it may not meet the needs of users requiring high-definition video for more demanding applications. Overall, it's a cost-effective choice for those seeking a simple and efficient camera solution.",
+      "SKU": "DL-SDC-010",
+      "categories": [
+        "Camera",
+        "Smart Home",
+        "Office"
+      ],
+      "tags": [
+        "smart desk camera",
+        "office",
+        "home",
+        "security"
+      ],
+      "review": {
+        "rating": 4.0,
+        "comment": "Affordable and effective for basic surveillance needs."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Tom Davis",
+          "rating": 4.2,
+          "comment": "Works well, but the battery life is shorter than expected.",
+          "date": "August 18, 2023"
         },
         {
-          "id": 12,
-          "brand": "D-Link",
-          "name": "Smart HDR WiFi Camera",
-          "price": "$100.00",
-          "image": "../PngItem_2839997.png",
-          "stock": true,
-          "images": [
-            "../PngItem_2839997.png",
-            "../PngItem_2839997.png",
-            "../PngItem_2839997.png",
-            "../PngItem_2839997.png"
-          ],
-          "star": "../yellowStar.svg",
-          "halfStar": "../halfStar.svg",
-          "emptyStar": "../emptyStar.svg",
-          "description": "The Smart HDR WiFi Camera by D-Link provides high dynamic range video and seamless WiFi connectivity, offering a blend of advanced features and user-friendly performance. This camera is designed to capture vivid and detailed video with enhanced contrast and color accuracy, making it ideal for both security and everyday monitoring. The integrated WiFi capability ensures easy connectivity and remote access, allowing users to monitor their premises from anywhere. While the camera offers great video quality, some users have noted that the app could be improved for a more intuitive experience. Overall, it’s a reliable choice for those needing high-definition video with HDR support.",
-          "SKU": "DL-SHWC-012",
-          "categories": [
-            "Camera",
-            "Security",
-            "WiFi",
-            "HDR"
-          ],
-          "tags": [
-            "smart HDR",
-            "WiFi camera",
-            "security"
-          ],
-          "review": {
-            "rating": 4.5,
-            "comment": "Great video quality and easy to set up, though the app could be more user-friendly."
-          },
-          "sosial": [
-            {
-              "facebook": "../face.svg",
-              "instagram": "../instagram.svg",
-              "twitter": "../twitter.svg"
-            }
-          ],
-          "customerReviews": [
-            {
-              "name": "Sophia Davis",
-              "rating": 4.5,
-              "comment": "Great video quality and easy to set up, though the app could be more user-friendly.",
-              "date": "August 18, 2023"
-            },
-            {
-              "name": "Liam Smith",
-              "rating": 4.4,
-              "comment": "Good HDR performance, but the WiFi setup was tricky.",
-              "date": "August 18, 2023"
-            }
-          ]
+          "name": "Jane Doe",
+          "rating": 4.4,
+          "comment": "Great for wireless needs, setup is a breeze.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Olivia Wilson",
+          "rating": 4.1,
+          "comment": "Works well for simple tasks, but not for high-definition needs.",
+          "date": "August 18, 2023"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "brand": "HK Vision",
+      "name": "High Vision HD Camera",
+      "price": "$130.00",
+      "category": "Security Sistem",
+      "image": "../PngItem_5335451.png",
+      "stock": true,
+      "images": [
+        "../PngItem_5335451.png",
+        "../PngItem_5335451.png",
+        "../PngItem_5335451.png",
+        "../PngItem_5335451.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The High Vision HD Camera from HK Vision provides exceptional video clarity and detail with its high-definition recording capabilities. Designed for superior performance, this camera features advanced technologies to ensure reliable and high-quality video surveillance. It offers easy installation and user-friendly controls, making it suitable for both residential and commercial security applications. The camera's robust design and dependable functionality make it a top choice for those seeking a high-performing security solution. However, users have noted that while the video quality is excellent, the accompanying app could benefit from improvements.",
+      "SKU": "HKV-HVHD-011",
+      "categories": [
+        "Camera",
+        "Security",
+        "HD"
+      ],
+      "tags": [
+        "high vision",
+        "HD camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.7,
+        "comment": "Excellent video quality and very reliable for home security."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Liam Smith",
+          "rating": 4.7,
+          "comment": "Excellent video quality and very reliable for home security.",
+          "date": "September 10, 2023"
+        },
+        {
+          "name": "Michael Brown",
+          "rating": 4,
+          "comment": "Easy to use and reliable, but the app could be better.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Emily Davis",
+          "rating": 5,
+          "comment": "Excellent product! Very secure and easy to install.",
+          "date": "September 10, 2023"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "brand": "D-Link",
+      "name": "Smart HDR WiFi Camera",
+      "price": "$100.00",
+      "category":"Security Sistem",
+      "image": "../PngItem_2839997.png",
+      "stock": true,
+      "images": [
+        "../PngItem_2839997.png",
+        "../PngItem_2839997.png",
+        "../PngItem_2839997.png",
+        "../PngItem_2839997.png"
+      ],
+      "star": "../yellowStar.svg",
+      "halfStar": "../halfStar.svg",
+      "emptyStar": "../emptyStar.svg",
+      "description": "The Smart HDR WiFi Camera by D-Link provides high dynamic range video and seamless WiFi connectivity, offering a blend of advanced features and user-friendly performance. This camera is designed to capture vivid and detailed video with enhanced contrast and color accuracy, making it ideal for both security and everyday monitoring. The integrated WiFi capability ensures easy connectivity and remote access, allowing users to monitor their premises from anywhere. While the camera offers great video quality, some users have noted that the app could be improved for a more intuitive experience. Overall, it’s a reliable choice for those needing high-definition video with HDR support.",
+      "SKU": "DL-SHWC-012",
+      "categories": [
+        "Camera",
+        "Security",
+        "WiFi",
+        "HDR"
+      ],
+      "tags": [
+        "smart HDR",
+        "WiFi camera",
+        "security"
+      ],
+      "review": {
+        "rating": 4.5,
+        "comment": "Great video quality and easy to set up, though the app could be more user-friendly."
+      },
+      "sosial": [
+        {
+          "facebook": "../face.svg",
+          "instagram": "../instagram.svg",
+          "twitter": "../twitter.svg"
+        }
+      ],
+      "customerReviews": [
+        {
+          "name": "Sophia Davis",
+          "rating": 4.5,
+          "comment": "Great video quality and easy to set up, though the app could be more user-friendly.",
+          "date": "August 18, 2023"
+        },
+        {
+          "name": "Liam Smith",
+          "rating": 4.4,
+          "comment": "Good HDR performance, but the WiFi setup was tricky.",
+          "date": "August 18, 2023"
         }
       ]
     }
-    
+  ]
+}
