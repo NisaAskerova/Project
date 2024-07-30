@@ -8,9 +8,7 @@ import Services from './sevices/Services';
 import Blog from './blog/Blog';
 import Shop from './shop/Shop';
 import ProductDetail from './shop/ProductDetail';
-import Description from './shop/Description';
-import CarbonAlarmDetail from './shop/CarbonAlarmDetail';
-import LeakageDetectorDetail from './shop/LeakageDetectorDetail';
+// import CarbonAlarmDetail from './shop/CarbonAlarmDetail';
 
 
 export const MyContext = createContext();
@@ -53,10 +51,7 @@ export default function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/shop' element={<Shop />} />
-          <Route path="/carbon_alarm_product/:id" element={<CarbonAlarmDetail />} />
-          <Route path="/leakage_detector/:id" element={<LeakageDetectorDetail />} />
           <Route path="/product/:id" element={<ProductDetail />} >
-            <Route path='description' element={<Description />} />
           </Route>
         </Routes>
       </Router>

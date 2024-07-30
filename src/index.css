@@ -1346,14 +1346,17 @@ strong {
 }
 
 .imgDiv {
-  width: 100%;
+  width: 262px;
   height: 330px;
   border: 1px solid rgba(21, 20, 15, 0.10);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.imgDiv>img{
+  width: 190px;
+  height: 190px;
+}
 .shopIcons {
   width: 40px;
   height: 140px;

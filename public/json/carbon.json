@@ -6,6 +6,7 @@
     "name": "Protect Smoke + CO Alarm",
     "price": "$119.00",
     "image": "../pngwing.com.png",
+    "category":"Carbon Alarm",
     "stock": true,
     "images": [
       "../pngwing.com.png",
@@ -60,6 +61,7 @@
     "price": "$79.00",
     "image": "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
     "stock": true,
+    "category":"Carbon Alarm",
     "images": [
       "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
       "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
@@ -113,6 +115,7 @@
     "price": "$299.00",
     "image": "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
     "stock": false,
+    "category":"Carbon Alarm",
     "images": [
       "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
       "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
@@ -166,6 +169,7 @@
     "price": "$89.00",
     "image": "../EVE_Room_Fahrenheit_09-min.jpg",
     "stock": true,
+    "category":"Carbon Alarm",
     "images": [
       "../EVE_Room_Fahrenheit_09-min.jpg",
       "../EVE_Room_Fahrenheit_09-min.jpg",
@@ -219,6 +223,7 @@
     "price": "$99.00",
     "image": "../5800COMBO_hi__36261.jpg",
     "stock": true,
+    "category":"Carbon Alarm",
     "images": [
       "../5800COMBO_hi__36261.jpg",
       "../5800COMBO_hi__36261.jpg",
