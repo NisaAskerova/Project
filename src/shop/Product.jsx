@@ -9,7 +9,7 @@ export default function Product() {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('/json/shopcamera.json');
+            const response = await axios.get('/json/products.json');
             const product = response.data.products.find(p => p.id === parseInt(id));
             setProduct(product);
         } catch (error) {

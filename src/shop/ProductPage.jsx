@@ -7,7 +7,11 @@ export default function ProductPage() {
     const { setProducts, products } = useContext(MyContext);
     const [loading, setLoading] = useState(true);
     const [shot, setShot] = useState(true);
+    const [shot2, setShot2] = useState(true);
+    const [shot3, setShot3] = useState(true);
     const [filters, setFilters] = useState({ category: [], brand: [], price: 2000 });
+    const [categoryCounts, setCategoryCounts] = useState({});
+    const [brandCounts, setBrandCounts] = useState({});
 
     const fetchData = async () => {
         try {
@@ -24,16 +28,41 @@ export default function ProductPage() {
         fetchData();
     }, []);
 
+    useEffect(() => {
+        const calculateCounts = () => {
+            const categoryCounts = {};
+            const brandCounts = {};
+
+            products.forEach(product => {
+                if (categoryCounts[product.category]) {
+                    categoryCounts[product.category]++;
+                } else {
+                    categoryCounts[product.category] = 1;
+                }
+
+                if (brandCounts[product.brand]) {
+                    brandCounts[product.brand]++;
+                } else {
+                    brandCounts[product.brand] = 1;
+                }
+            });
+
+            setCategoryCounts(categoryCounts);
+            setBrandCounts(brandCounts);
+        };
+
+        calculateCounts();
+    }, [products]);
+
     const handleFilterChange = (filterType, value) => {
         setFilters(prevFilters => {
+            const newFilters = { ...prevFilters };
             if (filterType === 'price') {
-                return { ...prevFilters, [filterType]: value };
+                newFilters[filterType] = value;
+            } else {
+                newFilters[filterType] = [value];
             }
-            const isValueSelected = prevFilters[filterType].includes(value);
-            const newFilterValues = isValueSelected
-                ? prevFilters[filterType].filter(v => v !== value)
-                : [...prevFilters[filterType], value];
-            return { ...prevFilters, [filterType]: newFilterValues };
+            return newFilters;
         });
     };
 
@@ -48,90 +77,89 @@ export default function ProductPage() {
 
     return (
         <div id='productPage'>
-            <div className='filters'>
+            <div className='filterProduct'>
                 <div className='filter-section'>
-                    <h3>Categories</h3>
+                    <div className='filterTitle ' onClick={() => setShot(!shot)}>
+                        <h3>Categories</h3>
+                        <img src="down.svg" alt="" />
+                    </div>
                     {['Carbon Alarm', 'Leakage Detector', 'Security System', 'Smart Home', 'Smoke Alarm'].map((category) => (
-                        <div key={category}>
-                            <input
-                                type="radio"
-                                id={category}
-                                value={category}
-                                name="radio"
-                                onChange={() => handleFilterChange('category', category)}
-                            />
-                            <label htmlFor={category}>{category}</label>
-                        </div>
-                    ))}
-                </div>
-                <div className='filter-section'>
-                    <h3>Brands</h3>
-                    {['igloohome', 'HIK Vision', 'Ezvir', 'D-Link', 'Samsung', 'CP Plus'].map((brand) => (
-                        <div key={brand}>
-                            <input
-                                type="radio"
-                                id={brand}
-                                value={brand}
-                                name='radio'
-                                onChange={() => handleFilterChange('brand', brand)}
-                            />
-                            <label htmlFor={brand}>{brand}</label>
-                        </div>
-                    ))}
-                </div>
-                <div className='filter-section'>
-                    <h3>Price</h3>
-                    <input
-                        type="range"
-                        min="0"
-                        max="3000"
-                        value={filters.price}
-                        onChange={(e) => handleFilterChange('price', e.target.value)}
-                    />
-                    <span>Up to ${filters.price}</span>
-                </div>
-            </div>
-            <div id='shopTitle'>
-                <div>
-                    <img src="grid.svg" alt="Grid" />
-                    <img src="list.svg" alt="List" />
-                    <span>Showing {defaultDisplayProducts.length} of {products.length} results</span>
-                </div>
-                <div onClick={() => setShot(!shot)}>
-                    <span>Shot by latest</span>
-                    <img src="down.svg" alt="" />
-                </div>
-            </div>
-            <div style={{ height: shot ? "100%" : "0", overflow: "hidden" }} className='shopBoxes'>
-                {loading ? (
-                    <h2>YÜKLƏNİR...</h2>
-                ) : defaultDisplayProducts && defaultDisplayProducts.length > 0 ? (
-                    defaultDisplayProducts.map((product) => (
-                        <div className='shopBox' key={product.id}>
-                            <div className='imgDiv'><img src={product.image} alt={product.name} /></div>
+                        <div key={category} style={{ height: shot ? "100%" : "0", overflow: "hidden" }} className='filterCatecory'>
                             <div>
-                                <span className='same'>{product.brand}</span>
-                                <h3>{product.name}</h3>
-                                <span className='same'>{product.price}</span>
+                                <input type="radio" id={category} value={category} name="category" onChange={() => handleFilterChange('category', category)} />
+                                <label htmlFor={category}>{category}</label>
                             </div>
-                            <div className='shopIcons'>
-                                <div className='shopIcon'>
-                                    <img src="star2.svg" alt="Star" />
-                                </div>
-                                <div className='shopIcon'>
-                                    <img src="arrow.svg" alt="Arrow" />
-                                </div>
-                                <div className='shopIcon'>
-                                    <Link to={`/product/${product.id}`}>
-                                        <img src="eye.svg" alt="Eye" />
-                                    </Link>
-                                </div>
-                            </div>
+                            <span>({categoryCounts[category] || 0})</span>
                         </div>
-                    ))
-                ) : (
-                    <h2>Mehsul tapılmadı</h2>
-                )}
+                    ))}
+               
+                    <div className='filterTitle ft' onClick={() => setShot2(!shot2)} >
+                        <h3>Price</h3>
+                        <img src="down.svg" alt="" />
+                    </div>
+                    <div style={{ height: shot2 ? "100%" : "0", overflow: "hidden" }} className='filterCatecory' id=''>
+                    <span>Price: {filters.price}</span>
+                    <input type="range" min="0" max="2000" value={filters.price} onChange={(e) => handleFilterChange('price', e.target.value)} />
+                    </div>
+                
+                    <div className='filterTitle ft' onClick={() => setShot3(!shot3)}>
+                        <h3>Brands</h3>
+                        <img src="down.svg" alt="" />
+                    </div>
+                    {['Igloohome', 'HIK Vision', 'Ezvir', 'D-Link', 'Samsung', 'CP Plus'].map((brand) => (
+                        <div style={{ height: shot3 ? "100%" : "0", overflow: "hidden" }} key={brand} className='filterCatecory'>
+                            <div>
+                                <input type="radio" id={brand} value={brand} name='category' onChange={() => handleFilterChange('brand', brand)} />
+                                <label htmlFor={brand}>{brand}</label>
+                            </div>
+                            <span>({brandCounts[brand] || 0})</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div id='products'>
+                <div id='shopTitle'>
+                    <div>
+                        <img src="grid.svg" alt="Grid" />
+                        <img src="list.svg" alt="List" />
+                        <span>Showing {defaultDisplayProducts.length} of {products.length} results</span>
+                    </div>
+                    <div>
+                        <span>Shot by latest</span>
+                        <img src="down.svg" alt="" />
+                    </div>
+                </div>
+                <div className='shopBoxes'>
+                    {loading ? (
+                        <h2>YÜKLƏNİR...</h2>
+                    ) : defaultDisplayProducts.length > 0 ? (
+                        defaultDisplayProducts.map((product) => (
+                            <div className='shopBox' key={product.id}>
+                                <div className='imgDiv'><img src={product.image} alt={product.name} /></div>
+                                <div>
+                                    <span className='same'>{product.brand}</span>
+                                    <h3>{product.name}</h3>
+                                    <span className='same'>${product.price}</span>
+                                </div>
+                                <div className='shopIcons'>
+                                    <div className='shopIcon'>
+                                        <img src="star2.svg" alt="Star" />
+                                    </div>
+                                    <div className='shopIcon'>
+                                        <img src="arrow.svg" alt="Arrow" />
+                                    </div>
+                                    <div className='shopIcon'>
+                                        <Link to={`/product/${product.id}`}>
+                                            <img src="eye.svg" alt="Eye" />
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    ) : (
+                        <h2>Mehsul tapılmadı</h2>
+                    )}
+                </div>
             </div>
         </div>
     );

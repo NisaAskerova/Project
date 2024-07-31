@@ -118,7 +118,7 @@
         },
         {
             "id": 3,
-            "brand": "Ezviz",
+            "brand": "Ezvir",
             "name": "Smart Door Lock",
             "price": "$70.00",
             "image": "../PngItem_4124313.png",
@@ -406,7 +406,7 @@
         },
         {
             "id": 8,
-            "brand": "Ezviz",
+            "brand": "Ezvir",
             "name": "Dome Camera",
             "price": "$89.00",
             "category": "Security System",
@@ -2046,8 +2046,8 @@
         },
         {
             "id": 38,
-            "brand": "Ezviz",
-            "name": "Ezviz C6N Smart Camera",
+            "brand": "Ezvir",
+            "name": "Ezvir C6N Smart Camera",
             "price": "$129.00",
             "image": "../images (4).jpeg",
             "stock": true,
@@ -2060,7 +2060,7 @@
             "star": "../yellowStar.svg",
             "halfStar": "../halfStar.svg",
             "emptyStar": "../emptyStar.svg",
-            "description": "Ezviz C6N Smart Camera offers 4MP high-definition video recording with pan and tilt functionality. It includes night vision, motion detection, and cloud storage options.",
+            "description": "Ezvir C6N Smart Camera offers 4MP high-definition video recording with pan and tilt functionality. It includes night vision, motion detection, and cloud storage options.",
             "SKU": "EZV-C6N-001",
             "categories": [
                 "Smart Camera",
@@ -2099,8 +2099,8 @@
         },
         {
             "id": 39,
-            "brand": "Ezviz",
-            "name": "Ezviz C3X Dual-Lens Camera",
+            "brand": "Ezvir",
+            "name": "Ezvir C3X Dual-Lens Camera",
             "price": "$179.00",
             "image": "../c3x-2.jpg",
             "stock": true,
@@ -2113,7 +2113,7 @@
             "star": "../yellowStar.svg",
             "halfStar": "../halfStar.svg",
             "emptyStar": "../emptyStar.svg",
-            "description": "Ezviz C3X Dual-Lens Camera features a unique dual-lens design for enhanced image clarity and color accuracy. It offers 4MP resolution, two-way audio, and weatherproofing.",
+            "description": "Ezvir C3X Dual-Lens Camera features a unique dual-lens design for enhanced image clarity and color accuracy. It offers 4MP resolution, two-way audio, and weatherproofing.",
             "SKU": "EZV-C3X-002",
             "categories": [
                 "Smart Camera",
@@ -2152,8 +2152,8 @@
         },
         {
             "id": 40,
-            "brand": "Ezviz",
-            "name": "Ezviz T1 Smart Lock",
+            "brand": "Ezvir",
+            "name": "Ezvir T1 Smart Lock",
             "price": "$149.00",
             "image": "../Ezviz T1 Smart Lock1.jpg",
             "stock": true,
@@ -2166,7 +2166,7 @@
             "star": "../yellowStar.svg",
             "halfStar": "../halfStar.svg",
             "emptyStar": "../emptyStar.svg",
-            "description": "Ezviz T1 Smart Lock features keyless entry with fingerprint recognition and remote control via mobile app. It includes a backup key option and is designed for easy installation.",
+            "description": "Ezvir T1 Smart Lock features keyless entry with fingerprint recognition and remote control via mobile app. It includes a backup key option and is designed for easy installation.",
             "SKU": "EZV-T1-003",
             "categories": [
                 "Smart Lock",
@@ -2205,8 +2205,8 @@
         },
         {
             "id": 41,
-            "brand": "Ezviz",
-            "name": "Ezviz DB1 Smart Doorbell",
+            "brand": "Ezvir",
+            "name": "Ezvir DB1 Smart Doorbell",
             "price": "$129.00",
             "image": "../EZVIZ-DB1-product.png",
             "stock": true,
@@ -2219,7 +2219,7 @@
             "star": "../yellowStar.svg",
             "halfStar": "../halfStar.svg",
             "emptyStar": "../emptyStar.svg",
-            "description": "Ezviz DB1 Smart Doorbell offers HD video, two-way audio, and motion detection. It integrates with the Ezviz app for real-time alerts and allows you to communicate with visitors remotely.",
+            "description": "Ezvir DB1 Smart Doorbell offers HD video, two-way audio, and motion detection. It integrates with the Ezvir app for real-time alerts and allows you to communicate with visitors remotely.",
             "SKU": "EZV-DB1-004",
             "categories": [
                 "Doorbell",
@@ -2258,8 +2258,8 @@
         },
         {
             "id": 42,
-            "brand": "Ezviz",
-            "name": "Ezviz C2C Smart Camera",
+            "brand": "Ezvir",
+            "name": "Ezvir C2C Smart Camera",
             "price": "$99.00",
             "image": "../512EoubjXhL.jpg",
             "stock": true,
@@ -2272,7 +2272,7 @@
             "star": "../yellowStar.svg",
             "halfStar": "../halfStar.svg",
             "emptyStar": "../emptyStar.svg",
-            "description": "Ezviz C2C Smart Camera provides 1080p HD video with a 115-degree wide-angle lens. It features two-way audio, motion alerts, and supports cloud storage.",
+            "description": "Ezvir C2C Smart Camera provides 1080p HD video with a 115-degree wide-angle lens. It features two-way audio, motion alerts, and supports cloud storage.",
             "SKU": "EZV-C2C-005",
             "categories": [
                 "Smart Camera",
@@ -2311,8 +2311,8 @@
         },
         {
             "id": 43,
-            "brand": "Ezviz",
-            "name": "Ezviz H6 Smart Floodlight Camera",
+            "brand": "Ezvir",
+            "name": "Ezvir H6 Smart Floodlight Camera",
             "price": "$199.00",
             "image": "../Ezviz H6 Smart Floodlight Camera.png",
             "stock": true,
@@ -2325,7 +2325,7 @@
             "star": "../yellowStar.svg",
             "halfStar": "../halfStar.svg",
             "emptyStar": "../emptyStar.svg",
-            "description": "Ezviz H6 Smart Floodlight Camera combines a high-powered floodlight with a 4MP camera. It includes motion detection, two-way audio, and integration with the Ezviz app for real-time alerts.",
+            "description": "Ezvir H6 Smart Floodlight Camera combines a high-powered floodlight with a 4MP camera. It includes motion detection, two-way audio, and integration with the Ezviz app for real-time alerts.",
             "SKU": "EZV-H6-006",
             "categories": [
                 "Floodlight Camera",
@@ -2364,8 +2364,8 @@
         },
         {
             "id": 44,
-            "brand": "Ezviz",
-            "name": "Ezviz Lark Series Smart Door Lock",
+            "brand": "Ezvir",
+            "name": "Ezvir Lark Series Smart Door Lock",
             "price": "$179.00",
             "image": "../Ezviz Lark Series Smart Door Lock.jpg",
             "stock": true,
@@ -2378,7 +2378,7 @@
             "star": "../yellowStar.svg",
             "halfStar": "../halfStar.svg",
             "emptyStar": "../emptyStar.svg",
-            "description": "Ezviz Lark Series Smart Door Lock features a sleek design with keyless entry through a fingerprint scanner, PIN code, and mobile app control. It offers easy installation and robust security.",
+            "description": "Ezvir Lark Series Smart Door Lock features a sleek design with keyless entry through a fingerprint scanner, PIN code, and mobile app control. It offers easy installation and robust security.",
             "SKU": "EZV-LARK-007",
             "categories": [
                 "Smart Lock",
@@ -2417,7 +2417,7 @@
         },
         {
             "id": 45,
-            "brand": "Ezviz",
+            "brand": "Ezvir",
             "name": "Smart Door Lock",
             "price": "$70.00",
             "image": "../PngItem_4124313.png",
@@ -4904,6 +4904,219 @@
                     "date": "January 5, 2025"
                 }
             ]
-        }
+        },
+        {
+            "id": 92,
+            "brand": "Igloohome",
+            "name": "Igloohome Smart Sensor",
+            "price": "$89.00",
+            "image": "../Igloohome Smart Senso.avif",
+            "stock": true,
+            "images": [
+              "../IgloohomeSmartSenso.avif",
+              "../IgloohomeSmartSenso.avif",
+              "../IgloohomeSmartSenso.avif",
+              "../IgloohomeSmartSenso.avif"
+            ],
+            "star": "../yellowStar.svg",
+            "halfStar": "../halfStar.svg",
+            "emptyStar": "../emptyStar.svg",
+            "description": "The Igloohome Smart Sensor provides monitoring for doors and windows. It offers real-time notifications, easy installation, and integration with other Igloohome devices.",
+            "SKU": "IGLOO-SENSOR-006",
+            "categories": [
+              "Sensor",
+              "Smart Home"
+            ],
+            "tags": [
+              "real-time notifications",
+              "easy installation",
+              "door and window monitoring"
+            ],
+            "review": {
+              "rating": 4.5,
+              "comment": "Useful sensor with good integration and real-time alerts."
+            },
+            "sosial": [
+              {
+                "facebook": "../face.svg",
+                "instagram": "../instagram.svg",
+                "twitter": "../twitter.svg"
+              }
+            ],
+            "customerReviews": [
+              {
+                "name": "James Anderson",
+                "rating": 5,
+                "comment": "Great sensor with reliable notifications and easy setup.",
+                "date": "July 1, 2024"
+              },
+              {
+                "name": "Olivia Walker",
+                "rating": 4,
+                "comment": "Effective sensor but the app could be more user-friendly.",
+                "date": "July 5, 2024"
+              }
+            ]
+          },
+            {
+              "id": 93,
+              "brand": "Igloohome",
+              "name": "Igloohome Keybox",
+              "price": "$79.00",
+              "image": "../Igloohome Keybox.webp",
+              "stock": true,
+              "images": [
+                "../Igloohome Keybox.webp",
+                "../Igloohome Keybox.webp",
+                "../Igloohome Keybox.webp",
+                "../Igloohome Keybox.webp"
+              ],
+              "star": "../yellowStar.svg",
+              "halfStar": "../halfStar.svg",
+              "emptyStar": "../emptyStar.svg",
+              "description": "The Igloohome Keybox provides secure storage for physical keys. It features a PIN code entry, weather-resistant design, and is suitable for both indoor and outdoor use.",
+              "SKU": "IGLOO-KEYBOX-002",
+              "categories": [
+                "Keybox",
+                "Security"
+              ],
+              "tags": [
+                "PIN code",
+                "weather-resistant",
+                "key storage"
+              ],
+              "review": {
+                "rating": 4.6,
+                "comment": "Reliable key storage with secure PIN code access."
+              },
+              "sosial": [
+                {
+                  "facebook": "../face.svg",
+                  "instagram": "../instagram.svg",
+                  "twitter": "../twitter.svg"
+                }
+              ],
+              "customerReviews": [
+                {
+                  "name": "Sophia Lee",
+                  "rating": 5,
+                  "comment": "Excellent keybox with easy PIN entry and durable design.",
+                  "date": "March 1, 2024"
+                },
+                {
+                  "name": "Liam Davis",
+                  "rating": 4,
+                  "comment": "Good keybox but could be more compact.",
+                  "date": "March 5, 2024"
+                }
+              ]
+            },
+            {
+              "id": 94,
+              "brand": "Igloohome",
+              "name": "Igloohome Smart Padlock",
+              "price": "$89.00",
+              "image": "../Front-SP2.jpg",
+              "stock": true,
+              "images": [
+                "../Front-SP2.jpg",
+                "../Front-SP2.jpg",
+                "../Front-SP2.jpg",
+                "../Front-SP2.jpg"
+              ],
+              "star": "../yellowStar.svg",
+              "halfStar": "../halfStar.svg",
+              "emptyStar": "../emptyStar.svg",
+              "description": "The Igloohome Smart Padlock features a keyless design with Bluetooth access. It includes a rechargeable battery, weather-resistant build, and can be managed via a mobile app.",
+              "SKU": "IGLOO-PADLOCK-003",
+              "categories": [
+                "Padlock",
+                "Smart Home"
+              ],
+              "tags": [
+                "Bluetooth",
+                "keyless design",
+                "weather-resistant"
+              ],
+              "review": {
+                "rating": 4.7,
+                "comment": "Convenient and sturdy padlock with excellent features."
+              },
+              "sosial": [
+                {
+                  "facebook": "../face.svg",
+                  "instagram": "../instagram.svg",
+                  "twitter": "../twitter.svg",
+                  "twitter": "../twitter.svg"
+                }
+              ],
+              "customerReviews": [
+                {
+                  "name": "Noah Wilson",
+                  "rating": 5,
+                  "comment": "Great padlock with reliable Bluetooth connectivity and sturdy build.",
+                  "date": "April 1, 2024"
+                },
+                {
+                  "name": "Ava Martinez",
+                  "rating": 4,
+                  "comment": "Effective padlock but the app could use some improvements.",
+                  "date": "April 5, 2024"
+                }
+              ]
+            },
+            {
+              "id": 95,
+              "brand": "Igloohome",
+              "name": "Igloohome Smart Doorbell",
+              "price": "$129.00",
+              "image": "../igloohome-smart-home-bridge-1.png",
+              "stock": true,
+              "images": [
+                "../igloohome-smart-home-bridge-1.png",
+                "../igloohome-smart-home-bridge-1.png",
+                "../igloohome-smart-home-bridge-1.png",
+                "../igloohome-smart-home-bridge-1.png"
+              ],
+              "star": "../yellowStar.svg",
+              "halfStar": "../halfStar.svg",
+              "emptyStar": "../emptyStar.svg",
+              "description": "The Igloohome Smart Doorbell offers video and audio communication with visitors via a mobile app. It includes motion detection, night vision, and integration with other Igloohome products.",
+              "SKU": "IGLOO-DOORBELL-004",
+              "categories": [
+                "Doorbell",
+                "Smart Home"
+              ],
+              "tags": [
+                "video communication",
+                "motion detection",
+                "night vision"
+              ],
+              "review": {
+                "rating": 4.8,
+                "comment": "Excellent smart doorbell with clear video and useful features."
+              },
+              "sosial": [
+                {
+                  "facebook": "../face.svg",
+                  "instagram": "../instagram.svg",
+                  "twitter": "../twitter.svg"
+                }
+              ],
+              "customerReviews": [
+                {
+                  "name": "Isabella Thompson",
+                  "rating": 5,
+                  "comment": "Fantastic doorbell with great video quality and features.",
+                  "date": "May 1, 2024"
+                },
+                {
+                  "name": "Ethan White",
+                  "rating": 4,
+                  "comment": "Good doorbell but the night vision could be better.",
+                  "date": "May 5, 2024"
+                }
+              ]
+            }
     ]
 }
