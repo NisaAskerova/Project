@@ -60,10 +60,10 @@ export default function Header() {
           </div>
           <div id='navRight'>
             <div id='navIcon'>
-              <img src="./search.svg" alt="search" />
-              <img src="./favory.svg" alt="favorite" />
+              <img src="/search.svg" alt="search" />
+              <img src="/favory.svg" alt="favorite" />
               <div id='cartCount'>
-                <img src="./shopCar.svg" alt="shop car" />
+                <img src="/shopCar.svg" alt="shop car" />
                 <div><span>2</span></div>
               </div>
             </div>

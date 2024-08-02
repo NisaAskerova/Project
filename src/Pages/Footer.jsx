@@ -9,15 +9,15 @@ export default function Footer() {
       <footer>
         <div id='information'>
           <div id="footerLeft">
-            <img src="./miniLogo.svg" alt="footerLogo" />
+            <img src="/miniLogo.svg" alt="footerLogo" />
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
             <div >
               <div className='footerInfo'>
-                <img src="./call.svg" alt="footer-fone" />
+                <img src="/call.svg" alt="footer-fone" />
                 <span>(505) 555-0125</span>
               </div>
               <div className='footerInfo'>
-                <img src="./location.svg" alt="" />
+                <img src="/location.svg" alt="" />
                 <span className='same'>2715 Ash Dr. San Jose, South Dakota 83475</span>
               </div>
             </div>
@@ -50,9 +50,9 @@ export default function Footer() {
             <span className='same'>Lorem ipsum dolor sit amet,
               consectetur adipiscing elit.</span>
             <div id='mediaIcons'>
-              <img src="./facebook.svg" alt="faceIcon" />
-              <img src="./instagram.svg" alt="instaIcon" />
-              <img src="./twitter.svg" alt="twitterIcon" />
+              <img src="/facebook.svg" alt="faceIcon" />
+              <img src="/instagram.svg" alt="instaIcon" />
+              <img src="/twitter.svg" alt="twitterIcon" />
             </div>
           </div>
         </div>

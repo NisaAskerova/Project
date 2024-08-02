@@ -44,25 +44,31 @@
                     "name": "Mark Williams",
                     "rating": 5,
                     "comment": "Excellent Camera, I Really Like It 😍",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Alexa Johnson",
                     "rating": 5,
                     "comment": "My Family is very much happy with this product",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "John Doe",
                     "rating": 4,
                     "comment": "Good camera, but could have better battery life.",
-                    "date": "September 2, 2023"
+                    "date": "September 2, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
         {
             "id": 2,
-            "brand": "HK Vision",
+            "brand": "HIK Vision",
             "name": "Full HD WiFi Camera",
             "price": "$100.00",
             "image": "../PngItem_4760952.png",
@@ -106,13 +112,17 @@
                     "name": "Jane Smith",
                     "rating": 4,
                     "comment": "Great WiFi range and picture quality, but setup was a bit complicated.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "John Doe",
                     "rating": 4.3,
                     "comment": "Good video quality, but the WiFi connection can be inconsistent.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -161,19 +171,25 @@
                     "name": "Michael Brown",
                     "rating": 4,
                     "comment": "Easy to use and reliable, but the app could be better.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emily Davis",
                     "rating": 5,
                     "comment": "Excellent product! Very secure and easy to install.",
-                    "date": "September 10, 2023"
+                    "date": "September 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Obama",
-                    "rating": 4.3,
+                    "rating": 4.5,
                     "comment": "Convenient and secure, but the app needs some improvements.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -222,19 +238,25 @@
                     "name": "Anna Wilson",
                     "rating": 5,
                     "comment": "Incredible video quality and very reliable performance.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "John Doe",
                     "rating": 4.7,
                     "comment": "Excellent HDR performance, but a bit pricey.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Alexa Johnson",
                     "rating": 4.9,
                     "comment": "Outstanding clarity and detail, worth every penny.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -283,19 +305,25 @@
                     "name": "Anna Wilson",
                     "rating": 5,
                     "comment": "Incredible video quality and very reliable performance.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Tom Davis",
                     "rating": 4.2,
                     "comment": "Works well, but the battery life is shorter than expected.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Jane Doe",
                     "rating": 4.4,
                     "comment": "Great for wireless needs, setup is a breeze.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -345,13 +373,17 @@
                     "name": "Chris Johnson",
                     "rating": 4,
                     "comment": "Very convenient and easy to set up, though battery life could be longer.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Patricia Taylor",
                     "rating": 5,
                     "comment": "Top-notch video quality and features, highly recommended for professional use.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -400,7 +432,9 @@
                     "name": "George Harris",
                     "rating": 4,
                     "comment": "Very good camera with a wide field of view, but could be more intuitive.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -449,13 +483,17 @@
                     "name": "David Miller",
                     "rating": 5,
                     "comment": "Amazing integration with Apple products and great video quality.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Anna Svitch",
                     "rating": 4.5,
                     "comment": "Excellent design and video quality, but night vision is lacking.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -504,7 +542,9 @@
                     "name": "Jane Doe",
                     "rating": 4.7,
                     "comment": "Nice coverage and easy setup, would prefer better night vision.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Chris Davis",
@@ -564,19 +604,25 @@
                     "name": "Tom Davis",
                     "rating": 4.2,
                     "comment": "Works well, but the battery life is shorter than expected.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Jane Doe",
                     "rating": 4.4,
                     "comment": "Great for wireless needs, setup is a breeze.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Olivia Wilson",
                     "rating": 4.1,
                     "comment": "Works well for simple tasks, but not for high-definition needs.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -625,19 +671,25 @@
                     "name": "Liam Smith",
                     "rating": 4.7,
                     "comment": "Excellent video quality and very reliable for home security.",
-                    "date": "September 10, 2023"
+                    "date": "September 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Michael Brown",
                     "rating": 4,
                     "comment": "Easy to use and reliable, but the app could be better.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emily Davis",
                     "rating": 5,
                     "comment": "Excellent product! Very secure and easy to install.",
-                    "date": "September 10, 2023"
+                    "date": "September 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -687,13 +739,17 @@
                     "name": "Sophia Davis",
                     "rating": 4.5,
                     "comment": "Great video quality and easy to set up, though the app could be more user-friendly.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Liam Smith",
                     "rating": 4.4,
                     "comment": "Good HDR performance, but the WiFi setup was tricky.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -741,13 +797,17 @@
                 "name": "Emily Clarke",
                 "rating": 5,
                 "comment": "A must-have for every home. Very efficient!",
-                "date": "July 10, 2023"
+                "date": "July 10, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               },
               {
                 "name": "Michael Brown",
                 "rating": 4,
                 "comment": "Works great, but a bit pricey.",
-                "date": "July 15, 2023"
+                "date": "July 15, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               }
             ]
           },
@@ -795,13 +855,17 @@
                 "name": "Sarah Green",
                 "rating": 4,
                 "comment": "Reliable and straightforward.",
-                "date": "June 20, 2023"
+                "date": "June 20, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               },
               {
                 "name": "David Lee",
                 "rating": 5,
                 "comment": "Excellent alarm with great features.",
-                "date": "June 25, 2023"
+                "date": "June 25, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               }
             ]
           },
@@ -849,13 +913,17 @@
                 "name": "Linda Roberts",
                 "rating": 5,
                 "comment": "Love the Alexa integration and smart features.",
-                "date": "May 15, 2023"
+                "date": "May 15, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               },
               {
                 "name": "James Smith",
                 "rating": 4,
                 "comment": "Great functionality but a bit expensive.",
-                "date": "May 20, 2023"
+                "date": "May 20, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               }
             ]
           },
@@ -903,13 +971,17 @@
                 "name": "Anna Wilson",
                 "rating": 5,
                 "comment": "Very sleek and reliable!",
-                "date": "April 10, 2023"
+                "date": "April 10, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               },
               {
                 "name": "Robert Johnson",
                 "rating": 4,
                 "comment": "Good product but could be more affordable.",
-                "date": "April 15, 2023"
+                "date": "April 15, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               }
             ]
           },
@@ -957,13 +1029,17 @@
                 "name": "Paul Adams",
                 "rating": 4,
                 "comment": "Good quality but the alarm is a bit loud.",
-                "date": "March 5, 2023"
+                "date": "March 5, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               },
               {
                 "name": "Laura Davis",
                 "rating": 5,
                 "comment": "Great detector, very satisfied.",
-                "date": "March 10, 2023"
+                "date": "March 10, 2023",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               }
             ]
           },
@@ -1010,13 +1086,17 @@
                     "name": "Michael Green",
                     "rating": 5,
                     "comment": "Excellent camera with clear video and effective night vision.",
-                    "date": "March 10, 2024"
+                    "date": "March 10, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Jessica Turner",
                     "rating": 4,
                     "comment": "Good camera but installation instructions were unclear.",
-                    "date": "March 15, 2024"
+                    "date": "March 15, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1063,13 +1143,17 @@
                     "name": "David Brown",
                     "rating": 5,
                     "comment": "Amazing camera with great zoom and control features.",
-                    "date": "April 5, 2024"
+                    "date": "April 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emily Lewis",
                     "rating": 4,
                     "comment": "Effective PTZ camera but the setup took longer than expected.",
-                    "date": "April 10, 2024"
+                    "date": "April 10, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1117,13 +1201,17 @@
                     "name": "Jennifer Wilson",
                     "rating": 5,
                     "comment": "Works perfectly, easy to install.",
-                    "date": "June 12, 2023"
+                    "date": "June 12, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "David Clark",
                     "rating": 4,
                     "comment": "Good sensor but could be cheaper.",
-                    "date": "June 15, 2023"
+                    "date": "June 15, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1171,13 +1259,17 @@
                     "name": "Paul Adams",
                     "rating": 5,
                     "comment": "Great quality and performance.",
-                    "date": "May 20, 2023"
+                    "date": "May 20, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Laura Harris",
                     "rating": 4,
                     "comment": "Reliable but slightly expensive.",
-                    "date": "May 25, 2023"
+                    "date": "May 25, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1225,13 +1317,17 @@
                     "name": "Alex Johnson",
                     "rating": 5,
                     "comment": "Fantastic performance and easy setup.",
-                    "date": "July 5, 2023"
+                    "date": "July 5, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emily Davis",
                     "rating": 4,
                     "comment": "Great device, but a bit bulky.",
-                    "date": "July 10, 2023"
+                    "date": "July 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1279,13 +1375,17 @@
                     "name": "Sophia Martinez",
                     "rating": 4,
                     "comment": "Good detector but a bit loud.",
-                    "date": "March 10, 2023"
+                    "date": "March 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Liam Garcia",
                     "rating": 5,
                     "comment": "Very reliable and easy to use.",
-                    "date": "March 15, 2023"
+                    "date": "March 15, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1333,13 +1433,17 @@
                     "name": "Olivia White",
                     "rating": 5,
                     "comment": "Stylish and efficient, highly recommended.",
-                    "date": "February 20, 2023"
+                    "date": "February 20, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "James Miller",
                     "rating": 4,
                     "comment": "Effective but the price is high.",
-                    "date": "February 25, 2023"
+                    "date": "February 25, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1387,13 +1491,17 @@
                     "name": "Isabella Thompson",
                     "rating": 5,
                     "comment": "Great integration with smart home systems.",
-                    "date": "January 10, 2023"
+                    "date": "January 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Ethan Johnson",
                     "rating": 4,
                     "comment": "Very good, but a bit costly.",
-                    "date": "January 15, 2023"
+                    "date": "January 15, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1441,13 +1549,17 @@
                     "name": "Sophia Adams",
                     "rating": 4,
                     "comment": "Works well but could use more features.",
-                    "date": "December 5, 2022"
+                    "date": "December 5, 2022",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Oliver Davis",
                     "rating": 5,
                     "comment": "Effective and affordable.",
-                    "date": "December 10, 2022"
+                    "date": "December 10, 2022",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1495,13 +1607,17 @@
                     "name": "Ava Lewis",
                     "rating": 4,
                     "comment": "Effective but build quality could be better.",
-                    "date": "November 10, 2022"
+                    "date": "November 10, 2022",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Lucas Martinez",
                     "rating": 4,
                     "comment": "Great value, integrates well with smart home.",
-                    "date": "November 15, 2022"
+                    "date": "November 15, 2022",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1548,13 +1664,17 @@
                     "name": "Jack Smith",
                     "rating": 5,
                     "comment": "Great camera with perfect night vision and solid build.",
-                    "date": "January 15, 2024"
+                    "date": "January 15, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Linda Johnson",
                     "rating": 4,
                     "comment": "Good camera but setup was a bit complicated.",
-                    "date": "January 20, 2024"
+                    "date": "January 20, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1601,13 +1721,17 @@
                     "name": "Michael White",
                     "rating": 5,
                     "comment": "Works perfectly to extend my Wi-Fi coverage.",
-                    "date": "February 1, 2024"
+                    "date": "February 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Sarah Davis",
                     "rating": 4,
                     "comment": "Good extender but the signal strength could be better.",
-                    "date": "February 5, 2024"
+                    "date": "February 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1654,13 +1778,17 @@
                     "name": "David Brown",
                     "rating": 5,
                     "comment": "Great router with fast speeds and strong signal.",
-                    "date": "March 1, 2024"
+                    "date": "March 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emma Wilson",
                     "rating": 4,
                     "comment": "Good router but the setup process was a bit confusing.",
-                    "date": "March 5, 2024"
+                    "date": "March 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1706,13 +1834,17 @@
                     "name": "Sophia Martinez",
                     "rating": 5,
                     "comment": "Great value for money with good video quality and features.",
-                    "date": "April 1, 2024"
+                    "date": "April 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "James Lee",
                     "rating": 4,
                     "comment": "Effective camera but the night vision could be improved.",
-                    "date": "April 5, 2024"
+                    "date": "April 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1759,13 +1891,17 @@
                     "name": "Lucas Adams",
                     "rating": 5,
                     "comment": "Works well with my cameras and has a user-friendly interface.",
-                    "date": "May 1, 2024"
+                    "date": "May 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Ella Harris",
                     "rating": 4,
                     "comment": "Good NVR but a bit expensive for the features offered.",
-                    "date": "May 5, 2024"
+                    "date": "May 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1812,13 +1948,17 @@
                     "name": "Oliver Thompson",
                     "rating": 5,
                     "comment": "Excellent outdoor camera with clear video and durable design.",
-                    "date": "June 1, 2024"
+                    "date": "June 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Charlotte Robinson",
                     "rating": 4,
                     "comment": "Good camera but the setup process was not very intuitive.",
-                    "date": "June 5, 2024"
+                    "date": "June 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1867,13 +2007,17 @@
                     "name": "Sophia Davis",
                     "rating": 4.5,
                     "comment": "Great video quality and easy to set up, though the app could be more user-friendly.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Liam Smith",
                     "rating": 4.4,
                     "comment": "Good HDR performance, but the WiFi setup was tricky.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1920,13 +2064,17 @@
                     "name": "Liam Scott",
                     "rating": 5,
                     "comment": "Effective extender with great range and easy installation.",
-                    "date": "September 1, 2024"
+                    "date": "September 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emma Lewis",
                     "rating": 4,
                     "comment": "Works well but the signal strength could be better in some areas.",
-                    "date": "September 5, 2024"
+                    "date": "September 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -1973,13 +2121,17 @@
                     "name": "Lucas White",
                     "rating": 5,
                     "comment": "Fantastic performance and range for the price.",
-                    "date": "October 1, 2024"
+                    "date": "October 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Sophia Robinson",
                     "rating": 4,
                     "comment": "Effective extender but could benefit from a more user-friendly app.",
-                    "date": "October 5, 2024"
+                    "date": "October 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2028,19 +2180,25 @@
                     "name": "Tom Davis",
                     "rating": 4.2,
                     "comment": "Works well, but the battery life is shorter than expected.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Jane Doe",
                     "rating": 4.4,
                     "comment": "Great for wireless needs, setup is a breeze.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Olivia Wilson",
                     "rating": 4.1,
                     "comment": "Works well for simple tasks, but not for high-definition needs.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2087,13 +2245,17 @@
                     "name": "Daniel Green",
                     "rating": 5,
                     "comment": "Excellent camera with clear video and reliable performance.",
-                    "date": "March 10, 2024"
+                    "date": "March 10, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Sophia Clark",
                     "rating": 4,
                     "comment": "Good camera but a bit bulky.",
-                    "date": "March 15, 2024"
+                    "date": "March 15, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2140,13 +2302,17 @@
                     "name": "Ella Johnson",
                     "rating": 5,
                     "comment": "Amazing clarity and dual-lens design is fantastic.",
-                    "date": "April 1, 2024"
+                    "date": "April 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Mason Wilson",
                     "rating": 4,
                     "comment": "Great camera but the installation was a bit tricky.",
-                    "date": "April 5, 2024"
+                    "date": "April 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2193,13 +2359,17 @@
                     "name": "Ava Davis",
                     "rating": 5,
                     "comment": "Perfect smart lock with fast fingerprint recognition.",
-                    "date": "May 1, 2024"
+                    "date": "May 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Liam Brown",
                     "rating": 4,
                     "comment": "Great lock but sometimes the app connection is slow.",
-                    "date": "May 5, 2024"
+                    "date": "May 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2246,13 +2416,17 @@
                     "name": "Ella Wilson",
                     "rating": 5,
                     "comment": "Great doorbell with excellent video and audio quality.",
-                    "date": "June 1, 2024"
+                    "date": "June 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "James Martinez",
                     "rating": 4,
                     "comment": "Effective doorbell but the motion detection could be improved.",
-                    "date": "June 5, 2024"
+                    "date": "June 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2299,13 +2473,17 @@
                     "name": "Olivia Taylor",
                     "rating": 5,
                     "comment": "Excellent camera with wide-angle view and clear video.",
-                    "date": "July 1, 2024"
+                    "date": "July 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Noah Anderson",
                     "rating": 4,
                     "comment": "Great camera but the cloud storage subscription is expensive.",
-                    "date": "July 5, 2024"
+                    "date": "July 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2352,13 +2530,17 @@
                     "name": "Liam Brown",
                     "rating": 5,
                     "comment": "Great floodlight camera with powerful illumination and clear video.",
-                    "date": "August 1, 2024"
+                    "date": "August 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Ava Johnson",
                     "rating": 4,
                     "comment": "Effective floodlight but the setup was a bit challenging.",
-                    "date": "August 5, 2024"
+                    "date": "August 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2405,13 +2587,17 @@
                     "name": "Ethan Lee",
                     "rating": 5,
                     "comment": "Perfect lock with fast fingerprint recognition and sleek design.",
-                    "date": "September 1, 2024"
+                    "date": "September 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emily Garcia",
                     "rating": 4,
                     "comment": "Great smart lock but the mobile app could be more intuitive.",
-                    "date": "September 5, 2024"
+                    "date": "September 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2459,19 +2645,25 @@
                     "name": "Michael Brown",
                     "rating": 4,
                     "comment": "Easy to use and reliable, but the app could be better.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emily Davis",
                     "rating": 5,
                     "comment": "Excellent product! Very secure and easy to install.",
-                    "date": "September 10, 2023"
+                    "date": "September 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Obama",
-                    "rating": 4.3,
+                    "rating": 4.5,
                     "comment": "Convenient and secure, but the app needs some improvements.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2520,19 +2712,23 @@
                     "name": "Jane Smith",
                     "rating": 4,
                     "comment": "Great WiFi range and picture quality, but setup was a bit complicated.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "John Doe",
                     "rating": 4.3,
                     "comment": "Good video quality, but the WiFi connection can be inconsistent.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
         {
             "id": 47,
-            "brand": "HK Vision",
+            "brand": "HIK Vision",
             "name": "Wireless Security Camera",
             "price": "$75.00",
             "image": "../PngItem_5335637.png",
@@ -2574,7 +2770,9 @@
                     "name": "Jane Doe",
                     "rating": 4.7,
                     "comment": "Nice coverage and easy setup, would prefer better night vision.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Chris Davis",
@@ -2633,7 +2831,9 @@
                     "name": "Robert Green",
                     "rating": 4.2,
                     "comment": "Great features and flexibility, but the setup is a bit complex.",
-                    "date": "June 30, 2023"
+                    "date": "June 30, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2682,7 +2882,9 @@
                     "name": "Emily White",
                     "rating": 4.3,
                     "comment": "Reliable outdoor camera with good night vision.",
-                    "date": "May 15, 2023"
+                    "date": "May 15, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2731,7 +2933,9 @@
                     "name": "Lucas Gray",
                     "rating": 4.4,
                     "comment": "Convenient and high-quality, but the app needs improvement.",
-                    "date": "April 10, 2023"
+                    "date": "April 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2780,7 +2984,9 @@
                     "name": "Sophia Lee",
                     "rating": 4.6,
                     "comment": "Excellent wireless system with easy setup and great support.",
-                    "date": "March 5, 2023"
+                    "date": "March 5, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2828,19 +3034,25 @@
                     "name": "Anna Wilson",
                     "rating": 5,
                     "comment": "Incredible video quality and very reliable performance.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "John Doe",
                     "rating": 4.7,
                     "comment": "Excellent HDR performance, but a bit pricey.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Alexa Johnson",
                     "rating": 4.9,
                     "comment": "Outstanding clarity and detail, worth every penny.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2889,7 +3101,9 @@
                     "name": "Oliver Adams",
                     "rating": 4.7,
                     "comment": "Perfect for smart home integration and high-quality video.",
-                    "date": "January 30, 2023"
+                    "date": "January 30, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2938,7 +3152,9 @@
                     "name": "Mia Davis",
                     "rating": 4.8,
                     "comment": "Outstanding panoramic view and video quality.",
-                    "date": "December 12, 2022"
+                    "date": "December 12, 2022",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -2987,7 +3203,9 @@
                     "name": "Charlotte Martinez",
                     "rating": 4.3,
                     "comment": "Great for monitoring babies with good video and audio features.",
-                    "date": "November 25, 2022"
+                    "date": "November 25, 2022",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3035,19 +3253,25 @@
                     "name": "Liam Smith",
                     "rating": 4.7,
                     "comment": "Excellent video quality and very reliable for home security.",
-                    "date": "September 10, 2023"
+                    "date": "September 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Michael Brown",
                     "rating": 4,
                     "comment": "Easy to use and reliable, but the app could be better.",
-                    "date": "August 18, 2023"
+                    "date": "August 18, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emily Davis",
                     "rating": 5,
                     "comment": "Excellent product! Very secure and easy to install.",
-                    "date": "September 10, 2023"
+                    "date": "September 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3094,13 +3318,17 @@
                     "name": "Olivia Moore",
                     "rating": 5,
                     "comment": "Love the learning feature, saves a lot on energy bills!",
-                    "date": "June 15, 2023"
+                    "date": "June 15, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Liam White",
                     "rating": 4,
                     "comment": "Good thermostat, a bit pricey though.",
-                    "date": "June 20, 2023"
+                    "date": "June 20, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3147,13 +3375,17 @@
                     "name": "Emma Smith",
                     "rating": 5,
                     "comment": "Amazing color options and easy to set up.",
-                    "date": "July 5, 2023"
+                    "date": "July 5, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Aiden Lee",
                     "rating": 4,
                     "comment": "Great kit but the app could use some improvements.",
-                    "date": "July 10, 2023"
+                    "date": "July 10, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3200,13 +3432,17 @@
                     "name": "James Wilson",
                     "rating": 5,
                     "comment": "Excellent smart speaker with great voice control.",
-                    "date": "August 1, 2023"
+                    "date": "August 1, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Isabella Brown",
                     "rating": 4,
                     "comment": "Very useful but could have better sound quality.",
-                    "date": "August 5, 2023"
+                    "date": "August 5, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3253,13 +3489,17 @@
                     "name": "Sophia Johnson",
                     "rating": 5,
                     "comment": "Love the integration with Google Assistant.",
-                    "date": "September 1, 2023"
+                    "date": "September 1, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "William Davis",
                     "rating": 4,
                     "comment": "Good device but the screen could be bigger.",
-                    "date": "September 5, 2023"
+                    "date": "September 5, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3306,13 +3546,17 @@
                     "name": "Emma Wilson",
                     "rating": 5,
                     "comment": "Great security camera with excellent features.",
-                    "date": "October 1, 2023"
+                    "date": "October 1, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Lucas Johnson",
                     "rating": 4,
                     "comment": "Very good camera but battery life could be improved.",
-                    "date": "October 5, 2023"
+                    "date": "October 5, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3359,13 +3603,17 @@
                     "name": "Sophia Moore",
                     "rating": 5,
                     "comment": "Fantastic doorbell with excellent features.",
-                    "date": "November 1, 2023"
+                    "date": "November 1, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Ethan Smith",
                     "rating": 4,
                     "comment": "Very good but setup was a bit tricky.",
-                    "date": "November 5, 2023"
+                    "date": "November 5, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3412,13 +3660,17 @@
                     "name": "Emily Davis",
                     "rating": 5,
                     "comment": "Amazing smart lock, very secure and easy to install.",
-                    "date": "December 1, 2023"
+                    "date": "December 1, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Jacob Brown",
                     "rating": 4,
                     "comment": "Very good lock but installation instructions were unclear.",
-                    "date": "December 5, 2023"
+                    "date": "December 5, 2023",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3465,13 +3717,17 @@
                     "name": "Mia Wilson",
                     "rating": 5,
                     "comment": "Excellent camera for the price, very reliable.",
-                    "date": "January 10, 2024"
+                    "date": "January 10, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Noah Clark",
                     "rating": 4,
                     "comment": "Good quality but setup can be confusing.",
-                    "date": "January 15, 2024"
+                    "date": "January 15, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3518,13 +3774,17 @@
                     "name": "Ava Johnson",
                     "rating": 5,
                     "comment": "Fantastic hub, integrates all my smart devices.",
-                    "date": "February 1, 2024"
+                    "date": "February 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Mason Martinez",
                     "rating": 4,
                     "comment": "Works well but setup was a bit complicated.",
-                    "date": "February 5, 2024"
+                    "date": "February 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3571,13 +3831,17 @@
                     "name": "Charlotte Green",
                     "rating": 5,
                     "comment": "Great vacuum with smart features and powerful suction.",
-                    "date": "March 1, 2024"
+                    "date": "March 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Daniel Thompson",
                     "rating": 4,
                     "comment": "Very good but a bit noisy.",
-                    "date": "March 5, 2024"
+                    "date": "March 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3624,13 +3888,17 @@
                     "name": "Sophia Taylor",
                     "rating": 5,
                     "comment": "Fantastic sound for its size and great Siri integration.",
-                    "date": "April 1, 2024"
+                    "date": "April 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Jackson Miller",
                     "rating": 4,
                     "comment": "Good speaker, but a bit pricey.",
-                    "date": "April 5, 2024"
+                    "date": "April 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3677,13 +3945,17 @@
                     "name": "Liam Johnson",
                     "rating": 5,
                     "comment": "Works great with HomeKit and energy monitoring is very useful.",
-                    "date": "May 1, 2024"
+                    "date": "May 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Olivia Garcia",
                     "rating": 4,
                     "comment": "Good smart plug but a bit bulky.",
-                    "date": "May 5, 2024"
+                    "date": "May 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3730,13 +4002,17 @@
                     "name": "Ethan Robinson",
                     "rating": 5,
                     "comment": "Easy to set up and works perfectly with my smart home system.",
-                    "date": "June 1, 2024"
+                    "date": "June 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Ava Martinez",
                     "rating": 4,
                     "comment": "Good bulb but app could use some improvements.",
-                    "date": "June 5, 2024"
+                    "date": "June 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3783,13 +4059,17 @@
                     "name": "Mason White",
                     "rating": 5,
                     "comment": "Reliable and easy to integrate with my SmartThings system.",
-                    "date": "July 1, 2024"
+                    "date": "July 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emily Clark",
                     "rating": 4,
                     "comment": "Works well but could have a louder alarm.",
-                    "date": "July 5, 2024"
+                    "date": "July 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3836,13 +4116,17 @@
                     "name": "Aiden Wilson",
                     "rating": 5,
                     "comment": "Great camera with clear video and good app integration.",
-                    "date": "August 1, 2024"
+                    "date": "August 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Charlotte Lee",
                     "rating": 4,
                     "comment": "Effective camera but could use better night vision.",
-                    "date": "August 5, 2024"
+                    "date": "August 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3889,13 +4173,17 @@
                     "name": "John Smith",
                     "rating": 5,
                     "comment": "Perfect camera with clear video and great features.",
-                    "date": "April 15, 2024"
+                    "date": "April 15, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Alice Johnson",
                     "rating": 4,
                     "comment": "Good quality but a bit pricey.",
-                    "date": "April 20, 2024"
+                    "date": "April 20, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3942,13 +4230,17 @@
                     "name": "Emily Davis",
                     "rating": 5,
                     "comment": "Great value for the price. Works well.",
-                    "date": "May 10, 2024"
+                    "date": "May 10, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Michael Lee",
                     "rating": 4,
                     "comment": "Good performance but setup was a bit tricky.",
-                    "date": "May 15, 2024"
+                    "date": "May 15, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -3995,13 +4287,17 @@
                     "name": "Sarah Wilson",
                     "rating": 5,
                     "comment": "Great outdoor camera with superb video quality.",
-                    "date": "June 1, 2024"
+                    "date": "June 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "James Brown",
                     "rating": 4,
                     "comment": "Good camera but installation could be easier.",
-                    "date": "June 5, 2024"
+                    "date": "June 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4049,13 +4345,17 @@
                     "name": "Laura Smith",
                     "rating": 5,
                     "comment": "Works perfectly with all my smart home devices.",
-                    "date": "July 1, 2024"
+                    "date": "July 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Robert Johnson",
                     "rating": 4,
                     "comment": "Effective hub but configuration was a bit complex.",
-                    "date": "July 5, 2024"
+                    "date": "July 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4102,13 +4402,17 @@
                     "name": "Daniel Miller",
                     "rating": 5,
                     "comment": "Great sensor for home automation. Works as expected.",
-                    "date": "August 1, 2024"
+                    "date": "August 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Sophia Martinez",
                     "rating": 4,
                     "comment": "Good motion detection but battery life could be better.",
-                    "date": "August 5, 2024"
+                    "date": "August 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4155,13 +4459,17 @@
                     "name": "Oliver Wilson",
                     "rating": 5,
                     "comment": "Excellent multipurpose sensor. Very useful for home security.",
-                    "date": "September 1, 2024"
+                    "date": "September 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Mia Davis",
                     "rating": 4,
                     "comment": "Good sensor but could use better integration options.",
-                    "date": "September 5, 2024"
+                    "date": "September 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4208,13 +4516,17 @@
                     "name": "Ethan Brown",
                     "rating": 5,
                     "comment": "Excellent sensor for preventing water damage. Highly recommended.",
-                    "date": "October 1, 2024"
+                    "date": "October 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Isabella Garcia",
                     "rating": 4,
                     "comment": "Works well but a bit expensive.",
-                    "date": "October 5, 2024"
+                    "date": "October 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4261,13 +4573,17 @@
                     "name": "Aiden Martinez",
                     "rating": 5,
                     "comment": "Excellent smart plug with useful features. Easy to use.",
-                    "date": "November 1, 2024"
+                    "date": "November 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Olivia Anderson",
                     "rating": 4,
                     "comment": "Works well but could use more advanced features.",
-                    "date": "November 5, 2024"
+                    "date": "November 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4314,13 +4630,17 @@
                     "name": "Lucas King",
                     "rating": 5,
                     "comment": "Effective leak sensor. Prevented potential water damage.",
-                    "date": "December 1, 2024"
+                    "date": "December 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Megan Lee",
                     "rating": 4,
                     "comment": "Good performance but a bit pricey.",
-                    "date": "December 5, 2024"
+                    "date": "December 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4367,13 +4687,17 @@
                     "name": "Hannah Scott",
                     "rating": 5,
                     "comment": "Excellent indoor camera with reliable performance.",
-                    "date": "January 1, 2025"
+                    "date": "January 1, 2025",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Ethan Clark",
                     "rating": 4,
                     "comment": "Good camera but the setup was a bit complicated.",
-                    "date": "January 5, 2025"
+                    "date": "January 5, 2025",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4420,13 +4744,17 @@
                     "name": "Oliver Smith",
                     "rating": 5,
                     "comment": "Very reliable and easy to set up. Love the integration with Google Home.",
-                    "date": "April 10, 2024"
+                    "date": "April 10, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Isabella Johnson",
                     "rating": 4,
                     "comment": "Good product but a bit expensive.",
-                    "date": "April 15, 2024"
+                    "date": "April 15, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4473,13 +4801,17 @@
                     "name": "Emma Davis",
                     "rating": 5,
                     "comment": "Great dual detector with a clear display and reliable performance.",
-                    "date": "May 1, 2024"
+                    "date": "May 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Liam Martinez",
                     "rating": 4,
                     "comment": "Good product, but the alarm could be louder.",
-                    "date": "May 5, 2024"
+                    "date": "May 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4526,13 +4858,17 @@
                     "name": "Aiden White",
                     "rating": 5,
                     "comment": "Excellent alarm with helpful voice alerts for location.",
-                    "date": "June 1, 2024"
+                    "date": "June 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Sophia Lee",
                     "rating": 4,
                     "comment": "Good alarm but could use a more noticeable alarm sound.",
-                    "date": "June 5, 2024"
+                    "date": "June 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4579,13 +4915,17 @@
                     "name": "James Brown",
                     "rating": 5,
                     "comment": "Excellent smart smoke detector with reliable notifications.",
-                    "date": "July 1, 2024"
+                    "date": "July 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Olivia Wilson",
                     "rating": 4,
                     "comment": "Good product but setup could be simpler.",
-                    "date": "July 5, 2024"
+                    "date": "July 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4631,13 +4971,17 @@
                     "name": "Lucas Adams",
                     "rating": 5,
                     "comment": "Great alarm with LED indicator and easy installation.",
-                    "date": "August 1, 2024"
+                    "date": "August 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Mia Miller",
                     "rating": 4,
                     "comment": "Effective smoke alarm but a bit noisy.",
-                    "date": "August 5, 2024"
+                    "date": "August 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4684,13 +5028,17 @@
                     "name": "Ethan Harris",
                     "rating": 5,
                     "comment": "Reliable smoke and fire alarm with a loud alarm.",
-                    "date": "September 1, 2024"
+                    "date": "September 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Ava Roberts",
                     "rating": 4,
                     "comment": "Good alarm but installation instructions could be clearer.",
-                    "date": "September 5, 2024"
+                    "date": "September 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4736,13 +5084,17 @@
                     "name": "William Green",
                     "rating": 5,
                     "comment": "Reliable smoke detector with easy installation.",
-                    "date": "October 1, 2024"
+                    "date": "October 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Emma White",
                     "rating": 4,
                     "comment": "Effective but a bit loud.",
-                    "date": "October 5, 2024"
+                    "date": "October 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4789,13 +5141,17 @@
                     "name": "Noah Scott",
                     "rating": 5,
                     "comment": "Great integration with my smart home system and reliable alerts.",
-                    "date": "November 1, 2024"
+                    "date": "November 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Isabella Adams",
                     "rating": 4,
                     "comment": "Good product but a bit pricey.",
-                    "date": "November 5, 2024"
+                    "date": "November 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4842,13 +5198,17 @@
                     "name": "Lucas Turner",
                     "rating": 5,
                     "comment": "Excellent smoke detector with smart alerts and good app integration.",
-                    "date": "December 1, 2024"
+                    "date": "December 1, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Mia Clark",
                     "rating": 4,
                     "comment": "Effective but could use a more noticeable alarm sound.",
-                    "date": "December 5, 2024"
+                    "date": "December 5, 2024",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4895,13 +5255,17 @@
                     "name": "Benjamin King",
                     "rating": 5,
                     "comment": "Great smoke detector with advanced features and good integration.",
-                    "date": "January 1, 2025"
+                    "date": "January 1, 2025",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 },
                 {
                     "name": "Ava Lee",
                     "rating": 4,
                     "comment": "Good performance but a bit on the expensive side.",
-                    "date": "January 5, 2025"
+                    "date": "January 5, 2025",
+                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    "avatar":""
                 }
             ]
         },
@@ -4948,13 +5312,17 @@
                 "name": "James Anderson",
                 "rating": 5,
                 "comment": "Great sensor with reliable notifications and easy setup.",
-                "date": "July 1, 2024"
+                "date": "July 1, 2024",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               },
               {
                 "name": "Olivia Walker",
                 "rating": 4,
                 "comment": "Effective sensor but the app could be more user-friendly.",
-                "date": "July 5, 2024"
+                "date": "July 5, 2024",
+                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "avatar":""
               }
             ]
           },
@@ -5001,13 +5369,17 @@
                   "name": "Sophia Lee",
                   "rating": 5,
                   "comment": "Excellent keybox with easy PIN entry and durable design.",
-                  "date": "March 1, 2024"
+                  "date": "March 1, 2024",
+                  "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                  "avatar":""
                 },
                 {
                   "name": "Liam Davis",
                   "rating": 4,
                   "comment": "Good keybox but could be more compact.",
-                  "date": "March 5, 2024"
+                  "date": "March 5, 2024",
+                  "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                  "avatar":""
                 }
               ]
             },
@@ -5046,7 +5418,6 @@
                 {
                   "facebook": "../face.svg",
                   "instagram": "../instagram.svg",
-                  "twitter": "../twitter.svg",
                   "twitter": "../twitter.svg"
                 }
               ],
@@ -5055,13 +5426,17 @@
                   "name": "Noah Wilson",
                   "rating": 5,
                   "comment": "Great padlock with reliable Bluetooth connectivity and sturdy build.",
-                  "date": "April 1, 2024"
+                  "date": "April 1, 2024",
+                  "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                  "avatar":""
                 },
                 {
                   "name": "Ava Martinez",
                   "rating": 4,
                   "comment": "Effective padlock but the app could use some improvements.",
-                  "date": "April 5, 2024"
+                  "date": "April 5, 2024",
+                  "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                  "avatar":""
                 }
               ]
             },
@@ -5108,13 +5483,17 @@
                   "name": "Isabella Thompson",
                   "rating": 5,
                   "comment": "Fantastic doorbell with great video quality and features.",
-                  "date": "May 1, 2024"
+                  "date": "May 1, 2024",
+                  "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                  "avatar":""
                 },
                 {
                   "name": "Ethan White",
                   "rating": 4,
                   "comment": "Good doorbell but the night vision could be better.",
-                  "date": "May 5, 2024"
+                  "date": "May 5, 2024",
+                  "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                  "avatar":""
                 }
               ]
             }

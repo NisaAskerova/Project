@@ -117,7 +117,7 @@
   width: 445px;
 }
 
-form {
+.rightBox>form {
   width: 100%;
   margin-top: 30px;
 }
@@ -162,7 +162,7 @@ button[type='submit'] {
 
 #remember>div>input[type='checkbox'],
 #question>input[type='checkbox'],
-.filterCatecory>div>input[type='radio']{
+.filterCatecory>div>input[type='radio'] {
   appearance: none;
   width: 24px;
   height: 24px;
@@ -170,20 +170,24 @@ button[type='submit'] {
   border-radius: 5px;
   cursor: pointer;
 }
-.filterCatecory>div>input[type='radio']{
+
+.filterCatecory>div>input[type='radio'] {
   background-color: transparent;
   border: 1px solid #15140F33;
   margin-right: 10px;
 }
+
 #remember>div>input[type='checkbox']:checked,
 #question>input[type='checkbox']:checked,
 .filterCatecory>div>input[type='radio']:checked {
   background-color: #FEE747;
   background-image: url(..//public/check.svg);
 }
-.filterCatecory>div>input[type='radio']:checked{
+
+.filterCatecory>div>input[type='radio']:checked {
   border: 1px solid transparent;
 }
+
 #remember>div>label {
   color: #15140F;
 
@@ -1192,7 +1196,7 @@ strong {
 }
 
 /* **************************APPOINTMENT*************************/
- #appointment {
+#appointment {
   width: 100%;
   height: 565px;
   background: #FEE747;
@@ -1350,10 +1354,12 @@ strong {
   align-items: center;
   justify-content: center;
 }
-.imgDiv>img{
+
+.imgDiv>img {
   width: 190px;
   height: 190px;
 }
+
 .shopIcons {
   width: 40px;
   height: 140px;
@@ -1411,7 +1417,6 @@ strong {
 /* ***********************PRODUCT*************************** */
 #product {
   width: 100%;
-  height: 100vh;
   display: flex;
   padding: 100px 189px;
   gap: 50px;
@@ -1465,10 +1470,12 @@ strong {
   font-weight: 400;
   line-height: 24px;
 }
-.productPrice{
-margin-top: 12px;
-display: block;
+
+.productPrice {
+  margin-top: 12px;
+  display: block;
 }
+
 #stockDiv {
   width: 70px;
   position: absolute;
@@ -1593,9 +1600,7 @@ tr td:first-of-type,
   outline: none;
   border: 1px solid rgba(180, 178, 173, 0.20);
   background-color: #fff;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+
 }
 
 .productButtons>div button:first-of-type {
@@ -1650,20 +1655,191 @@ tr td:first-of-type,
   cursor: pointer;
 }
 
-#shereMedia{
+#shereMedia {
   margin-top: 19px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+/* ***************DESCTIPTION REVIEW**************************** */
+#comments {
+  width: 100%;
+  padding: 0 198px;
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid #B4B2AD;
+}
+
+.description {
+  padding: 20px 189px;
+}
+
+#comments>div>a>span {
+  display: block;
+  height: 100%;
+  padding: 10px 0 20px;
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 120% */
+}
+
+.reviewCard {
+  width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(180, 178, 173, 0.20);
+}
+
+.active-link span {
+  color: #FEE747 !important;
+  font-family: Epilogue;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  border-bottom: 3px solid #FEE747;
+}
+
+.review {
+  width: 100%;
+  padding: 10px 189px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.review>h3{
+  margin-top: 20px;
+}
+.review>h3,
+#reviewForm>h3 {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+#reviewForm>h3{
+  margin: 30px 0 20px;
+}
+.reviewDate {
+  display: flex;
+  gap: 3px;
+  /* margin-top: 10px; */
+}
+
+.reviewTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.reviewTitle>div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+}
+
+.gray {
+  color: #B4B2AD;
+  font-family: Epilogue;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 157.143% */
+}
+
+.gray+span {
+  color: #15140F;
+
+  /* Body-2 Regular */
+  font-family: Epilogue;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.ratingStars {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#reviewForm {
+  width: 100%;
+}
+
+#reviewForm>form {
+  display: flex;
+  flex-direction: column;
+ justify-content: flex-start;
+}
+
+#reviewForm>form>label {
+  color: #15140F;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin-top: 20px;
+}
+
+#reviewForm>form>input,
+#reviewForm>form>textarea{
+  width: 100%;
+  height: 56px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(180, 178, 173, 0.20);
+  outline: none;
+}
+#reviewForm>form>textarea{
+  height: 104px;
+  resize: none;
+}
+#reviewForm>form>input::placeholder{
+  color: rgba(180, 178, 173, 0.80);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; 
+}
+#reviewForm>form>button{
+  width: 139px;
+height: 56px;
+}
+ #relatedProducts{
+  width: 100%;
+  padding: 100px 189px 0;
+ }
+.products-grid{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
 
 /* ******************ProductCategories***************************** */
-.filterProduct{
+.filterProduct {
   width: 23%;
-  /* height: 100vh; */
+
 }
-.filterTitle{
+
+.filterTitle {
   display: flex;
   width: 100%;
   align-items: center;
@@ -1671,35 +1847,46 @@ tr td:first-of-type,
   cursor: pointer;
   height: 30px;
 }
-.ft{
+
+.ft {
   margin-top: 30px;
 }
-.filterCatecory{
+
+.filterCatecory {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
 }
-.filterCatecory>div{
+
+.filterCatecory>div {
   display: flex;
   align-items: center;
   height: 30px;
 }
+
 .filterCatecory>div,
-.filterCatecory>span{
+.filterCatecory>span {
   padding: 16px 0;
 }
-#range{
+
+#range {
   flex-direction: column;
   justify-content: flex-start;
 }
-#range>input{
-width: 100%;
-color: #FEE747;
+
+#range>input {
+  width: 100%;
+  color: #FEE747;
 }
-#products{
+
+#products {
   width: 80%;
 }
+
+
+
+
 /* **************************************************************** */
 /* **************************************************************** */
 /* *************************TABLET********************************* */
@@ -1792,7 +1979,7 @@ color: #FEE747;
   #homepage2 {
     width: 100%;
     height: 150vh;
-    padding: 80px 50px ;
+    padding: 80px 50px;
     display: block;
     /* background-color: #d13939; */
   }
@@ -1898,7 +2085,7 @@ color: #FEE747;
   }
 
   /* ***************CLIENT*********************** */
- #client {
+  #client {
     display: none;
   }
 
@@ -1945,4 +2132,3 @@ color: #FEE747;
     width: 100px;
   }
 }
-

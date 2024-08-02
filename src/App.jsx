@@ -8,7 +8,8 @@ import Services from './sevices/Services';
 import Blog from './blog/Blog';
 import Shop from './shop/Shop';
 import ProductDetail from './shop/ProductDetail';
-// import CarbonAlarmDetail from './shop/CarbonAlarmDetail';
+import Description from './shop/Description';
+import Review from './shop/Review';
 
 
 export const MyContext = createContext();
@@ -52,6 +53,8 @@ export default function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/shop' element={<Shop />} />
           <Route path="/product/:id" element={<ProductDetail />} >
+          <Route path='description' element={<Description/>}/>
+          <Route path='review' element={<Review/>}/>
           </Route>
         </Routes>
       </Router>

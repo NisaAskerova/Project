@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { NavLink, Outlet, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Product() {
@@ -31,6 +31,7 @@ export default function Product() {
     const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
     return (
+        <div>
         <div id='product'>
             <div id="leftProduct">
                 <div id='bigImg'>
@@ -42,7 +43,6 @@ export default function Product() {
                     ))}
                 </div>
             </div >
-
 
             <div id="rightProduct">
                 <div>
@@ -115,7 +115,21 @@ export default function Product() {
                     ))}
                 </div>
             </div>
+        </div>
+            <div id='comments'>
+                <div>
+                    <NavLink to="description" className={({ isActive }) => isActive ? 'active-link' : ''}>
+                        <span>Description</span>
+                    </NavLink>
+                </div>
+                <div>
+                    <NavLink to="review" className={({ isActive }) => isActive ? 'active-link' : ''}>
+                        <span>Review</span>
+                    </NavLink>
+                </div>
+            </div>
 
-        </div >
+            <Outlet/>
+        </div>
     );
 }

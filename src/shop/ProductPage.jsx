@@ -143,10 +143,10 @@ export default function ProductPage() {
                                 </div>
                                 <div className='shopIcons'>
                                     <div className='shopIcon'>
-                                        <img src="star2.svg" alt="Star" />
+                                        <img src="/star2.svg" alt="Star" />
                                     </div>
                                     <div className='shopIcon'>
-                                        <img src="arrow.svg" alt="Arrow" />
+                                        <img src="/arrow.svg" alt="Arrow" />
                                     </div>
                                     <div className='shopIcon'>
                                         <Link to={`/product/${product.id}`}>
