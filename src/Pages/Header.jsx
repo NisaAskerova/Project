@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { MyContext } from '../App';
+
 
 export default function Header() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
-
-
+  const {cart, setVisibleCard} = useContext(MyContext);
   const navigate = useNavigate();
-
   const handleLogin = (e) => {
     e.preventDefault();
     navigate('/');
@@ -62,10 +62,11 @@ export default function Header() {
             <div id='navIcon'>
               <img src="/search.svg" alt="search" />
               <img src="/favory.svg" alt="favorite" />
-              <div id='cartCount'>
+              <div id='cartCount' onClick={()=>setVisibleCard(true)}>
                 <img src="/shopCar.svg" alt="shop car" />
-                <div><span>2</span></div>
+                <div><span>{cart.length}</span></div>
               </div>
+              
             </div>
             <div id='headerButtons'>
               <button className='same'>Get a Quote</button>

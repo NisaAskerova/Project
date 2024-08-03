@@ -16,7 +16,11 @@ export default function ProductPage() {
     const fetchData = async () => {
         try {
             const response = await axios.get('/json/products.json');
-            setProducts(response.data.products);
+            const productsWithQuantity = response.data.products.map(product => ({
+                ...product,
+                quantity: 1 
+            }));
+            setProducts(productsWithQuantity);
         } catch (error) {
             console.error(error);
         } finally {
@@ -98,10 +102,10 @@ export default function ProductPage() {
                         <img src="down.svg" alt="" />
                     </div>
                     <div style={{ height: shot2 ? "100%" : "0", overflow: "hidden" }} className='filterCatecory' id=''>
-                    <span>Price: {filters.price}</span>
-                    <input type="range" min="0" max="2000" value={filters.price} onChange={(e) => handleFilterChange('price', e.target.value)} />
+                        <span>Price: {filters.price}</span>
+                        <input type="range" min="0" max="2000" value={filters.price} onChange={(e) => handleFilterChange('price', e.target.value)} />
                     </div>
-                
+               
                     <div className='filterTitle ft' onClick={() => setShot3(!shot3)}>
                         <h3>Brands</h3>
                         <img src="down.svg" alt="" />
@@ -109,7 +113,7 @@ export default function ProductPage() {
                     {['Igloohome', 'HIK Vision', 'Ezvir', 'D-Link', 'Samsung', 'CP Plus'].map((brand) => (
                         <div style={{ height: shot3 ? "100%" : "0", overflow: "hidden" }} key={brand} className='filterCatecory'>
                             <div>
-                                <input type="radio" id={brand} value={brand} name='category' onChange={() => handleFilterChange('brand', brand)} />
+                                <input type="radio" id={brand} value={brand} name='brand' onChange={() => handleFilterChange('brand', brand)} />
                                 <label htmlFor={brand}>{brand}</label>
                             </div>
                             <span>({brandCounts[brand] || 0})</span>
@@ -139,7 +143,7 @@ export default function ProductPage() {
                                 <div>
                                     <span className='same'>{product.brand}</span>
                                     <h3>{product.name}</h3>
-                                    <span className='same'>${product.price}</span>
+                                    <span className='same'>{product.price}</span>
                                 </div>
                                 <div className='shopIcons'>
                                     <div className='shopIcon'>

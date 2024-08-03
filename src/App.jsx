@@ -10,39 +10,27 @@ import Shop from './shop/Shop';
 import ProductDetail from './shop/ProductDetail';
 import Description from './shop/Description';
 import Review from './shop/Review';
+import Card from './shop/Card';
 
 
 export const MyContext = createContext();
 
 export default function App() {
   const [products, setProducts] = useState([]);
-  const [detector, setDetector] = useState([]);
-  const [smoke, setSmoke] = useState([]);
-  const [home, setHome] = useState([]);
-  const [carbon, setCarbon] = useState([]);
   const [cart, setCart] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedBrand, setSelectedBrand] = useState("");
-  const [priceRange, setPriceRange] = useState([0, 2000]);
-  const [selectedTags, setSelectedTags] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  
+  const [visibleCard, setVisibleCard] = useState(false);
+  const [localQuantity, setLocalQuantity] = useState(1);
+
   const data = {
     products, setProducts,
     cart, setCart,
-    carbon, setCarbon,
-    detector, setDetector,
-    home, setHome,
-    smoke, setSmoke,
-    selectedCategory, setSelectedCategory,
-    selectedBrand, setSelectedBrand,
-    priceRange, setPriceRange,
-    selectedTags, setSelectedTags,
-    filteredProducts, setFilteredProducts
+    visibleCard, setVisibleCard,
+    localQuantity, setLocalQuantity
   };
 
   return (
     <MyContext.Provider value={data}>
+      {visibleCard ? <Card/> : null}
       <Router>
         <Routes>
           <Route path='/' element={<Login />} />
@@ -53,8 +41,8 @@ export default function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/shop' element={<Shop />} />
           <Route path="/product/:id" element={<ProductDetail />} >
-          <Route path='description' element={<Description/>}/>
-          <Route path='review' element={<Review/>}/>
+            <Route path='description' element={<Description />} />
+            <Route path='review' element={<Review />} />
           </Route>
         </Routes>
       </Router>

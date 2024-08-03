@@ -1,17 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, Outlet, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { MyContext } from '../App';
 
 export default function Product() {
+    const { cart, setCart, localQuantity, setLocalQuantity } = useContext(MyContext);
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
+
+    const increment = () => {
+        setLocalQuantity(prevQuantity => prevQuantity + 1);
+    };
+
+    const decrement = () => {
+        setLocalQuantity(prevQuantity => (prevQuantity > 1 ? prevQuantity - 1 : 1));
+    };
+    const addCart = (product) => {
+        const existingProduct = cart.find((prd) => prd.id === product.id);
+        if (existingProduct) {
+            const newArray = cart.map((e) => {
+                if (e.id === product.id) {
+                    return { ...e, quantity: e.quantity + localQuantity }; 
+                } else {
+                    return e;
+                }
+            });
+            setCart(newArray);
+        } else {
+            setCart([...cart, { ...product, quantity: localQuantity }]); 
+        }
+    };
+    
 
     const fetchData = async () => {
         try {
             const response = await axios.get('/json/products.json');
             const product = response.data.products.find(p => p.id === parseInt(id));
             setProduct(product);
+            setLocalQuantity(1);
         } catch (error) {
             console.error(error);
         } finally {
@@ -32,104 +59,100 @@ export default function Product() {
 
     return (
         <div>
-        <div id='product'>
-            <div id="leftProduct">
-                <div id='bigImg'>
-                    <img src={product.image} alt={product.name} />
+            <div id='product'>
+                <div id="leftProduct">
+                    <div id='bigImg'>
+                        <img src={product.image} alt={product.name} />
+                    </div>
+                    <div className='productImageBox'>
+                        {product.images.map((e, index) => (
+                            <div className='fourImages' key={index}><img src={e} alt="" /></div>
+                        ))}
+                    </div>
                 </div>
-                <div className='productImageBox'>
-                    {product.images.map((e, index) => (
-                        <div className='fourImages' key={index}><img src={e} alt="" /></div>
-                    ))}
-                </div>
-            </div >
 
-            <div id="rightProduct">
-                <div>
-                    <div id='stockDiv'>
-                        {product.stock ? (
-                            <div className='greenDiv'><span>In Stock</span></div>
-                        ) : <div className='redDiv'><span>Out Of Stock</span></div>}
-                    </div>
-                    <span className='brand'>{product.brand}</span>
-                    <h3 className='productName'>{product.name}</h3>
-                    <div className='productRating'>
-                        {Array.from({ length: fullStars }).map((_, i) => (
-                            <img key={i} src={product.star} alt="star" />
-                        ))}
-                        {hasHalfStar && <img src={product.halfStar} alt="half star" />}
-                        {Array.from({ length: emptyStars }).map((_, i) => (
-                            <img key={i} src={product.emptyStar} alt="empty star" />
-                        ))}
-                        <div>
-                            <span>{product.review.rating}</span>
-                            <span>({product.customerReviews.length} Reviews)</span>
-                        </div>
-                    </div>
-                </div>
-                <span className='productPrice'>{product.price}</span>
-                <div className='productDescription'>
-                    <p className='same'>{product.description.slice(0,200)}...</p>
-                </div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><h4>SKU</h4></td>
-                            <td>{product.SKU}</td>
-                        </tr>
-                        <tr>
-                            <td><h4>Categories</h4></td>
-                            <td>{product.categories.join(', ')}</td>
-                        </tr>
-                        <tr>
-                            <td><h4>Tags</h4></td>
-                            <td>{product.tags.join(', ')}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div className='productButtons'>
+                <div id="rightProduct">
                     <div>
-                        <button disabled={!product.stock}><img src="/minus.svg" alt="" /></button>
-                        <input className='same' type="text" readOnly value={1} />
-                        <button disabled={!product.stock}><img src="/plus.svg" alt="" /></button>
-                    </div>
-                    <button className='addButton' disabled={!product.stock}>Add to Cart</button>
-                    <div className='favoriteButton'>
-                        <img src="/favory.svg" alt="" />
-                    </div>
-                </div>
-                <div id='shereMedia'>
-                    <h3 id='shere'>Share</h3>
-                    {product.sosial?.map((e, i) => (
-                        <div className='media' key={i}>
+                        <div id='stockDiv'>
+                            {product.stock ? (
+                                <div className='greenDiv'><span>In Stock</span></div>
+                            ) : (
+                                <div className='redDiv'><span>Out Of Stock</span></div>
+                            )}
+                        </div>
+                        <span className='brand'>{product.brand}</span>
+                        <h3 className='productName'>{product.name}</h3>
+                        <div className='productRating'>
+                            {Array.from({ length: fullStars }).map((_, i) => (
+                                <img key={i} src={product.star} alt="star" />
+                            ))}
+                            {hasHalfStar && <img src={product.halfStar} alt="half star" />}
+                            {Array.from({ length: emptyStars }).map((_, i) => (
+                                <img key={i} src={product.emptyStar} alt="empty star" />
+                            ))}
                             <div>
-                                {e.facebook && <img src={e.facebook} alt="Facebook" />}
-                            </div>
-                            <div>
-                                {e.instagram && <img src={e.instagram} alt="Instagram" />}
-                            </div>
-                            <div>
-                                {e.twitter && <img src={e.twitter} alt="Twitter" />}
+                                <span>{product.review.rating}</span>
+                                <span>({product.customerReviews.length} Reviews)</span>
                             </div>
                         </div>
-                    ))}
+                    </div>
+                    <span className='productPrice'>{product.price}</span>
+                    <div className='productDescription'>
+                        <p className='same'>{product.description.slice(0, 200)}...</p>
+                    </div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><h4>SKU</h4></td>
+                                <td>{product.SKU}</td>
+                            </tr>
+                            <tr>
+                                <td><h4>Categories</h4></td>
+                                <td>{product.categories.join(', ')}</td>
+                            </tr>
+                            <tr>
+                                <td><h4>Tags</h4></td>
+                                <td>{product.tags.join(', ')}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div className='productButtons'>
+                        <div>
+                            <button onClick={decrement} disabled={!product.stock}><img src="/minus.svg" alt="" /></button>
+                            <input className='same' type="text" readOnly value={localQuantity} />
+                            <button onClick={increment} disabled={!product.stock}><img src="/plus.svg" alt="" /></button>
+                        </div>
+                        <button className='addButton' disabled={!product.stock} onClick={() => addCart(product)}>Add to Cart</button>
+                        <div className='favoriteButton'>
+                            <img src="/favory.svg" alt="" />
+                        </div>
+                    </div>
+                    <div id='shereMedia'>
+                        <h3 id='shere'>Share</h3>
+                        {product.sosial?.map((e, i) => (
+                            <div className='media' key={i}>
+                                <div>{e.facebook && <img src={e.facebook} alt="Facebook" />}</div>
+                                <div>{e.instagram && <img src={e.instagram} alt="Instagram" />}</div>
+                                <div>{e.twitter && <img src={e.twitter} alt="Twitter" />}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
             <div id='comments'>
                 <div>
-                    <NavLink to="description" className={({ isActive }) => isActive ? 'active-link' : ''}>
+                    <NavLink to="description" className={({ isActive }) => (isActive ? 'active-link' : '')}>
                         <span>Description</span>
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to="review" className={({ isActive }) => isActive ? 'active-link' : ''}>
+                    <NavLink to="review" className={({ isActive }) => (isActive ? 'active-link' : '')}>
                         <span>Review</span>
                     </NavLink>
                 </div>
             </div>
 
-            <Outlet/>
+            <Outlet />
         </div>
     );
 }
