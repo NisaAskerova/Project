@@ -8,6 +8,7 @@
             "image": "../image 17.png",
             "category": "Security System",
             "stock": false,
+            "color":"black",
             "images": [
                 "../image 17.png",
                 "../image 17.png",
@@ -74,6 +75,7 @@
             "image": "../PngItem_4760952.png",
             "category": "Security System",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_4760952.png",
                 "../PngItem_4760952.png ",
@@ -134,6 +136,7 @@
             "image": "../PngItem_4124313.png",
             "category": "Security System",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_4124313.png",
                 "../PngItem_4124313.png",
@@ -201,6 +204,7 @@
             "category": "Security System",
             "image": "../PngItem_5335869.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_5335869.png",
                 "../PngItem_5335869.png",
@@ -268,6 +272,7 @@
             "category": "Security System",
             "image": "../PngItem_5989470.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_5989470.png",
                 "../PngItem_5989470.png",
@@ -335,6 +340,7 @@
             "category": "Security System",
             "image": "../PngItem_2018403.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_2018403.png",
                 "../PngItem_2018403.png",
@@ -395,6 +401,7 @@
             "category": "Security System",
             "image": "../PngItem_3521561.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_3521561.png",
                 "../PngItem_3521561.png",
@@ -446,6 +453,7 @@
             "category": "Security System",
             "image": "../PngItem_5335828.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_5335828.png",
                 "../PngItem_5335828.png",
@@ -505,6 +513,7 @@
             "category": "Security System",
             "image": "../PngItem_5335637.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_5335637.png",
                 "../PngItem_5335637.png",
@@ -566,6 +575,7 @@
             "category": "Security System",
             "image": "../PngItem_2560501.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_2560501.png",
                 "../PngItem_2560501.png",
@@ -634,6 +644,7 @@
             "category": "Security System",
             "image": "../PngItem_5335451.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_5335451.png",
                 "../PngItem_5335451.png",
@@ -701,6 +712,7 @@
             "category": "Security System",
             "image": "../PngItem_2839997.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_2839997.png",
                 "../PngItem_2839997.png",
@@ -761,6 +773,7 @@
             "image": "../pngwing.com.png",
             "category":"Carbon Alarm",
             "stock": true,
+            "color":"black",
             "images": [
               "../pngwing.com.png",
               "../pngwing.com.png",
@@ -818,6 +831,7 @@
             "price": "79.00",
             "image": "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
             "stock": true,
+            "color":"black",
             "category":"Carbon Alarm",
             "images": [
               "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
@@ -876,6 +890,7 @@
             "price": "299.00",
             "image": "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
             "stock": false,
+            "color":"black",
             "category":"Carbon Alarm",
             "images": [
               "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
@@ -934,6 +949,7 @@
             "price": "89.00",
             "image": "../EVE_Room_Fahrenheit_09-min.jpg",
             "stock": true,
+            "color":"black",
             "category":"Carbon Alarm",
             "images": [
               "../EVE_Room_Fahrenheit_09-min.jpg",
@@ -992,6 +1008,7 @@
             "price": "99.00",
             "image": "../5800COMBO_hi__36261.jpg",
             "stock": true,
+            "color":"black",
             "category":"Carbon Alarm",
             "images": [
               "../5800COMBO_hi__36261.jpg",
@@ -1050,6 +1067,7 @@
             "price": "129.00",
             "image": "../images (10).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (10).jpeg",
                 "../images (10).jpeg",
@@ -1107,6 +1125,7 @@
             "price": "249.00",
             "image": "../31R7dh5QVAL.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../31R7dh5QVAL.jpg",
                 "../31R7dh5QVAL.jpg",
@@ -1164,6 +1183,7 @@
             "price": "45.00",
             "image": "../GoveeLife-H5043-Wi-Fi-Smart-Gateway-2-with-Smart-Thermo-Hygrometer-3-Lite-U-7.png",
             "stock": true,
+            "color":"black",
             "category":"Leakage Detector",
             "images": [
                 "..GoveeLife-H5043-Wi-Fi-Smart-Gateway-2-with-Smart-Thermo-Hygrometer-3-Lite-U-7.png",
@@ -1222,6 +1242,7 @@
             "price": "79.00",
             "image": "../wld2-side-1id56976.png",
             "stock": true,
+            "color":"black",
             "category":"Leakage Detector",
             "images": [
                 "../wld2-side-1id56976.png",
@@ -1280,6 +1301,7 @@
             "price": "85.00",
             "image": "../hpa-water-leak-detector-1.png",
             "stock": true,
+            "color":"black",
             "category":"Leakage Detector",
             "images": [
                 "../hpa-water-leak-detector-1.png",
@@ -1338,6 +1360,7 @@
             "price": "65.00",
             "image": "../images.jpeg",
             "stock": true,
+            "color":"black",
             "category":"Leakage Detector",
             "images": [
                 "../images.jpeg",
@@ -1396,6 +1419,7 @@
             "price": "89.00",
             "image": "../EVE_Waterguard_2311.png",
             "stock": true,
+            "color":"black",
             "category":"Leakage Detector",
             "images": [
                 "../EVE_Waterguard_2311.png",
@@ -1454,6 +1478,7 @@
             "price": "119.00",
             "image": "../meross-smart-water-leak-sensor-kit-ms400hhk-eu-version.jpg",
             "stock": true,
+            "color":"black",
             "category":"Leakage Detector",
             "images": [
                 "../meross-smart-water-leak-sensor-kit-ms400hhk-eu-version.jpg",
@@ -1512,6 +1537,7 @@
             "price": "55.00",
             "image": "../61zQif7cSbL._AC_UF894,1000_QL80_.jpg",
             "stock": true,
+            "color":"black",
             "category":"Leakage Detector",
             "images": [
                 "../61zQif7cSbL._AC_UF894,1000_QL80_.jpg",
@@ -1570,6 +1596,7 @@
             "price": "39.00",
             "image": "../xiaomi_mi_leak_detector_-.jpg",
             "stock": true,
+            "color":"black",
             "category":"Leakage Detector",
             "images": [
                 "../xiaomi_mi_leak_detector_-.jpg",
@@ -1628,6 +1655,7 @@
             "price": "139.00",
             "image": "../DCS-8600LH-mainimage.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../DCS-8600LH-mainimage.jpg",
                 "../DCS-8600LH-mainimage.jpg",
@@ -1685,6 +1713,7 @@
             "price": "59.00",
             "image": "../DAP-1530_A1_SideL_750x.webp",
             "stock": true,
+            "color":"black",
             "images": [
                 "../DAP-1530_A1_SideL_750x.webp",
                 "../DAP-1530_A1_SideL_750x.webp",
@@ -1742,6 +1771,7 @@
             "price": "109.00",
             "image": "../DIR_1960_Front.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../DIR_1960_Front.png",
                 "../DIR_1960_Front.png",
@@ -1799,6 +1829,7 @@
             "price": "89.00",
             "image": "../images (5).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (5).jpeg",
                 "../images (5).jpeg",
@@ -1855,6 +1886,7 @@
             "price": "249.00",
             "image": "../DNR-202L_A1.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../DNR-202L_A1.jpg",
                 "../DNR-202L_A1.jpg",
@@ -1912,6 +1944,7 @@
             "price": "159.00",
             "image": "../DCS2330LA1Image HFront.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../DCS2330LA1Image HFront.png",
                 "../DCS2330LA1Image HFront.png",
@@ -1969,6 +2002,7 @@
             "price": "100.00",
             "image": "../PngItem_2839997.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_2839997.png",
                 "../PngItem_2839997.png",
@@ -2028,6 +2062,7 @@
             "price": "79.00",
             "image": "../image9.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../image9.png",
                 "../image9.png",
@@ -2085,6 +2120,7 @@
             "price": "89.00",
             "image": "../DAP1820A1Front1.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../DAP1820A1Front1.png",
                 "../DAP1820A1Front1.png",
@@ -2142,6 +2178,7 @@
             "price": "50.00",
             "image": "../PngItem_2560501.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_2560501.png",
                 "../PngItem_2560501.png",
@@ -2209,6 +2246,7 @@
             "price": "129.00",
             "image": "../images (4).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (4).jpeg",
                 "../images (4).jpeg",
@@ -2266,6 +2304,7 @@
             "price": "179.00",
             "image": "../c3x-2.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../c3x-2.jpg",
                 "../c3x-2.jpg",
@@ -2323,6 +2362,7 @@
             "price": "149.00",
             "image": "../Ezviz T1 Smart Lock1.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../Ezviz T1 Smart Lock1.jpg",
                 "../Ezviz T1 Smart Lock1.jpg",
@@ -2380,6 +2420,7 @@
             "price": "129.00",
             "image": "../EZVIZ-DB1-product.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../EZVIZ-DB1-product.png",
                 "../EZVIZ-DB1-product.png",
@@ -2437,6 +2478,7 @@
             "price": "99.00",
             "image": "../512EoubjXhL.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../512EoubjXhL.jpg",
                 "../512EoubjXhL.jpg",
@@ -2494,6 +2536,7 @@
             "price": "199.00",
             "image": "../Ezviz H6 Smart Floodlight Camera.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../Ezviz H6 Smart Floodlight Camera.png",
                 "../Ezviz H6 Smart Floodlight Camera.png",
@@ -2551,6 +2594,7 @@
             "price": "179.00",
             "image": "../Ezviz Lark Series Smart Door Lock.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../Ezviz Lark Series Smart Door Lock.jpg",
                 "../Ezviz Lark Series Smart Door Lock.jpg",
@@ -2608,6 +2652,7 @@
             "price": "70.00",
             "image": "../PngItem_4124313.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_4124313.png",
                 "../PngItem_4124313.png",
@@ -2674,6 +2719,7 @@
             "price": "100.00",
             "image": "../PngItem_4760952.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_4760952.png",
                 "../PngItem_4760952.png",
@@ -2733,6 +2779,7 @@
             "price": "75.00",
             "image": "../PngItem_5335637.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_5335637.png",
                 "../PngItem_5335637.png",
@@ -2793,6 +2840,7 @@
             "price": "120.00",
             "image": "../de4axxxiw_0.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../de4axxxiw_0.png",
                 "../de4axxxiw_0.png",
@@ -2844,6 +2892,7 @@
             "price": "110.00",
             "image": "../31oxc6fTd0L._AC_UF894,1000_QL80_.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../31oxc6fTd0L._AC_UF894,1000_QL80_.jpg",
                 "../31oxc6fTd0L._AC_UF894,1000_QL80_.jpg",
@@ -2895,6 +2944,7 @@
             "price": "130.00",
             "image": "../images (11).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (11).jpeg",
                 "../images (11).jpeg",
@@ -2946,6 +2996,7 @@
             "price": "200.00",
             "image": "../61i8RUdZNFL.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../61i8RUdZNFL.jpg",
                 "../61i8RUdZNFL.jpg",
@@ -2997,6 +3048,7 @@
             "price": "120.00",
             "image": "../PngItem_5335869.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_5335869.png",
                 "../PngItem_5335869.png",
@@ -3063,6 +3115,7 @@
             "price": "140.00",
             "image": "../images (12).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (12).jpeg",
                 "../images (12).jpeg",
@@ -3114,6 +3167,7 @@
             "price": "180.00",
             "image": "../images (13).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (13).jpeg",
                 "../images (13).jpeg",
@@ -3165,6 +3219,7 @@
             "price": "110.00",
             "image": "../61REiQ1uZlL.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../61REiQ1uZlL.jpg",
                 "../61REiQ1uZlL.jpg",
@@ -3216,6 +3271,7 @@
             "price": "130.00",
             "image": "../PngItem_5335451.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../PngItem_5335451.png",
                 "../PngItem_5335451.png",
@@ -3282,6 +3338,7 @@
             "price": "249.00",
             "image": "../GPM202200133_Thermostat_Front_StainlessSteel_3000x3000__95593.webp",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image1.png",
@@ -3339,6 +3396,7 @@
             "price": "199.00",
             "image": "../046677563295-929002468705-Philips-Hue_WCA-10_5W-A19-E26-4set-US-APP.webp",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image2.png",
@@ -3396,6 +3454,7 @@
             "price": "49.00",
             "image": "../ZWRhMGNkOWUt._CB404330879_.jpg",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image3.png",
@@ -3453,6 +3512,7 @@
             "price": "129.00",
             "image": "../Google Nest Hub (2nd Gen).webp",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image4.png",
@@ -3510,6 +3570,7 @@
             "price": "199.00",
             "image": "../arlo-pro-4-spotlight-2k-video-180-degree-cctv-camera.jpg",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image5.png",
@@ -3567,6 +3628,7 @@
             "price": "249.00",
             "image": "../variant-31961428492377.jpg",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image6.png",
@@ -3624,6 +3686,7 @@
             "price": "279.00",
             "image": "../August Smart Lock Pro.jpeg",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image7.png",
@@ -3681,6 +3744,7 @@
             "price": "35.00",
             "image": "../v3.webp",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image8.png",
@@ -3738,6 +3802,7 @@
             "price": "99.00",
             "image": "../614d2lQP0hL.jpg",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image9.png",
@@ -3795,6 +3860,7 @@
             "price": "499.00",
             "image": "../054435_5395.jpg",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image10.png",
@@ -3852,6 +3918,7 @@
             "price": "99.00",
             "image": "../homepod-mini-select-spacegray-202110_FMT_WHH.jpeg",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image11.png",
@@ -3909,6 +3976,7 @@
             "price": "39.00",
             "image": "../Eve_Energy_NA_Device_shadow4 (1).png",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image12.png",
@@ -3966,6 +4034,7 @@
             "price": "29.00",
             "image": "../images (1).jpeg",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image13.png",
@@ -4023,6 +4092,7 @@
             "price": "45.00",
             "image": "../sg-smartthings-waterleak-sensor-gp-u999sjvlcha-136751242.avif",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image14.png",
@@ -4080,6 +4150,7 @@
             "price": "79.00",
             "image": "../black-blink-security-cameras-b09n6v1fhg-64_1000.avif",
             "stock": true,
+            "color":"black",
             "category":"Smart Home",
             "images": [
                 "../image15.png",
@@ -4137,6 +4208,7 @@
             "price": "150.00",
             "image": "../images (6).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (6).jpeg",
                 "../images (6).jpeg",
@@ -4194,6 +4266,7 @@
             "price": "120.00",
             "image": "../Pdpdefault-snh-p6410bn-600x600-C1-052016.webp",
             "stock": true,
+            "color":"black",
             "images": [
                 "../Pdpdefault-snh-p6410bn-600x600-C1-052016.webp",
                 "../Pdpdefault-snh-p6410bn-600x600-C1-052016.webp",
@@ -4251,6 +4324,7 @@
             "price": "250.00",
             "image": "../Samsung Wisenet TID-4220R.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../Samsung Wisenet TID-4220R.jpg",
                 "../Samsung Wisenet TID-4220R.jpg",
@@ -4308,6 +4382,7 @@
             "price": "80.00",
             "image": "../indir.jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../indir.jpeg",
                 "../indir.jpeg",
@@ -4366,6 +4441,7 @@
             "price": "30.00",
             "image": "../images (7).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (7).jpeg",
                 "../images (7).jpeg",
@@ -4423,6 +4499,7 @@
             "price": "25.00",
             "image": "../uk-smartthings-sensors-plug-f-mlt-uk-v3-gp-u999sjvlaea-frontwhite-117506290.avif",
             "stock": true,
+            "color":"black",
             "images": [
                 "../uk-smartthings-sensors-plug-f-mlt-uk-v3-gp-u999sjvlaea-frontwhite-117506290.avif",
                 "../uk-smartthings-sensors-plug-f-mlt-uk-v3-gp-u999sjvlaea-frontwhite-117506290.avif",
@@ -4480,6 +4557,7 @@
             "price": "40.00",
             "image": "../SmartThings_Water_Leak_Sensor_1_Front_LQ.png",
             "stock": true,
+            "color":"black",
             "images": [
                 "../SmartThings_Water_Leak_Sensor_1_Front_LQ.png",
                 "../SmartThings_Water_Leak_Sensor_1_Front_LQ.png",
@@ -4537,6 +4615,7 @@
             "price": "20.00",
             "image": "../images (8).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (8).jpeg",
                 "../images (8).jpeg",
@@ -4594,6 +4673,7 @@
             "price": "35.00",
             "image": "../71ttpykJl0L.jpg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../71ttpykJl0L.jpg",
                 "../71ttpykJl0L.jpg",
@@ -4651,6 +4731,7 @@
             "price": "170.00",
             "image": "../images (9).jpeg",
             "stock": true,
+            "color":"black",
             "images": [
                 "../images (9).jpeg",
                 "../images (9).jpeg",
@@ -4708,6 +4789,7 @@
             "price": "119.00",
             "image": "../714dK+uZTUL.jpg",
             "stock": true,
+            "color":"black",
             "category":"Smoke Alarm",
             "images": [
                 "../714dK+uZTUL.jpg",
@@ -4765,6 +4847,7 @@
             "price": "79.00",
             "image": "../61tI9Tu-zIL.jpg",
             "stock": true,
+            "color":"black",
             "category":"Smoke Alarm",
             "images": [
                 "../61tI9Tu-zIL.jpg",
@@ -4823,6 +4906,7 @@
             "image": "../7010LBL-247x296.jpg",
             "category":"Smoke Alarm",
             "stock": true,
+            "color":"black",
             "images": [
                 "../7010LBL-247x296.jpg",
                 "../7010LBL-247x296.jpg",
@@ -4879,6 +4963,7 @@
             "price": "109.00",
             "image": "../400445-4f7732bdcb9805d47c8b75adb0bbd0aa.jpg",
             "stock": true,
+            "color":"black",
             "category":"Smoke Alarm",
             "images": [
                 "../400445-4f7732bdcb9805d47c8b75adb0bbd0aa.jpg",
@@ -4936,6 +5021,7 @@
             "price": "59.00",
             "image": "../images (2).jpeg",
             "stock": true,
+            "color":"black",
             "category":"Smoke Alarm",
             "images": [
                 "../image5.png",
@@ -4992,6 +5078,7 @@
             "price": "89.00",
             "image": "../images (3).jpeg",
             "stock": true,
+            "color":"black",
             "category":"Smoke Alarm",
             "images": [
                 "../images (3).jpeg",
@@ -5049,6 +5136,7 @@
             "price": "69.00",
             "image": "../X-Sense Smoke Detector.webp",
             "stock": true,
+            "color":"black",
             "category":"Smoke Alarm",
             "images": [
                 "../X-Sense Smoke Detector.webp",
@@ -5105,6 +5193,7 @@
             "price": "129.00",
             "image": "../fm=f_jpg.jpeg",
             "stock": true,
+            "color":"black",
             "category":"Smoke Alarm",
             "images": [
                 "../fm=f_jpg.jpeg",
@@ -5163,6 +5252,7 @@
             "image": "../IN0271000012.jpg",
             "category":"Smoke Alarm",
             "stock": true,
+            "color":"black",
             "images": [
                 "../IN0271000012.jpg",
                 "../IN0271000012.jpg",
@@ -5219,6 +5309,7 @@
             "price": "139.00",
             "image": "../41fNXeanItL.jpg",
             "stock": true,
+            "color":"black",
             "category":"Smoke Alarm",
             "images": [
                 "../41fNXeanItL.jpg",
@@ -5276,6 +5367,7 @@
             "price": "89.00",
             "image": "../Igloohome Smart Senso.avif",
             "stock": true,
+            "color":"black",
             "images": [
               "../IgloohomeSmartSenso.avif",
               "../IgloohomeSmartSenso.avif",
@@ -5333,6 +5425,7 @@
               "price": "79.00",
               "image": "../Igloohome Keybox.webp",
               "stock": true,
+              "color":"black",
               "images": [
                 "../Igloohome Keybox.webp",
                 "../Igloohome Keybox.webp",
@@ -5390,6 +5483,7 @@
               "price": "89.00",
               "image": "../Front-SP2.jpg",
               "stock": true,
+              "color":"black",
               "images": [
                 "../Front-SP2.jpg",
                 "../Front-SP2.jpg",
@@ -5447,6 +5541,7 @@
               "price": "129.00",
               "image": "../igloohome-smart-home-bridge-1.png",
               "stock": true,
+              "color":"black",
               "images": [
                 "../igloohome-smart-home-bridge-1.png",
                 "../igloohome-smart-home-bridge-1.png",

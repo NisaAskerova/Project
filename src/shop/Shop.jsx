@@ -1,16 +1,16 @@
-import Header from '../Pages/Header';
 import ShopHero from './ShopHero';
-import Footer from '../Pages/Footer';
 import ProductPage from './ProductPage';
+import Header from '../Pages/Header';
+import Footer from '../Pages/Footer';
 
 export default function Shop() {
 
   return (
     <div>
-      <Header />
+      <Header/>
       <ShopHero />
    <ProductPage/>
-      <Footer />
+   <Footer/>
     </div>
   );
 }

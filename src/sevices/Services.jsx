@@ -10,12 +10,10 @@ import Appointment from './Appointment'
 export default function Services() {
     return (
         <div>
-            <Header />
             <ServicesHero />
             <HomeServices />
             <Work />
             <Appointment />
-            <Footer />
         </div>
     )
 }
