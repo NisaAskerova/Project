@@ -22,6 +22,7 @@ export default function App() {
   const [visibleCard, setVisibleCard] = useState(false);
   const [checkoutCart, setCheckoutCart] = useState([]);
   const [quantities, setQuantities] = useState({});
+  
 
   const updateQuantity = (productId, newQuantity) => {
     setQuantities(prevQuantities => ({

@@ -1665,7 +1665,7 @@ tr td:first-of-type,
 /* ***************DESCTIPTION REVIEW**************************** */
 #comments {
   width: 100%;
-  padding: 0 198px;
+  padding: 0 12%;
   display: flex;
   gap: 30px;
   border-bottom: 1px solid #B4B2AD;
@@ -2010,9 +2010,172 @@ tr td:first-of-type,
 
 #cartBottom button:nth-of-type(2) {
   background: #FEE747;
+  
+}
+
+/* *************************CHECKOUT**************************** */
+#checkoutWrapper {
+  width: 100%;
+  padding: 50px 189px 0;
+}
+
+#checkout_hero {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#checkoutItems {
+  width: 63%;
+}
+
+#imageDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
 }
 
+#checkoutItems>table>tbody>tr td:first-of-type {
+  width:45%;
+}
+#checkoutItems>table>tbody>tr td:nth-of-type(2),
+#checkoutItems>table>tbody>tr td:nth-of-type(3),
+#checkoutItems>table>tbody>tr td:nth-of-type(4)
+{
+  width: 15%;
+}
+#checkoutItems>table>tbody>tr td:nth-of-type(5){
+  width: 4%;
+}
+
+#checkoutItems>table> tbody,
+#checkoutItems>table> thead {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#checkoutItems>table td{
+  text-align: start;
+  padding: 20px 0;
+}
+#checkoutItems>table th{
+  text-align: start;
+padding-bottom: 10px;
+}
+
+#checkoutItems>table tr {
+  border-bottom: 1px solid rgba(180, 178, 173, 0.20);
+}
+
+.ch_productInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  padding: 20px 0;
+
+}
+
+
+#shopCard {
+  width: 360px;
+  height: 366px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 55px 110px 0px rgba(0, 0, 0, 0.05), 0px 55px 110px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+#shopCard>button {
+  width: 100%;
+  height: 56px;
+  border-radius: 10px;
+  background: #FEE747;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.codeDiv,
+.code_bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+
+}
+
+.codeDiv {
+  border-bottom: 1px solid rgba(180, 178, 173, 0.20);
+}
+
+.codeDiv>h4 {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  /* 187.5% */
+}
+
+#checkoutLbl {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  /* 133.333% */
+}
+
+#checkoutLbl+div>input {
+  width: 320px;
+  height: 56px;
+  border-radius: 10px;
+  border: 1px solid rgba(180, 178, 173, 0.20);
+  padding: 16px 16px 10px 16px;
+  outline: none;
+}
+
+#checkoutLbl+div {
+  width: 100%;
+  height: 56px;
+  position: relative;
+}
+
+#checkoutLbl+div>button {
+  width: 102px;
+  height: 56px;
+  border-radius: 0px 10px 10px 0px;
+  background: #FEE747;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, 0);
+  cursor: pointer;
+}
+#checkoutTotal{
+  width: 32%;
+}
+.del{
+  cursor: pointer;
+}
 /* **************************************************************** */
 /* **************************************************************** */
 /* *************************TABLET********************************* */
