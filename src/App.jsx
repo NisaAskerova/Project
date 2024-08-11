@@ -13,6 +13,11 @@ import Description from './shop/Description';
 import Review from './shop/Review';
 import Card from './shop/Card';
 import Payment from './checkout/Payment';
+import ShoppingAddressPage from './shoppingAdress/ShoppingAddressPage';
+import Address from './shoppingAdress/Address';
+import PaymentMethod from './shoppingAdress/PaymentMethod';
+import ReviwPage from './shoppingAdress/ReviwPage';
+
 
 export const MyContext = createContext();
 
@@ -22,6 +27,7 @@ export default function App() {
   const [visibleCard, setVisibleCard] = useState(false);
   const [checkoutCart, setCheckoutCart] = useState([]);
   const [quantities, setQuantities] = useState({});
+  const [activeStep, setActiveStep] = useState('');
   
 
   const updateQuantity = (productId, newQuantity) => {
@@ -30,7 +36,6 @@ export default function App() {
       [productId]: newQuantity,
     }));
 
-    // Update cart and checkoutCart to reflect quantity changes
     setCart(prevCart =>
       prevCart.map(product =>
         product.id === productId ? { ...product, quantity: newQuantity } : product
@@ -77,7 +82,8 @@ export default function App() {
     visibleCard,
     setVisibleCard,
     checkoutCart,
-    setCheckoutCart
+    setCheckoutCart,
+    activeStep, setActiveStep
   };
 
   return (
@@ -93,10 +99,20 @@ export default function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/checkout' element={<Payment />} />
           <Route path='/shop' element={<Shop />} />
+
           <Route path="/product/:id" element={<ProductDetail />}>
             <Route path='description' element={<Description />} />
             <Route path='review' element={<Review />} />
           </Route>
+
+          
+          <Route path='/shoppingAddress' element={<ShoppingAddressPage />}>
+            <Route path='address' element={<Address />} />
+            <Route path='payment' element={<PaymentMethod />} />
+            <Route path='review' element={<ReviwPage />} />
+          </Route>
+
+
         </Routes>
       </Router>
     </MyContext.Provider>

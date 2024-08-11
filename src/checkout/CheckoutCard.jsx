@@ -1,10 +1,9 @@
-// CheckoutCard.js
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../App';
 
-const CheckoutCard = ({ 
-  checkoutCart, 
-  setCheckoutCart 
-}) => {
+const CheckoutCard = ({ showButton = true }) => {
+  const { checkoutCart, setCheckoutCart } = useContext(MyContext);
   const [discountCode, setDiscountCode] = useState('');
   const [discount, setDiscount] = useState(0);
   const deliveryCharge = 10.00;
@@ -15,14 +14,15 @@ const CheckoutCard = ({
 
   const handleDiscountCode = () => {
     if (discountCode === 'FLAT50') {
-      setDiscount(50); 
+      setDiscount(50);
     } else {
-      setDiscount(0); 
+      setDiscount(0);
     }
   };
 
-  const removeProduct = (id) => {
-    setCheckoutCart(checkoutCart.filter((e) => e.id !== id));
+  const navigate = useNavigate();
+  const handleCheckout = () => {
+    navigate('/shoppingAddress');
   };
 
   return (
@@ -53,7 +53,9 @@ const CheckoutCard = ({
         <h4>Grand Total</h4>
         <h4>${grandTotal.toFixed(2)}</h4>
       </div>
-      <button className='same'>Proceed to Checkout</button>
+      {showButton && (
+        <button className='same' onClick={handleCheckout}>Proceed to Checkout</button>
+      )}
     </div>
   );
 };

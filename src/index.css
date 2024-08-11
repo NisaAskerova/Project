@@ -162,7 +162,9 @@ button[type='submit'] {
 
 #remember>div>input[type='checkbox'],
 #question>input[type='checkbox'],
-.filterCatecory>div>input[type='radio'] {
+.filterCatecory>div>input[type='radio'],
+.addressCart>div>input,
+#dfAddress>input {
   appearance: none;
   width: 24px;
   height: 24px;
@@ -171,7 +173,9 @@ button[type='submit'] {
   cursor: pointer;
 }
 
-.filterCatecory>div>input[type='radio'] {
+.filterCatecory>div>input[type='radio'],
+.addressCart>div>input,
+#dfAddress>input {
   background-color: transparent;
   border: 1px solid #15140F33;
   margin-right: 10px;
@@ -179,16 +183,20 @@ button[type='submit'] {
 
 #remember>div>input[type='checkbox']:checked,
 #question>input[type='checkbox']:checked,
-.filterCatecory>div>input[type='radio']:checked {
+.filterCatecory>div>input[type='radio']:checked,
+.addressCart>div>input:checked,
+#dfAddress>input:checked {
   background-color: #FEE747;
   background-image: url(..//public/check.svg);
 }
 
-.filterCatecory>div>input[type='radio']:checked {
+.filterCatecory>div>input[type='radio']:checked,
+.addressCart>div>input:checked,
+#dfAddress>input:checked {
   border: 1px solid transparent;
 }
 
-#remember>div>label {
+#dfAddress>input:che #remember>div>label {
   color: #15140F;
 
   font-size: 16px;
@@ -2010,7 +2018,7 @@ tr td:first-of-type,
 
 #cartBottom button:nth-of-type(2) {
   background: #FEE747;
-  
+
 }
 
 /* *************************CHECKOUT**************************** */
@@ -2024,6 +2032,7 @@ tr td:first-of-type,
   width: 100%;
   justify-content: space-between;
 }
+
 #checkoutItems {
   width: 63%;
 }
@@ -2037,20 +2046,21 @@ tr td:first-of-type,
 }
 
 #checkoutItems>table>tbody>tr td:first-of-type {
-  width:45%;
+  width: 45%;
 }
+
 #checkoutItems>table>tbody>tr td:nth-of-type(2),
 #checkoutItems>table>tbody>tr td:nth-of-type(3),
-#checkoutItems>table>tbody>tr td:nth-of-type(4)
-{
+#checkoutItems>table>tbody>tr td:nth-of-type(4) {
   width: 15%;
 }
-#checkoutItems>table>tbody>tr td:nth-of-type(5){
+
+#checkoutItems>table>tbody>tr td:nth-of-type(5) {
   width: 4%;
 }
 
-#checkoutItems>table> tbody,
-#checkoutItems>table> thead {
+#checkoutItems>table>tbody,
+#checkoutItems>table>thead {
   width: 100%;
 }
 
@@ -2059,13 +2069,14 @@ table {
   border-collapse: collapse;
 }
 
-#checkoutItems>table td{
+#checkoutItems>table td {
   text-align: start;
   padding: 20px 0;
 }
-#checkoutItems>table th{
+
+#checkoutItems>table th {
   text-align: start;
-padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 #checkoutItems>table tr {
@@ -2087,7 +2098,6 @@ padding-bottom: 10px;
 
 #shopCard {
   width: 360px;
-  height: 366px;
   border-radius: 20px;
   background: #FFF;
   box-shadow: 0px 55px 110px 0px rgba(0, 0, 0, 0.05), 0px 55px 110px 0px rgba(0, 0, 0, 0.04);
@@ -2170,12 +2180,255 @@ padding-bottom: 10px;
   transform: translate(0, 0);
   cursor: pointer;
 }
-#checkoutTotal{
+
+#checkoutTotal {
   width: 32%;
 }
-.del{
+
+.del {
   cursor: pointer;
 }
+
+/* ******************SHOP_ADDRESS******************************* */
+
+
+#shopAddress {
+  width: 100%;
+  padding: 50px 189px;
+
+}
+
+.right-page {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+  height: 80px;
+  width: 700px;
+}
+
+.addressHero {
+  width: 100%;
+
+}
+
+.address {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.shopIcon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(180, 178, 173, 0.10);
+
+}
+
+.line,
+.line2 {
+  width: 290px;
+  height: 1px;
+  border: 1px dashed rgba(180, 178, 173, 0.10);
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  transform: translateX(-100%);
+}
+
+.line2 {
+  transform: translateX(-95%);
+
+}
+
+.step.active .shopIcon {
+  background-color: #FEE747;
+}
+
+.step.active .line,
+.step.active .line2 {
+  border: 1px dashed #FEE747;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* *************************ADDRESS************************** */
+#addressHero {
+  width: 700px;
+}
+
+#addressCards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.addressCart {
+  width: 335px;
+  height: 171px;
+  border-radius: 10px;
+  background: rgba(180, 178, 173, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addressButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addressButtons button {
+  display: flex;
+  width: 141px;
+  height: 34px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: Epilogue;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.addressButtons button:first-of-type {
+  background: rgba(180, 178, 173, 0.10);
+  color: #15140F;
+}
+
+.addressButtons button:nth-of-type(2) {
+  background: rgba(255, 114, 98, 0.10);
+  color: #FF7262;
+}
+
+#deliverBtn {
+  display: flex;
+  width: 320px;
+  height: 56px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #FEE747;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 30px 0;
+}
+
+.addInfo {
+  padding-right: 9px;
+  margin: 15px 0 6px;
+}
+
+#newAddress {
+  width: 100%;
+  padding: 30px 0 0;
+}
+
+#newAddress>form>div>label {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  /* 133.333% */
+}
+
+#newAddress>form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#newAddress>form>div>input[type="text"],
+.custom-select {
+  border-radius: 10px;
+  border: 1px solid rgba(180, 178, 173, 0.20);
+  width: 100%;
+  height: 56px;
+  padding: 13px 20px;
+  outline: none;
+  color: #15140F;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  /* 187.5% */
+}
+
+#newAddress>form>div:not(#newAddress>form>div:last-of-type) {
+  display: flex;
+  flex-direction: column;
+}
+
+#dfAddress {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#dfAddress>span {
+  color: #15140F;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+#newAddress>form>button {
+  width: 320px;
+  height: 56px;
+  border-radius: 10px;
+  background: #FEE747;
+  outline: none;
+  border: none;
+}
+
+.sm {
+  line-height: 22px;
+}
+
+
 /* **************************************************************** */
 /* **************************************************************** */
 /* *************************TABLET********************************* */
