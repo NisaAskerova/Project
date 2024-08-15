@@ -1,5 +1,6 @@
 import React from 'react';
 import NewAddress from './NewAddress';
+import { Link } from 'react-router-dom';
 
 const Address = () => {
   return (
@@ -37,7 +38,7 @@ const Address = () => {
           </div>
         </div>
       </div>
-      <button className='same' id='deliverBtn'>Deliver Here</button>
+      <Link to='/shoppingAddress/payment' className='same' id='deliverBtn'>Deliver Here</Link>
       <NewAddress/>
     </div>
   );

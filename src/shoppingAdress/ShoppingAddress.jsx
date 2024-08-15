@@ -17,6 +17,7 @@ const ShoppingAddressPage = () => {
         }
     }, [activeStep, navigate]);
 
+
     return (
         <div id='shopAddress'>
             <h2 className='thick'>Shopping Cart</h2>
@@ -39,7 +40,7 @@ const ShoppingAddressPage = () => {
                             to="payment"
                             className={`step ${activeStep === 'payment' ? 'active' : ''}`}
                             onClick={() => setActiveStep('payment')}
-                        > 
+                        >
                             <div className='stp'>
                                 <div className='steps'>
                                     <div className='line'></div>

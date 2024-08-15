@@ -27,7 +27,7 @@ export default function App() {
   const [visibleCard, setVisibleCard] = useState(false);
   const [checkoutCart, setCheckoutCart] = useState([]);
   const [quantities, setQuantities] = useState({});
-  const [activeStep, setActiveStep] = useState('');
+  const [activeStep, setActiveStep] = useState('address');
   
 
   const updateQuantity = (productId, newQuantity) => {
@@ -107,7 +107,7 @@ export default function App() {
 
           
           <Route path='/shoppingAddress' element={<ShoppingAddressPage />}>
-            <Route path='address' element={<Address />} />
+            <Route path='address' element={<Address />} index={true} />
             <Route path='payment' element={<PaymentMethod />} />
             <Route path='review' element={<ReviwPage />} />
           </Route>
