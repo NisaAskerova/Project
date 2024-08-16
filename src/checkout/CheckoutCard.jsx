@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MyContext } from '../App';
 
-const CheckoutCard = ({ showButton = true }) => {
+const CheckoutCard = ({ showButton = true, buttonLabel = "Proceed to Checkout" }) => {
   const { checkoutCart, setCheckoutCart } = useContext(MyContext);
   const [discountCode, setDiscountCode] = useState('');
   const [discount, setDiscount] = useState(0);
@@ -54,7 +54,7 @@ const CheckoutCard = ({ showButton = true }) => {
         <h4>${grandTotal.toFixed(2)}</h4>
       </div>
       {showButton && (
-        <button className='same' onClick={handleCheckout}>Proceed to Checkout</button>
+        <button className='same' onClick={handleCheckout}>{buttonLabel}</button>
       )}
     </div>
   );

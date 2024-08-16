@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const PaymentMethod = () => {
   const [expiryDate, setExpiryDate] = useState('09/26');
@@ -30,61 +31,57 @@ const PaymentMethod = () => {
       setError('CVV must be a maximum of 3 digits.');
     }
   };
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setActiveStep('reviews'); 
+    navigate('/shoppingAddress/reviews');
+  };
   return (
     <div>
       <h2>Select a payment method</h2>
-      <form action="" method='POST'>
-        <div>
-          <input type="checkbox" name="dcCard" id="dcCard" />
-          <label htmlFor="dcCard">Debit/Credit Card</label>
+      <form id='method' onSubmit={handleSubmit} action="" method='POST'>
+        <div id='debet'>
+          <input className='radio' type="checkbox" name="dcCard" id="dcCard" />
+          <label htmlFor="dcCard"><h2>Debit/Credit Card</h2></label>
         </div>
         <div>
           <label htmlFor="cardNumber">Card Number</label>
-          <input type="number" name="cardNumber" id="cardNumber" />
+          <input className='same' type="number" name="cardNumber" id="cardNumber" />
         </div>
         <div>
           <label htmlFor="cardName">Card Name</label>
-          <input type="text" name="cardName" id="cardName" />
+          <input className='same' type="text" name="cardName" id="cardName" />
         </div>
-        <div>
+        <div id='date'>
           <div>
             <label htmlFor="expiryDate">Expiry Date</label>
-            <input
-              type="text"
-              name="expiryDate"
-              id="expiryDate"
-              value={expiryDate}
-              onChange={handleExpiryDateChange}
-            />
+            <input className='same' type="text" name="expiryDate" id="expiryDate" value={expiryDate} onChange={handleExpiryDateChange} />
           </div>
           <div>
             <label htmlFor="cvv">CVV</label>
-            <input
-              type="text"
-              name="cvv"
-              id="cvv"
-              value={cvv}
-              onChange={handleCvvChange}
-            />
+            <input className='same' type="text" name="cvv" id="cvv" value={cvv} onChange={handleCvvChange} />
           </div>
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button>Add Card</button>
+
+        <button className="same deliverBtn">Add Card</button>
         <div>
-          <div>
-            <input type="radio" name="" id="" />
-            <label htmlFor="Google Pay"></label>
+          <div className='dbcard'>
+            <input className='radio' type="radio" name="pay" id="googlePay" />
+            <label htmlFor="googlePay"> <h2>Google Pay</h2></label>
           </div>
-          <div>
-            <input type="radio" name="" id="" />
-            <label htmlFor="Google Pay"></label>
+          <div className='dbcard'>
+            <input className='radio' type="radio" name="pay" id="paypal" />
+            <label htmlFor="paypal"> <h2>Paypal</h2></label>
           </div>
-          <div>
-            <input type="radio" name="" id="" />
-            <label htmlFor="Google Pay"></label>
+          <div className='dbcard'>
+            <input className='radio' type="radio" name="pay" id="cashOnDelivery" />
+            <label htmlFor="cashOnDelivery"> <h2>Cash on Delivery</h2></label>
           </div>
         </div>
+        <Link to="/shoppingAddress/reviews" className="same deliverBtn">
+        Continue
+        </Link>
       </form>
     </div>
   );

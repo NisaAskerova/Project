@@ -102,8 +102,7 @@
   line-height: 30px;
 }
 
-.rightBox>form>label,
-#appointmentRight>form label {
+label {
   color: #15140F;
   display: block;
   font-size: 12px;
@@ -2337,7 +2336,7 @@ table {
   color: #FF7262;
 }
 
-#deliverBtn {
+.deliverBtn {
   display: flex;
   width: 320px;
   height: 56px;
@@ -2428,7 +2427,167 @@ table {
   line-height: 22px;
 }
 
+#method {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+#method>div>input:not(input[type='checkbox']) {
+  width: 100%;
+  height: 56px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(180, 178, 173, 0.20);
+  outline: none;
+}
+
+#date {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#date div>label{
+  color: #15140F;
+  display: block;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  display: block;
+}
+#date>div{
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+#date div>input {
+  width: 100%;
+  height: 56px;
+  border-radius: 10px;
+  border: 1px solid rgba(180, 178, 173, 0.20);
+  padding: 13px 20px;
+  outline: none;
+}
+
+.radio {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  outline: 3px solid #d7d7d7;
+  cursor: pointer;
+}
+
+.radio:checked{
+  background-color: #FEE747;
+  border: 4px solid white;
+  outline: 3px solid #FEE747;
+}
+.dbcard{
+  width: 100%;
+display: flex;
+align-self: center;
+gap: 16px;
+padding: 25px 0;
+border-top:1px solid rgba(180, 178, 173, 0.20);
+}
+
+#debet{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+#sa{
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(180, 178, 173, 0.20);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+#sa>h3{
+  color: #15140F;
+font-family: Epilogue;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 120% */
+}
+#sa>h4{
+  color: #15140F;
+font-family: Epilogue;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px; 
+}
+.edit{
+  width: 40px;
+height: 40px;
+border-radius: 10px;
+background:  rgba(180, 178, 173, 0.10);
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+right: 0;
+top: 20px;
+}
+
+#orders{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgba(21, 20, 15, 0.10);
+  display: flex;
+  justify-content:center;
+  position: fixed;
+  z-index: 500;
+  transition: all 0.5s ease-in;
+}
+#order{
+  width: 412px;
+height: 458px;
+border-radius: 20px;
+border: 1px solid  rgba(180, 178, 173, 0.20);
+background:  #FFF;
+box-shadow: 0px 10px 40px -4px rgba(16, 24, 40, 0.02), 0px 8px 8px -4px rgba(16, 24, 40, 0.02);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#yDiv{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FEE747;
+}
+#order>div>h3{
+  margin-top: 10px;
+  color: #15140F;
+text-align: center;
+font-family: Epilogue;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px; /* 116.667% */
+}
+
+#order>div>span
+{
+display: block;
+text-align: center;
+}
 /* **************************************************************** */
 /* **************************************************************** */
 /* *************************TABLET********************************* */
