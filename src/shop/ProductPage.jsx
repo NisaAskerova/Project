@@ -9,7 +9,7 @@ export default function ProductPage() {
     const [shot, setShot] = useState(true);
     const [shot2, setShot2] = useState(true);
     const [shot3, setShot3] = useState(true);
-    const [filters, setFilters] = useState({ category: [], brand: [], price: 2000 });
+    const [filters, setFilters] = useState({ category: [], brand: [], minPrice: 0, maxPrice: 2000 });
     const [categoryCounts, setCategoryCounts] = useState({});
     const [brandCounts, setBrandCounts] = useState({});
 
@@ -61,11 +61,7 @@ export default function ProductPage() {
     const handleFilterChange = (filterType, value) => {
         setFilters(prevFilters => {
             const newFilters = { ...prevFilters };
-            if (filterType === 'price') {
-                newFilters[filterType] = value;
-            } else {
-                newFilters[filterType] = [value];
-            }
+            newFilters[filterType] = value;
             return newFilters;
         });
     };
@@ -73,7 +69,7 @@ export default function ProductPage() {
     const filteredProducts = products.filter(product => {
         const matchesCategory = filters.category.length === 0 || filters.category.includes(product.category);
         const matchesBrand = filters.brand.length === 0 || filters.brand.includes(product.brand);
-        const matchesPrice = product.price <= filters.price;
+        const matchesPrice = product.price >= filters.minPrice && product.price <= filters.maxPrice;
         return matchesCategory && matchesBrand && matchesPrice;
     });
 
@@ -91,7 +87,7 @@ export default function ProductPage() {
                         <div key={category} style={{ height: shot ? "100%" : "0", overflow: "hidden" }} className='filterCatecory'>
                             <div>
                                 <input type="radio" id={category} value={category} name="category" onChange={() => handleFilterChange('category', category)} />
-                                <label htmlFor={category}>{category}</label>
+                                <label className='filterLabel' htmlFor={category}>{category}</label>
                             </div>
                             <span>({categoryCounts[category] || 0})</span>
                         </div>
@@ -101,9 +97,27 @@ export default function ProductPage() {
                         <h3>Price</h3>
                         <img src="down.svg" alt="" />
                     </div>
-                    <div style={{ height: shot2 ? "100%" : "0", overflow: "hidden" }} className='filterCatecory' id=''>
-                        <span>Price: {filters.price}</span>
-                        <input type="range" min="0" max="2000" value={filters.price} onChange={(e) => handleFilterChange('price', e.target.value)} />
+                    <div style={{ height: shot2 ? "100%" : "0", overflow: "hidden" }} className='filterCatecory filterRange'>
+                        <span>Price: ${filters.minPrice} - ${filters.maxPrice}</span>
+                        <div className="priceRange">
+                            <input
+                                type="range"
+                                min="0"
+                                max="2000"
+                                value={filters.minPrice}
+                                onChange={(e) => handleFilterChange('minPrice', parseInt(e.target.value))}
+                                className="thumb thumb--left"
+                                style={{ zIndex: filters.minPrice > 2000 - 100 ? '5' : 'auto' }}
+                            />
+                            <input
+                                type="range"
+                                min="0"
+                                max="2000"
+                                value={filters.maxPrice}
+                                onChange={(e) => handleFilterChange('maxPrice', parseInt(e.target.value))}
+                                className="thumb thumb--right"
+                            />
+                        </div>
                     </div>
                
                     <div className='filterTitle ft' onClick={() => setShot3(!shot3)}>
@@ -114,7 +128,7 @@ export default function ProductPage() {
                         <div style={{ height: shot3 ? "100%" : "0", overflow: "hidden" }} key={brand} className='filterCatecory'>
                             <div>
                                 <input type="radio" id={brand} value={brand} name='brand' onChange={() => handleFilterChange('brand', brand)} />
-                                <label htmlFor={brand}>{brand}</label>
+                                <label className='filterLabel' htmlFor={brand}>{brand}</label>
                             </div>
                             <span>({brandCounts[brand] || 0})</span>
                         </div>
@@ -146,13 +160,13 @@ export default function ProductPage() {
                                     <span className='same'>{product.price}</span>
                                 </div>
                                 <div className='shopIcons'>
-                                    <div className='shopIcon'>
+                                    <div className='shopIcon1'>
                                         <img src="/star2.svg" alt="Star" />
                                     </div>
-                                    <div className='shopIcon'>
+                                    <div className='shopIcon1'>
                                         <img src="/arrow.svg" alt="Arrow" />
                                     </div>
-                                    <div className='shopIcon'>
+                                    <div className='shopIcon1'>
                                         <Link to={`/product/${product.id}`}>
                                             <img src="eye.svg" alt="Eye" />
                                         </Link>

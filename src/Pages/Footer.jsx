@@ -38,8 +38,8 @@ export default function Footer() {
             <h3>Help & Support</h3>
             <ul>
               <li><NavLink to="/contact">Contact Us</NavLink></li>
-              <li><NavLink to="">Privacy Policy</NavLink></li>
-              <li><NavLink to="">Terms & Conditions</NavLink></li>
+              <li><NavLink to="/privacy_policy">Privacy Policy</NavLink></li>
+              <li><NavLink to="/terms_conditions">Terms & Conditions</NavLink></li>
               <li><NavLink to="">FAQ’S</NavLink></li>
               <li><NavLink to="">Disclaimer</NavLink></li>
             </ul>

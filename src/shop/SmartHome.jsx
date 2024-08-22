@@ -50,13 +50,13 @@ export default function SmartHome() {
                                 <span className='same'>{product.price}</span>
                             </div>
                             <div className='shopIcons'>
-                                <div className='shopIcon'>
+                                <div className='shopIcon1'>
                                     <img src="star2.svg" alt="Star" />
                                 </div>
-                                <div className='shopIcon'>
+                                <div className='shopIcon1'>
                                     <img src="arrow.svg" alt="Arrow" />
                                 </div>
-                                <div className='shopIcon'>
+                                <div className='shopIcon1'>
                                     <Link to={`/product/${product.id}`}>
                                         <img src="eye.svg" alt="Eye" />
                                     </Link>

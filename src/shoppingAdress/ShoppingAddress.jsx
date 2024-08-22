@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Outlet, Link, useLocation } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
 import CheckoutCard from "../checkout/CheckoutCard";
+import { MyContext } from "../App";
 
-const ShoppingAddressPage = () => {
-  const { pathname } = useLocation();
-  const [activeStep, setActiveStep] = useState("address");
+
+  const ShoppingAddressPage = () => {
+    const { pathname } = useLocation();
+    const [activeStep, setActiveStep] = useState("address");
+    const { setOrderCart } = useContext(MyContext);
+    const navigate = useNavigate();  
 
   useEffect(() => {
     if (pathname === "/shoppingAddress/address") {
@@ -16,9 +20,17 @@ const ShoppingAddressPage = () => {
     }
   }, [pathname]);
 
+  const handlePlaceOrder = () => {
+    if (activeStep === "reviews") {
+      console.log("Place Order button clicked");
+      setOrderCart(true);
+      navigate('/order');  
+    }
+  };
+
   return (
     <div id="shopAddress">
-        <h2 className="thick">Shopping Cart</h2>
+      <h2 className="thick">Shopping Cart</h2>
       <div className="address">
         <div id="addressHero">
           <div className="right-page">
@@ -70,10 +82,12 @@ const ShoppingAddressPage = () => {
           </div>
         </div>
         <div>
-          <CheckoutCard
-            showButton={activeStep === "reviews"}
-            buttonLabel={activeStep === "reviews" ? "Place Order" : ""}
-          />
+        <CheckoutCard
+        showButton={activeStep === "reviews"}
+        buttonLabel={activeStep === "reviews" ? "Place Order" : ""
+        }
+        onClick={handlePlaceOrder}
+      />
         </div>
       </div>
     </div>
