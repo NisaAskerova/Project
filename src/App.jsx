@@ -22,7 +22,6 @@ import TermsConditions from './terms_conditions/TermsConditions';
 import BlogDetail from './blog/BlogDetail';
 import Order from './shoppingAdress/Order';
 
-
 export const MyContext = createContext();
 
 export default function App() {
@@ -95,6 +94,7 @@ export default function App() {
     <MyContext.Provider value={data}>
       <Router>
         {visibleCard && <Card />}
+        {orderCart && <Order/>}
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
@@ -110,17 +110,13 @@ export default function App() {
             <Route path='description' element={<Description />} />
             <Route path='review' element={<Review />} />
           </Route>
-          
           <Route path='/shoppingAddress' element={<ShoppingAddressPage />}>
             <Route path='address' element={<Address />} index={true} />
             <Route path='payment' element={<PaymentMethod />} />
             <Route path='reviews' element={<ReviwPage />} />
           </Route>
-          
           <Route path='/privacy_policy' element={<PrivacyPolicy />} />
           <Route path='/terms_conditions' element={<TermsConditions />} />
-
-          <Route path='/order' element={<Order />} />
         </Routes>
       </Router>
     </MyContext.Provider>

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { MyContext } from '../App';
 
 const CheckoutCard = ({ showButton = true, buttonLabel = "Proceed to Checkout" }) => {
-  const { checkoutCart, setCheckoutCart } = useContext(MyContext);
+  const { checkoutCart, setCheckoutCart, setOrderCart } = useContext(MyContext);
   const [discountCode, setDiscountCode] = useState('');
   const [discount, setDiscount] = useState(0);
   const deliveryCharge = 10.00;
@@ -22,7 +22,11 @@ const CheckoutCard = ({ showButton = true, buttonLabel = "Proceed to Checkout" }
 
   const navigate = useNavigate();
   const handleCheckout = () => {
-    navigate('/shoppingAddress');
+    if (buttonLabel === "Place Order") {
+      setOrderCart(true);  
+    } else {
+      navigate('/shoppingAddress');
+    }
   };
 
   return (

@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../App';
+
 
 export default function Order() {
+  const { setOrderCart } = useContext(MyContext);
   const navigate = useNavigate();
 
   const handleViewOrder = () => {
+    setOrderCart(false)
     navigate('/shop');
   };
 
   const handleBackToHome = () => {
+    setOrderCart(false)
     navigate('/home'); 
   };
 
@@ -30,5 +35,6 @@ export default function Order() {
         </div>
       </div>
     </div>
+    
   );
 }

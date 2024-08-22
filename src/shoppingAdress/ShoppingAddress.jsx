@@ -1,14 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import CheckoutCard from "../checkout/CheckoutCard";
 import { MyContext } from "../App";
 
-
-  const ShoppingAddressPage = () => {
-    const { pathname } = useLocation();
-    const [activeStep, setActiveStep] = useState("address");
-    const { setOrderCart } = useContext(MyContext);
-    const navigate = useNavigate();  
+const ShoppingAddressPage = () => {
+  const { pathname } = useLocation();
+  const [activeStep, setActiveStep] = useState("address");
+  const { setOrderCart } = useContext(MyContext);
 
   useEffect(() => {
     if (pathname === "/shoppingAddress/address") {
@@ -23,8 +21,7 @@ import { MyContext } from "../App";
   const handlePlaceOrder = () => {
     if (activeStep === "reviews") {
       console.log("Place Order button clicked");
-      setOrderCart(true);
-      navigate('/order');  
+      setOrderCart(true);  
     }
   };
 
@@ -82,12 +79,11 @@ import { MyContext } from "../App";
           </div>
         </div>
         <div>
-        <CheckoutCard
-        showButton={activeStep === "reviews"}
-        buttonLabel={activeStep === "reviews" ? "Place Order" : ""
-        }
-        onClick={handlePlaceOrder}
-      />
+          <CheckoutCard
+            showButton={activeStep === "reviews"}
+            buttonLabel={activeStep === "reviews" ? "Place Order" : ""}
+            onClick={handlePlaceOrder}
+          />
         </div>
       </div>
     </div>

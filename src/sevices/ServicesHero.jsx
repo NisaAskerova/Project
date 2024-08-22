@@ -5,9 +5,14 @@ export default function ServicesHero() {
     <div id='servicesHero'>
       <div className='heroTitle'>
         <div>
-          <span>Home</span>
-          <img src="./arrows.svg" alt="" />
-          <span>services</span>
+        <span
+                onClick={() => navigate('/home')}
+                className='navLink'
+              >
+                Home
+                <img src="../../arrows.svg" alt="Arrow" className='arrow' />
+              </span>
+          <span>Services</span>
         </div>
         <h2>Services</h2>
       </div>
