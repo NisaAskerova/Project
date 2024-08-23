@@ -58,7 +58,13 @@ const CheckoutCard = ({ showButton = true, buttonLabel = "Proceed to Checkout" }
         <h4>${grandTotal.toFixed(2)}</h4>
       </div>
       {showButton && (
-        <button className='same' onClick={handleCheckout}>{buttonLabel}</button>
+        <button
+          className='same'
+          onClick={handleCheckout}
+          disabled={checkoutCart.length === 0} 
+        >
+          {buttonLabel}
+        </button>
       )}
     </div>
   );

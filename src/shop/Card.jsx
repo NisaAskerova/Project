@@ -6,14 +6,15 @@ import { useNavigate } from 'react-router-dom';
 export default function Card() {
   const { setVisibleCard, cart, setCart, localQuantity, setCheckoutCart, } = useContext(MyContext);
   const navigate = useNavigate();
-
+  
   const removeProduct = (id) => {
     setCart(cart.filter((e) => e.id !== id));
   };
-
+  
   const handleCheckout = () => {
     setCheckoutCart(cart);
     navigate('/checkout');
+    setVisibleCard(false);
   };
 
   return (
