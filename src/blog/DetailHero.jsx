@@ -53,7 +53,9 @@ export default function DetailHero() {
                         {blog.title}
                     </span>
                 </div>
-                <h2>{blog.title}</h2>
+                <div id='blTitle'>
+                <h2 className='thick wh'>{blog.title}</h2>
+                </div>
             </div>
         </div>
     );

@@ -802,7 +802,7 @@ footer h3 {
   display: flex;
   /* align-items: center; */
   gap: 50px;
-  padding: 12.5% 6.5%;
+  padding:  6.5% 12.5%;
   justify-content: space-between;
 }
 
@@ -1327,9 +1327,7 @@ strong {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  /* Adjust opacity and color */
   z-index: 1;
-  /* Ensure overlay is above the background but below content */
 }
 
 .heroTitle {
@@ -1349,9 +1347,7 @@ strong {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  /* Adjust opacity and color */
   z-index: 1;
-  /* Ensure overlay is above the background but below content */
 }
 
 
@@ -1360,7 +1356,6 @@ strong {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* Add some space between elements */
 }
 
 .navLink {
@@ -1371,18 +1366,15 @@ strong {
   align-items: center;
   color: #FFF;
 
-  /* Body-2 Regular */
   font-family: Epilogue;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
-  /* 157.143% */
 }
 
 .navLink:hover {
   transform: translateX(10px);
-  /* Move text to the right */
 }
 
 .arrow {
@@ -1398,6 +1390,8 @@ strong {
   width: 100%;
   padding: 6.5% 12.5% 0;
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .bDetailLeft {
@@ -1553,6 +1547,127 @@ strong {
   background: #FEE747;
   border: none;
   cursor: pointer;
+}
+
+.blogImage {
+  width: 80px;
+  height: 76px;
+  border-radius: 8px;
+}
+
+#blogList {
+  width: 340px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 55px 110px 0px rgba(0, 0, 0, 0.05), 0px 55px 110px 0px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blogBox2 {
+  width: 100%;
+  height: 96px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+#blogList .blogBox:not(#blogList .blogBox:last-of-type) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(174, 180, 175, 0.20);
+
+}
+#blTitle{
+  width: 534px;
+}
+.wh{
+  color: #fff;
+  text-align: center;
+}
+.blogDateTitle {
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+}
+#blogFilter{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.blogDateTitle>h3 {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.blogDateTitle>span {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 157.143% */
+}
+
+#searchInput {
+  width: 340px;
+  height: 56px;
+  position: relative;
+}
+
+#searchInput>input {
+  width: 100%;
+  height: 56px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-gray-20, rgba(180, 178, 173, 0.20));
+  outline: none;
+  padding: 10px 20px 10px 60px;
+}
+#searchInput>img{
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.categories {
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 55px 110px 0px rgba(0, 0, 0, 0.05), 0px 55px 110px 0px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+}
+
+.categories h3 {
+  color:  #15140F;
+  font-family: Epilogue;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 120% */
+}
+
+.categoryItem {
+  padding: 16px 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(180, 178, 173, 0.20);
+}
+
+.categoryItem:last-child {
+  border-bottom: none;
+}
+
+.categoryItem.selected {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.categoryItem:hover {
+  background-color: #f9f9f9;
 }
 
 /* ****************************************************************** */

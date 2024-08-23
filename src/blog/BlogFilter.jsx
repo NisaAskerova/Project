@@ -5,53 +5,62 @@ const BlogFilter = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const filteredBlogs = homeBlogs
-    .filter(blog => 
+  const filteredBlogs = homeBlogs.filter(
+    (blog) =>
       blog.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
       (selectedCategory === 'All' || blog.category === selectedCategory)
-    );
+  );
 
-  const categories = ['All', ...new Set(homeBlogs.map(blog => blog.category))];
+  const categories = [ ...new Set(homeBlogs.map((blog) => blog.category))];
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
   };
 
   return (
     <div id='blogFilter'>
-      <input 
-        type='text' 
-        placeholder='Search...' 
-        value={searchTerm} 
-        onChange={handleSearchChange} 
-      />
+      <div id='searchInput'>
+        <img src='../../search.svg' alt='' />
+        <input
+          className='same'
+          type='text'
+          placeholder='Search'
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+      </div>
 
       <div id='blogList'>
+        <h3>Latest Post</h3>
         {filteredBlogs.slice(0, 3).map((blog, index) => (
-          <div className='blogBox' key={index}>
+          <div className='blogBox2' key={index}>
             <div>
-              <img src={blog.image} alt="" />
+              <img className='blogImage' src={blog.image} alt='' />
             </div>
-            <h3>{blog.title}</h3>
-            <div className='blogDate'>
-              <img src={blog.icon} alt="" />
+            <div className='blogDateTitle'>
+              <h3>{blog.title.substring(0, 35)}...</h3>
               <span>{blog.date}</span>
             </div>
-            <p className='same'>{blog.description}</p>
           </div>
         ))}
       </div>
-      <select value={selectedCategory} onChange={handleCategoryChange} multiple>
+
+      <div className='categories'>
+        <h3>Categories</h3>
         {categories.map((category, index) => (
-          <option key={index} value={category}>
+          <div
+            key={index}
+            className={`categoryItem ${selectedCategory === category ? 'selected' : ''}`}
+            onClick={() => handleCategoryChange(category)}
+          >
             {category}
-          </option>
+          </div>
         ))}
-      </select>
+      </div>
     </div>
   );
 };
