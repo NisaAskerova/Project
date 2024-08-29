@@ -26,7 +26,7 @@ export default function Login() {
             <div id='remember'>
               <div>
                 <input type="checkbox" name="check" id="check" />
-                <label htmlFor='check'>Remember Me</label>
+                <label className='same' htmlFor='check'>Remember Me</label>
               </div>
               <div><a href="">Forgot Password?</a></div>
             </div>

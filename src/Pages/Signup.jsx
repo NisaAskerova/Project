@@ -24,7 +24,7 @@ export default function Signup() {
                         <input type="text" name="lastName" id="lastName" />
                         <label htmlFor="email">Email Address</label>
                         <input type="email" name="email" id="email" />
-                        <label htmlFor="password">Password</label>
+                        <label className='same' htmlFor="password">Password</label>
                         <input type="password" name="password" id="password" />
 
                         <div id='question'>

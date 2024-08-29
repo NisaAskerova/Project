@@ -1,7 +1,14 @@
 import React from 'react'
 import homeBlogs from '../JSON/homeBlogs.json'
+import { useNavigate } from 'react-router-dom';
 
 export default function HomeBlogs() {
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = (id) => {
+    navigate(`/blog/${id}`);
+  };
   const blogs=homeBlogs.slice(0, 3)
   return (
     <div id='homeBlogs'>
@@ -21,7 +28,7 @@ export default function HomeBlogs() {
               <span>{e.date}</span>
             </div>
             <p className='same'>{e.description}</p>
-            <button className='same'>{e.buttonText} <img src={e.buttonIcon} alt="" /></button>
+            <button className='same' onClick={() => handleButtonClick(e.id)}>{e.buttonText}<img src={e.buttonIcon} alt="" /></button>
 
           </div>
         ))}
