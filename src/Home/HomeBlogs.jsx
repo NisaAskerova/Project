@@ -18,7 +18,7 @@ export default function HomeBlogs() {
         The point of using Lorem Ipsum.</p>
       <div id='blogBoxes'>
         {blogs.map((e, index) => (
-          <div className='blogBox' key={index}>
+          <div onClick={() => handleButtonClick(e.id)} className='blogBox' key={index}>
             <div>
               <img src={e.image} alt="" />
             </div>
@@ -28,7 +28,7 @@ export default function HomeBlogs() {
               <span>{e.date}</span>
             </div>
             <p className='same'>{e.description}</p>
-            <button className='same' onClick={() => handleButtonClick(e.id)}>{e.buttonText}<img src={e.buttonIcon} alt="" /></button>
+            <button className='same'>{e.buttonText}<img src={e.buttonIcon} alt="" /></button>
 
           </div>
         ))}

@@ -250,9 +250,7 @@ button[type='submit'] {
   font-weight: 700;
   line-height: 30px;
 }
-.signLabel{
-  
-}
+
 /* ****************************HEADER************************ */
 header {
   z-index: 999;
@@ -625,8 +623,11 @@ footer h3 {
   height: 262px;
   border-radius: 20px;
   padding: 20px;
+  cursor: pointer;
 }
-
+.homeBox:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
 .iconsBox {
   width: 80px;
   height: 80px;
@@ -919,7 +920,7 @@ strong {
 #blogBoxes {
   width: 100%;
   display: flex;
-  gap: 18px;
+  gap: 16px;
   flex-wrap: wrap;
   margin-top: 50px;
 }
@@ -927,6 +928,7 @@ strong {
 .blogBox {
   width: 367px;
   height: 500px;
+  cursor: pointer;
 }
 
 .blogBox>h3 {
@@ -1170,7 +1172,7 @@ strong {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .teamBox {
@@ -2370,7 +2372,7 @@ tr td:first-of-type,
   height: 100vh;
   background-color: #fff;
   z-index: 999;
-  padding: 20px 20px 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3331,7 +3333,6 @@ table {
     width: 30px;
     height: 30px;
   }
-
   /* ***********HOME*************** */
   .padding {
     padding: 0 50px;

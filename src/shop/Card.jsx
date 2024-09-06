@@ -18,7 +18,7 @@ export default function Card() {
   };
 
   return (
-    <div id='cardWrapper'>
+    <div id='cardWrapper' onClick={() => setVisibleCard(false)}>
       <div id='card'>
         <div id='productsCard'>
           <span className='same'>You have <h3>{cart.length} items</h3> in your cart</span>
@@ -45,7 +45,7 @@ export default function Card() {
             <span>Subtotal</span>
             <span>${cart.reduce((acc, item) => acc + item.price * (localQuantity[item.id] || 1), 0).toFixed(2)}</span>
           </div>
-          <button className='same' onClick={() => setVisibleCard(false)}>View Cart</button>
+          <button className='same'>View Cart</button>
           <button className='same' onClick={handleCheckout}>Checkout</button>
         </div>
       </div>

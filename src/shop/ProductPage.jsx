@@ -152,6 +152,7 @@ export default function ProductPage() {
                         <h2>YÜKLƏNİR...</h2>
                     ) : defaultDisplayProducts.length > 0 ? (
                         defaultDisplayProducts.map((product) => (
+                            <Link to={`/product/${product.id}`}>
                             <div className='shopBox' key={product.id}>
                                 <div className='imgDiv'><img src={product.image} alt={product.name} /></div>
                                 <div>
@@ -167,12 +168,11 @@ export default function ProductPage() {
                                         <img src="/arrow.svg" alt="Arrow" />
                                     </div>
                                     <div className='shopIcon1'>
-                                        <Link to={`/product/${product.id}`}>
                                             <img src="eye.svg" alt="Eye" />
-                                        </Link>
                                     </div>
                                 </div>
                             </div>
+                                        </Link>
                         ))
                     ) : (
                         <h2>Mehsul tapılmadı</h2>

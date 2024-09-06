@@ -66,14 +66,15 @@ export default function Header() {
                 <img src="/shopCar.svg" alt="shop car" />
                 <div><span>{cart.length}</span></div>
               </div>
-              
             </div>
+
             <div id='headerButtons'>
               <button className='same'>Get a Quote</button>
               <button onClick={handleLogin}>Login</button>
             </div>
           </div>
-          <div id='navBar' className={isNavBarOpen ? 'open' : ''}>
+
+               <div id='navBar' className={isNavBarOpen ? 'open' : ''}>
             <div id='closeDiv' onClick={toggleNavBar}>
               <img src="close.svg" alt="close" />
             </div>
@@ -86,6 +87,7 @@ export default function Header() {
               <li><NavLink to="/contact">Contact Us</NavLink></li>
             </ul>
           </div>
+       
         </nav>
       </header>
     </>

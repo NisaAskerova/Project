@@ -31,6 +31,7 @@ export default function RelatedProducts() {
             <h2>Related Products</h2>
             <div className="products-grid">
                 {products.map(product => (
+                      <Link to={`/product/${product.id}`}>
                     <div key={product.id} className="shopBox">
                         <div className='imgDiv'><img src={product.image} alt={product.name} /></div>
                         <div>
@@ -46,12 +47,12 @@ export default function RelatedProducts() {
                                 <img src="/arrow.svg" alt="Arrow" />
                             </div>
                             <div className='shopIcon1'>
-                                <Link to={`/product/${product.id}`}>
+                              
                                     <img src="/eye.svg" alt="Eye" />
-                                </Link>
                             </div>
                         </div>
                     </div>
+                                </Link>
                 ))}
             </div>
         </div>

@@ -42,6 +42,7 @@ export default function SmartHome() {
                     <h2>YÜKLƏNİR...</h2>
                 ) : home && home.length > 0 ? (
                     home.map((product) => (
+                        <Link to={`/product/${product.id}`}>
                         <div className='shopBox' key={product.id}>
                             <div className='imgDiv'><img src={product.image} alt='' width={190} /></div>
                             <div>
@@ -57,12 +58,11 @@ export default function SmartHome() {
                                     <img src="arrow.svg" alt="Arrow" />
                                 </div>
                                 <div className='shopIcon1'>
-                                    <Link to={`/product/${product.id}`}>
                                         <img src="eye.svg" alt="Eye" />
-                                    </Link>
                                 </div>
                             </div>
                         </div>
+                                    </Link>
                     ))
                 ) : (
                     <h2>Mehsul tapılmadı</h2>
