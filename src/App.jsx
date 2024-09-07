@@ -21,6 +21,7 @@ import PrivacyPolicy from './privacy_policy/PrivacyPolicy';
 import TermsConditions from './terms_conditions/TermsConditions';
 import BlogDetail from './blog/BlogDetail';
 import Order from './shoppingAdress/Order';
+import { Toaster } from 'react-hot-toast'; // Toaster komponentini əlavə edirik
 
 export const MyContext = createContext();
 
@@ -95,6 +96,10 @@ export default function App() {
       <Router>
         {visibleCard && <Card />}
         {orderCart && <Order/>}
+        
+        {/* Toaster komponentini əlavə edirik */}
+        <Toaster position="top-right" reverseOrder={false} />
+        
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/signup' element={<Signup />} />

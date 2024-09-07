@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, Outlet, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { MyContext } from '../App';
+import toast from 'react-hot-toast'; 
 
 export default function Product() {
   const { cart, setCart, localQuantity, incrementQuantity, decrementQuantity, setLocalQuantity } = useContext(MyContext);
@@ -10,20 +11,21 @@ export default function Product() {
   const [loading, setLoading] = useState(true);
 
   const addCart = (product) => {
+    if (!product.stock) {
+      toast.error('Product is out of stock');
+      return;
+    }
+  
     const existingProduct = cart.find((prd) => prd.id === product.id);
     if (existingProduct) {
-      const newArray = cart.map((e) => {
-        if (e.id === product.id) {
-          return { ...e, quantity: e.quantity + (localQuantity[id] || 1) }; 
-        } else {
-          return e;
-        }
-      });
-      setCart(newArray);
+      toast.error('Product is already in the cart'); 
+      return; 
     } else {
-      setCart([...cart, { ...product, quantity: localQuantity[id] || 1 }]); 
+      setCart([...cart, { ...product, quantity: localQuantity[id] || 1 }]);
+      toast.success('Product added to cart');
     }
   };
+  
 
   const fetchData = async () => {
     try {
@@ -33,6 +35,7 @@ export default function Product() {
       setLocalQuantity(id, 1); 
     } catch (error) {
       console.error(error);
+      toast.error('Failed to load product'); 
     } finally {
       setLoading(false);
     }

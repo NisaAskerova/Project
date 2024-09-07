@@ -919,15 +919,16 @@ strong {
 
 #blogBoxes {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 367px); 
   gap: 16px;
   flex-wrap: wrap;
   margin-top: 50px;
 }
 
 .blogBox {
-  width: 367px;
-  height: 500px;
+  /* width: 367px;
+  height: 500px; */
   cursor: pointer;
 }
 
@@ -1312,12 +1313,13 @@ strong {
 
 #blog {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 367px); 
   padding: 6.5% 12.5% 0;
-  column-gap: 19px;
+  column-gap: 20px;
   row-gap: 30px;
 }
+
 
 /* ******************BLOGDETAIL*********************************** */
 #bdetail {
@@ -3455,12 +3457,11 @@ table {
     height: 250vh;
   }
 
-  .blogBox {
-    width: 45%;
-  }
 
   #blogBoxes {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 367px); 
+    grid-row: repeat(2, 500px);
+
   }
 
   /* ***************CLIENT*********************** */
