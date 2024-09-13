@@ -625,9 +625,11 @@ footer h3 {
   padding: 20px;
   cursor: pointer;
 }
-.homeBox:hover{
+
+.homeBox:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
 .iconsBox {
   width: 80px;
   height: 80px;
@@ -805,7 +807,7 @@ footer h3 {
   display: flex;
   /* align-items: center; */
   gap: 50px;
-  padding:  6.5% 12.5%;
+  padding: 6.5% 12.5%;
   justify-content: space-between;
 }
 
@@ -920,8 +922,9 @@ strong {
 #blogBoxes {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 367px); 
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 500px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-top: 50px;
 }
@@ -1170,15 +1173,14 @@ strong {
 
 #teamBoxes {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 384px;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .teamBox {
-  width: 367px;
-  height: 384px;
   margin-top: 50px;
 }
 
@@ -1314,7 +1316,9 @@ strong {
 #blog {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 367px); 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 500px;
+  column-gap: 20px;
   padding: 6.5% 12.5% 0;
   column-gap: 20px;
   row-gap: 30px;
@@ -1334,6 +1338,7 @@ strong {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  object-fit: cover;
 }
 
 .heroTitle {
@@ -1433,6 +1438,7 @@ strong {
 .bdi {
   width: 100%;
   height: 390px;
+  object-fit: cover;
 }
 
 .dthick {
@@ -1559,6 +1565,7 @@ strong {
   width: 80px;
   height: 76px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 #blogList {
@@ -1585,23 +1592,28 @@ strong {
   border-bottom: 1px solid rgba(174, 180, 175, 0.20);
 
 }
-#blTitle{
+
+#blTitle {
   width: 534px;
 }
-.wh{
+
+.wh {
   color: #fff;
   text-align: center;
 }
+
 .blogDateTitle {
   height: 76px;
   display: flex;
   flex-direction: column;
 }
-#blogFilter{
+
+#blogFilter {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .blogDateTitle>h3 {
   color: #15140F;
   font-family: Epilogue;
@@ -1635,7 +1647,8 @@ strong {
   outline: none;
   padding: 10px 20px 10px 60px;
 }
-#searchInput>img{
+
+#searchInput>img {
   position: absolute;
   top: 15px;
   left: 20px;
@@ -1649,12 +1662,13 @@ strong {
 }
 
 .categories h3 {
-  color:  #15140F;
+  color: #15140F;
   font-family: Epilogue;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
+  /* 120% */
 }
 
 .categoryItem {
@@ -3335,6 +3349,7 @@ table {
     width: 30px;
     height: 30px;
   }
+
   /* ***********HOME*************** */
   .padding {
     padding: 0 50px;
@@ -3459,8 +3474,9 @@ table {
 
 
   #blogBoxes {
-    grid-template-columns: repeat(2, 367px); 
-    grid-row: repeat(2, 500px);
+    grid-template-columns: repeat(2, 367px);
+    grid-template-rows: 500px;
+    row-gap: 30px;
 
   }
 

@@ -117,7 +117,7 @@ export default function Product() {
               <input className='same' type="text" readOnly value={localQuantity[id] || 1} />
               <button onClick={() => incrementQuantity(id)} disabled={!product.stock}><img src="/plus.svg" alt="" /></button>
             </div>
-            <button className='addButton' disabled={!product.stock} onClick={() => addCart(product)}>Add to Cart</button>
+            <button className='addButton' onClick={() => addCart(product)}>Add to Cart</button>
             <div className='favoriteButton'>
               <img src="/favory.svg" alt="" />
             </div>
