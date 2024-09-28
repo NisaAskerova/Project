@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div>
+    <>
             <div id="homeHero" >
         <div id='heroLeft'>
           <h3>Your Safety and
@@ -17,6 +17,6 @@ export default function Hero() {
           <img src="./portrait-male-security-guard-with-uniform 1.png" alt="" />
         </div>
       </div>
-    </div>
+    </>
   )
 }

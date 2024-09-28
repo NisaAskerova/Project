@@ -612,15 +612,16 @@ footer h3 {
 }
 
 #boxes {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 270px);
+  grid-template-rows: repeat(2, 262px);
   gap: 20px;
   margin-top: 30px;
 }
 
 .homeBox {
-  width: 270px;
-  height: 262px;
+
+  /* height: 262px; */
   border-radius: 20px;
   padding: 20px;
   cursor: pointer;
@@ -3393,11 +3394,7 @@ table {
     width: 100%;
   }
 
-  .homeBox {
-    width: 48%;
-    height: 280px;
-    padding: 30px 40px 30px 30px;
-  }
+
 
   #homePage2Right {
     display: none;
@@ -3468,18 +3465,20 @@ table {
 
   /* ****************HOME-BLOGS************* */
   #homeBlogs {
-    padding: 50px;
+    width: 100%;
+    padding: 0 5.5%;
     height: 250vh;
   }
 
 
   #blogBoxes {
-    grid-template-columns: repeat(2, 367px);
-    grid-template-rows: 500px;
+    /* width: 100%; */
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 30px;
-
   }
-
+  .blogBox .fDiv>img{
+    width: 100%;
+  }
   /* ***************CLIENT*********************** */
   #client {
     display: none;
@@ -3527,4 +3526,224 @@ table {
   #rightContact>div>button {
     width: 100px;
   }
+  #boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 262px);
+
+      padding: 30px 40px 30px 30px;
+    
+  }
+}
+
+/* *****************************MOBILE****************** */
+@media (max-width: 710px) {
+  #headerLeft{
+    width: 100px;
+    border: 2px solid red;
+  }
+  #navBar {
+    width: 50%;
+    height: 120vh;
+  }
+  #blogBoxes{
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(2, 440px); */
+  }
+  #footerCenter1>ul>li>a, #footerCenter2>ul>li>a,
+    #footerLeft>p,
+    .footerInfo>span,
+    #footerRight .same,
+    #end>span,
+    #leftContact>span, #leftContact>p{
+    font-size: 12px;
+  }
+  #homeBlogs{
+    height: 260vh;
+  }
+  #contactUs>div{
+    display: block;
+  }
+  #leftContact>h2{
+    font-size: 26px;
+    line-height: 30px;
+  }
+  #rightContact>div>input,
+  #rightContact>div>button{
+    height: 36px;
+  
+  }
+  #rightContact>div>input::placeholder{
+    font-size: 12px;
+  }
+  #contactUs>div{
+    padding:10px 20px ;
+
+  }
+.same,
+#heroLeft>p
+{
+  font-size: 12px;
+}
+.homeBox>h4{
+  font-size: 14px;
+}
+.thick{
+  font-size: 20px;
+}
+#journey{
+  display: block;
+  height: 100%;
+  padding-top: 10px ;
+}
+#journeyLeft{
+  width: 100%;
+}
+#journeyRight{
+  width: 100%;
+  display: block;
+}
+#heroLeft>h3{
+  font-size: 20px;
+  line-height: 30px;
+}
+#heroLeft{
+  /* width: 100%; */
+  /* background-color: #B4B2AD; */
+}
+#homeHero{
+  padding: 2%;
+}
+#workLeft{
+  gap: 10px;
+}
+#headerButtons button:first-child{
+  display: none;
+}
+#headerButtons>button{
+width: 100px;
+height: 46px;
+}
+#headerButtons{
+  width: 100%;
+}
+.headerIcon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  background: #FEE747;
+}
+
+.headerRight {
+  display: block;
+  align-items: center;
+  /* gap: 20px; */
+}
+
+.contact {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.info span:nth-of-type(2){
+  font-size: 12px;
+}
+.info .same{
+  display: none;
+}
+#lg{
+  width: 100px;
+}
+.headerRight{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+#heroRight{
+  display: none;
+}
+#titleDiv>h2{
+  font-size: 26px;
+  line-height: 30px;
+  
+}
+#boxes{
+  padding: 0;
+}
+.iconsBox{
+  width: 60px;
+  height: 60px;
+}
+.same{
+  line-height: 20px;
+}
+.homeBox>h4 {
+  line-height: 20px;
+}
+.serviceBox>div button{
+  width: 100px;
+  height: 46px;
+  margin-bottom: 10px;
+}
+.serviceBox>div{
+  margin-bottom: 40px;
+padding: 0 20px;
+}
+.serviceBox{
+  height: 100%;
+}
+#HomeServices{
+  height: 245vh;
+}
+.blogBox .fDiv>img{
+  width: 100%;
+}
+.workBox{
+  width: 100%;
+}
+
+.firstDivServices{
+  height: 35%;
+}
+
+.workiconDiv{
+  width: 50px;
+  height: 50px;
+}
+#work{
+  padding: 3% 5.5%;
+}
+#serviceBoxes{
+  margin-top: 0;
+}
+#homepage2{
+  height: 135vh;
+}
+#rightContact>div>input{
+width: 200px;
+}
+#rightContact>div>button{
+  width: 80px;
+}
+#rightContact>div{
+  width: 200px;
+}
+#rightContact{
+  display: block;
+  margin-top: 10px;
+}
+#foot{
+height: 80vh;}
+#wirkRight>img{
+  height: 70vh;
+}
+.blogBox{
+
+}
 }

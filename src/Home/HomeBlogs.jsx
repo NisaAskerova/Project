@@ -19,7 +19,7 @@ export default function HomeBlogs() {
       <div id='blogBoxes'>
         {blogs.map((e, index) => (
           <div onClick={() => handleButtonClick(e.id)} className='blogBox' key={index}>
-            <div>
+            <div className='fDiv'>
               <img src={e.image} alt="" />
             </div>
             <h3>{e.title}</h3>

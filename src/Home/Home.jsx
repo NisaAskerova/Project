@@ -11,7 +11,7 @@ import Footer from '../Pages/Footer'
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header/>
       <Hero />
       <HomePage2 />
@@ -21,6 +21,6 @@ export default function Home() {
       <Client />
       <HomeBlogs />
       <Footer/>
-    </div>
+    </>
   )
 }

@@ -21,7 +21,7 @@ export default function Header() {
       <header>
         <div id='hed'>
           <div className='headerLeft'>
-            <img src="/miniLogo.svg" alt="miniLogo" />
+            <img id='lg' src="/miniLogo.svg" alt="miniLogo" />
           </div>
           <div className="headerRight">
             <div className='contact'>
