@@ -282,6 +282,11 @@ header {
   align-items: center;
   gap: 31px;
 }
+#information{
+  display: flex;
+  width: 100%;
+
+}
 
 .contact {
   display: flex;
@@ -434,7 +439,6 @@ footer {
 #footerLeft {
   width: 35%;
 }
-
 #footerLeft>p {
   color: #15140F;
   font-size: 14px;
@@ -3743,7 +3747,20 @@ height: 80vh;}
 #wirkRight>img{
   height: 70vh;
 }
-.blogBox{
+#footerLogo{
+  width: 100px;
+}
+footer{
+  width: 100%;
+  padding: 5.5%
+}
 
+#foot{
+  width: 100%;
+  height: 110vh;
+}
+#footerLeft, #footerCenter1,
+#footerCenter2, #footerRight{
+  width: 50%;
 }
 }

@@ -101,8 +101,8 @@ export default function App() {
         <Toaster position="top-right" reverseOrder={false} />
         
         <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
+          <Route path='/' element={<Signup />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />

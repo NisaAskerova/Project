@@ -70,7 +70,7 @@ export default function Header() {
 
             <div id='headerButtons'>
               <button className='same'>Get a Quote</button>
-              <button onClick={handleLogin}>Login</button>
+              <button className='same' onClick={handleLogin}>Logout</button>
             </div>
           </div>
 
