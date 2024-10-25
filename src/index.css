@@ -515,7 +515,6 @@ footer h3 {
 #homeHero {
   width: 100%;
   height: 100vh;
-  background-image: url(..//backgrounHome.png);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -584,7 +583,17 @@ footer h3 {
   right: 12.5%;
 
 }
+.slide1 {
+  background-image: url(..//backgrounHome.png);
+}
 
+.slide2 {
+  background-image: url(..//Rectangle346242333.png); 
+}
+
+.slide3 {
+  background-image: url(..//Rectangle346242334.png);
+}
 /* ***********************HOMEPAGE2******************** */
 #homepage2 {
   width: 100%;
