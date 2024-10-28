@@ -22,6 +22,15 @@ import TermsConditions from './terms_conditions/TermsConditions';
 import BlogDetail from './blog/BlogDetail';
 import Order from './shoppingAdress/Order';
 import { Toaster } from 'react-hot-toast'; // Toaster komponentini əlavə edirik
+import Admin from './admin/Admin';
+import AddServiceForm from './admin/who_we_are/AdServiceForm';
+import ShowWhoWeAre from './admin/who_we_are/ShowWhoWeAre';
+import UpdateMainWhoWeAre from './admin/who_we_are/UpdateMainWhoWeAre';
+import UpdateServiceWhoWeAre from './admin/who_we_are/UpdateServiceWhoWeAre';
+import AddHowWeWorks from './admin/how_we_works/AddHowWeWorks';
+import ShowHowWeWorks from './admin/how_we_works/ShowHowWeWorks';
+import UpdateHowWeWorks from './admin/how_we_works/UpdateMainHowWeWorks';
+import UpdateServiceHowWeWorks from './admin/how_we_works/UpdateServiceHowWeWorks';
 
 export const MyContext = createContext();
 
@@ -95,11 +104,11 @@ export default function App() {
     <MyContext.Provider value={data}>
       <Router>
         {visibleCard && <Card />}
-        {orderCart && <Order/>}
-        
+        {orderCart && <Order />}
+
         {/* Toaster komponentini əlavə edirik */}
         <Toaster position="top-right" reverseOrder={false} />
-        
+
         <Routes>
           <Route path='/' element={<Signup />} />
           <Route path='/login' element={<Login />} />
@@ -122,6 +131,18 @@ export default function App() {
           </Route>
           <Route path='/privacy_policy' element={<PrivacyPolicy />} />
           <Route path='/terms_conditions' element={<TermsConditions />} />
+          <Route path='/admin' element={<Admin />} />
+          <Route path='/who_we_are' element={<AddServiceForm />} />
+          <Route path='/show_who_we_are' element={<ShowWhoWeAre />} />
+          <Route path="/update_who_we_are_main/:id" element={<UpdateMainWhoWeAre />} />
+          <Route path="/update_who_we_are_service/:id" element={<UpdateServiceWhoWeAre />} />
+          <Route path="/how_we_works" element={<AddHowWeWorks />} />
+          <Route path='/show_how_we_works' element={<ShowHowWeWorks/>}/>
+          <Route path="/update_how_we_works_main/:id" element={<UpdateHowWeWorks />} />
+          <Route path="/update_how_we_works_service/:id" element={<UpdateServiceHowWeWorks />} />
+
+
+
         </Routes>
       </Router>
     </MyContext.Provider>

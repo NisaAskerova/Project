@@ -35,17 +35,16 @@ export default function Register() {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          // Qeydiyyat uğurlu olarsa login səhifəsinə yönləndirilir
           console.log("Registration successful:", data);
-          navigate('/login'); // navigate istifadə edərək login səhifəsinə yönləndirilir
+          navigate('/login'); 
         } else {
-          // Əgər uğursuz olarsa, xətaları setErrors funksiyası ilə saxlayırıq
+       
           console.log("Error during registration:", data);
           setErrors(data.errors); 
         }
       })
       .catch((error) => {
-        console.error("Error:", error); // Əgər sorğuda bir xəta baş verərsə onu consol-da göstəririk
+        console.error("Error:", error); 
       });
   };
 

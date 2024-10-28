@@ -29,7 +29,7 @@ export default function Login() {
         if (data.success) {
             localStorage.setItem('token', data.token);
             if (data.role === 'admin') { 
-              window.open('http://127.0.0.1:8000/dashboard/main', ); // Yeni pəncərə açın
+              window.open('/admin' );
           } else { 
                 navigate('/home'); 
             }

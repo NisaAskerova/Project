@@ -10,12 +10,237 @@
   font-family: Epilogue;
 }
 
-/* 
-.container {
+/* ////////////////////////////ADMIN//////////////////////////////// */
+#nav{
+  position: fixed;
+  border: 1px solid #15140F;
+  z-index: 1999;
+
+}
+#nav>a>button{
+  width: 133px;
+  height: 56px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#dashboard {
+  width: 250px;
+  left: 0;
+  height: 100vh;
+  background-color: #fee747;
+  padding: 90px 0 0 0;
+  position: fixed;
+  z-index: 0; /* Bu dəyəri daha aşağı edin */
+}
+#dashboard>ul{
   width: 100%;
-  padding: 0 140px;
+}
+#dashboard>ul>li{
+  line-height: 35px;
+  padding: 0 20px;
+  border: 1px solid #ddd7d7;
+  
+}
+.adminHero{
+  width: 100%;
+  height: 100vh;
+  padding: 120px 0 0 280px;
+}
+
+/* ShowWhoWeAre.css */
+
+/* .adminHero {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 } */
 
+.adminHero h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.adminHero table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.adminHero table th,
+.adminHero table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.adminHero table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.adminHero table img {
+  border-radius: 4px;
+}
+
+.adminHero .add-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.adminHero .add-button:hover {
+  background-color: #218838;
+}
+
+.adminHero .edit-button,
+.adminHero .delete-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.adminHero .edit-button:hover {
+  background-color: #0056b3;
+}
+
+.adminHero .delete-button {
+  background-color: #dc3545;
+}
+
+.adminHero .delete-button:hover {
+  background-color: #c82333;
+}
+
+.adminHero .message {
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+
+
+.form {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.form-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="file"],
+.form-group input[type="color"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+}
+
+h2 {
+  color: #333; /* Dark text color for headings */
+  margin-bottom: 15px;
+}
+
+form {
+  margin-bottom: 30px; /* Spacing between forms */
+}
+
+label {
+  font-weight: bold; /* Bold labels */
+  margin-bottom: 5px;
+  display: block; /* Make labels block elements */
+}
+
+input[type="text"],
+input[type="color"],
+textarea {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding inside inputs */
+  margin-bottom: 15px; /* Spacing below inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+input[type="text"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+button:disabled {
+  background-color: #c0c0c0; /* Grey color for disabled buttons */
+  cursor: not-allowed; /* Not allowed cursor for disabled buttons */
+}
+
+.message {
+  margin-top: 20px; /* Space above messages */
+  color: #d9534f; /* Red color for error messages */
+}
+
+.loading {
+  color: #5bc0de; /* Light blue for loading message */
+}
+
+/* ///////////////////////////////////////////////////////////////// */
 .site {
   width: 100%;
 }
