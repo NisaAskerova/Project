@@ -31,6 +31,13 @@ import AddHowWeWorks from './admin/how_we_works/AddHowWeWorks';
 import ShowHowWeWorks from './admin/how_we_works/ShowHowWeWorks';
 import UpdateHowWeWorks from './admin/how_we_works/UpdateMainHowWeWorks';
 import UpdateServiceHowWeWorks from './admin/how_we_works/UpdateServiceHowWeWorks';
+import AboutSecura from './about/AboutSecura';
+import AddAboutSecura from './admin/about_secura/AddAboutSecura';
+import ShowAboutSecura from './admin/about_secura/ShowAboutSecura';
+import UpdateAboutSecura from './admin/about_secura/UpdateAboutSecura';
+import AddHeroSlide from './admin/hero_slide/AddHeroSlide';
+import ShowHeroSlide from './admin/hero_slide/ShowHeroSlide';
+import UpdateHerSlider from './admin/hero_slide/UpdateHeroSlider';
 
 export const MyContext = createContext();
 
@@ -140,7 +147,12 @@ export default function App() {
           <Route path='/show_how_we_works' element={<ShowHowWeWorks/>}/>
           <Route path="/update_how_we_works_main/:id" element={<UpdateHowWeWorks />} />
           <Route path="/update_how_we_works_service/:id" element={<UpdateServiceHowWeWorks />} />
-
+          <Route path='/add_about_secura' element={<AddAboutSecura/>} />
+          <Route path='/show_about_secura' element={<ShowAboutSecura/>} />
+          <Route path='/update_about_secura/:id' element={<UpdateAboutSecura/>} />
+          <Route path='/add_hero_slide' element={<AddHeroSlide/>} />
+          <Route path='/show_hero_slide' element={<ShowHeroSlide/>} />
+          <Route path='/update_hero_slider/:id' element={<UpdateHerSlider/>} />
 
 
         </Routes>

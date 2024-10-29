@@ -12,23 +12,23 @@ function ShowWhoWeAre() {
 
   const fetchAboutUs = async () => {
     try {
-        const response = await axios.get('http://localhost:8000/api/how_we_works/show_main_info');  // `show_main_info` istifadə edilir
-        setAboutUs(response.data);
+      const response = await axios.get('http://localhost:8000/api/how_we_works/show_main_info');  // `show_main_info` istifadə edilir
+      setAboutUs(response.data);
     } catch (error) {
-        console.error('Error fetching About Us data:', error);
-        setMessage('Error fetching About Us data: ' + (error.response?.data.message || error.message));
+      console.error('Error fetching About Us data:', error);
+      setMessage('Error fetching About Us data: ' + (error.response?.data.message || error.message));
     }
-};
+  };
 
-const fetchServices = async () => {
+  const fetchServices = async () => {
     try {
-        const response = await axios.get('http://localhost:8000/api/how_we_works/show_service_info');  // `show_service_info` istifadə edilir
-        setServices(response.data);
+      const response = await axios.get('http://localhost:8000/api/how_we_works/show_service_info');  // `show_service_info` istifadə edilir
+      setServices(response.data);
     } catch (error) {
-        console.error('Error fetching services:', error);
-        setMessage('Error fetching services: ' + (error.response?.data.message || error.message));
+      console.error('Error fetching services:', error);
+      setMessage('Error fetching services: ' + (error.response?.data.message || error.message));
     }
-};
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -77,8 +77,7 @@ const fetchServices = async () => {
                   <td>{item.main_description}</td>
                   <td>
                     {item.image ? (
-                      <img src={`http://localhost:8000/public/storage/images/${item.image}`} alt={`${item.title} icon`} width="50" />
-                    ) : (
+                      <img src={`http://localhost:8000/storage/${item.image}`} alt="Image" width="50" />) : (
                       'No image available'
                     )}
                   </td>
@@ -112,7 +111,7 @@ const fetchServices = async () => {
                   <td>{service.description}</td>
                   <td>
                     {service.icon ? (
-                      <img src={`http://localhost:8000/public/storage/icons/${service.icon}?t=${Date.now()}`} alt={`${service.title} icon`} width="50" />
+                    <img src={`http://localhost:8000/storage/${service.icon}`} alt="Image" width="50" />
                     ) : (
                       'No icon available'
                     )}

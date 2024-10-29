@@ -25,7 +25,7 @@ export default function Register() {
 
     console.log('Sorğu göndərilir...');
 
-    fetch("http://127.0.0.1:8000/api/register", {
+    fetch("http://127.0.0.1:8000/api/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

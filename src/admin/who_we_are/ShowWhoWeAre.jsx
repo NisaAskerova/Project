@@ -81,8 +81,7 @@ function ShowWhoWeAre() {
                   <td>{item.main_description}</td>
                   <td>
                     {item.image ? (
-                      <img src={`http://localhost:8000/public/storage/images/${item.image}?t=${Date.now()}`} alt={`${item.title} icon`} width="50" />
-
+                      <img src={`http://localhost:8000/storage/${item.image}`} alt="Image" width="50" />
                     ) : (
                       'No image available'
                     )}
@@ -119,7 +118,7 @@ function ShowWhoWeAre() {
                   <td>{service.description}</td>
                   <td>
                     {service.icon ? (
-                      <img src={`http://localhost:8000/public/storage/icons/${service.icon}?t=${Date.now()}`} alt={`${service.title} icon`} width="50" />
+                    <img src={`http://localhost:8000/storage/${service.icon}`} alt="Image" width="50" />
                     ) : (
                       'No icon available'
                     )}

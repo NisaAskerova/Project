@@ -5,17 +5,34 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 
-export default function Hero() {
-  const [slides, setSlides] = useState([]);
+function HeroSlider() {
+  const [sliders, setSliders] = useState([]);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchSlides = async () => {
-      const response = await axios.get('http://127.0.0.1:8000/api/sliders');
-      setSlides(response.data);
+    const fetchSliders = async () => {
+      try {
+        const response = await axios.get('http://localhost:8000/api/sliders/show');
+        setSliders(response.data);
+      } catch (error) {
+        setError(error.response ? error.response.data.message : 'Error fetching sliders');
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    fetchSlides();
+    fetchSliders();
   }, []);
+
+  if (loading) {
+    return <div>Loading...</div>; // Yüklənmə anında mesaj göstərin
+  }
+
+  if (error) {
+    return <div style={{ color: 'red' }}>{error}</div>; // Xətanı qırmızı ilə göstərin
+  }
 
   return (
     <Swiper
@@ -26,7 +43,7 @@ export default function Hero() {
       pagination={{ clickable: true }}
       loop={true}
     >
-      {slides.map((slide, index) => (
+      {sliders.map((slide, index) => (
         <SwiperSlide key={index}>
           <div id="homeHero" className={slide.backImage}>
             <div id='heroLeft'>
@@ -47,3 +64,5 @@ export default function Hero() {
     </Swiper>
   );
 }
+
+export default HeroSlider;
