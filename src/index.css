@@ -800,7 +800,7 @@ footer h3 {
   padding-right: 55px;
 }
 
-#heroRight img:first-of-type {
+.yellowLine {
   z-index: 0;
 }
 
@@ -810,16 +810,8 @@ footer h3 {
   right: 12.5%;
 
 }
-.slide1 {
-  background-image: url(..//backgrounHome.png);
-}
-
-.slide2 {
-  background-image: url(..//Rectangle346242333.png); 
-}
-
-.slide3 {
-  background-image: url(..//Rectangle346242334.png);
+.security{
+  z-index: 999;
 }
 /* ***********************HOMEPAGE2******************** */
 #homepage2 {

@@ -31,13 +31,16 @@ import AddHowWeWorks from './admin/how_we_works/AddHowWeWorks';
 import ShowHowWeWorks from './admin/how_we_works/ShowHowWeWorks';
 import UpdateHowWeWorks from './admin/how_we_works/UpdateMainHowWeWorks';
 import UpdateServiceHowWeWorks from './admin/how_we_works/UpdateServiceHowWeWorks';
-import AboutSecura from './about/AboutSecura';
 import AddAboutSecura from './admin/about_secura/AddAboutSecura';
 import ShowAboutSecura from './admin/about_secura/ShowAboutSecura';
 import UpdateAboutSecura from './admin/about_secura/UpdateAboutSecura';
 import AddHeroSlide from './admin/hero_slide/AddHeroSlide';
 import ShowHeroSlide from './admin/hero_slide/ShowHeroSlide';
 import UpdateHerSlider from './admin/hero_slide/UpdateHeroSlider';
+import AddOurVision from './admin/our_vision_mission/AddOurVision';
+import ShowOurVision from './admin/our_vision_mission/ShowOurVision';
+import UpdateMainOurVision from './admin/our_vision_mission/UpdateMainOurVision';
+import UpdateServiceOurVision from './admin/our_vision_mission/UpdateServiceOurVision';
 
 export const MyContext = createContext();
 
@@ -153,6 +156,11 @@ export default function App() {
           <Route path='/add_hero_slide' element={<AddHeroSlide/>} />
           <Route path='/show_hero_slide' element={<ShowHeroSlide/>} />
           <Route path='/update_hero_slider/:id' element={<UpdateHerSlider/>} />
+          <Route path='/add_our_vision_mission' element={<AddOurVision/>} />
+          <Route path='/our_vision_mission' element={<ShowOurVision/>} />
+          <Route path='/update_main_our_vision/:id' element={<UpdateMainOurVision/>} />
+          <Route path='/update_service_our_vision/:id' element={<UpdateServiceOurVision/>} />
+
 
 
         </Routes>

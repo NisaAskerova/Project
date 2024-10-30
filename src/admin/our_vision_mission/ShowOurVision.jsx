@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Admin from '../Admin';
 
-function ShowWhoWeAre() {
+function ShowOurVision() {
   const [aboutUs, setAboutUs] = useState([]);
   const [services, setServices] = useState([]);
   const [message, setMessage] = useState('');
@@ -12,7 +12,7 @@ function ShowWhoWeAre() {
 
   const fetchAboutUs = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/how_we_works/show_main_info');  // `show_main_info` istifadə edilir
+      const response = await axios.get('http://localhost:8000/api/our_vision_mission/show_main_info');  // `show_main_info` istifadə edilir
       setAboutUs(response.data);
     } catch (error) {
       console.error('Error fetching About Us data:', error);
@@ -22,7 +22,7 @@ function ShowWhoWeAre() {
 
   const fetchServices = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/how_we_works/show_service_info');  // `show_service_info` istifadə edilir
+      const response = await axios.get('http://localhost:8000/api/our_vision_mission/show_service_info');  // `show_service_info` istifadə edilir
       setServices(response.data);
     } catch (error) {
       console.error('Error fetching services:', error);
@@ -41,7 +41,7 @@ function ShowWhoWeAre() {
   const handleDelete = async (id, type) => {
     if (window.confirm(`Are you sure you want to delete this ${type === 'main_info' ? 'About Us' : 'Service'}?`)) {
       try {
-        await axios.delete(`http://localhost:8000/api/how_we_works/${type}/${id}`);
+        await axios.delete(`http://localhost:8000/api/our_vision_mission/${type}/${id}`);
         setMessage(`${type === 'main_info' ? 'About Us' : 'Service'} deleted successfully!`);
         type === 'main_info' ? fetchAboutUs() : fetchServices();
       } catch (error) {
@@ -55,7 +55,7 @@ function ShowWhoWeAre() {
     <>
       <Admin />
       <div className="adminHero">
-        <button className="add-button" onClick={() => navigate('/how_we_works')}>Add About Us</button>
+        <button className="add-button" onClick={() => navigate('/add_our_vision_mission')}>Add</button>
         <h2>About Us</h2>
         {loading ? <p>Loading data...</p> : null}
         {message && <p className="message">{message}</p>}
@@ -75,8 +75,8 @@ function ShowWhoWeAre() {
               {aboutUs.map((item) => (
                 <tr key={item.id}>
                   <td>{item.type}</td>
-                  <td>{item.main_title}</td>
-                  <td>{item.main_description}</td>
+                  <td>{item.title}</td>
+                  <td>{item.description}</td>
                   <td>
                     {item.image ? (
                       <img src={`http://localhost:8000/storage/${item.image}`} alt="Image" width="50" />) : (
@@ -84,7 +84,7 @@ function ShowWhoWeAre() {
                     )}
                   </td>
                   <td>
-                    <button className="edit-button" onClick={() => navigate(`/update_how_we_works_main/${item.id}`)}>Edit</button>
+                    <button className="edit-button" onClick={() => navigate(`/update_main_our_vision/${item.id}`)}>Edit</button>
                     <button className="delete-button" onClick={() => handleDelete(item.id, 'main_info')}>Delete</button>
                   </td>
                 </tr>
@@ -119,7 +119,7 @@ function ShowWhoWeAre() {
                     )}
                   </td>
                   <td>
-                    <button className="edit-button" onClick={() => navigate(`/update_how_we_works_service/${service.id}`)}>Edit</button>
+                    <button className="edit-button" onClick={() => navigate(`/update_service_our_vision/${service.id}`)}>Edit</button>
                     <button className="delete-button" onClick={() => handleDelete(service.id, 'service_info')}>Delete</button>
                   </td>
                 </tr>
@@ -134,4 +134,4 @@ function ShowWhoWeAre() {
   );
 }
 
-export default ShowWhoWeAre;
+export default ShowOurVision;

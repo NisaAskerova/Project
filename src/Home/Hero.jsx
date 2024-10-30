@@ -45,18 +45,26 @@ function HeroSlider() {
     >
       {sliders.map((slide, index) => (
         <SwiperSlide key={index}>
-          <div id="homeHero" className={slide.backImage}>
+          <div 
+            id="homeHero" 
+            style={{ 
+              backgroundImage: `url(http://localhost:8000/storage/${slide.backImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              height: '100vh', // Height for the slider
+            }}
+          >
             <div id='heroLeft'>
               <h3>{slide.title}</h3>
               <p>{slide.description}</p>
               <button>
                 <span className='same'>Get Started</span>
-                <img src={slide.icon} alt="Left Icon" />
+                <img src={`http://localhost:8000/storage/${slide.icon}`} alt="Left Icon" />
               </button>
             </div>
             <div id="heroRight">
-              <img src={slide.heroImage} alt="Line Decoration" />
-              <img src={slide.image} alt="Security Guard" />
+              <img className='security' src={`http://localhost:8000/storage/${slide.heroImage}`} alt="Line Decoration" />
+              <img className='yellowLine' src={`http://localhost:8000/storage/${slide.image}`} alt="Security Guard" />
             </div>
           </div>
         </SwiperSlide>
