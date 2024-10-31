@@ -41,6 +41,10 @@ import AddOurVision from './admin/our_vision_mission/AddOurVision';
 import ShowOurVision from './admin/our_vision_mission/ShowOurVision';
 import UpdateMainOurVision from './admin/our_vision_mission/UpdateMainOurVision';
 import UpdateServiceOurVision from './admin/our_vision_mission/UpdateServiceOurVision';
+import AddOurTeam from './admin/our_team/AddOurTeam';
+import ShowOurTeam from './admin/our_team/ShowOurTeam';
+import UpdateMainOurTeam from './admin/our_team/UpdateMainOurTeam';
+import UpdateServiceOurTeam from './admin/our_team/UpdateServiceOurTeam';
 
 export const MyContext = createContext();
 
@@ -160,6 +164,11 @@ export default function App() {
           <Route path='/our_vision_mission' element={<ShowOurVision/>} />
           <Route path='/update_main_our_vision/:id' element={<UpdateMainOurVision/>} />
           <Route path='/update_service_our_vision/:id' element={<UpdateServiceOurVision/>} />
+          <Route path='/add_our_team' element={<AddOurTeam/>} />
+          <Route path='/our_team' element={<ShowOurTeam/>} />
+          <Route path='/update_main_our_team/:id' element={<UpdateMainOurTeam/>} />
+          <Route path='/update_service_our_team/:id' element={<UpdateServiceOurTeam/>} />
+
 
 
 
