@@ -32,9 +32,7 @@ export default function Login() {
               window.open('/admin' );
           } else { 
                 navigate('/home'); 
-            }
-        // console.log(data.role);
-        
+            }        
         }
     })
     .catch((error) => {

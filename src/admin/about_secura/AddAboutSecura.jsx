@@ -31,7 +31,7 @@ function AddAboutSecura() {
         },
       });
       setMessage('Information added successfully!');
-      navigate('/show_about_secura'); // Başqa bir səhifəyə yönləndirir
+      navigate('/show_about_secura');
     } catch (error) {
       setMessage('Error adding information: ' + error.response.data.message);
       console.error('Error:', error);
