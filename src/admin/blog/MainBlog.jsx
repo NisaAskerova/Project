@@ -12,7 +12,7 @@ function MainBlog() {
 
     const [message, setMessage] = useState('');
     const [isSuccess, setIsSuccess] = useState(false);
-    const navigate = useNavigate(); // useNavigate hook'unu kullanıyoruz
+    const navigate = useNavigate(); 
 
     const handleChange = (e) => {
         setFormData({
