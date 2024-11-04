@@ -11,7 +11,7 @@ export default function Dashboard() {
         <li><a className='same' href="/our_vision_mission">Our Vision/Mission</a></li>
         <li><a className='same' href="/our_team">Our Team</a></li>
         <li><a className='same' href="">Hero</a></li>
-        <li><a className='same' href="">Blogs</a></li>
+        <li><a className='same' href="show_main_blog">Blogs</a></li>
         <li><a className='same' href="">Contact Us</a></li>
         <li><a className='same' href="">Product add</a></li>
         <li><a className='same' href="">Secura Content</a></li>

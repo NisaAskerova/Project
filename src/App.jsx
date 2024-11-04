@@ -48,6 +48,9 @@ import UpdateServiceOurTeam from './admin/our_team/UpdateServiceOurTeam';
 import AddAboutHero from './admin/hero/about/AddAboutHero';
 import ShowAboutHero from './admin/hero/about/ShowAboutHero';
 import UpdateAboutHero from './admin/hero/about/UpdateAboutHero';
+import MainBlog from './admin/blog/MainBlog';
+import ShowMainBlog from './admin/blog/ShowMainBlog';
+import UpdateMainBlog from './admin/blog/UpdateMainBlog';
 
 export const MyContext = createContext();
 
@@ -174,10 +177,12 @@ export default function App() {
           <Route path='/add_about_hero' element={<AddAboutHero/>} />
           <Route path='/show_about_hero' element={<ShowAboutHero/>} />
           <Route path='/update_about_hero/:id' element={<UpdateAboutHero/>} />
-          
+          <Route path='/add_main_blog' element={<MainBlog/>} />
+          <Route path='/show_main_blog' element={<ShowMainBlog/>} />
+          <Route path='/update_main_blog/:id' element={<UpdateMainBlog/>} />
 
 
-
+ 
 
         </Routes>
       </Router>
