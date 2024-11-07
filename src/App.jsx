@@ -49,11 +49,17 @@ import AddAboutHero from './admin/hero/about/AddAboutHero';
 import ShowAboutHero from './admin/hero/about/ShowAboutHero';
 import UpdateAboutHero from './admin/hero/about/UpdateAboutHero';
 import MainBlog from './admin/blog/MainBlog';
-import ShowMainBlog from './admin/blog/ShowMainBlog';
 import UpdateMainBlog from './admin/blog/UpdateMainBlog';
 import AddBlog from './admin/blog/AddBlog';
 import ShowBlog from './admin/blog/ShowBlog';
 import UpdateBlog from './admin/blog/UpdateBlog';
+import AddCategoies from './admin/category/AddCategories';
+import ShowCategories from './admin/category/ShowCategories';
+import UpdateCategories from './admin/category/UpdateCategories';
+import AddOurJourney from './admin/our_journey/AddOurJourney';
+import ShowOurJourney from './admin/our_journey/ShowOurJourney';
+import UpdateMainOurJourney from './admin/our_journey/UpdateMainOurJourney';
+import UpdateCounterOurJourney from './admin/our_journey/UpdateCounterOurJourney';
 
 export const MyContext = createContext();
 
@@ -185,6 +191,14 @@ export default function App() {
           <Route path='/add_blog' element={<AddBlog/>} />
           <Route path='/show_blog' element={<ShowBlog/>} />
           <Route path='/update_blog/:id' element={<UpdateBlog/>} />
+          <Route path='/add_category' element={<AddCategoies/>} />
+          <Route path='/show_categories' element={<ShowCategories/>} />
+          <Route path='/update_categories/:id' element={<UpdateCategories/>} />
+          <Route path='/add_our_journey' element={<AddOurJourney/>} />
+          <Route path='/show_our_journey' element={<ShowOurJourney/>} />
+          <Route path='/update_main/:id' element={<UpdateMainOurJourney/>} />
+          <Route path='/update_counter/:id' element={<UpdateCounterOurJourney/>} />
+
 
 
  
