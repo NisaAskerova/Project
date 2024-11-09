@@ -63,6 +63,12 @@ import UpdateCounterOurJourney from './admin/our_journey/UpdateCounterOurJourney
 import AddProduct from './admin/product/AddProduct';
 import ProductTable from './admin/product/ProductTable';
 import UpdateProduct from './admin/product/UpdateProduct';
+import AddTags from './admin/tags/AddTags';
+import ShowTags from './admin/tags/ShowTags';
+import UpdateTag from './admin/tags/UpdateTag';
+import AddBrand from './admin/brand/AddBrand';
+import ShowBrand from './admin/brand/ShowBrand';
+import UpdateBrand from './admin/brand/UpdateBrand';
 
 export const MyContext = createContext();
 
@@ -204,6 +210,13 @@ export default function App() {
           <Route path='/add_product' element={<AddProduct/>} />
           <Route path='/show_product' element={<ProductTable/>} />
           <Route path='/update_product/:id' element={<UpdateProduct/>} />
+          <Route path='/add_tag' element={<AddTags/>} />
+          <Route path='/show_tags' element={<ShowTags/>} />
+          <Route path='/update_tag/:id' element={<UpdateTag/>} />
+          <Route path='/add_brand' element={<AddBrand/>} />
+          <Route path='/show_brands' element={<ShowBrand/>} />
+          <Route path='/update_brand/:id' element={<UpdateBrand/>} />
+
 
 
 

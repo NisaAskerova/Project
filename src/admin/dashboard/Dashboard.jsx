@@ -14,6 +14,7 @@ export default function Dashboard() {
         <li><a className='same' href="">Hero</a></li>
         <li><a className='same' href="/show_blog">Blogs</a></li>
         <li><a className='same' href="/show_categories">Category</a></li>
+        <li><a className='same' href="/show_tags">Tag</a></li>
         <li><a className='same' href="/add_product">Product add</a></li>
         <li><a className='same' href="">Contact Us</a></li>
         <li><a className='same' href="">Secura Content</a></li>
