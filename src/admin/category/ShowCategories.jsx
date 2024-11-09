@@ -39,6 +39,7 @@ const ShowCategories = () => {
         <>
         <Admin/>
         <div className='adminHero'>
+        <button className="add-button" onClick={() => navigate('/add_category')}>Add</button>
             <h2>Categories</h2>
             <table>
                 <thead>

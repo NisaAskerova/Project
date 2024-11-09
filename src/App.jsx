@@ -60,6 +60,9 @@ import AddOurJourney from './admin/our_journey/AddOurJourney';
 import ShowOurJourney from './admin/our_journey/ShowOurJourney';
 import UpdateMainOurJourney from './admin/our_journey/UpdateMainOurJourney';
 import UpdateCounterOurJourney from './admin/our_journey/UpdateCounterOurJourney';
+import AddProduct from './admin/product/AddProduct';
+import ProductTable from './admin/product/ProductTable';
+import UpdateProduct from './admin/product/UpdateProduct';
 
 export const MyContext = createContext();
 
@@ -198,6 +201,9 @@ export default function App() {
           <Route path='/show_our_journey' element={<ShowOurJourney/>} />
           <Route path='/update_main/:id' element={<UpdateMainOurJourney/>} />
           <Route path='/update_counter/:id' element={<UpdateCounterOurJourney/>} />
+          <Route path='/add_product' element={<AddProduct/>} />
+          <Route path='/show_product' element={<ProductTable/>} />
+          <Route path='/update_product/:id' element={<UpdateProduct/>} />
 
 
 
