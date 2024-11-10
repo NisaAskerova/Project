@@ -69,6 +69,7 @@ import UpdateTag from './admin/tags/UpdateTag';
 import AddBrand from './admin/brand/AddBrand';
 import ShowBrand from './admin/brand/ShowBrand';
 import UpdateBrand from './admin/brand/UpdateBrand';
+import ShowContactUs from './admin/countact_us/ShowContactUs';
 
 export const MyContext = createContext();
 
@@ -216,6 +217,7 @@ export default function App() {
           <Route path='/add_brand' element={<AddBrand/>} />
           <Route path='/show_brands' element={<ShowBrand/>} />
           <Route path='/update_brand/:id' element={<UpdateBrand/>} />
+          <Route path='/show_contact_us' element={<ShowContactUs/>} />
 
 
 
