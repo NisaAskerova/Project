@@ -11,15 +11,22 @@ function UpdateProduct() {
         has_stock: false,
         stock_quantity: 0,
         image: null,
+        categories: [],
+        brands: [],
+        tags: [],
     });
+    const [categories, setCategories] = useState([]);
+    const [brands, setBrands] = useState([]);
+    const [tags, setTags] = useState([]);
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
     const { id } = useParams();
 
     useEffect(() => {
+        // Fetch product details
         const fetchProduct = async () => {
             try {
-                const response = await axios.post(`http://127.0.0.1:8000/api/products/update/${id}`);
+                const response = await axios.get(`http://127.0.0.1:8000/api/products/show_product/${id}`);
                 const product = response.data;
 
                 setFormData({
@@ -29,6 +36,9 @@ function UpdateProduct() {
                     has_stock: product.has_stock === 1,
                     stock_quantity: product.stock_quantity,
                     image: null,
+                    categories: product.categories.map(cat => cat.id),
+                    brands: product.brands.map(brand => brand.id),
+                    tags: product.tags.map(tag => tag.id),
                 });
             } catch (error) {
                 console.error('Error fetching product:', error);
@@ -36,7 +46,38 @@ function UpdateProduct() {
             }
         };
 
+        // Fetch categories, brands, and tags
+        const fetchCategories = async () => {
+            try {
+                const response = await axios.get('http://127.0.0.1:8000/api/categories/show');
+                setCategories(response.data);
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+            }
+        };
+
+        const fetchBrands = async () => {
+            try {
+                const response = await axios.get('http://127.0.0.1:8000/api/brands/show');
+                setBrands(response.data);
+            } catch (error) {
+                console.error('Error fetching brands:', error);
+            }
+        };
+
+        const fetchTags = async () => {
+            try {
+                const response = await axios.get('http://127.0.0.1:8000/api/tags/show');
+                setTags(response.data);
+            } catch (error) {
+                console.error('Error fetching tags:', error);
+            }
+        };
+
         fetchProduct();
+        fetchCategories();
+        fetchBrands();
+        fetchTags();
     }, [id]);
 
     const handleChange = (e) => {
@@ -64,6 +105,9 @@ function UpdateProduct() {
         data.append('price', formData.price);
         data.append('has_stock', formData.has_stock ? '1' : '0');
         data.append('stock_quantity', formData.has_stock ? formData.stock_quantity : 0);
+        data.append('categories', formData.categories);
+        data.append('brands', formData.brands);
+        data.append('tags', formData.tags);
 
         if (formData.image) {
             data.append('image', formData.image);
@@ -157,6 +201,55 @@ function UpdateProduct() {
                             accept="image/*"
                         />
                     </div>
+
+                    <div>
+                        <label>Categories:</label>
+                        <select
+                            name="categories"
+                            multiple
+                            value={formData.categories}
+                            onChange={handleChange}
+                        >
+                            {categories.map((category) => (
+                                <option key={category.id} value={category.id}>
+                                    {category.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Brands:</label>
+                        <select
+                            name="brands"
+                            multiple
+                            value={formData.brands}
+                            onChange={handleChange}
+                        >
+                            {brands.map((brand) => (
+                                <option key={brand.id} value={brand.id}>
+                                    {brand.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Tags:</label>
+                        <select
+                            name="tags"
+                            multiple
+                            value={formData.tags}
+                            onChange={handleChange}
+                        >
+                            {tags.map((tag) => (
+                                <option key={tag.id} value={tag.id}>
+                                    {tag.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+
                     <button type="submit">Update Product</button>
                 </form>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Admin from '../Admin';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -11,16 +11,56 @@ function AddProduct() {
         has_stock: false,
         stock_quantity: 0,
         image: null,
+        category_ids: [],
+        brand_ids: [],
+        tag_ids: [],
     });
+
+    const [categories, setCategories] = useState([]);
+    const [brands, setBrands] = useState([]);
+    const [tags, setTags] = useState([]);
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
 
+    useEffect(() => {
+        // Fetch categories, brands, and tags for select options
+        const fetchOptions = async () => {
+            try {
+                const [categoriesRes, brandsRes, tagsRes] = await Promise.all([
+                    axios.get('http://127.0.0.1:8000/api/categories/show'),
+                    axios.get('http://127.0.0.1:8000/api/brands/show'),
+                    axios.get('http://127.0.0.1:8000/api/tags/show'),
+                ]);
+                setCategories(categoriesRes.data);
+                setBrands(brandsRes.data);
+                setTags(tagsRes.data);
+            } catch (error) {
+                console.error('Error fetching options:', error);
+                setMessage('Error loading categories, brands, or tags.');
+            }
+        };
+        fetchOptions();
+    }, []);
+
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
-        setFormData({
-            ...formData,
-            [name]: type === 'checkbox' ? checked : value,
-        });
+        if (type === 'checkbox') {
+            setFormData({
+                ...formData,
+                [name]: checked,
+            });
+        } else if (type === 'select-multiple') {
+            const selectedValues = Array.from(e.target.selectedOptions, option => option.value);
+            setFormData({
+                ...formData,
+                [name]: selectedValues,
+            });
+        } else {
+            setFormData({
+                ...formData,
+                [name]: value,
+            });
+        }
     };
 
     const handleFileChange = (e) => {
@@ -38,8 +78,32 @@ function AddProduct() {
         data.append('title', formData.title);
         data.append('description', formData.description);
         data.append('price', formData.price);
-        data.append('has_stock', formData.has_stock ? '1' : '0'); // Boolean true/false yerine '1' veya '0' olarak gönderiliyor
+        data.append('has_stock', formData.has_stock ? '1' : '0');
         data.append('stock_quantity', formData.has_stock ? formData.stock_quantity : 0);
+    
+        // Log each field before appending to FormData
+        console.log('Sending data:', {
+            title: formData.title,
+            description: formData.description,
+            price: formData.price,
+            has_stock: formData.has_stock,
+            stock_quantity: formData.stock_quantity,
+            category_ids: formData.category_ids,
+            brand_ids: formData.brand_ids,
+            tag_ids: formData.tag_ids,
+        });
+    
+        formData.category_ids.forEach(id => {
+            data.append('category_ids[]', id);
+        });
+    
+        formData.brand_ids.forEach(id => {
+            data.append('brand_ids[]', id);
+        });
+    
+        formData.tag_ids.forEach(id => {
+            data.append('tag_ids[]', id);
+        });
     
         if (formData.image) {
             data.append('image', formData.image);
@@ -51,6 +115,8 @@ function AddProduct() {
                     'Content-Type': 'multipart/form-data',
                 },
             });
+            
+            console.log('Response:', response); // Log the full response to check what the backend returns
     
             if (response.status === 201) {
                 setMessage('Product added successfully!');
@@ -61,6 +127,9 @@ function AddProduct() {
                     has_stock: false,
                     stock_quantity: 0,
                     image: null,
+                    category_ids: [],
+                    brand_ids: [],
+                    tag_ids: [],
                 });
                 navigate('/show_product', { replace: true });
             } else {
@@ -68,8 +137,8 @@ function AddProduct() {
             }
         } catch (error) {
             console.error('Error:', error.response ? error.response.data : error.message);
-            setMessage(error.response && error.response.data.message 
-                ? error.response.data.message 
+            setMessage(error.response && error.response.data.message
+                ? error.response.data.message
                 : 'An unexpected error occurred.');
         }
     };
@@ -133,6 +202,54 @@ function AddProduct() {
                             />
                         </div>
                     )}
+                    <div>
+                        <label>Categories:</label>
+                        <select
+                            name="category_ids"
+                            multiple
+                            value={formData.category_ids}
+                            onChange={handleChange}
+                            required
+                        >
+                            {categories.map((category) => (
+                                <option key={category.id} value={category.id}>
+                                    {category.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div>
+                        <label>Brands:</label>
+                        <select
+                            name="brand_ids"
+                            multiple
+                            value={formData.brand_ids}
+                            onChange={handleChange}
+                            required
+                        >
+                            {brands.map((brand) => (
+                                <option key={brand.id} value={brand.id}>
+                                    {brand.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div>
+                        <label>Tags:</label>
+                        <select
+                            name="tag_ids"
+                            multiple
+                            value={formData.tag_ids}
+                            onChange={handleChange}
+                            required
+                        >
+                            {tags.map((tag) => (
+                                <option key={tag.id} value={tag.id}>
+                                    {tag.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
                     <div>
                         <label>Image:</label>
                         <input

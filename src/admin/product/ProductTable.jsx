@@ -51,6 +51,9 @@ function ProductTable() {
                             <th>Stock</th>
                             <th>SKU</th>
                             <th>Image</th>
+                            <th>Categories</th>
+                            <th>Brands</th>
+                            <th>Tags</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -71,6 +74,36 @@ function ProductTable() {
                                         />
                                     ) : (
                                         <p>No image</p>
+                                    )}
+                                </td>
+                                <td>
+                                    {/* Categories */}
+                                    {product.categories && product.categories.length > 0 ? (
+                                        product.categories.map((category) => (
+                                            <span key={category.id}>{category.name}</span>
+                                        ))
+                                    ) : (
+                                        <p>No categories</p>
+                                    )}
+                                </td>
+                                <td>
+                                    {/* Brands */}
+                                    {product.brands && product.brands.length > 0 ? (
+                                        product.brands.map((brand) => (
+                                            <span key={brand.id}>{brand.name}</span>
+                                        ))
+                                    ) : (
+                                        <p>No brands</p>
+                                    )}
+                                </td>
+                                <td>
+                                    {/* Tags */}
+                                    {product.tags && product.tags.length > 0 ? (
+                                        product.tags.map((tag) => (
+                                            <span key={tag.id}>{tag.name}</span>
+                                        ))
+                                    ) : (
+                                        <p>No tags</p>
                                     )}
                                 </td>
                                 <td>
