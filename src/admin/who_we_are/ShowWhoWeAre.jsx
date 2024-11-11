@@ -68,7 +68,8 @@ function ShowWhoWeAre() {
           <table>
             <thead>
               <tr>
-                <th>Main Title</th>
+                <th>Type</th> 
+                <th>Main Title</th> 
                 <th>Main Description</th>
                 <th>Image</th>
                 <th>Actions</th>
@@ -77,6 +78,7 @@ function ShowWhoWeAre() {
             <tbody>
               {aboutUs.map((item) => (
                 <tr key={item.id}>
+                  <td>{item.type}</td>
                   <td>{item.main_title}</td>
                   <td>{item.main_description}</td>
                   <td>

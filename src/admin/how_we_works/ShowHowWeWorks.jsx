@@ -12,7 +12,7 @@ function ShowWhoWeAre() {
 
   const fetchAboutUs = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/how_we_works/show_main_info');  // `show_main_info` istifadə edilir
+      const response = await axios.get('http://localhost:8000/api/how_we_works/get_main_info');  // `show_main_info` istifadə edilir
       setAboutUs(response.data);
     } catch (error) {
       console.error('Error fetching About Us data:', error);
@@ -22,7 +22,7 @@ function ShowWhoWeAre() {
 
   const fetchServices = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/how_we_works/show_service_info');  // `show_service_info` istifadə edilir
+      const response = await axios.get('http://localhost:8000/api/how_we_works/get_service_info');  // `show_service_info` istifadə edilir
       setServices(response.data);
     } catch (error) {
       console.error('Error fetching services:', error);

@@ -6,6 +6,7 @@ import Admin from '../Admin';
 function UpdateMainWhoWeAre() {
     const { id } = useParams();
     const [formData, setFormData] = useState({
+        type: '',
         main_title: '',
         main_description: '',
         image: null,
@@ -19,7 +20,7 @@ function UpdateMainWhoWeAre() {
             setMessage(''); // Clear previous messages
             setLoading(true); // Start loading
             try {
-                const response = await axios.post(`http://localhost:8000/api/who_we_are/main_info/${id}`);
+                const response = await axios.get(`http://localhost:8000/api/who_we_are/get_main_info/${id}`);
                 setFormData(response.data);
             } catch (error) {
                 console.error('Error fetching About Us data:', error);
@@ -34,18 +35,21 @@ function UpdateMainWhoWeAre() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
+        const data = new FormData();
+        data.append('type', formData.type);
+        data.append('main_title', formData.main_title);
+        data.append('main_description', formData.main_description);
+        if (formData.image) {
+            data.append('image', formData.image);
+        }
+    
         try {
-            const params = new URLSearchParams();
-            params.append('main_title', formData.main_title);
-            params.append('main_description', formData.main_description);
-
-            if (formData.image) {
-                params.append('image', formData.image); // This might not work well as images are usually not sent in GET requests.
-            }
-
-            // Use GET method for updating
-            await axios.post(`http://localhost:8000/api/who_we_are/main_info/${id}?${params.toString()}`);
+            await axios.post(`http://localhost:8000/api/who_we_are/update/${id}`, data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
             setMessage('Main information updated successfully!');
             navigate('/show_who_we_are'); // Redirect after successful update
         } catch (error) {
@@ -53,7 +57,7 @@ function UpdateMainWhoWeAre() {
             setMessage('Error updating About Us data: ' + (error.response?.data.message || error.message));
         }
     };
-
+    
     return (
         <>
             <Admin />
@@ -62,6 +66,15 @@ function UpdateMainWhoWeAre() {
                 {message && <p>{message}</p>}
                 {loading && <p>Loading...</p>}
                 <form onSubmit={handleSubmit}>
+                    <div>
+                        <label>Type :</label>
+                        <input
+                            type="text"
+                            value={formData.type}
+                            onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                            required
+                        />
+                    </div>
                     <div>
                         <label>Main Title:</label>
                         <input

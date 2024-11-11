@@ -16,7 +16,7 @@ function ShowOurTeam() {
 
     const fetchMainInfo = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/our_team/show_main_info');
+            const response = await axios.get('http://localhost:8000/api/our_team/get_main_info');
             setMainInfo(response.data);
         } catch (error) {
             setMessage('Error fetching main information: ' + error.response?.data.message);
@@ -25,7 +25,7 @@ function ShowOurTeam() {
 
     const fetchServiceInfo = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/our_team/show_service_info');
+            const response = await axios.get('http://localhost:8000/api/our_team/get_service_info');
             setServiceInfo(response.data);
         } catch (error) {
             setMessage('Error fetching service information: ' + error.response?.data.message);

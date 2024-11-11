@@ -6,6 +6,7 @@ import Admin from '../Admin';
 function AddServiceForm() {
   const navigate = useNavigate(); // Initialize navigate function
 
+  const [type, setType] = useState('');
   const [mainTitle, setMainTitle] = useState('');
   const [mainDescription, setMainDescription] = useState('');
   const [mainImage, setMainImage] = useState(null);
@@ -22,6 +23,7 @@ function AddServiceForm() {
     e.preventDefault();
 
     const formData = new FormData();
+    formData.append('type', type);
     formData.append('main_title', mainTitle);
     formData.append('main_description', mainDescription);
     formData.append('image', mainImage);
@@ -32,7 +34,7 @@ function AddServiceForm() {
           'Content-Type': 'multipart/form-data',
         },
       });
-      setMessage('About Us section added successfully!');
+      navigate('/show_who_we_are'); // Redirect after successful update
     } catch (error) {
       setMessage('Error adding About Us section: ' + error.response.data.message);
       console.error('Error:', error);
@@ -71,6 +73,16 @@ function AddServiceForm() {
         {/* Form for About Us Section */}
         <form className="form" onSubmit={handleAboutUsSubmit}>
           <h2 className="form-title">Add About Us Section</h2>
+          <div className="form-group">
+            <label htmlFor="type">Type:</label>
+            <input
+              id="type"
+              type="text"
+              value={type}
+              onChange={(e) => setType(e.target.value)}
+              required
+            />
+          </div>
           <div className="form-group">
             <label htmlFor="mainTitle">Main Title:</label>
             <input

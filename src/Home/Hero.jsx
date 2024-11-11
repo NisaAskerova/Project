@@ -13,7 +13,7 @@ function HeroSlider() {
   useEffect(() => {
     const fetchSliders = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/sliders/show');
+        const response = await axios.get('http://localhost:8000/api/sliders/get');
         setSliders(response.data);
       } catch (error) {
         setError(error.response ? error.response.data.message : 'Error fetching sliders');

@@ -12,7 +12,7 @@ function ShowHeroSlide() {
   useEffect(() => {
     const fetchSliders = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/sliders/show');
+        const response = await axios.get('http://localhost:8000/api/sliders/get');
         setSliders(response.data);
       } catch (error) {
         setError(error.response ? error.response.data.message : 'Error fetching sliders');
@@ -74,8 +74,8 @@ function ShowHeroSlide() {
                 <td><img src={`http://localhost:8000/storage/${slider.backImage}`} alt={slider.title} style={{ width: '100px' }} /></td>
                 <td><img src={`http://localhost:8000/storage/${slider.icon}`} alt={slider.title} style={{ width: '100px' }} /></td>
                 <td>
-                  <button onClick={() => handleUpdate(slider.id)}>Update</button>
-                  <button onClick={() => handleDelete(slider.id)} style={{ marginLeft: '10px', color: 'red' }}>Delete</button>
+                  <button className='edit-button' onClick={() => handleUpdate(slider.id)}>Update</button>
+                  <button className='delete-button' onClick={() => handleDelete(slider.id)} >Delete</button>
                 </td>
               </tr>
             ))}

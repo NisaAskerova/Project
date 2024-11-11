@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Admin from '../Admin';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function UpdateHerSlider() {
   const { id } = useParams(); // URL-dən id alırıq
@@ -12,28 +12,28 @@ function UpdateHerSlider() {
   const [backImage, setBackImage] = useState(null);
   const [icon, setIcon] = useState(null);
   const [message, setMessage] = useState('');
-
+  const navigate = useNavigate();
   // Slideni əldə etmək üçün useEffect
   useEffect(() => {
     const fetchSlider = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/sliders/update${id}`);
+        const response = await axios.get(`http://localhost:8000/api/sliders/show/${id}`);
         const slider = response.data;
         setTitle(slider.title);
         setDescription(slider.description);
-        setImage(null); 
-        setHeroImage(null); 
-        setBackImage(null); 
-        setIcon(null); 
+        setImage(null);
+        setHeroImage(null);
+        setBackImage(null);
+        setIcon(null);
       } catch (error) {
         console.error('Error fetching slider:', error);
         setMessage('Error fetching slider data.');
       }
     };
-
+  
     fetchSlider();
   }, [id]);
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -51,7 +51,7 @@ function UpdateHerSlider() {
           'Content-Type': 'multipart/form-data',
         },
       });
-      setMessage(response.data.message || 'Slider updated successfully!');
+      navigate('/show_hero_slide')
     } catch (error) {
       setMessage(error.response?.data.message || 'Error updating slider.');
       console.error('Error:', error);

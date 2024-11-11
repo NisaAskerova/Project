@@ -18,7 +18,7 @@ function UpdateServiceHowWeWorks() {
     const fetchServiceData = async () => {
       setLoading(true);
       try {
-        const response = await axios.post(`http://localhost:8000/api/how_we_works/service_info/${id}`);
+        const response = await axios.get(`http://localhost:8000/api/how_we_works/show_service_info/${id}`);
         setFormData(response.data);
       } catch (error) {
         console.error('Error fetching service data:', error);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Admin from '../Admin';
+import { useNavigate } from 'react-router-dom';
 
 function SliderForm() {
   const [title, setTitle] = useState('');
@@ -10,7 +11,7 @@ function SliderForm() {
   const [backImage, setBackImage] = useState(null);
   const [icon, setIcon] = useState(null);
   const [message, setMessage] = useState('');
-
+  const navigate=useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -28,7 +29,7 @@ function SliderForm() {
           'Content-Type': 'multipart/form-data',
         },
       });
-      setMessage(response.data.message || 'Slider added successfully!');
+      navigate('/show_hero_slide')
     } catch (error) {
       setMessage(error.response?.data.message || 'Error adding slider.');
       console.error('Error:', error);

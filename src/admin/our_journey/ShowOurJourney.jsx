@@ -16,7 +16,7 @@ const ShowOurJourney = () => {
     // Fetch main data
     const fetchMainData = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:8000/api/our_journey/show_main_info');
+            const response = await axios.get('http://127.0.0.1:8000/api/our_journey/get_main_info');
             setMainData(response.data);
         } catch (error) {
             console.error("Error fetching main information:", error);
@@ -26,7 +26,7 @@ const ShowOurJourney = () => {
     // Fetch counter data
     const fetchCounterData = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:8000/api/our_journey/show_counter_info');
+            const response = await axios.get('http://127.0.0.1:8000/api/our_journey/get_counter_info');
             setCounterData(response.data);
         } catch (error) {
             console.error("Error fetching counter information:", error);

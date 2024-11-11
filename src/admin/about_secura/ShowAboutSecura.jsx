@@ -11,7 +11,7 @@ function ShowAboutSecura() {
   useEffect(() => {
     const fetchAboutSecuraData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/about_secura/show');
+        const response = await axios.get('http://localhost:8000/api/about_secura/get');
         setAboutSecuraData(response.data);
       } catch (error) {
         setError('Error loading data');

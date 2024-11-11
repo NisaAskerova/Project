@@ -20,7 +20,7 @@ function UpdateMainOurVision() {
             setMessage('');
             setLoading(true);
             try {
-                const response = await axios.post(`http://localhost:8000/api/our_vision_mission/main_info/${id}`);
+                const response = await axios.get(`http://localhost:8000/api/our_vision_mission/show_main_info/${id}`);
                 setFormData(response.data);
             } catch (error) {
                 console.error('Error fetching About Us data:', error);

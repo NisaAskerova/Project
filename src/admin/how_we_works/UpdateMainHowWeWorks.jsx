@@ -20,7 +20,7 @@ function UpdateHowWeWorks() {
             setMessage(''); 
             setLoading(true);
             try {
-                const response = await axios.post(`http://localhost:8000/api/how_we_works/main_info/${id}`);
+                const response = await axios.get(`http://localhost:8000/api/how_we_works/show_main_info/${id}`);
                 setFormData(response.data);
             } catch (error) {
                 console.error('Error fetching About Us data:', error);

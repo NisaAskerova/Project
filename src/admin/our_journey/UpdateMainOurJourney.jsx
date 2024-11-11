@@ -14,7 +14,7 @@ const UpdateMainOurJourney = () => {
 
     const fetchMainData = async () => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/our_journey/main_info/${id}`);
+            const response = await axios.get(`http://127.0.0.1:8000/api/our_journey/show_main_info/${id}`);
             setMainData(response.data);
         } catch (error) {
             console.error("Error fetching main information:", error);

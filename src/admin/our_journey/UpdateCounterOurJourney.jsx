@@ -14,7 +14,7 @@ const UpdateCounterOurJourney = () => {
 
     const fetchCounterData = async () => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/our_journey/counter_info/${id}`);
+            const response = await axios.get(`http://127.0.0.1:8000/api/our_journey/show_counter_info/${id}`);
             setCounterData(response.data);
         } catch (error) {
             console.error("Error fetching counter information:", error);

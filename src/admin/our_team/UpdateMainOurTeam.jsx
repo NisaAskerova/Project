@@ -16,7 +16,7 @@ function UpdateMainOurTeam() {
 
     const fetchMainInfo = async () => {
         try {
-            const response = await axios.post(`http://localhost:8000/api/our_team/main_info/${id}`);
+            const response = await axios.get(`http://localhost:8000/api/our_team/show_main_info/${id}`);
             setMainInfo(response.data);
         } catch (error) {
             setMessage('Error fetching main information: ' + error.response?.data.message);
