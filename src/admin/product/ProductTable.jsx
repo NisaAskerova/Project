@@ -8,6 +8,7 @@ function ProductTable() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        // Fetch the list of products from the API
         fetch('http://localhost:8000/api/products/show')
             .then((response) => response.json())
             .then((data) => {
@@ -20,10 +21,7 @@ function ProductTable() {
             });
     }, []);
 
-    if (loading) {
-        return <p>Loading...</p>;
-    }
-
+    // Delete product by ID
     const deleteProduct = (id) => {
         fetch(`http://localhost:8000/api/products/delete/${id}`, {
             method: 'DELETE',
@@ -31,16 +29,20 @@ function ProductTable() {
             .then((response) => response.json())
             .then((data) => {
                 alert(data.message);
-                setProducts(products.filter((product) => product.id !== id)); // Silinən məhsul cədvəldən silinir
+                setProducts(products.filter((product) => product.id !== id)); // Remove the deleted product from the table
             })
             .catch((error) => console.error('Error deleting product:', error));
     };
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <>
             <Admin />
             <div className='adminHero'>
-                <button className="add-button" onClick={() => navigate('/add_product')}>Add</button>
+                <button className="add-button" onClick={() => navigate('/add_product')}>Add Product</button>
                 <h2>Product List</h2>
                 <table>
                     <thead>
@@ -51,6 +53,7 @@ function ProductTable() {
                             <th>Stock</th>
                             <th>SKU</th>
                             <th>Image</th>
+                            <th>Multiple Image</th>
                             <th>Categories</th>
                             <th>Brands</th>
                             <th>Tags</th>
@@ -74,6 +77,21 @@ function ProductTable() {
                                         />
                                     ) : (
                                         <p>No image</p>
+                                    )}
+                                </td>
+                                <td>
+                                    {/* Display multiple images */}
+                                    {product.images && product.images.length > 0 ? (
+                                        product.images.map((image, index) => (
+                                            <img
+                                                key={index}
+                                                src={`http://localhost:8000/storage/${image}`}
+                                                alt={`${product.title}-image-${index}`}
+                                                width="100"
+                                            />
+                                        ))
+                                    ) : (
+                                        <p>No additional images</p>
                                     )}
                                 </td>
                                 <td>
@@ -107,8 +125,8 @@ function ProductTable() {
                                     )}
                                 </td>
                                 <td>
-                                    <button className="edit-button" onClick={() => navigate(`/update_product/${product.id}`)}>Edit</button>
-                                    <button className="delete-button" onClick={() => deleteProduct(product.id)}>Delete</button>
+                                    <button className='edit-button' onClick={() => deleteProduct(product.id)}>Delete</button>
+                                    <button className='delete-button' onClick={() => navigate(`/update_product/${product.id}`)}>Update</button>
                                 </td>
                             </tr>
                         ))}

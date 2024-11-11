@@ -11,6 +11,7 @@ function AddProduct() {
         has_stock: false,
         stock_quantity: 0,
         image: null,
+        images: [],
         category_ids: [],
         brand_ids: [],
         tag_ids: [],
@@ -27,9 +28,9 @@ function AddProduct() {
         const fetchOptions = async () => {
             try {
                 const [categoriesRes, brandsRes, tagsRes] = await Promise.all([
-                    axios.get('http://127.0.0.1:8000/api/categories/show'),
+                    axios.get('http://127.0.0.1:8000/api/categories/get'),
                     axios.get('http://127.0.0.1:8000/api/brands/show'),
-                    axios.get('http://127.0.0.1:8000/api/tags/show'),
+                    axios.get('http://127.0.0.1:8000/api/tags/get'),
                 ]);
                 setCategories(categoriesRes.data);
                 setBrands(brandsRes.data);
@@ -71,16 +72,24 @@ function AddProduct() {
         });
     };
 
+    const handleImagesChange = (e) => {
+        const files = Array.from(e.target.files);
+        setFormData({
+            ...formData,
+            images: files,
+        });
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         const data = new FormData();
         data.append('title', formData.title);
         data.append('description', formData.description);
         data.append('price', formData.price);
         data.append('has_stock', formData.has_stock ? '1' : '0');
         data.append('stock_quantity', formData.has_stock ? formData.stock_quantity : 0);
-    
+
         // Log each field before appending to FormData
         console.log('Sending data:', {
             title: formData.title,
@@ -92,32 +101,38 @@ function AddProduct() {
             brand_ids: formData.brand_ids,
             tag_ids: formData.tag_ids,
         });
-    
+
         formData.category_ids.forEach(id => {
             data.append('category_ids[]', id);
         });
-    
+
         formData.brand_ids.forEach(id => {
             data.append('brand_ids[]', id);
         });
-    
+
         formData.tag_ids.forEach(id => {
             data.append('tag_ids[]', id);
         });
-    
+
         if (formData.image) {
             data.append('image', formData.image);
         }
-    
+
+        if (formData.images.length > 0) {
+            formData.images.forEach(image => {
+                data.append('images[]', image);
+            });
+        }
+
         try {
             const response = await axios.post('http://127.0.0.1:8000/api/products/store', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
-            
+
             console.log('Response:', response); // Log the full response to check what the backend returns
-    
+
             if (response.status === 201) {
                 setMessage('Product added successfully!');
                 setFormData({
@@ -127,6 +142,7 @@ function AddProduct() {
                     has_stock: false,
                     stock_quantity: 0,
                     image: null,
+                    images: [],
                     category_ids: [],
                     brand_ids: [],
                     tag_ids: [],
@@ -142,7 +158,6 @@ function AddProduct() {
                 : 'An unexpected error occurred.');
         }
     };
-    
 
     return (
         <>
@@ -251,12 +266,22 @@ function AddProduct() {
                         </select>
                     </div>
                     <div>
-                        <label>Image:</label>
+                        <label>Single Image:</label>
                         <input
                             type="file"
                             name="image"
                             onChange={handleFileChange}
                             accept="image/*"
+                        />
+                    </div>
+                    <div>
+                        <label>Multiple Images:</label>
+                        <input
+                            type="file"
+                            name="images"
+                            onChange={handleImagesChange}
+                            accept="image/*"
+                            multiple
                         />
                     </div>
                     <button type="submit">Add Product</button>

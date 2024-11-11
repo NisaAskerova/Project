@@ -11,81 +11,85 @@ function UpdateProduct() {
         has_stock: false,
         stock_quantity: 0,
         image: null,
-        categories: [],
-        brands: [],
-        tags: [],
+        images: [],
+        category_ids: [],
+        brand_ids: [],
+        tag_ids: [],
     });
+
     const [categories, setCategories] = useState([]);
     const [brands, setBrands] = useState([]);
     const [tags, setTags] = useState([]);
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
-    const { id } = useParams();
+    const { id } = useParams(); // Product ID from the route
 
     useEffect(() => {
-        // Fetch product details
+        // Fetch categories, brands, and tags for select options
+        const fetchOptions = async () => {
+            try {
+                const [categoriesRes, brandsRes, tagsRes] = await Promise.all([
+                    axios.get('http://127.0.0.1:8000/api/categories/get'),
+                    axios.get('http://127.0.0.1:8000/api/brands/show'),
+                    axios.get('http://127.0.0.1:8000/api/tags/get'),
+                ]);
+                setCategories(categoriesRes.data);
+                setBrands(brandsRes.data);
+                setTags(tagsRes.data);
+            } catch (error) {
+                console.error('Error fetching options:', error);
+                setMessage('Error loading categories, brands, or tags.');
+            }
+        };
+        fetchOptions();
+    }, []);
+
+    useEffect(() => {
         const fetchProduct = async () => {
             try {
                 const response = await axios.get(`http://127.0.0.1:8000/api/products/show_product/${id}`);
                 const product = response.data;
-
+    
                 setFormData({
                     title: product.title,
                     description: product.description,
                     price: product.price,
-                    has_stock: product.has_stock === 1,
+                    has_stock: product.has_stock,
                     stock_quantity: product.stock_quantity,
-                    image: null,
-                    categories: product.categories.map(cat => cat.id),
-                    brands: product.brands.map(brand => brand.id),
-                    tags: product.tags.map(tag => tag.id),
+                    image: null, // You can implement logic to display the existing image, if needed
+                    images: [], // You can display existing images if required
+                    category_ids: product.category_ids,
+                    brand_ids: product.brand_ids,
+                    tag_ids: product.tag_ids,
                 });
             } catch (error) {
                 console.error('Error fetching product:', error);
-                setMessage('Failed to fetch product details.');
+                setMessage(error.response ? error.response.data.message : 'Error fetching product data.');
             }
         };
-
-        // Fetch categories, brands, and tags
-        const fetchCategories = async () => {
-            try {
-                const response = await axios.get('http://127.0.0.1:8000/api/categories/show');
-                setCategories(response.data);
-            } catch (error) {
-                console.error('Error fetching categories:', error);
-            }
-        };
-
-        const fetchBrands = async () => {
-            try {
-                const response = await axios.get('http://127.0.0.1:8000/api/brands/show');
-                setBrands(response.data);
-            } catch (error) {
-                console.error('Error fetching brands:', error);
-            }
-        };
-
-        const fetchTags = async () => {
-            try {
-                const response = await axios.get('http://127.0.0.1:8000/api/tags/show');
-                setTags(response.data);
-            } catch (error) {
-                console.error('Error fetching tags:', error);
-            }
-        };
-
         fetchProduct();
-        fetchCategories();
-        fetchBrands();
-        fetchTags();
     }, [id]);
+    
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
-        setFormData({
-            ...formData,
-            [name]: type === 'checkbox' ? checked : value,
-        });
+        if (type === 'checkbox') {
+            setFormData({
+                ...formData,
+                [name]: checked,
+            });
+        } else if (type === 'select-multiple') {
+            const selectedValues = Array.from(e.target.selectedOptions, option => option.value);
+            setFormData({
+                ...formData,
+                [name]: selectedValues,
+            });
+        } else {
+            setFormData({
+                ...formData,
+                [name]: value,
+            });
+        }
     };
 
     const handleFileChange = (e) => {
@@ -93,6 +97,14 @@ function UpdateProduct() {
         setFormData({
             ...formData,
             image: file ? file : null,
+        });
+    };
+
+    const handleImagesChange = (e) => {
+        const files = Array.from(e.target.files);
+        setFormData({
+            ...formData,
+            images: files,
         });
     };
 
@@ -105,12 +117,27 @@ function UpdateProduct() {
         data.append('price', formData.price);
         data.append('has_stock', formData.has_stock ? '1' : '0');
         data.append('stock_quantity', formData.has_stock ? formData.stock_quantity : 0);
-        data.append('categories', formData.categories);
-        data.append('brands', formData.brands);
-        data.append('tags', formData.tags);
+
+        formData.category_ids.forEach(id => {
+            data.append('category_ids[]', id);
+        });
+
+        formData.brand_ids.forEach(id => {
+            data.append('brand_ids[]', id);
+        });
+
+        formData.tag_ids.forEach(id => {
+            data.append('tag_ids[]', id);
+        });
 
         if (formData.image) {
             data.append('image', formData.image);
+        }
+
+        if (formData.images.length > 0) {
+            formData.images.forEach(image => {
+                data.append('images[]', image);
+            });
         }
 
         try {
@@ -122,6 +149,18 @@ function UpdateProduct() {
 
             if (response.status === 200) {
                 setMessage('Product updated successfully!');
+                setFormData({
+                    title: '',
+                    description: '',
+                    price: '',
+                    has_stock: false,
+                    stock_quantity: 0,
+                    image: null,
+                    images: [],
+                    category_ids: [],
+                    brand_ids: [],
+                    tag_ids: [],
+                });
                 navigate('/show_product', { replace: true });
             } else {
                 setMessage('Failed to update product.');
@@ -193,22 +232,13 @@ function UpdateProduct() {
                         </div>
                     )}
                     <div>
-                        <label>Image:</label>
-                        <input
-                            type="file"
-                            name="image"
-                            onChange={handleFileChange}
-                            accept="image/*"
-                        />
-                    </div>
-
-                    <div>
                         <label>Categories:</label>
                         <select
-                            name="categories"
+                            name="category_ids"
                             multiple
-                            value={formData.categories}
+                            value={formData.category_ids}
                             onChange={handleChange}
+                            required
                         >
                             {categories.map((category) => (
                                 <option key={category.id} value={category.id}>
@@ -217,14 +247,14 @@ function UpdateProduct() {
                             ))}
                         </select>
                     </div>
-
                     <div>
                         <label>Brands:</label>
                         <select
-                            name="brands"
+                            name="brand_ids"
                             multiple
-                            value={formData.brands}
+                            value={formData.brand_ids}
                             onChange={handleChange}
+                            required
                         >
                             {brands.map((brand) => (
                                 <option key={brand.id} value={brand.id}>
@@ -233,14 +263,14 @@ function UpdateProduct() {
                             ))}
                         </select>
                     </div>
-
                     <div>
                         <label>Tags:</label>
                         <select
-                            name="tags"
+                            name="tag_ids"
                             multiple
-                            value={formData.tags}
+                            value={formData.tag_ids}
                             onChange={handleChange}
+                            required
                         >
                             {tags.map((tag) => (
                                 <option key={tag.id} value={tag.id}>
@@ -249,7 +279,25 @@ function UpdateProduct() {
                             ))}
                         </select>
                     </div>
-
+                    <div>
+                        <label>Single Image:</label>
+                        <input
+                            type="file"
+                            name="image"
+                            onChange={handleFileChange}
+                            accept="image/*"
+                        />
+                    </div>
+                    <div>
+                        <label>Multiple Images:</label>
+                        <input
+                            type="file"
+                            name="images"
+                            onChange={handleImagesChange}
+                            accept="image/*"
+                            multiple
+                        />
+                    </div>
                     <button type="submit">Update Product</button>
                 </form>
             </div>
