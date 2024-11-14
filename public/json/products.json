@@ -3,7 +3,7 @@
         {
             "id": 1,
             "brand": "Igloohome",
-            "name": "High Vision Camera",
+            "title": "High Vision Camera",
             "price": "89.00",
             "image": "../image 17.png",
             "category": "Security System",
@@ -42,7 +42,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Mark Williams",
+                    "title": "Mark Williams",
                     "rating": 5,
                     "comment": "Excellent Camera, I Really Like It 😍",
                     "date": "August 18, 2023",
@@ -50,7 +50,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Alexa Johnson",
+                    "title": "Alexa Johnson",
                     "rating": 5,
                     "comment": "My Family is very much happy with this product",
                     "date": "August 18, 2023",
@@ -58,7 +58,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "John Doe",
+                    "title": "John Doe",
                     "rating": 4,
                     "comment": "Good camera, but could have better battery life.",
                     "date": "September 2, 2023",
@@ -70,7 +70,7 @@
         {
             "id": 2,
             "brand": "HIK Vision",
-            "name": "Full HD WiFi Camera",
+            "title": "Full HD WiFi Camera",
             "price": "100.00",
             "image": "../PngItem_4760952.png",
             "category": "Security System",
@@ -111,7 +111,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Jane Smith",
+                    "title": "Jane Smith",
                     "rating": 4,
                     "comment": "Great WiFi range and picture quality, but setup was a bit complicated.",
                     "date": "August 18, 2023",
@@ -119,7 +119,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "John Doe",
+                    "title": "John Doe",
                     "rating": 4.3,
                     "comment": "Good video quality, but the WiFi connection can be inconsistent.",
                     "date": "August 18, 2023",
@@ -131,7 +131,7 @@
         {
             "id": 3,
             "brand": "Ezvir",
-            "name": "Smart Door Lock",
+            "title": "Smart Door Lock",
             "price": "70.00",
             "image": "../PngItem_4124313.png",
             "category": "Security System",
@@ -171,7 +171,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Michael Brown",
+                    "title": "Michael Brown",
                     "rating": 4,
                     "comment": "Easy to use and reliable, but the app could be better.",
                     "date": "August 18, 2023",
@@ -179,7 +179,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Emily Davis",
+                    "title": "Emily Davis",
                     "rating": 5,
                     "comment": "Excellent product! Very secure and easy to install.",
                     "date": "September 10, 2023",
@@ -187,7 +187,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Obama",
+                    "title": "Obama",
                     "rating": 4.5,
                     "comment": "Convenient and secure, but the app needs some improvements.",
                     "date": "August 18, 2023",
@@ -199,7 +199,7 @@
         {
             "id": 4,
             "brand": "HK Vision",
-            "name": "Ultra HDR Camera",
+            "title": "Ultra HDR Camera",
             "price": "120.00",
             "category": "Security System",
             "image": "../PngItem_5335869.png",
@@ -239,7 +239,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Anna Wilson",
+                    "title": "Anna Wilson",
                     "rating": 5,
                     "comment": "Incredible video quality and very reliable performance.",
                     "date": "August 18, 2023",
@@ -247,7 +247,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "John Doe",
+                    "title": "John Doe",
                     "rating": 4.7,
                     "comment": "Excellent HDR performance, but a bit pricey.",
                     "date": "August 18, 2023",
@@ -255,7 +255,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Alexa Johnson",
+                    "title": "Alexa Johnson",
                     "rating": 4.9,
                     "comment": "Outstanding clarity and detail, worth every penny.",
                     "date": "August 18, 2023",
@@ -267,7 +267,7 @@
         {
             "id": 5,
             "brand": "Igloohome CHAIR",
-            "name": "Wireless Camera",
+            "title": "Wireless Camera",
             "price": "89.00",
             "category": "Security System",
             "image": "../PngItem_5989470.png",
@@ -307,7 +307,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Anna Wilson",
+                    "title": "Anna Wilson",
                     "rating": 5,
                     "comment": "Incredible video quality and very reliable performance.",
                     "date": "August 18, 2023",
@@ -315,7 +315,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Tom Davis",
+                    "title": "Tom Davis",
                     "rating": 4.2,
                     "comment": "Works well, but the battery life is shorter than expected.",
                     "date": "August 18, 2023",
@@ -323,7 +323,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Jane Doe",
+                    "title": "Jane Doe",
                     "rating": 4.4,
                     "comment": "Great for wireless needs, setup is a breeze.",
                     "date": "August 18, 2023",
@@ -335,7 +335,7 @@
         {
             "id": 6,
             "brand": "Samsung",
-            "name": "Vision Pro Camera",
+            "title": "Vision Pro Camera",
             "price": "140.00",
             "category": "Security System",
             "image": "../PngItem_2018403.png",
@@ -376,7 +376,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Chris Johnson",
+                    "title": "Chris Johnson",
                     "rating": 4,
                     "comment": "Very convenient and easy to set up, though battery life could be longer.",
                     "date": "August 18, 2023",
@@ -384,7 +384,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Patricia Taylor",
+                    "title": "Patricia Taylor",
                     "rating": 5,
                     "comment": "Top-notch video quality and features, highly recommended for professional use.",
                     "date": "August 18, 2023",
@@ -396,7 +396,7 @@
         {
             "id": 7,
             "brand": "Igloohome CHAIR",
-            "name": "Wide Angle Smart Camera",
+            "title": "Wide Angle Smart Camera",
             "price": "90.00",
             "category": "Security System",
             "image": "../PngItem_3521561.png",
@@ -436,7 +436,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "George Harris",
+                    "title": "George Harris",
                     "rating": 4,
                     "comment": "Very good camera with a wide field of view, but could be more intuitive.",
                     "date": "August 18, 2023",
@@ -448,7 +448,7 @@
         {
             "id": 8,
             "brand": "Ezvir",
-            "name": "Dome Camera",
+            "title": "Dome Camera",
             "price": "89.00",
             "category": "Security System",
             "image": "../PngItem_5335828.png",
@@ -488,7 +488,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "David Miller",
+                    "title": "David Miller",
                     "rating": 5,
                     "comment": "Amazing integration with Apple products and great video quality.",
                     "date": "August 18, 2023",
@@ -496,7 +496,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Anna Svitch",
+                    "title": "Anna Svitch",
                     "rating": 4.5,
                     "comment": "Excellent design and video quality, but night vision is lacking.",
                     "date": "August 18, 2023",
@@ -508,7 +508,7 @@
         {
             "id": 9,
             "brand": "HK Vision",
-            "name": "Wireless Security Camera",
+            "title": "Wireless Security Camera",
             "price": "75.00",
             "category": "Security System",
             "image": "../PngItem_5335637.png",
@@ -548,7 +548,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Jane Doe",
+                    "title": "Jane Doe",
                     "rating": 4.7,
                     "comment": "Nice coverage and easy setup, would prefer better night vision.",
                     "date": "August 18, 2023",
@@ -556,12 +556,12 @@
                     "avatar":""
                 },
                 {
-                    "name": "Chris Davis",
+                    "title": "Chris Davis",
                     "rating": 4.3,
                     "comment": "Decent camera with a good price, occasional connection issues."
                 },
                 {
-                    "name": "Chris Johnson",
+                    "title": "Chris Johnson",
                     "rating": 4.2,
                     "comment": "Affordable and works well, but connection stability could improve."
                 }
@@ -570,7 +570,7 @@
         {
             "id": 10,
             "brand": "D-Link",
-            "name": "Smart Desk Camera",
+            "title": "Smart Desk Camera",
             "price": "50.00",
             "category": "Security System",
             "image": "../PngItem_2560501.png",
@@ -611,7 +611,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Tom Davis",
+                    "title": "Tom Davis",
                     "rating": 4.2,
                     "comment": "Works well, but the battery life is shorter than expected.",
                     "date": "August 18, 2023",
@@ -619,7 +619,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Jane Doe",
+                    "title": "Jane Doe",
                     "rating": 4.4,
                     "comment": "Great for wireless needs, setup is a breeze.",
                     "date": "August 18, 2023",
@@ -627,7 +627,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Olivia Wilson",
+                    "title": "Olivia Wilson",
                     "rating": 4.1,
                     "comment": "Works well for simple tasks, but not for high-definition needs.",
                     "date": "August 18, 2023",
@@ -639,7 +639,7 @@
         {
             "id": 11,
             "brand": "HK Vision",
-            "name": "High Vision HD Camera",
+            "title": "High Vision HD Camera",
             "price": "130.00",
             "category": "Security System",
             "image": "../PngItem_5335451.png",
@@ -679,7 +679,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Liam Smith",
+                    "title": "Liam Smith",
                     "rating": 4.7,
                     "comment": "Excellent video quality and very reliable for home security.",
                     "date": "September 10, 2023",
@@ -687,7 +687,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Michael Brown",
+                    "title": "Michael Brown",
                     "rating": 4,
                     "comment": "Easy to use and reliable, but the app could be better.",
                     "date": "August 18, 2023",
@@ -695,7 +695,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Emily Davis",
+                    "title": "Emily Davis",
                     "rating": 5,
                     "comment": "Excellent product! Very secure and easy to install.",
                     "date": "September 10, 2023",
@@ -707,7 +707,7 @@
         {
             "id": 12,
             "brand": "D-Link",
-            "name": "Smart HDR WiFi Camera",
+            "title": "Smart HDR WiFi Camera",
             "price": "100.00",
             "category": "Security System",
             "image": "../PngItem_2839997.png",
@@ -748,7 +748,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Sophia Davis",
+                    "title": "Sophia Davis",
                     "rating": 4.5,
                     "comment": "Great video quality and easy to set up, though the app could be more user-friendly.",
                     "date": "August 18, 2023",
@@ -756,7 +756,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Liam Smith",
+                    "title": "Liam Smith",
                     "rating": 4.4,
                     "comment": "Good HDR performance, but the WiFi setup was tricky.",
                     "date": "August 18, 2023",
@@ -765,834 +765,282 @@
                 }
             ]
         },
-        {
-            "id": 13,
-            "brand": "Nest",
-            "name": "Protect Smoke + CO Alarm",
-            "price": "119.00",
-            "image": "../pngwing.com.png",
-            "category":"Carbon Alarm",
-            "stock": true,
-            "color":"black",
-            "images": [
-              "../pngwing.com.png",
-              "../pngwing.com.png",
-              "../pngwing.com.png",
-              "../pngwing.com.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Nest Protect Smoke + CO Alarm is designed to keep you safe from both smoke and carbon monoxide. It features a split-spectrum sensor that detects smoke from both fast-burning and slow-smoldering fires. With voice alerts and a mobile app for remote monitoring, it’s a modern solution for home safety.",
-            "SKU": "NEST-CO-001",
-            "categories": [
-              "Alarm",
-              "Safety"
-            ],
-            "tags": [
-              "smoke detector",
-              "carbon monoxide",
-              "home safety"
-            ],
-            "review": {
-              "rating": 4.7,
-              "comment": "Reliable and easy to use. Excellent safety feature."
+        
+            {
+              "id": 13,
+              "brand": "igloohome",
+              "name": "Smart Lock",
+              "sku": "IGLOO-LOCK-001",
+              "category": "Carbon Alarm",
+              "price": 250.00,
+              "description": "A smart lock that can be controlled via mobile app for easy access and security.",
+              "tags": ["smart lock", "home security", "igloohome"],
+              "quantity": 100,
+              "reviews": [
+                {
+                  "user": "John Doe",
+                  "rating": 4,
+                  "comment": "Works great, easy setup."
+                }
+              ]
             },
-            "sosial": [
-              {
-                "facebook": "../face.svg",
-                "instagram": "../instagram.svg",
-                "twitter": "../twitter.svg"
-              }
-            ],
-            "customerReviews": [
-              {
-                "name": "Emily Clarke",
-                "rating": 5,
-                "comment": "A must-have for every home. Very efficient!",
-                "date": "July 10, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
+            {
+              "id": 14,
+              "brand": "igloohome",
+              "name": "Smart Padlock",
+              "sku": "IGLOO-PAD-002",
+              "category": "Carbon Alarm",
+              "price": 120.00,
+              "description": "Portable smart padlock that offers keyless access with Bluetooth technology.",
+              "tags": ["padlock", "smart", "security", "igloohome"],
+              "quantity": 150,
+              "reviews": [
+                {
+                  "user": "Jane Smith",
+                  "rating": 5,
+                  "comment": "Very convenient for securing bikes."
+                }
+              ]
+            },
+            {
+              "id": 15,
+              "brand": "HIK Vision",
+              "name": "CCTV Camera",
+              "sku": "HIK-SEC-003",
+              "category": "Carbon Alarm",
+              "price": 200.00,
+              "description": "High-definition CCTV camera with night vision and motion detection.",
+              "tags": ["CCTV", "security", "HIK Vision"],
+              "quantity": 200,
+              "reviews": [
+                {
+                  "user": "Michael Clark",
+                  "rating": 5,
+                  "comment": "Great video quality and easy to set up."
+                }
+              ]
+            },
+            {
+                "id": 16,
+                "brand": "HIK Vision",
+                "name": "IP Camera",
+                "sku": "HIK-IP-005",
+                "category": "Carbon Alarm",
+                "price": 180.00,
+                "description": "High-definition IP camera with advanced motion detection and night vision.",
+                "tags": ["IP Camera", "security", "HIK Vision"],
+                "quantity": 120,
+                "reviews": [
+                  {
+                    "user": "David King",
+                    "rating": 5,
+                    "comment": "Excellent camera with great video quality and easy setup."
+                  },
+                  {
+                    "user": "Maria Green",
+                    "rating": 4,
+                    "comment": "Good performance, but the mobile app could be improved."
+                  }
+                ]
+              },              
+            {
+              "id": 17,
+              "brand": "Ezvir",
+              "name": "Smart Doorbell",
+              "sku": "EZVIR-DB-005",
+              "category": "Carbon Alarm",
+              "price": 150.00,
+              "description": "Video doorbell with two-way audio and HD video stream.",
+              "tags": ["doorbell", "smart", "security", "Ezvir"],
+              "quantity": 120,
+              "reviews": [
+                {
+                  "user": "David Lee",
+                  "rating": 4,
+                  "comment": "Clear video quality and easy installation."
+                }
+              ]
+            },
+            {
+              "id": 18,
+              "brand": "Ezvir",
+              "name": "Home Security Kit",
+              "sku": "EZVIR-KIT-006",
+              "category": "Carbon Alarm",
+              "price": 300.00,
+              "description": "Complete home security system with sensors and cameras.",
+              "tags": ["security", "home kit", "Ezvir"],
+              "quantity": 50,
+              "reviews": [
+                {
+                  "user": "Laura Chen",
+                  "rating": 5,
+                  "comment": "Comprehensive system that covers all bases."
+                }
+              ]
+            },
+            {
+              "id": 19,
+              "brand": "D-Link",
+              "name": "Wi-Fi Router",
+              "sku": "DLK-WIFI-007",
+              "category": "Carbon Alarm",
+              "price": 70.00,
+              "description": "Dual-band Wi-Fi router with high-speed internet support.",
+              "tags": ["router", "Wi-Fi", "D-Link"],
+              "quantity": 180,
+              "reviews": [
+                {
+                  "user": "Kevin Brown",
+                  "rating": 5,
+                  "comment": "Excellent speed and coverage."
+                }
+              ]
+            },                  
+            {
+                "id": 20,
+                "name": "igloohome Water Leakage Detector",
+                "sku": "IGL-001",
+                "price": 59.99,
+                "description": "Water leakage detector with smart alerts via mobile app, ideal for homes and offices.",
+                "tags": ["water leakage", "smart alerts", "home security"],
+                "brand": "igloohome",
+                "reviews": [
+                  {
+                    "rating": 5,
+                    "comment": "Easy to set up and works perfectly to alert when there's a leak."
+                  },
+                  {
+                    "rating": 4,
+                    "comment": "Works great, but the range could be better."
+                  }
+                ],
+                "category": "Leakage Detector"
               },
               {
-                "name": "Michael Brown",
-                "rating": 4,
-                "comment": "Works great, but a bit pricey.",
-                "date": "July 15, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
-              }
-            ]
-          },
-          {
-            "id": 14,
-            "brand": "Kidde",
-            "name": "Kidde KN-COSM-BA Smoke & CO Alarm",
-            "price": "79.00",
-            "image": "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
-            "stock": true,
-            "color":"black",
-            "category":"Carbon Alarm",
-            "images": [
-              "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
-              "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
-              "../Kidde KN-COSM-BA Smoke & CO Alarm.png",
-              "../Kidde KN-COSM-BA Smoke & CO Alarm.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Kidde KN-COSM-BA Smoke & CO Alarm provides protection from both smoke and carbon monoxide. It features a battery backup and an advanced alarm system that ensures you are alerted even during power outages.",
-            "SKU": "KIDDE-CO-002",
-            "categories": [
-              "Alarm",
-              "Safety"
-            ],
-            "tags": [
-              "smoke alarm",
-              "carbon monoxide",
-              "battery backup"
-            ],
-            "review": {
-              "rating": 4.3,
-              "comment": "Good value for money and easy to install."
-            },
-            "sosial": [
-              {
-                "facebook": "../face.svg",
-                "instagram": "../instagram.svg",
-                "twitter": "../twitter.svg"
-              }
-            ],
-            "customerReviews": [
-              {
-                "name": "Sarah Green",
-                "rating": 4,
-                "comment": "Reliable and straightforward.",
-                "date": "June 20, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
+                "id": 21,
+                "name": "HIK Vision Water Leak Detector",
+                "sku": "HIK-002",
+                "price": 69.99,
+                "description": "Reliable water leakage detector with high sensitivity and wireless connectivity.",
+                "tags": ["leak detector", "wireless", "home safety"],
+                "brand": "HIK Vision",
+                "reviews": [
+                  {
+                    "rating": 5,
+                    "comment": "Very sensitive and fast response to water leaks."
+                  },
+                  {
+                    "rating": 4,
+                    "comment": "Good product but a bit pricier than others."
+                  }
+                ],
+                "category": "Leakage Detector"
               },
               {
-                "name": "David Lee",
-                "rating": 5,
-                "comment": "Excellent alarm with great features.",
-                "date": "June 25, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
-              }
-            ]
-          },
-          {
-            "id": 15,
-            "brand": "First Alert",
-            "name": "First Alert Onelink Safe & Sound",
-            "price": "299.00",
-            "image": "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
-            "stock": false,
-            "color":"black",
-            "category":"Carbon Alarm",
-            "images": [
-              "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
-              "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
-              "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png",
-              "../imageService_a4ddc81d-aa1b-4fd3-aca9-6eb228d8475d_800x.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The First Alert Onelink Safe & Sound is a smart smoke and carbon monoxide alarm with a built-in Alexa speaker. It integrates with your smart home system to provide voice alerts and allows you to control it through voice commands.",
-            "SKU": "FIRST-ALERT-003",
-            "categories": [
-              "Alarm",
-              "Smart Home"
-            ],
-            "tags": [
-              "smart alarm",
-              "carbon monoxide",
-              "Alexa"
-            ],
-            "review": {
-              "rating": 4.8,
-              "comment": "Innovative features with excellent sound quality."
-            },
-            "sosial": [
-              {
-                "facebook": "../face.svg",
-                "instagram": "../instagram.svg",
-                "twitter": "../twitter.svg"
-              }
-            ],
-            "customerReviews": [
-              {
-                "name": "Linda Roberts",
-                "rating": 5,
-                "comment": "Love the Alexa integration and smart features.",
-                "date": "May 15, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
+                "id": 22,
+                "name": "Ezvir Smart Leakage Detector",
+                "sku": "EZV-003",
+                "price": 49.99,
+                "description": "Smart water leakage detector with app integration and real-time notifications.",
+                "tags": ["smart", "water leakage", "real-time alerts"],
+                "brand": "Ezvir",
+                "reviews": [
+                  {
+                    "rating": 5,
+                    "comment": "Works perfectly, easy installation, and reliable alerts."
+                  },
+                  {
+                    "rating": 3,
+                    "comment": "Occasionally misses small leaks, but still a good product."
+                  }
+                ],
+                "category": "Leakage Detector"
               },
               {
-                "name": "James Smith",
-                "rating": 4,
-                "comment": "Great functionality but a bit expensive.",
-                "date": "May 20, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
-              }
-            ]
-          },
-          {
-            "id": 16,
-            "brand": "Eve",
-            "name": "Eve Room Carbon Monoxide Alarm",
-            "price": "89.00",
-            "image": "../EVE_Room_Fahrenheit_09-min.jpg",
-            "stock": true,
-            "color":"black",
-            "category":"Carbon Alarm",
-            "images": [
-              "../EVE_Room_Fahrenheit_09-min.jpg",
-              "../EVE_Room_Fahrenheit_09-min.jpg",
-              "../EVE_Room_Fahrenheit_09-min.jpg",
-              "../EVE_Room_Fahrenheit_09-min.jpg"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Eve Room Carbon Monoxide Alarm provides advanced CO detection with a sleek, modern design. It features a built-in display that shows current CO levels and integrates with your smart home system for notifications and control.",
-            "SKU": "EVE-CO-004",
-            "categories": [
-              "Alarm",
-              "Smart Home"
-            ],
-            "tags": [
-              "carbon monoxide",
-              "smart alarm",
-              "CO levels"
-            ],
-            "review": {
-              "rating": 4.6,
-              "comment": "Effective CO detection with a stylish design."
-            },
-            "sosial": [
-              {
-                "facebook": "../face.svg",
-                "instagram": "../instagram.svg",
-                "twitter": "../twitter.svg"
-              }
-            ],
-            "customerReviews": [
-              {
-                "name": "Anna Wilson",
-                "rating": 5,
-                "comment": "Very sleek and reliable!",
-                "date": "April 10, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
+                "id": 23,
+                "name": "D-Link Water Leak Sensor",
+                "sku": "DLK-004",
+                "price": 39.99,
+                "description": "Water leakage sensor with wireless connection and customizable alert settings.",
+                "tags": ["leak sensor", "wireless", "alerts"],
+                "brand": "D-Link",
+                "reviews": [
+                  {
+                    "rating": 4,
+                    "comment": "Affordable and effective for basic leakage detection."
+                  },
+                  {
+                    "rating": 3,
+                    "comment": "The range could be improved, but works fine for smaller areas."
+                  }
+                ],
+                "category": "Leakage Detector"
               },
               {
-                "name": "Robert Johnson",
-                "rating": 4,
-                "comment": "Good product but could be more affordable.",
-                "date": "April 15, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
-              }
-            ]
-          },
-          {
-            "id": 17,
-            "brand": "Honeywell",
-            "name": "Honeywell Smoke & Carbon Monoxide Detector",
-            "price": "99.00",
-            "image": "../5800COMBO_hi__36261.jpg",
-            "stock": true,
-            "color":"black",
-            "category":"Carbon Alarm",
-            "images": [
-              "../5800COMBO_hi__36261.jpg",
-              "../5800COMBO_hi__36261.jpg",
-              "../5800COMBO_hi__36261.jpg",
-              "../5800COMBO_hi__36261.jpg"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Honeywell Smoke & Carbon Monoxide Detector offers dual protection with both smoke and CO detection. It has a user-friendly interface and provides reliable alerts with an easy-to-read display and loud alarm.",
-            "SKU": "HONEY-CO-005",
-            "categories": [
-              "Alarm",
-              "Safety"
-            ],
-            "tags": [
-              "smoke detector",
-              "carbon monoxide",
-              "safety"
-            ],
-            "review": {
-              "rating": 4.4,
-              "comment": "Reliable and easy to use."
-            },
-            "sosial": [
-              {
-                "facebook": "../face.svg",
-                "instagram": "../instagram.svg",
-                "twitter": "../twitter.svg"
-              }
-            ],
-            "customerReviews": [
-              {
-                "name": "Paul Adams",
-                "rating": 4,
-                "comment": "Good quality but the alarm is a bit loud.",
-                "date": "March 5, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
+                "id": 24,
+                "name": "Samsung Smart Leakage Detector",
+                "sku": "SAM-005",
+                "price": 89.99,
+                "description": "Advanced smart water leakage detector with app integration and emergency alerts.",
+                "tags": ["smart", "water leakage", "emergency alerts"],
+                "brand": "Samsung",
+                "reviews": [
+                  {
+                    "rating": 5,
+                    "comment": "Top-notch product, alerts me immediately and integrates well with other devices."
+                  },
+                  {
+                    "rating": 4,
+                    "comment": "Great device but a bit expensive compared to others."
+                  }
+                ],
+                "category": "Leakage Detector"
               },
               {
-                "name": "Laura Davis",
-                "rating": 5,
-                "comment": "Great detector, very satisfied.",
-                "date": "March 10, 2023",
-                "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                "avatar":""
-              }
-            ]
-          },
-        {
-            "id": 18,
-            "brand": "CP Plus",
-            "name": "CP Plus CP-UNC-2201 HD Bullet Camera",
-            "price": "129.00",
-            "image": "../images (10).jpeg",
-            "stock": true,
-            "color":"black",
-            "images": [
-                "../images (10).jpeg",
-                "../images (10).jpeg",
-                "../images (10).jpeg",
-                "../images (10).jpeg"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The CP Plus CP-UNC-2201 is an HD bullet camera offering 1080p resolution, night vision up to 30 meters, and motion detection. Ideal for both indoor and outdoor use.",
-            "SKU": "CP-UNC-2201-001",
-            "categories": [
-                "Camera",
-                "Security"
-            ],
-            "tags": [
-                "HD video",
-                "night vision",
-                "motion detection"
-            ],
-            "review": {
-                "rating": 4.5,
-                "comment": "High-quality camera with good night vision and solid build."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Michael Green",
-                    "rating": 5,
-                    "comment": "Excellent camera with clear video and effective night vision.",
-                    "date": "March 10, 2024",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Jessica Turner",
+                "id": 25,
+                "name": "CP Plus Security Camera System",
+                "sku": "CPP-006",
+                "price": 199.99,
+                "description": "High-definition security camera system with night vision and motion detection features.",
+                "tags": ["security", "camera system", "motion detection", "HD"],
+                "brand": "CP Plus",
+                "reviews": [
+                  {
                     "rating": 4,
-                    "comment": "Good camera but installation instructions were unclear.",
-                    "date": "March 15, 2024",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 19,
-            "brand": "CP Plus",
-            "name": "CP Plus CP-PAR-2204 PTZ Camera",
-            "price": "249.00",
-            "image": "../31R7dh5QVAL.jpg",
-            "stock": true,
-            "color":"black",
-            "images": [
-                "../31R7dh5QVAL.jpg",
-                "../31R7dh5QVAL.jpg",
-                "../31R7dh5QVAL.jpg",
-                "../31R7dh5QVAL.jpg"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The CP Plus CP-PAR-2204 is a PTZ camera with 4x optical zoom and 720p resolution. It offers remote pan, tilt, and zoom control, night vision up to 50 meters, and advanced motion detection.",
-            "SKU": "CP-PAR-2204-002",
-            "categories": [
-                "Camera",
-                "PTZ"
-            ],
-            "tags": [
-                "optical zoom",
-                "PTZ",
-                "night vision"
-            ],
-            "review": {
-                "rating": 4.7,
-                "comment": "Versatile PTZ camera with excellent zoom capabilities and night vision."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "David Brown",
+                    "comment": "Good quality camera, easy to set up and provides clear video feed."
+                  },
+                  {
                     "rating": 5,
-                    "comment": "Amazing camera with great zoom and control features.",
-                    "date": "April 5, 2024",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Emily Lewis",
-                    "rating": 4,
-                    "comment": "Effective PTZ camera but the setup took longer than expected.",
-                    "date": "April 10, 2024",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 20,
-            "brand": "Govee",
-            "name": "Govee Water Leak Sensor",
-            "price": "45.00",
-            "image": "../GoveeLife-H5043-Wi-Fi-Smart-Gateway-2-with-Smart-Thermo-Hygrometer-3-Lite-U-7.png",
-            "stock": true,
-            "color":"black",
-            "category":"Leakage Detector",
-            "images": [
-                "..GoveeLife-H5043-Wi-Fi-Smart-Gateway-2-with-Smart-Thermo-Hygrometer-3-Lite-U-7.png",
-                "..GoveeLife-H5043-Wi-Fi-Smart-Gateway-2-with-Smart-Thermo-Hygrometer-3-Lite-U-7.png",
-                "..GoveeLife-H5043-Wi-Fi-Smart-Gateway-2-with-Smart-Thermo-Hygrometer-3-Lite-U-7.png",
-                "..GoveeLife-H5043-Wi-Fi-Smart-Gateway-2-with-Smart-Thermo-Hygrometer-3-Lite-U-7.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Govee Water Leak Sensor provides reliable detection of water leaks with a simple and efficient design. It is ideal for use in basements, kitchens, and bathrooms. The sensor alerts you to leaks before they become a major problem.",
-            "SKU": "Govee-WL-001",
-            "categories": [
-                "Leakage Detector",
-                "Safety"
-            ],
-            "tags": [
-                "water leak",
-                "sensor",
-                "basement"
-            ],
-            "review": {
-                "rating": 4.5,
-                "comment": "Highly sensitive and reliable."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Jennifer Wilson",
+                    "comment": "Great value for money, excellent night vision and motion detection."
+                  }
+                ],
+                "category": "Leakage Detector"
+              },              
+              {
+                "id": 26,
+                "name": "igloohome Smart Water Leak Detector",
+                "sku": "IGL-007",
+                "price": 55.99,
+                "description": "Smart water leak detector with real-time alerts and mobile app integration.",
+                "tags": ["smart", "leak detection", "mobile alerts"],
+                "brand": "igloohome",
+                "reviews": [
+                  {
                     "rating": 5,
-                    "comment": "Works perfectly, easy to install.",
-                    "date": "June 12, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "David Clark",
+                    "comment": "Excellent product, keeps me notified instantly when there’s a leak."
+                  },
+                  {
                     "rating": 4,
-                    "comment": "Good sensor but could be cheaper.",
-                    "date": "June 15, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 21,
-            "brand": "Honeywell",
-            "name": "Honeywell WLD2 Water Leak Detector",
-            "price": "79.00",
-            "image": "../wld2-side-1id56976.png",
-            "stock": true,
-            "color":"black",
-            "category":"Leakage Detector",
-            "images": [
-                "../wld2-side-1id56976.png",
-                "../wld2-side-1id56976.png",
-                "../wld2-side-1id56976.png",
-                "../wld2-side-1id56976.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Honeywell WLD2 Water Leak Detector offers robust performance with advanced sensors to detect even the smallest leaks. It provides both audible and visual alerts and is suitable for various home and commercial applications.",
-            "SKU": "HONEY-WL-002",
-            "categories": [
-                "Leakage Detector",
-                "Safety"
-            ],
-            "tags": [
-                "water leak",
-                "advanced sensor",
-                "commercial use"
-            ],
-            "review": {
-                "rating": 4.6,
-                "comment": "Excellent detection and easy setup."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Paul Adams",
-                    "rating": 5,
-                    "comment": "Great quality and performance.",
-                    "date": "May 20, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Laura Harris",
-                    "rating": 4,
-                    "comment": "Reliable but slightly expensive.",
-                    "date": "May 25, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 22,
-            "brand": "LeakGuard",
-            "name": "LeakGuard Pro Water Leak Detector",
-            "price": "85.00",
-            "image": "../hpa-water-leak-detector-1.png",
-            "stock": true,
-            "color":"black",
-            "category":"Leakage Detector",
-            "images": [
-                "../hpa-water-leak-detector-1.png",
-                "../hpa-water-leak-detector-1.png",
-                "../hpa-water-leak-detector-1.png",
-                "../hpa-water-leak-detector-1.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The LeakGuard Pro Water Leak Detector is a reliable and advanced device designed to detect water leaks with precision. It features real-time notifications and integrates seamlessly with various smart home systems.",
-            "SKU": "LEAKGUARD-WL-003",
-            "categories": [
-                "Leakage Detector",
-                "Safety"
-            ],
-            "tags": [
-                "water leak",
-                "advanced detection",
-                "smart home"
-            ],
-            "review": {
-                "rating": 4.7,
-                "comment": "Highly effective with excellent smart home integration."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Alex Johnson",
-                    "rating": 5,
-                    "comment": "Fantastic performance and easy setup.",
-                    "date": "July 5, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Emily Davis",
-                    "rating": 4,
-                    "comment": "Great device, but a bit bulky.",
-                    "date": "July 10, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 23,
-            "brand": "Kidde",
-            "name": "Kidde Leak Detector",
-            "price": "65.00",
-            "image": "../images.jpeg",
-            "stock": true,
-            "color":"black",
-            "category":"Leakage Detector",
-            "images": [
-                "../images.jpeg",
-                "../images.jpeg",
-                "../images.jpeg",
-                "../images.jpeg"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Kidde Leak Detector is designed to detect water leaks quickly and efficiently. It features an easy-to-read display and a loud alarm to alert you to potential issues before they become serious.",
-            "SKU": "KIDDE-WL-004",
-            "categories": [
-                "Leakage Detector",
-                "Safety"
-            ],
-            "tags": [
-                "water leak",
-                "easy install",
-                "display"
-            ],
-            "review": {
-                "rating": 4.4,
-                "comment": "Effective and straightforward to use."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Sophia Martinez",
-                    "rating": 4,
-                    "comment": "Good detector but a bit loud.",
-                    "date": "March 10, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Liam Garcia",
-                    "rating": 5,
-                    "comment": "Very reliable and easy to use.",
-                    "date": "March 15, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 24,
-            "brand": "Eve",
-            "name": "Eve Water Leak Sensor",
-            "price": "89.00",
-            "image": "../EVE_Waterguard_2311.png",
-            "stock": true,
-            "color":"black",
-            "category":"Leakage Detector",
-            "images": [
-                "../EVE_Waterguard_2311.png",
-                "../EVE_Waterguard_2311.png",
-                "../EVE_Waterguard_2311.png",
-                "../EVE_Waterguard_2311.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Eve Water Leak Sensor offers a modern design with advanced leak detection capabilities. It integrates seamlessly with smart home systems and provides real-time notifications through the mobile app.",
-            "SKU": "EVE-WL-005",
-            "categories": [
-                "Leakage Detector",
-                "Smart Home"
-            ],
-            "tags": [
-                "smart sensor",
-                "water leak",
-                "app integration"
-            ],
-            "review": {
-                "rating": 4.7,
-                "comment": "Sleek design and reliable detection."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Olivia White",
-                    "rating": 5,
-                    "comment": "Stylish and efficient, highly recommended.",
-                    "date": "February 20, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "James Miller",
-                    "rating": 4,
-                    "comment": "Effective but the price is high.",
-                    "date": "February 25, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 25,
-            "brand": "Netatmo",
-            "name": "Netatmo Smart Water Leak Sensor",
-            "price": "119.00",
-            "image": "../meross-smart-water-leak-sensor-kit-ms400hhk-eu-version.jpg",
-            "stock": true,
-            "color":"black",
-            "category":"Leakage Detector",
-            "images": [
-                "../meross-smart-water-leak-sensor-kit-ms400hhk-eu-version.jpg",
-                "../meross-smart-water-leak-sensor-kit-ms400hhk-eu-version.jpg",
-                "../meross-smart-water-leak-sensor-kit-ms400hhk-eu-version.jpg",
-                "../meross-smart-water-leak-sensor-kit-ms400hhk-eu-version.jpg"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Netatmo Smart Water Leak Sensor integrates with your smart home system to provide real-time alerts and notifications. It offers high sensitivity and advanced features for comprehensive leak detection.",
-            "SKU": "NETATMO-WL-006",
-            "categories": [
-                "Leakage Detector",
-                "Smart Home"
-            ],
-            "tags": [
-                "smart sensor",
-                "water leak",
-                "real-time alerts"
-            ],
-            "review": {
-                "rating": 4.8,
-                "comment": "Excellent smart features and reliable detection."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Isabella Thompson",
-                    "rating": 5,
-                    "comment": "Great integration with smart home systems.",
-                    "date": "January 10, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Ethan Johnson",
-                    "rating": 4,
-                    "comment": "Very good, but a bit costly.",
-                    "date": "January 15, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 26,
-            "brand": "Philips",
-            "name": "Philips Water Leak Detector",
-            "price": "55.00",
-            "image": "../61zQif7cSbL._AC_UF894,1000_QL80_.jpg",
-            "stock": true,
-            "color":"black",
-            "category":"Leakage Detector",
-            "images": [
-                "../61zQif7cSbL._AC_UF894,1000_QL80_.jpg",
-                "../61zQif7cSbL._AC_UF894,1000_QL80_.jpg",
-                "../61zQif7cSbL._AC_UF894,1000_QL80_.jpg",
-                "../61zQif7cSbL._AC_UF894,1000_QL80_.jpg"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Philips Water Leak Detector provides essential leak detection with an easy-to-use design. It includes audible alerts and a visual indicator to ensure you are aware of any leaks promptly.",
-            "SKU": "PHILIPS-WL-007",
-            "categories": [
-                "Leakage Detector",
-                "Safety"
-            ],
-            "tags": [
-                "water leak",
-                "audible alert",
-                "visual indicator"
-            ],
-            "review": {
-                "rating": 4.3,
-                "comment": "Good basic detector with clear alerts."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Sophia Adams",
-                    "rating": 4,
-                    "comment": "Works well but could use more features.",
-                    "date": "December 5, 2022",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Oliver Davis",
-                    "rating": 5,
-                    "comment": "Effective and affordable.",
-                    "date": "December 10, 2022",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
+                    "comment": "Works well, but I wish it had more advanced features."
+                  }
+                ],
+                "category": "Leakage Detector"
+              },
         {
             "id": 27,
             "brand": "Xiaomi",
-            "name": "Xiaomi Mi Water Leak Sensor",
+            "title": "Xiaomi Mi Water Leak Sensor",
             "price": "39.00",
             "image": "../xiaomi_mi_leak_detector_-.jpg",
             "stock": true,
@@ -1631,7 +1079,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Ava Lewis",
+                    "title": "Ava Lewis",
                     "rating": 4,
                     "comment": "Effective but build quality could be better.",
                     "date": "November 10, 2022",
@@ -1639,7 +1087,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Lucas Martinez",
+                    "title": "Lucas Martinez",
                     "rating": 4,
                     "comment": "Great value, integrates well with smart home.",
                     "date": "November 15, 2022",
@@ -1651,7 +1099,7 @@
         {
             "id": 28,
             "brand": "D-Link",
-            "name": "D-Link DCS-8600LH Outdoor Camera",
+            "title": "D-Link DCS-8600LH Outdoor Camera",
             "price": "139.00",
             "image": "../DCS-8600LH-mainimage.jpg",
             "stock": true,
@@ -1689,7 +1137,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Jack Smith",
+                    "title": "Jack Smith",
                     "rating": 5,
                     "comment": "Great camera with perfect night vision and solid build.",
                     "date": "January 15, 2024",
@@ -1697,7 +1145,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Linda Johnson",
+                    "title": "Linda Johnson",
                     "rating": 4,
                     "comment": "Good camera but setup was a bit complicated.",
                     "date": "January 20, 2024",
@@ -1709,7 +1157,7 @@
         {
             "id": 29,
             "brand": "D-Link",
-            "name": "D-Link DAP-1610 AC750 Wi-Fi Range Extender",
+            "title": "D-Link DAP-1610 AC750 Wi-Fi Range Extender",
             "price": "59.00",
             "image": "../DAP-1530_A1_SideL_750x.webp",
             "stock": true,
@@ -1747,7 +1195,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Michael White",
+                    "title": "Michael White",
                     "rating": 5,
                     "comment": "Works perfectly to extend my Wi-Fi coverage.",
                     "date": "February 1, 2024",
@@ -1755,7 +1203,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Sarah Davis",
+                    "title": "Sarah Davis",
                     "rating": 4,
                     "comment": "Good extender but the signal strength could be better.",
                     "date": "February 5, 2024",
@@ -1767,7 +1215,7 @@
         {
             "id": 30,
             "brand": "D-Link",
-            "name": "D-Link DIR-1960 AC1900 Wi-Fi Router",
+            "title": "D-Link DIR-1960 AC1900 Wi-Fi Router",
             "price": "109.00",
             "image": "../DIR_1960_Front.png",
             "stock": true,
@@ -1805,7 +1253,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "David Brown",
+                    "title": "David Brown",
                     "rating": 5,
                     "comment": "Great router with fast speeds and strong signal.",
                     "date": "March 1, 2024",
@@ -1813,7 +1261,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Emma Wilson",
+                    "title": "Emma Wilson",
                     "rating": 4,
                     "comment": "Good router but the setup process was a bit confusing.",
                     "date": "March 5, 2024",
@@ -1825,7 +1273,7 @@
         {
             "id": 31,
             "brand": "D-Link",
-            "name": "D-Link DCS-936L HD Wi-Fi Camera",
+            "title": "D-Link DCS-936L HD Wi-Fi Camera",
             "price": "89.00",
             "image": "../images (5).jpeg",
             "stock": true,
@@ -1862,7 +1310,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Sophia Martinez",
+                    "title": "Sophia Martinez",
                     "rating": 5,
                     "comment": "Great value for money with good video quality and features.",
                     "date": "April 1, 2024",
@@ -1870,7 +1318,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "James Lee",
+                    "title": "James Lee",
                     "rating": 4,
                     "comment": "Effective camera but the night vision could be improved.",
                     "date": "April 5, 2024",
@@ -1882,7 +1330,7 @@
         {
             "id": 32,
             "brand": "D-Link",
-            "name": "D-Link DNR-202L Network Video Recorder",
+            "title": "D-Link DNR-202L Network Video Recorder",
             "price": "249.00",
             "image": "../DNR-202L_A1.jpg",
             "stock": true,
@@ -1920,7 +1368,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Lucas Adams",
+                    "title": "Lucas Adams",
                     "rating": 5,
                     "comment": "Works well with my cameras and has a user-friendly interface.",
                     "date": "May 1, 2024",
@@ -1928,7 +1376,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Ella Harris",
+                    "title": "Ella Harris",
                     "rating": 4,
                     "comment": "Good NVR but a bit expensive for the features offered.",
                     "date": "May 5, 2024",
@@ -1940,7 +1388,7 @@
         {
             "id": 33,
             "brand": "D-Link",
-            "name": "D-Link DCS-2330L HD Wireless Outdoor Camera",
+            "title": "D-Link DCS-2330L HD Wireless Outdoor Camera",
             "price": "159.00",
             "image": "../DCS2330LA1Image HFront.png",
             "stock": true,
@@ -1978,7 +1426,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Oliver Thompson",
+                    "title": "Oliver Thompson",
                     "rating": 5,
                     "comment": "Excellent outdoor camera with clear video and durable design.",
                     "date": "June 1, 2024",
@@ -1986,7 +1434,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Charlotte Robinson",
+                    "title": "Charlotte Robinson",
                     "rating": 4,
                     "comment": "Good camera but the setup process was not very intuitive.",
                     "date": "June 5, 2024",
@@ -1998,7 +1446,7 @@
         {
             "id": 34,
             "brand": "D-Link",
-            "name": "Smart HDR WiFi Camera",
+            "title": "Smart HDR WiFi Camera",
             "price": "100.00",
             "image": "../PngItem_2839997.png",
             "stock": true,
@@ -2038,7 +1486,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Sophia Davis",
+                    "title": "Sophia Davis",
                     "rating": 4.5,
                     "comment": "Great video quality and easy to set up, though the app could be more user-friendly.",
                     "date": "August 18, 2023",
@@ -2046,7 +1494,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Liam Smith",
+                    "title": "Liam Smith",
                     "rating": 4.4,
                     "comment": "Good HDR performance, but the WiFi setup was tricky.",
                     "date": "August 18, 2023",
@@ -2056,67 +1504,9 @@
             ]
         },
         {
-            "id": 35,
-            "brand": "D-Link",
-            "name": "D-Link DAP-1610 AC750 Wi-Fi Range Extender",
-            "price": "79.00",
-            "image": "../image9.png",
-            "stock": true,
-            "color":"black",
-            "images": [
-                "../image9.png",
-                "../image9.png",
-                "../image9.png",
-                "../image9.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The D-Link DAP-1610 AC750 Wi-Fi Range Extender enhances Wi-Fi coverage with speeds up to 750 Mbps. It supports dual-band connectivity and has a compact form factor.",
-            "SKU": "DLK-DAP-1610-009",
-            "categories": [
-                "Range Extender",
-                "Networking"
-            ],
-            "tags": [
-                "Wi-Fi boost",
-                "dual-band",
-                "compact design"
-            ],
-            "review": {
-                "rating": 4.3,
-                "comment": "Good range extender with decent performance and easy setup."
-            },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Liam Scott",
-                    "rating": 5,
-                    "comment": "Effective extender with great range and easy installation.",
-                    "date": "September 1, 2024",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Emma Lewis",
-                    "rating": 4,
-                    "comment": "Works well but the signal strength could be better in some areas.",
-                    "date": "September 5, 2024",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
             "id": 36,
             "brand": "D-Link",
-            "name": "D-Link DAP-1820 AC2000 Wi-Fi Range Extender",
+            "title": "D-Link DAP-1820 AC2000 Wi-Fi Range Extender",
             "price": "89.00",
             "image": "../DAP1820A1Front1.png",
             "stock": true,
@@ -2154,7 +1544,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Lucas White",
+                    "title": "Lucas White",
                     "rating": 5,
                     "comment": "Fantastic performance and range for the price.",
                     "date": "October 1, 2024",
@@ -2162,7 +1552,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Sophia Robinson",
+                    "title": "Sophia Robinson",
                     "rating": 4,
                     "comment": "Effective extender but could benefit from a more user-friendly app.",
                     "date": "October 5, 2024",
@@ -2174,7 +1564,7 @@
         {
             "id": 37,
             "brand": "D-Link",
-            "name": "Smart Desk Camera",
+            "title": "Smart Desk Camera",
             "price": "50.00",
             "image": "../PngItem_2560501.png",
             "stock": true,
@@ -2214,7 +1604,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Tom Davis",
+                    "title": "Tom Davis",
                     "rating": 4.2,
                     "comment": "Works well, but the battery life is shorter than expected.",
                     "date": "August 18, 2023",
@@ -2222,7 +1612,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Jane Doe",
+                    "title": "Jane Doe",
                     "rating": 4.4,
                     "comment": "Great for wireless needs, setup is a breeze.",
                     "date": "August 18, 2023",
@@ -2230,7 +1620,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Olivia Wilson",
+                    "title": "Olivia Wilson",
                     "rating": 4.1,
                     "comment": "Works well for simple tasks, but not for high-definition needs.",
                     "date": "August 18, 2023",
@@ -2242,7 +1632,7 @@
         {
             "id": 38,
             "brand": "Ezvir",
-            "name": "Ezvir C6N Smart Camera",
+            "title": "Ezvir C6N Smart Camera",
             "price": "129.00",
             "image": "../images (4).jpeg",
             "stock": true,
@@ -2280,7 +1670,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Daniel Green",
+                    "title": "Daniel Green",
                     "rating": 5,
                     "comment": "Excellent camera with clear video and reliable performance.",
                     "date": "March 10, 2024",
@@ -2288,7 +1678,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Sophia Clark",
+                    "title": "Sophia Clark",
                     "rating": 4,
                     "comment": "Good camera but a bit bulky.",
                     "date": "March 15, 2024",
@@ -2300,7 +1690,7 @@
         {
             "id": 39,
             "brand": "Ezvir",
-            "name": "Ezvir C3X Dual-Lens Camera",
+            "title": "Ezvir C3X Dual-Lens Camera",
             "price": "179.00",
             "image": "../c3x-2.jpg",
             "stock": true,
@@ -2338,7 +1728,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Ella Johnson",
+                    "title": "Ella Johnson",
                     "rating": 5,
                     "comment": "Amazing clarity and dual-lens design is fantastic.",
                     "date": "April 1, 2024",
@@ -2346,7 +1736,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Mason Wilson",
+                    "title": "Mason Wilson",
                     "rating": 4,
                     "comment": "Great camera but the installation was a bit tricky.",
                     "date": "April 5, 2024",
@@ -2358,7 +1748,7 @@
         {
             "id": 40,
             "brand": "Ezvir",
-            "name": "Ezvir T1 Smart Lock",
+            "title": "Ezvir T1 Smart Lock",
             "price": "149.00",
             "image": "../Ezviz T1 Smart Lock1.jpg",
             "stock": true,
@@ -2396,7 +1786,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Ava Davis",
+                    "title": "Ava Davis",
                     "rating": 5,
                     "comment": "Perfect smart lock with fast fingerprint recognition.",
                     "date": "May 1, 2024",
@@ -2404,7 +1794,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Liam Brown",
+                    "title": "Liam Brown",
                     "rating": 4,
                     "comment": "Great lock but sometimes the app connection is slow.",
                     "date": "May 5, 2024",
@@ -2416,7 +1806,7 @@
         {
             "id": 41,
             "brand": "Ezvir",
-            "name": "Ezvir DB1 Smart Doorbell",
+            "title": "Ezvir DB1 Smart Doorbell",
             "price": "129.00",
             "image": "../EZVIZ-DB1-product.png",
             "stock": true,
@@ -2454,7 +1844,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Ella Wilson",
+                    "title": "Ella Wilson",
                     "rating": 5,
                     "comment": "Great doorbell with excellent video and audio quality.",
                     "date": "June 1, 2024",
@@ -2462,7 +1852,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "James Martinez",
+                    "title": "James Martinez",
                     "rating": 4,
                     "comment": "Effective doorbell but the motion detection could be improved.",
                     "date": "June 5, 2024",
@@ -2474,7 +1864,7 @@
         {
             "id": 42,
             "brand": "Ezvir",
-            "name": "Ezvir C2C Smart Camera",
+            "title": "Ezvir C2C Smart Camera",
             "price": "99.00",
             "image": "../512EoubjXhL.jpg",
             "stock": true,
@@ -2512,7 +1902,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Olivia Taylor",
+                    "title": "Olivia Taylor",
                     "rating": 5,
                     "comment": "Excellent camera with wide-angle view and clear video.",
                     "date": "July 1, 2024",
@@ -2520,7 +1910,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Noah Anderson",
+                    "title": "Noah Anderson",
                     "rating": 4,
                     "comment": "Great camera but the cloud storage subscription is expensive.",
                     "date": "July 5, 2024",
@@ -2532,7 +1922,7 @@
         {
             "id": 43,
             "brand": "Ezvir",
-            "name": "Ezvir H6 Smart Floodlight Camera",
+            "title": "Ezvir H6 Smart Floodlight Camera",
             "price": "199.00",
             "image": "../Ezviz H6 Smart Floodlight Camera.png",
             "stock": true,
@@ -2570,7 +1960,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Liam Brown",
+                    "title": "Liam Brown",
                     "rating": 5,
                     "comment": "Great floodlight camera with powerful illumination and clear video.",
                     "date": "August 1, 2024",
@@ -2578,7 +1968,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Ava Johnson",
+                    "title": "Ava Johnson",
                     "rating": 4,
                     "comment": "Effective floodlight but the setup was a bit challenging.",
                     "date": "August 5, 2024",
@@ -2590,7 +1980,7 @@
         {
             "id": 44,
             "brand": "Ezvir",
-            "name": "Ezvir Lark Series Smart Door Lock",
+            "title": "Ezvir Lark Series Smart Door Lock",
             "price": "179.00",
             "image": "../Ezviz Lark Series Smart Door Lock.jpg",
             "stock": true,
@@ -2628,7 +2018,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Ethan Lee",
+                    "title": "Ethan Lee",
                     "rating": 5,
                     "comment": "Perfect lock with fast fingerprint recognition and sleek design.",
                     "date": "September 1, 2024",
@@ -2636,7 +2026,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Emily Garcia",
+                    "title": "Emily Garcia",
                     "rating": 4,
                     "comment": "Great smart lock but the mobile app could be more intuitive.",
                     "date": "September 5, 2024",
@@ -2648,7 +2038,7 @@
         {
             "id": 45,
             "brand": "Ezvir",
-            "name": "Smart Door Lock",
+            "title": "Smart Door Lock",
             "price": "70.00",
             "image": "../PngItem_4124313.png",
             "stock": true,
@@ -2687,7 +2077,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Michael Brown",
+                    "title": "Michael Brown",
                     "rating": 4,
                     "comment": "Easy to use and reliable, but the app could be better.",
                     "date": "August 18, 2023",
@@ -2695,7 +2085,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Emily Davis",
+                    "title": "Emily Davis",
                     "rating": 5,
                     "comment": "Excellent product! Very secure and easy to install.",
                     "date": "September 10, 2023",
@@ -2703,7 +2093,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Obama",
+                    "title": "Obama",
                     "rating": 4.5,
                     "comment": "Convenient and secure, but the app needs some improvements.",
                     "date": "August 18, 2023",
@@ -2715,7 +2105,7 @@
         {
             "id": 46,
             "brand": "HIK Vision",
-            "name": "Full HD WiFi Camera",
+            "title": "Full HD WiFi Camera",
             "price": "100.00",
             "image": "../PngItem_4760952.png",
             "stock": true,
@@ -2755,7 +2145,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Jane Smith",
+                    "title": "Jane Smith",
                     "rating": 4,
                     "comment": "Great WiFi range and picture quality, but setup was a bit complicated.",
                     "date": "August 18, 2023",
@@ -2763,7 +2153,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "John Doe",
+                    "title": "John Doe",
                     "rating": 4.3,
                     "comment": "Good video quality, but the WiFi connection can be inconsistent.",
                     "date": "August 18, 2023",
@@ -2775,7 +2165,7 @@
         {
             "id": 47,
             "brand": "HIK Vision",
-            "name": "Wireless Security Camera",
+            "title": "Wireless Security Camera",
             "price": "75.00",
             "image": "../PngItem_5335637.png",
             "stock": true,
@@ -2814,7 +2204,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Jane Doe",
+                    "title": "Jane Doe",
                     "rating": 4.7,
                     "comment": "Nice coverage and easy setup, would prefer better night vision.",
                     "date": "August 18, 2023",
@@ -2822,12 +2212,12 @@
                     "avatar":""
                 },
                 {
-                    "name": "Chris Davis",
+                    "title": "Chris Davis",
                     "rating": 4.3,
                     "comment": "Decent camera with a good price, occasional connection issues."
                 },
                 {
-                    "name": "Chris Johnson",
+                    "title": "Chris Johnson",
                     "rating": 4.2,
                     "comment": "Affordable and works well, but connection stability could improve."
                 }
@@ -2836,7 +2226,7 @@
         {
             "id": 48,
             "brand": "HIK Vision",
-            "name": "Indoor PTZ Camera",
+            "title": "Indoor PTZ Camera",
             "price": "120.00",
             "image": "../de4axxxiw_0.png",
             "stock": true,
@@ -2876,7 +2266,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Robert Green",
+                    "title": "Robert Green",
                     "rating": 4.2,
                     "comment": "Great features and flexibility, but the setup is a bit complex.",
                     "date": "June 30, 2023",
@@ -2888,7 +2278,7 @@
         {
             "id": 49,
             "brand": "HIK Vision",
-            "name": "Outdoor Bullet Camera",
+            "title": "Outdoor Bullet Camera",
             "price": "110.00",
             "image": "../31oxc6fTd0L._AC_UF894,1000_QL80_.jpg",
             "stock": true,
@@ -2928,7 +2318,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Emily White",
+                    "title": "Emily White",
                     "rating": 4.3,
                     "comment": "Reliable outdoor camera with good night vision.",
                     "date": "May 15, 2023",
@@ -2940,7 +2330,7 @@
         {
             "id": 50,
             "brand": "HIK Vision",
-            "name": "Smart Doorbell Camera",
+            "title": "Smart Doorbell Camera",
             "price": "130.00",
             "image": "../images (11).jpeg",
             "stock": true,
@@ -2980,7 +2370,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Lucas Gray",
+                    "title": "Lucas Gray",
                     "rating": 4.4,
                     "comment": "Convenient and high-quality, but the app needs improvement.",
                     "date": "April 10, 2023",
@@ -2992,7 +2382,7 @@
         {
             "id": 51,
             "brand": "HIK Vision",
-            "name": "Wireless NVR System",
+            "title": "Wireless NVR System",
             "price": "200.00",
             "image": "../61i8RUdZNFL.jpg",
             "stock": true,
@@ -3032,7 +2422,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Sophia Lee",
+                    "title": "Sophia Lee",
                     "rating": 4.6,
                     "comment": "Excellent wireless system with easy setup and great support.",
                     "date": "March 5, 2023",
@@ -3044,7 +2434,7 @@
         {
             "id": 52,
             "brand": "HK Vision",
-            "name": "Ultra HDR Camera",
+            "title": "Ultra HDR Camera",
             "price": "120.00",
             "image": "../PngItem_5335869.png",
             "stock": true,
@@ -3083,7 +2473,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Anna Wilson",
+                    "title": "Anna Wilson",
                     "rating": 5,
                     "comment": "Incredible video quality and very reliable performance.",
                     "date": "August 18, 2023",
@@ -3091,7 +2481,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "John Doe",
+                    "title": "John Doe",
                     "rating": 4.7,
                     "comment": "Excellent HDR performance, but a bit pricey.",
                     "date": "August 18, 2023",
@@ -3099,7 +2489,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Alexa Johnson",
+                    "title": "Alexa Johnson",
                     "rating": 4.9,
                     "comment": "Outstanding clarity and detail, worth every penny.",
                     "date": "August 18, 2023",
@@ -3111,7 +2501,7 @@
         {
             "id": 53,
             "brand": "HIK Vision",
-            "name": "Smart Home Camera",
+            "title": "Smart Home Camera",
             "price": "140.00",
             "image": "../images (12).jpeg",
             "stock": true,
@@ -3151,7 +2541,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Oliver Adams",
+                    "title": "Oliver Adams",
                     "rating": 4.7,
                     "comment": "Perfect for smart home integration and high-quality video.",
                     "date": "January 30, 2023",
@@ -3163,7 +2553,7 @@
         {
             "id": 54,
             "brand": "HIK Vision",
-            "name": "360° Panoramic Camera",
+            "title": "360° Panoramic Camera",
             "price": "180.00",
             "image": "../images (13).jpeg",
             "stock": true,
@@ -3203,7 +2593,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Mia Davis",
+                    "title": "Mia Davis",
                     "rating": 4.8,
                     "comment": "Outstanding panoramic view and video quality.",
                     "date": "December 12, 2022",
@@ -3215,7 +2605,7 @@
         {
             "id": 55,
             "brand": "HIK Vision",
-            "name": "Baby Monitor Camera",
+            "title": "Baby Monitor Camera",
             "price": "110.00",
             "image": "../61REiQ1uZlL.jpg",
             "stock": true,
@@ -3255,7 +2645,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Charlotte Martinez",
+                    "title": "Charlotte Martinez",
                     "rating": 4.3,
                     "comment": "Great for monitoring babies with good video and audio features.",
                     "date": "November 25, 2022",
@@ -3267,7 +2657,7 @@
         {
             "id": 56,
             "brand": "HK Vision",
-            "name": "High Vision HD Camera",
+            "title": "High Vision HD Camera",
             "price": "130.00",
             "image": "../PngItem_5335451.png",
             "stock": true,
@@ -3306,7 +2696,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Liam Smith",
+                    "title": "Liam Smith",
                     "rating": 4.7,
                     "comment": "Excellent video quality and very reliable for home security.",
                     "date": "September 10, 2023",
@@ -3314,7 +2704,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Michael Brown",
+                    "title": "Michael Brown",
                     "rating": 4,
                     "comment": "Easy to use and reliable, but the app could be better.",
                     "date": "August 18, 2023",
@@ -3322,7 +2712,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Emily Davis",
+                    "title": "Emily Davis",
                     "rating": 5,
                     "comment": "Excellent product! Very secure and easy to install.",
                     "date": "September 10, 2023",
@@ -3331,474 +2721,146 @@
                 }
             ]
         },
-        {
-            "id": 57,
-            "brand": "Nest",
-            "name": "Nest Learning Thermostat",
-            "price": "249.00",
-            "image": "../GPM202200133_Thermostat_Front_StainlessSteel_3000x3000__95593.webp",
-            "stock": true,
-            "color":"black",
-            "category":"Smart Home",
-            "images": [
-                "../image1.png",
-                "../image1.png",
-                "../image1.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Nest Learning Thermostat adapts to your schedule and helps save energy by learning your temperature preferences. It can be controlled via a mobile app and integrates with other smart home systems.",
-            "SKU": "NEST-T-001",
-            "categories": [
-                "Smart Home",
-                "Thermostat"
-            ],
-            "tags": [
-                "learning thermostat",
-                "energy saving",
-                "smart home"
-            ],
-            "review": {
-                "rating": 4.7,
-                "comment": "Great energy-saving feature and easy to use."
+            {
+                "id": 57,
+                "brand": "igloohome",
+                "title": "Smart Door Lock",
+                "price": "299.00",
+                "image": "../GPM202200133_Thermostat_Front_StainlessSteel_3000x3000__95593.webp",
+                "stock": true,
+                "color": "black",
+                "category": "Smart Home",
+                "images": [
+                    "../image1.png",
+                    "../image2.png",
+                    "../image3.png"
+                ],
+                "star": "../yellowStar.svg",
+                "halfStar": "../halfStar.svg"
             },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Olivia Moore",
-                    "rating": 5,
-                    "comment": "Love the learning feature, saves a lot on energy bills!",
-                    "date": "June 15, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Liam White",
-                    "rating": 4,
-                    "comment": "Good thermostat, a bit pricey though.",
-                    "date": "June 20, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 58,
-            "brand": "Philips",
-            "name": "Philips Hue White and Color Ambiance Starter Kit",
-            "price": "199.00",
-            "image": "../046677563295-929002468705-Philips-Hue_WCA-10_5W-A19-E26-4set-US-APP.webp",
-            "stock": true,
-            "color":"black",
-            "category":"Smart Home",
-            "images": [
-                "../image2.png",
-                "../image2.png",
-                "../image2.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Philips Hue White and Color Ambiance Starter Kit lets you control your lights remotely and create custom lighting scenarios. It includes smart bulbs that can change colors and be controlled via a mobile app.",
-            "SKU": "PHILIPS-HUE-002",
-            "categories": [
-                "Smart Home",
-                "Lighting"
-            ],
-            "tags": [
-                "smart bulbs",
-                "color changing",
-                "remote control"
-            ],
-            "review": {
-                "rating": 4.8,
-                "comment": "Excellent lighting control and color options."
+            {
+                "id": 58,
+                "brand": "HIK Vision",
+                "title": "Outdoor Security Camera",
+                "price": "179.00",
+                "image": "../GPM202200133_Camera_Front_StainlessSteel_3000x3000__95594.webp",
+                "stock": true,
+                "color": "white",
+                "category": "Smart Home",
+                "images": [
+                    "../image4.png",
+                    "../image5.png",
+                    "../image6.png"
+                ],
+                "star": "../yellowStar.svg",
+                "halfStar": "../halfStar.svg"
             },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Emma Smith",
-                    "rating": 5,
-                    "comment": "Amazing color options and easy to set up.",
-                    "date": "July 5, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Aiden Lee",
-                    "rating": 4,
-                    "comment": "Great kit but the app could use some improvements.",
-                    "date": "July 10, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 59,
-            "brand": "Amazon",
-            "name": "Amazon Echo Dot (4th Gen)",
-            "price": "49.00",
-            "image": "../ZWRhMGNkOWUt._CB404330879_.jpg",
-            "stock": true,
-            "color":"black",
-            "category":"Smart Home",
-            "images": [
-                "../image3.png",
-                "../image3.png",
-                "../image3.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Amazon Echo Dot (4th Gen) is a smart speaker with Alexa that can control your smart home devices, play music, set alarms, and more. Its compact design fits into any room.",
-            "SKU": "AMAZON-ECHO-003",
-            "categories": [
-                "Smart Home",
-                "Speaker"
-            ],
-            "tags": [
-                "Alexa",
-                "smart speaker",
-                "voice control"
-            ],
-            "review": {
-                "rating": 4.6,
-                "comment": "Great sound quality and versatile functionality."
+            {
+                "id": 59,
+                "brand": "Ezvir",
+                "title": "WiFi Doorbell Camera",
+                "price": "99.00",
+                "image": "../GPM202200133_Doorbell_Front_StainlessSteel_3000x3000__95595.webp",
+                "stock": false,
+                "color": "silver",
+                "category": "Smart Home",
+                "images": [
+                    "../image7.png",
+                    "../image8.png",
+                    "../image9.png"
+                ],
+                "star": "../yellowStar.svg",
+                "halfStar": "../halfStar.svg"
             },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "James Wilson",
-                    "rating": 5,
-                    "comment": "Excellent smart speaker with great voice control.",
-                    "date": "August 1, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Isabella Brown",
-                    "rating": 4,
-                    "comment": "Very useful but could have better sound quality.",
-                    "date": "August 5, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 60,
-            "brand": "Google",
-            "name": "Google Nest Hub (2nd Gen)",
-            "price": "129.00",
-            "image": "../Google Nest Hub (2nd Gen).webp",
-            "stock": true,
-            "color":"black",
-            "category":"Smart Home",
-            "images": [
-                "../image4.png",
-                "../image4.png",
-                "../image4.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Google Nest Hub (2nd Gen) is a smart display that integrates with Google Assistant. It provides information, controls smart home devices, and can display photos and videos.",
-            "SKU": "GOOGLE-NEST-004",
-            "categories": [
-                "Smart Home",
-                "Display"
-            ],
-            "tags": [
-                "smart display",
-                "Google Assistant",
-                "home control"
-            ],
-            "review": {
-                "rating": 4.7,
-                "comment": "Versatile display with great smart home integration."
+            {
+                "id": 60,
+                "brand": "D-Link",
+                "title": "Smart Motion Sensor",
+                "price": "49.00",
+                "image": "../GPM202200133_Sensor_Front_StainlessSteel_3000x3000__95596.webp",
+                "stock": true,
+                "color": "grey",
+                "category": "Smart Home",
+                "images": [
+                    "../image10.png",
+                    "../image11.png",
+                    "../image12.png"
+                ],
+                "star": "../yellowStar.svg",
+                "halfStar": "../halfStar.svg"
             },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Sophia Johnson",
-                    "rating": 5,
-                    "comment": "Love the integration with Google Assistant.",
-                    "date": "September 1, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "William Davis",
-                    "rating": 4,
-                    "comment": "Good device but the screen could be bigger.",
-                    "date": "September 5, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 61,
-            "brand": "Arlo",
-            "name": "Arlo Pro 4 Security Camera",
-            "price": "199.00",
-            "image": "../arlo-pro-4-spotlight-2k-video-180-degree-cctv-camera.jpg",
-            "stock": true,
-            "color":"black",
-            "category":"Smart Home",
-            "images": [
-                "../image5.png",
-                "../image5.png",
-                "../image5.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Arlo Pro 4 Security Camera provides high-definition video and features night vision, motion detection, and two-way audio. It integrates with smart home systems and can be controlled via a mobile app.",
-            "SKU": "ARLO-PRO-005",
-            "categories": [
-                "Smart Home",
-                "Security"
-            ],
-            "tags": [
-                "security camera",
-                "HD video",
-                "smart home"
-            ],
-            "review": {
-                "rating": 4.8,
-                "comment": "Excellent video quality and easy to set up."
+            {
+                "id": 61,
+                "brand": "Samsung",
+                "title": "Smart Light Bulb",
+                "price": "19.00",
+                "image": "../GPM202200133_Light_Front_StainlessSteel_3000x3000__95597.webp",
+                "stock": true,
+                "color": "white",
+                "category": "Smart Home",
+                "images": [
+                    "../image13.png",
+                    "../image14.png",
+                    "../image15.png"
+                ],
+                "star": "../yellowStar.svg",
+                "halfStar": "../halfStar.svg"
             },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Emma Wilson",
-                    "rating": 5,
-                    "comment": "Great security camera with excellent features.",
-                    "date": "October 1, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Lucas Johnson",
-                    "rating": 4,
-                    "comment": "Very good camera but battery life could be improved.",
-                    "date": "October 5, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 62,
-            "brand": "Ring",
-            "name": "Ring Video Doorbell Pro 2",
-            "price": "249.00",
-            "image": "../variant-31961428492377.jpg",
-            "stock": true,
-            "color":"black",
-            "category":"Smart Home",
-            "images": [
-                "../image6.png",
-                "../image6.png",
-                "../image6.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Ring Video Doorbell Pro 2 features high-definition video, two-way audio, and advanced motion detection. It integrates with Ring's smart home system and can be controlled via the mobile app.",
-            "SKU": "RING-PRO-006",
-            "categories": [
-                "Smart Home",
-                "Doorbell"
-            ],
-            "tags": [
-                "video doorbell",
-                "HD video",
-                "motion detection"
-            ],
-            "review": {
-                "rating": 4.7,
-                "comment": "Great video quality and easy to install."
+            {
+                "id": 62,
+                "brand": "CP Plus",
+                "title": "Wireless Security Camera",
+                "price": "129.00",
+                "image": "../GPM202200133_Camera_Front_StainlessSteel_3000x3000__95598.webp",
+                "stock": false,
+                "color": "black",
+                "category": "Smart Home",
+                "images": [
+                    "../image16.png",
+                    "../image17.png",
+                    "../image18.png"
+                ],
+                "star": "../yellowStar.svg",
+                "halfStar": "../halfStar.svg"
             },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Sophia Moore",
-                    "rating": 5,
-                    "comment": "Fantastic doorbell with excellent features.",
-                    "date": "November 1, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Ethan Smith",
-                    "rating": 4,
-                    "comment": "Very good but setup was a bit tricky.",
-                    "date": "November 5, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 63,
-            "brand": "August",
-            "name": "August Smart Lock Pro",
-            "price": "279.00",
-            "image": "../August Smart Lock Pro.jpeg",
-            "stock": true,
-            "color":"black",
-            "category":"Smart Home",
-            "images": [
-                "../image7.png",
-                "../image7.png",
-                "../image7.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The August Smart Lock Pro allows you to control your door lock remotely with a mobile app. It features auto-lock, unlock, and provides security and convenience for your home.",
-            "SKU": "AUGUST-SL-007",
-            "categories": [
-                "Smart Home",
-                "Lock"
-            ],
-            "tags": [
-                "smart lock",
-                "remote control",
-                "auto-lock"
-            ],
-            "review": {
-                "rating": 4.8,
-                "comment": "Reliable and easy to use with great security features."
+            {
+                "id": 63,
+                "brand": "igloohome",
+                "title": "Smart Fingerprint Door Lock",
+                "price": "349.00",
+                "image": "../GPM202200133_Fingerprint_Lock_StainlessSteel_3000x3000__95599.webp",
+                "stock": true,
+                "color": "black",
+                "category": "Smart Home",
+                "images": [
+                    "../image19.png",
+                    "../image20.png",
+                    "../image21.png"
+                ],
+                "star": "../yellowStar.svg",
+                "halfStar": "../halfStar.svg"
             },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Emily Davis",
-                    "rating": 5,
-                    "comment": "Amazing smart lock, very secure and easy to install.",
-                    "date": "December 1, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Jacob Brown",
-                    "rating": 4,
-                    "comment": "Very good lock but installation instructions were unclear.",
-                    "date": "December 5, 2023",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
-        {
-            "id": 64,
-            "brand": "Wyze",
-            "name": "Wyze Cam V3",
-            "price": "35.00",
-            "image": "../v3.webp",
-            "stock": true,
-            "color":"black",
-            "category":"Smart Home",
-            "images": [
-                "../image8.png",
-                "../image8.png",
-                "../image8.png"
-            ],
-            "star": "../yellowStar.svg",
-            "halfStar": "../halfStar.svg",
-            "emptyStar": "../emptyStar.svg",
-            "description": "The Wyze Cam V3 is an affordable smart camera with high-definition video, night vision, and motion detection. It integrates with Wyze’s smart home ecosystem and offers easy setup and control through a mobile app.",
-            "SKU": "WYZE-CAM-008",
-            "categories": [
-                "Smart Home",
-                "Camera"
-            ],
-            "tags": [
-                "smart camera",
-                "HD video",
-                "night vision"
-            ],
-            "review": {
-                "rating": 4.5,
-                "comment": "Great value for the price with good features."
+            {
+                "id": 64,
+                "brand": "HIK Vision",
+                "title": "Indoor Smart Camera",
+                "price": "159.00",
+                "image": "../GPM202200133_Indoor_Camera_StainlessSteel_3000x3000__95600.webp",
+                "stock": true,
+                "color": "white",
+                "category": "Smart Home",
+                "images": [
+                    "../image22.png",
+                    "../image23.png",
+                    "../image24.png"
+                ],
+                "star": "../yellowStar.svg",
+                "halfStar": "../halfStar.svg"
             },
-            "sosial": [
-                {
-                    "facebook": "../face.svg",
-                    "instagram": "../instagram.svg",
-                    "twitter": "../twitter.svg"
-                }
-            ],
-            "customerReviews": [
-                {
-                    "name": "Mia Wilson",
-                    "rating": 5,
-                    "comment": "Excellent camera for the price, very reliable.",
-                    "date": "January 10, 2024",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                },
-                {
-                    "name": "Noah Clark",
-                    "rating": 4,
-                    "comment": "Good quality but setup can be confusing.",
-                    "date": "January 15, 2024",
-                    "rev":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-                    "avatar":""
-                }
-            ]
-        },
         {
             "id": 65,
             "brand": "Samsung",
-            "name": "Samsung SmartThings Hub",
+            "title": "Samsung SmartThings Hub",
             "price": "99.00",
             "image": "../614d2lQP0hL.jpg",
             "stock": true,
@@ -3836,7 +2898,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Ava Johnson",
+                    "title": "Ava Johnson",
                     "rating": 5,
                     "comment": "Fantastic hub, integrates all my smart devices.",
                     "date": "February 1, 2024",
@@ -3844,7 +2906,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Mason Martinez",
+                    "title": "Mason Martinez",
                     "rating": 4,
                     "comment": "Works well but setup was a bit complicated.",
                     "date": "February 5, 2024",
@@ -3856,7 +2918,7 @@
         {
             "id": 66,
             "brand": "Ecovacs",
-            "name": "Ecovacs Deebot T8",
+            "title": "Ecovacs Deebot T8",
             "price": "499.00",
             "image": "../054435_5395.jpg",
             "stock": true,
@@ -3894,7 +2956,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Charlotte Green",
+                    "title": "Charlotte Green",
                     "rating": 5,
                     "comment": "Great vacuum with smart features and powerful suction.",
                     "date": "March 1, 2024",
@@ -3902,7 +2964,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Daniel Thompson",
+                    "title": "Daniel Thompson",
                     "rating": 4,
                     "comment": "Very good but a bit noisy.",
                     "date": "March 5, 2024",
@@ -3914,7 +2976,7 @@
         {
             "id": 67,
             "brand": "Apple",
-            "name": "Apple HomePod Mini",
+            "title": "Apple HomePod Mini",
             "price": "99.00",
             "image": "../homepod-mini-select-spacegray-202110_FMT_WHH.jpeg",
             "stock": true,
@@ -3952,7 +3014,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Sophia Taylor",
+                    "title": "Sophia Taylor",
                     "rating": 5,
                     "comment": "Fantastic sound for its size and great Siri integration.",
                     "date": "April 1, 2024",
@@ -3960,7 +3022,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Jackson Miller",
+                    "title": "Jackson Miller",
                     "rating": 4,
                     "comment": "Good speaker, but a bit pricey.",
                     "date": "April 5, 2024",
@@ -3972,7 +3034,7 @@
         {
             "id": 68,
             "brand": "Eve",
-            "name": "Eve Energy Smart Plug",
+            "title": "Eve Energy Smart Plug",
             "price": "39.00",
             "image": "../Eve_Energy_NA_Device_shadow4 (1).png",
             "stock": true,
@@ -4010,7 +3072,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Liam Johnson",
+                    "title": "Liam Johnson",
                     "rating": 5,
                     "comment": "Works great with HomeKit and energy monitoring is very useful.",
                     "date": "May 1, 2024",
@@ -4018,7 +3080,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Olivia Garcia",
+                    "title": "Olivia Garcia",
                     "rating": 4,
                     "comment": "Good smart plug but a bit bulky.",
                     "date": "May 5, 2024",
@@ -4030,7 +3092,7 @@
         {
             "id": 69,
             "brand": "TP-Link",
-            "name": "TP-Link Kasa Smart Wi-Fi Light Bulb",
+            "title": "TP-Link Kasa Smart Wi-Fi Light Bulb",
             "price": "29.00",
             "image": "../images (1).jpeg",
             "stock": true,
@@ -4068,7 +3130,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Ethan Robinson",
+                    "title": "Ethan Robinson",
                     "rating": 5,
                     "comment": "Easy to set up and works perfectly with my smart home system.",
                     "date": "June 1, 2024",
@@ -4076,7 +3138,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Ava Martinez",
+                    "title": "Ava Martinez",
                     "rating": 4,
                     "comment": "Good bulb but app could use some improvements.",
                     "date": "June 5, 2024",
@@ -4088,7 +3150,7 @@
         {
             "id": 70,
             "brand": "SmartThings",
-            "name": "SmartThings Water Leak Sensor",
+            "title": "SmartThings Water Leak Sensor",
             "price": "45.00",
             "image": "../sg-smartthings-waterleak-sensor-gp-u999sjvlcha-136751242.avif",
             "stock": true,
@@ -4126,7 +3188,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Mason White",
+                    "title": "Mason White",
                     "rating": 5,
                     "comment": "Reliable and easy to integrate with my SmartThings system.",
                     "date": "July 1, 2024",
@@ -4134,7 +3196,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Emily Clark",
+                    "title": "Emily Clark",
                     "rating": 4,
                     "comment": "Works well but could have a louder alarm.",
                     "date": "July 5, 2024",
@@ -4146,7 +3208,7 @@
         {
             "id": 71,
             "brand": "Blink",
-            "name": "Blink Indoor Camera",
+            "title": "Blink Indoor Camera",
             "price": "79.00",
             "image": "../black-blink-security-cameras-b09n6v1fhg-64_1000.avif",
             "stock": true,
@@ -4184,7 +3246,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Aiden Wilson",
+                    "title": "Aiden Wilson",
                     "rating": 5,
                     "comment": "Great camera with clear video and good app integration.",
                     "date": "August 1, 2024",
@@ -4192,7 +3254,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Charlotte Lee",
+                    "title": "Charlotte Lee",
                     "rating": 4,
                     "comment": "Effective camera but could use better night vision.",
                     "date": "August 5, 2024",
@@ -4204,7 +3266,7 @@
         {
             "id": 72,
             "brand": "Samsung",
-            "name": "Samsung SmartCam HD Pro",
+            "title": "Samsung SmartCam HD Pro",
             "price": "150.00",
             "image": "../images (6).jpeg",
             "stock": true,
@@ -4242,7 +3304,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "John Smith",
+                    "title": "John Smith",
                     "rating": 5,
                     "comment": "Perfect camera with clear video and great features.",
                     "date": "April 15, 2024",
@@ -4250,7 +3312,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Alice Johnson",
+                    "title": "Alice Johnson",
                     "rating": 4,
                     "comment": "Good quality but a bit pricey.",
                     "date": "April 20, 2024",
@@ -4262,7 +3324,7 @@
         {
             "id": 73,
             "brand": "Samsung",
-            "name": "Samsung SmartCam HD",
+            "title": "Samsung SmartCam HD",
             "price": "120.00",
             "image": "../Pdpdefault-snh-p6410bn-600x600-C1-052016.webp",
             "stock": true,
@@ -4300,7 +3362,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Emily Davis",
+                    "title": "Emily Davis",
                     "rating": 5,
                     "comment": "Great value for the price. Works well.",
                     "date": "May 10, 2024",
@@ -4308,7 +3370,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Michael Lee",
+                    "title": "Michael Lee",
                     "rating": 4,
                     "comment": "Good performance but setup was a bit tricky.",
                     "date": "May 15, 2024",
@@ -4320,7 +3382,7 @@
         {
             "id": 74,
             "brand": "Samsung",
-            "name": "Samsung Wisenet TID-4220R",
+            "title": "Samsung Wisenet TID-4220R",
             "price": "250.00",
             "image": "../Samsung Wisenet TID-4220R.jpg",
             "stock": true,
@@ -4358,7 +3420,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Sarah Wilson",
+                    "title": "Sarah Wilson",
                     "rating": 5,
                     "comment": "Great outdoor camera with superb video quality.",
                     "date": "June 1, 2024",
@@ -4366,7 +3428,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "James Brown",
+                    "title": "James Brown",
                     "rating": 4,
                     "comment": "Good camera but installation could be easier.",
                     "date": "June 5, 2024",
@@ -4378,7 +3440,7 @@
         {
             "id": 75,
             "brand": "Samsung",
-            "name": "Samsung SmartThings Hub",
+            "title": "Samsung SmartThings Hub",
             "price": "80.00",
             "image": "../indir.jpeg",
             "stock": true,
@@ -4417,7 +3479,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Laura Smith",
+                    "title": "Laura Smith",
                     "rating": 5,
                     "comment": "Works perfectly with all my smart home devices.",
                     "date": "July 1, 2024",
@@ -4425,7 +3487,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Robert Johnson",
+                    "title": "Robert Johnson",
                     "rating": 4,
                     "comment": "Effective hub but configuration was a bit complex.",
                     "date": "July 5, 2024",
@@ -4437,7 +3499,7 @@
         {
             "id": 76,
             "brand": "Samsung",
-            "name": "Samsung SmartThings Motion Sensor",
+            "title": "Samsung SmartThings Motion Sensor",
             "price": "30.00",
             "image": "../images (7).jpeg",
             "stock": true,
@@ -4475,7 +3537,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Daniel Miller",
+                    "title": "Daniel Miller",
                     "rating": 5,
                     "comment": "Great sensor for home automation. Works as expected.",
                     "date": "August 1, 2024",
@@ -4483,7 +3545,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Sophia Martinez",
+                    "title": "Sophia Martinez",
                     "rating": 4,
                     "comment": "Good motion detection but battery life could be better.",
                     "date": "August 5, 2024",
@@ -4495,7 +3557,7 @@
         {
             "id": 77,
             "brand": "Samsung",
-            "name": "Samsung SmartThings Multipurpose Sensor",
+            "title": "Samsung SmartThings Multipurpose Sensor",
             "price": "25.00",
             "image": "../uk-smartthings-sensors-plug-f-mlt-uk-v3-gp-u999sjvlaea-frontwhite-117506290.avif",
             "stock": true,
@@ -4533,7 +3595,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Oliver Wilson",
+                    "title": "Oliver Wilson",
                     "rating": 5,
                     "comment": "Excellent multipurpose sensor. Very useful for home security.",
                     "date": "September 1, 2024",
@@ -4541,7 +3603,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Mia Davis",
+                    "title": "Mia Davis",
                     "rating": 4,
                     "comment": "Good sensor but could use better integration options.",
                     "date": "September 5, 2024",
@@ -4553,7 +3615,7 @@
         {
             "id": 78,
             "brand": "Samsung",
-            "name": "Samsung SmartThings Water Leak Sensor",
+            "title": "Samsung SmartThings Water Leak Sensor",
             "price": "40.00",
             "image": "../SmartThings_Water_Leak_Sensor_1_Front_LQ.png",
             "stock": true,
@@ -4591,7 +3653,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Ethan Brown",
+                    "title": "Ethan Brown",
                     "rating": 5,
                     "comment": "Excellent sensor for preventing water damage. Highly recommended.",
                     "date": "October 1, 2024",
@@ -4599,7 +3661,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Isabella Garcia",
+                    "title": "Isabella Garcia",
                     "rating": 4,
                     "comment": "Works well but a bit expensive.",
                     "date": "October 5, 2024",
@@ -4611,7 +3673,7 @@
         {
             "id": 79,
             "brand": "Samsung",
-            "name": "Samsung SmartThings Smart Plug",
+            "title": "Samsung SmartThings Smart Plug",
             "price": "20.00",
             "image": "../images (8).jpeg",
             "stock": true,
@@ -4649,7 +3711,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Aiden Martinez",
+                    "title": "Aiden Martinez",
                     "rating": 5,
                     "comment": "Excellent smart plug with useful features. Easy to use.",
                     "date": "November 1, 2024",
@@ -4657,7 +3719,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Olivia Anderson",
+                    "title": "Olivia Anderson",
                     "rating": 4,
                     "comment": "Works well but could use more advanced features.",
                     "date": "November 5, 2024",
@@ -4669,7 +3731,7 @@
         {
             "id": 80,
             "brand": "Samsung",
-            "name": "Samsung SmartThings Leak Sensor",
+            "title": "Samsung SmartThings Leak Sensor",
             "price": "35.00",
             "image": "../71ttpykJl0L.jpg",
             "stock": true,
@@ -4707,7 +3769,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Lucas King",
+                    "title": "Lucas King",
                     "rating": 5,
                     "comment": "Effective leak sensor. Prevented potential water damage.",
                     "date": "December 1, 2024",
@@ -4715,7 +3777,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Megan Lee",
+                    "title": "Megan Lee",
                     "rating": 4,
                     "comment": "Good performance but a bit pricey.",
                     "date": "December 5, 2024",
@@ -4727,7 +3789,7 @@
         {
             "id": 81,
             "brand": "Samsung",
-            "name": "Samsung SmartThings Indoor Camera",
+            "title": "Samsung SmartThings Indoor Camera",
             "price": "170.00",
             "image": "../images (9).jpeg",
             "stock": true,
@@ -4765,7 +3827,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Hannah Scott",
+                    "title": "Hannah Scott",
                     "rating": 5,
                     "comment": "Excellent indoor camera with reliable performance.",
                     "date": "January 1, 2025",
@@ -4773,7 +3835,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Ethan Clark",
+                    "title": "Ethan Clark",
                     "rating": 4,
                     "comment": "Good camera but the setup was a bit complicated.",
                     "date": "January 5, 2025",
@@ -4785,7 +3847,7 @@
         {
             "id": 82,
             "brand": "Nest",
-            "name": "Nest Protect",
+            "title": "Nest Protect",
             "price": "119.00",
             "image": "../714dK+uZTUL.jpg",
             "stock": true,
@@ -4823,7 +3885,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Oliver Smith",
+                    "title": "Oliver Smith",
                     "rating": 5,
                     "comment": "Very reliable and easy to set up. Love the integration with Google Home.",
                     "date": "April 10, 2024",
@@ -4831,7 +3893,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Isabella Johnson",
+                    "title": "Isabella Johnson",
                     "rating": 4,
                     "comment": "Good product but a bit expensive.",
                     "date": "April 15, 2024",
@@ -4843,7 +3905,7 @@
         {
             "id": 83,
             "brand": "Kidde",
-            "name": "Kidde Smoke & Carbon Monoxide Detector",
+            "title": "Kidde Smoke & Carbon Monoxide Detector",
             "price": "79.00",
             "image": "../61tI9Tu-zIL.jpg",
             "stock": true,
@@ -4881,7 +3943,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Emma Davis",
+                    "title": "Emma Davis",
                     "rating": 5,
                     "comment": "Great dual detector with a clear display and reliable performance.",
                     "date": "May 1, 2024",
@@ -4889,7 +3951,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Liam Martinez",
+                    "title": "Liam Martinez",
                     "rating": 4,
                     "comment": "Good product, but the alarm could be louder.",
                     "date": "May 5, 2024",
@@ -4901,7 +3963,7 @@
         {
             "id": 84,
             "brand": "First Alert",
-            "name": "First Alert Smoke Alarm with Voice Location",
+            "title": "First Alert Smoke Alarm with Voice Location",
             "price": "89.00",
             "image": "../7010LBL-247x296.jpg",
             "category":"Smoke Alarm",
@@ -4939,7 +4001,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Aiden White",
+                    "title": "Aiden White",
                     "rating": 5,
                     "comment": "Excellent alarm with helpful voice alerts for location.",
                     "date": "June 1, 2024",
@@ -4947,7 +4009,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Sophia Lee",
+                    "title": "Sophia Lee",
                     "rating": 4,
                     "comment": "Good alarm but could use a more noticeable alarm sound.",
                     "date": "June 5, 2024",
@@ -4959,7 +4021,7 @@
         {
             "id": 85,
             "brand": "Honeywell",
-            "name": "Honeywell Smart Smoke Detector",
+            "title": "Honeywell Smart Smoke Detector",
             "price": "109.00",
             "image": "../400445-4f7732bdcb9805d47c8b75adb0bbd0aa.jpg",
             "stock": true,
@@ -4997,7 +4059,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "James Brown",
+                    "title": "James Brown",
                     "rating": 5,
                     "comment": "Excellent smart smoke detector with reliable notifications.",
                     "date": "July 1, 2024",
@@ -5005,7 +4067,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Olivia Wilson",
+                    "title": "Olivia Wilson",
                     "rating": 4,
                     "comment": "Good product but setup could be simpler.",
                     "date": "July 5, 2024",
@@ -5017,7 +4079,7 @@
         {
             "id": 86,
             "brand": "Etekcity",
-            "name": "Etekcity Smoke Detector with LED Indicator",
+            "title": "Etekcity Smoke Detector with LED Indicator",
             "price": "59.00",
             "image": "../images (2).jpeg",
             "stock": true,
@@ -5054,7 +4116,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Lucas Adams",
+                    "title": "Lucas Adams",
                     "rating": 5,
                     "comment": "Great alarm with LED indicator and easy installation.",
                     "date": "August 1, 2024",
@@ -5062,7 +4124,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Mia Miller",
+                    "title": "Mia Miller",
                     "rating": 4,
                     "comment": "Effective smoke alarm but a bit noisy.",
                     "date": "August 5, 2024",
@@ -5074,7 +4136,7 @@
         {
             "id": 87,
             "brand": "Brinks",
-            "name": "Brinks Smoke and Fire Alarm",
+            "title": "Brinks Smoke and Fire Alarm",
             "price": "89.00",
             "image": "../images (3).jpeg",
             "stock": true,
@@ -5112,7 +4174,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Ethan Harris",
+                    "title": "Ethan Harris",
                     "rating": 5,
                     "comment": "Reliable smoke and fire alarm with a loud alarm.",
                     "date": "September 1, 2024",
@@ -5120,7 +4182,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Ava Roberts",
+                    "title": "Ava Roberts",
                     "rating": 4,
                     "comment": "Good alarm but installation instructions could be clearer.",
                     "date": "September 5, 2024",
@@ -5132,7 +4194,7 @@
         {
             "id": 88,
             "brand": "X-Sense",
-            "name": "X-Sense Smoke Detector",
+            "title": "X-Sense Smoke Detector",
             "price": "69.00",
             "image": "../X-Sense Smoke Detector.webp",
             "stock": true,
@@ -5169,7 +4231,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "William Green",
+                    "title": "William Green",
                     "rating": 5,
                     "comment": "Reliable smoke detector with easy installation.",
                     "date": "October 1, 2024",
@@ -5177,7 +4239,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Emma White",
+                    "title": "Emma White",
                     "rating": 4,
                     "comment": "Effective but a bit loud.",
                     "date": "October 5, 2024",
@@ -5189,7 +4251,7 @@
         {
             "id": 89,
             "brand": "Netatmo",
-            "name": "Netatmo Smart Smoke Alarm",
+            "title": "Netatmo Smart Smoke Alarm",
             "price": "129.00",
             "image": "../fm=f_jpg.jpeg",
             "stock": true,
@@ -5227,7 +4289,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Noah Scott",
+                    "title": "Noah Scott",
                     "rating": 5,
                     "comment": "Great integration with my smart home system and reliable alerts.",
                     "date": "November 1, 2024",
@@ -5235,7 +4297,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Isabella Adams",
+                    "title": "Isabella Adams",
                     "rating": 4,
                     "comment": "Good product but a bit pricey.",
                     "date": "November 5, 2024",
@@ -5247,7 +4309,7 @@
         {
             "id": 90,
             "brand": "GROVE",
-            "name": "GROVE Smoke Detector with Smart Alerts",
+            "title": "GROVE Smoke Detector with Smart Alerts",
             "price": "99.00",
             "image": "../IN0271000012.jpg",
             "category":"Smoke Alarm",
@@ -5285,7 +4347,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Lucas Turner",
+                    "title": "Lucas Turner",
                     "rating": 5,
                     "comment": "Excellent smoke detector with smart alerts and good app integration.",
                     "date": "December 1, 2024",
@@ -5293,7 +4355,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Mia Clark",
+                    "title": "Mia Clark",
                     "rating": 4,
                     "comment": "Effective but could use a more noticeable alarm sound.",
                     "date": "December 5, 2024",
@@ -5305,7 +4367,7 @@
         {
             "id": 91,
             "brand": "Arlo",
-            "name": "Arlo Smart Smoke Detector",
+            "title": "Arlo Smart Smoke Detector",
             "price": "139.00",
             "image": "../41fNXeanItL.jpg",
             "stock": true,
@@ -5343,7 +4405,7 @@
             ],
             "customerReviews": [
                 {
-                    "name": "Benjamin King",
+                    "title": "Benjamin King",
                     "rating": 5,
                     "comment": "Great smoke detector with advanced features and good integration.",
                     "date": "January 1, 2025",
@@ -5351,7 +4413,7 @@
                     "avatar":""
                 },
                 {
-                    "name": "Ava Lee",
+                    "title": "Ava Lee",
                     "rating": 4,
                     "comment": "Good performance but a bit on the expensive side.",
                     "date": "January 5, 2025",
@@ -5363,7 +4425,7 @@
         {
             "id": 92,
             "brand": "Igloohome",
-            "name": "Igloohome Smart Sensor",
+            "title": "Igloohome Smart Sensor",
             "price": "89.00",
             "image": "../Igloohome Smart Senso.avif",
             "stock": true,
@@ -5401,7 +4463,7 @@
             ],
             "customerReviews": [
               {
-                "name": "James Anderson",
+                "title": "James Anderson",
                 "rating": 5,
                 "comment": "Great sensor with reliable notifications and easy setup.",
                 "date": "July 1, 2024",
@@ -5409,7 +4471,7 @@
                 "avatar":""
               },
               {
-                "name": "Olivia Walker",
+                "title": "Olivia Walker",
                 "rating": 4,
                 "comment": "Effective sensor but the app could be more user-friendly.",
                 "date": "July 5, 2024",
@@ -5421,7 +4483,7 @@
             {
               "id": 93,
               "brand": "Igloohome",
-              "name": "Igloohome Keybox",
+              "title": "Igloohome Keybox",
               "price": "79.00",
               "image": "../Igloohome Keybox.webp",
               "stock": true,
@@ -5459,7 +4521,7 @@
               ],
               "customerReviews": [
                 {
-                  "name": "Sophia Lee",
+                  "title": "Sophia Lee",
                   "rating": 5,
                   "comment": "Excellent keybox with easy PIN entry and durable design.",
                   "date": "March 1, 2024",
@@ -5467,7 +4529,7 @@
                   "avatar":""
                 },
                 {
-                  "name": "Liam Davis",
+                  "title": "Liam Davis",
                   "rating": 4,
                   "comment": "Good keybox but could be more compact.",
                   "date": "March 5, 2024",
@@ -5479,7 +4541,7 @@
             {
               "id": 94,
               "brand": "Igloohome",
-              "name": "Igloohome Smart Padlock",
+              "title": "Igloohome Smart Padlock",
               "price": "89.00",
               "image": "../Front-SP2.jpg",
               "stock": true,
@@ -5517,7 +4579,7 @@
               ],
               "customerReviews": [
                 {
-                  "name": "Noah Wilson",
+                  "title": "Noah Wilson",
                   "rating": 5,
                   "comment": "Great padlock with reliable Bluetooth connectivity and sturdy build.",
                   "date": "April 1, 2024",
@@ -5525,7 +4587,7 @@
                   "avatar":""
                 },
                 {
-                  "name": "Ava Martinez",
+                  "title": "Ava Martinez",
                   "rating": 4,
                   "comment": "Effective padlock but the app could use some improvements.",
                   "date": "April 5, 2024",
@@ -5537,7 +4599,7 @@
             {
               "id": 95,
               "brand": "Igloohome",
-              "name": "Igloohome Smart Doorbell",
+              "title": "Igloohome Smart Doorbell",
               "price": "129.00",
               "image": "../igloohome-smart-home-bridge-1.png",
               "stock": true,
@@ -5575,7 +4637,7 @@
               ],
               "customerReviews": [
                 {
-                  "name": "Isabella Thompson",
+                  "title": "Isabella Thompson",
                   "rating": 5,
                   "comment": "Fantastic doorbell with great video quality and features.",
                   "date": "May 1, 2024",
@@ -5583,7 +4645,7 @@
                   "avatar":""
                 },
                 {
-                  "name": "Ethan White",
+                  "title": "Ethan White",
                   "rating": 4,
                   "comment": "Good doorbell but the night vision could be better.",
                   "date": "May 5, 2024",

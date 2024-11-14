@@ -80,20 +80,33 @@ function ProductTable() {
                                     )}
                                 </td>
                                 <td>
-                                    {/* Display multiple images */}
-                                    {product.images && product.images.length > 0 ? (
-                                        product.images.map((image, index) => (
-                                            <img
-                                                key={index}
-                                                src={`http://localhost:8000/storage/${image}`}
-                                                alt={`${product.title}-image-${index}`}
-                                                width="100"
-                                            />
-                                        ))
+                                    {/* Multiple images */}
+                                    {product.images ? (
+                                        (() => {
+                                            try {
+                                                const imagesArray = Array.isArray(product.images)
+                                                    ? product.images // JSON array formatında isə olduğu kimi istifadə et
+                                                    : JSON.parse(product.images); // Əks halda JSON kimi parse et
+
+                                                return imagesArray.map((image, index) => (
+                                                    <img
+                                                        key={index}
+                                                        src={`http://localhost:8000/storage/${image}`}
+                                                        alt={`${product.title}-image-${index}`}
+                                                        width="100"
+                                                    />
+                                                ));
+                                            } catch (error) {
+                                                console.error('Şəkilləri parse edərkən xəta:', error);
+                                                return <p>Yanlış şəkil formatı</p>;
+                                            }
+                                        })()
                                     ) : (
-                                        <p>No additional images</p>
+                                        <p>Əlavə şəkil yoxdur</p>
                                     )}
                                 </td>
+
+
                                 <td>
                                     {/* Categories */}
                                     {product.categories && product.categories.length > 0 ? (

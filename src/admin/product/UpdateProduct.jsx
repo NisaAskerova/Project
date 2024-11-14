@@ -17,6 +17,7 @@ function UpdateProduct() {
         tag_ids: [],
     });
 
+    const [previousProductData, setPreviousProductData] = useState(null);  // Add this to store the previous product data
     const [categories, setCategories] = useState([]);
     const [brands, setBrands] = useState([]);
     const [tags, setTags] = useState([]);
@@ -50,6 +51,9 @@ function UpdateProduct() {
                 const response = await axios.get(`http://127.0.0.1:8000/api/products/show_product/${id}`);
                 const product = response.data;
     
+                // Save the product data to compare later
+                setPreviousProductData(product);
+                
                 setFormData({
                     title: product.title,
                     description: product.description,
@@ -57,7 +61,7 @@ function UpdateProduct() {
                     has_stock: product.has_stock,
                     stock_quantity: product.stock_quantity,
                     image: null, // You can implement logic to display the existing image, if needed
-                    images: [], // You can display existing images if required
+                    images: [], // You can display existing images if needed
                     category_ids: product.category_ids,
                     brand_ids: product.brand_ids,
                     tag_ids: product.tag_ids,
@@ -69,7 +73,6 @@ function UpdateProduct() {
         };
         fetchProduct();
     }, [id]);
-    
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -110,68 +113,65 @@ function UpdateProduct() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const data = new FormData();
-        data.append('title', formData.title);
-        data.append('description', formData.description);
-        data.append('price', formData.price);
-        data.append('has_stock', formData.has_stock ? '1' : '0');
-        data.append('stock_quantity', formData.has_stock ? formData.stock_quantity : 0);
-
-        formData.category_ids.forEach(id => {
-            data.append('category_ids[]', id);
-        });
-
-        formData.brand_ids.forEach(id => {
-            data.append('brand_ids[]', id);
-        });
-
-        formData.tag_ids.forEach(id => {
-            data.append('tag_ids[]', id);
-        });
-
-        if (formData.image) {
-            data.append('image', formData.image);
+        
+        // Əgər əvvəlki və cari məlumatlar eynidirsə, heç bir dəyişiklik edilməyib
+        const hasChanges = Object.keys(formData).some(key => formData[key] !== previousProductData[key]);
+    
+        if (!hasChanges) {
+            setMessage('No changes detected.');
+            return;
         }
-
-        if (formData.images.length > 0) {
-            formData.images.forEach(image => {
-                data.append('images[]', image);
-            });
+    
+        // Yalnızca dəyişən sahələri göndərmək üçün yeni obyekt yaradırıq
+        const updatedData = {};
+        
+        // Category IDs yoxlanır
+        if (formData.category_ids && formData.category_ids.length > 0) {
+            updatedData.category_ids = formData.category_ids;
         }
-
+        
+        // Brand IDs yoxlanır
+        if (formData.brand_ids && formData.brand_ids.length > 0) {
+            updatedData.brand_ids = formData.brand_ids;
+        }
+    
+        // Tag IDs yoxlanır
+        if (formData.tag_ids && formData.tag_ids.length > 0) {
+            updatedData.tag_ids = formData.tag_ids;
+        }
+    
+        // Digər sahələri yoxlamaq və əlavə etmək
+        if (formData.name !== previousProductData.name) {
+            updatedData.name = formData.name;
+        }
+        if (formData.price !== previousProductData.price) {
+            updatedData.price = formData.price;
+        }
+        if (formData.description !== previousProductData.description) {
+            updatedData.description = formData.description;
+        }
+    
+        // Əgər heç bir dəyişiklik yoxdursa, məlumat göndərmə
+        if (Object.keys(updatedData).length === 0) {
+            setMessage('No changes detected.');
+            return;
+        }
+    
         try {
-            const response = await axios.post(`http://127.0.0.1:8000/api/products/update/${id}`, data, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            });
-
-            if (response.status === 200) {
+            // API request göndərmək
+            const response = await axios.post(`/api/products/${formData.id}`, updatedData);
+    
+            if (response.data.success) {
                 setMessage('Product updated successfully!');
-                setFormData({
-                    title: '',
-                    description: '',
-                    price: '',
-                    has_stock: false,
-                    stock_quantity: 0,
-                    image: null,
-                    images: [],
-                    category_ids: [],
-                    brand_ids: [],
-                    tag_ids: [],
-                });
-                navigate('/show_product', { replace: true });
             } else {
                 setMessage('Failed to update product.');
             }
         } catch (error) {
-            console.error('Error:', error.response ? error.response.data : error.message);
-            setMessage(error.response && error.response.data.message
-                ? error.response.data.message
-                : 'An unexpected error occurred.');
+            setMessage('An error occurred while updating the product.');
         }
     };
+    
+    
 
     return (
         <>
@@ -187,7 +187,6 @@ function UpdateProduct() {
                             name="title"
                             value={formData.title}
                             onChange={handleChange}
-                            required
                         />
                     </div>
                     <div>
@@ -196,7 +195,6 @@ function UpdateProduct() {
                             name="description"
                             value={formData.description}
                             onChange={handleChange}
-                            required
                         />
                     </div>
                     <div>
@@ -206,7 +204,6 @@ function UpdateProduct() {
                             name="price"
                             value={formData.price}
                             onChange={handleChange}
-                            required
                             step="0.01"
                         />
                     </div>
@@ -227,7 +224,6 @@ function UpdateProduct() {
                                 name="stock_quantity"
                                 value={formData.stock_quantity}
                                 onChange={handleChange}
-                                required
                             />
                         </div>
                     )}
@@ -238,7 +234,6 @@ function UpdateProduct() {
                             multiple
                             value={formData.category_ids}
                             onChange={handleChange}
-                            required
                         >
                             {categories.map((category) => (
                                 <option key={category.id} value={category.id}>
@@ -254,7 +249,6 @@ function UpdateProduct() {
                             multiple
                             value={formData.brand_ids}
                             onChange={handleChange}
-                            required
                         >
                             {brands.map((brand) => (
                                 <option key={brand.id} value={brand.id}>
@@ -270,7 +264,6 @@ function UpdateProduct() {
                             multiple
                             value={formData.tag_ids}
                             onChange={handleChange}
-                            required
                         >
                             {tags.map((tag) => (
                                 <option key={tag.id} value={tag.id}>
@@ -280,22 +273,15 @@ function UpdateProduct() {
                         </select>
                     </div>
                     <div>
-                        <label>Single Image:</label>
-                        <input
-                            type="file"
-                            name="image"
-                            onChange={handleFileChange}
-                            accept="image/*"
-                        />
+                        <label>Image:</label>
+                        <input type="file" onChange={handleFileChange} />
                     </div>
                     <div>
-                        <label>Multiple Images:</label>
+                        <label>Additional Images:</label>
                         <input
                             type="file"
-                            name="images"
-                            onChange={handleImagesChange}
-                            accept="image/*"
                             multiple
+                            onChange={handleImagesChange}
                         />
                     </div>
                     <button type="submit">Update Product</button>
