@@ -239,7 +239,15 @@ button:disabled {
 .loading {
   color: #5bc0de; /* Light blue for loading message */
 }
-
+.view-button{
+  background-color: #0f83aa;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
 /* ///////////////////////////////////////////////////////////////// */
 .site {
   width: 100%;
@@ -649,6 +657,7 @@ nav {
 #navBar {
   display: none;
 }
+
 
 /* ************************FOOTER***************************** */
 footer {

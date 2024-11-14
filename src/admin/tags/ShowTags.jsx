@@ -35,34 +35,42 @@ const ShowTags = () => {
         navigate(`/update_tag/${id}`);
     };
 
+    // Function to navigate to the show_product_tag page with selected tag ID
+    const handleViewProducts = (id) => {
+        navigate(`/show_product_tag/${id}`);
+    };
+
     return (
         <>
-        <Admin />
-        <div className='adminHero'>
-            <button className="add-button" onClick={() => navigate('/add_tag')}>Add</button>
-            <h2>Tags</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Tag Name</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tags.map((tag) => (
-                        <tr key={tag.id}>
-                            <td>{tag.id}</td>
-                            <td>{tag.name}</td>
-                            <td>
-                                <button className='edit-button' onClick={() => handleUpdate(tag.id)}>Update</button>
-                                <button className='delete-button' onClick={() => handleDelete(tag.id)}>Delete</button>
-                            </td>
+            <Admin />
+            <div className='adminHero'>
+                <button className="add-button" onClick={() => navigate('/add_tag')}>Add</button>
+                <h2>Tags</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tag Name</th>
+                            <th>Actions</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+                    <tbody>
+                        {tags.map((tag) => (
+                            <tr key={tag.id}>
+                                <td>{tag.id}</td>
+                                <td>{tag.name}</td>
+                                <td>
+                                    <button className='edit-button' onClick={() => handleUpdate(tag.id)}>Update</button>
+                                    <button className='delete-button' onClick={() => handleDelete(tag.id)}>Delete</button>
+                                    <button className="view-button" onClick={() => handleViewProducts(tag.id)}>
+                                        View Products
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </>
     );
 };

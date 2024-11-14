@@ -35,6 +35,11 @@ const ShowCategories = () => {
         navigate(`/update_categories/${id}`);
     };
 
+    const handleViewProducts = (id) => {
+        // Navigate to the page where products of the selected category will be shown
+        navigate(`/view_category_product/${id}`);
+    };
+
     return (
         <>
         <Admin/>
@@ -57,6 +62,7 @@ const ShowCategories = () => {
                             <td>
                                 <button className='edit-button' onClick={() => handleUpdate(category.id)}>Update</button>
                                 <button className='delete-button' onClick={() => handleDelete(category.id)}>Delete</button>
+                                <button className="view-button" onClick={() => handleViewProducts(category.id)}>View Products</button> {/* Yeni düymə */}
                             </td>
                         </tr>
                     ))}

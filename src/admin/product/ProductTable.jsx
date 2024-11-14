@@ -8,7 +8,6 @@ function ProductTable() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Fetch the list of products from the API
         fetch('http://localhost:8000/api/products/show')
             .then((response) => response.json())
             .then((data) => {
@@ -21,7 +20,6 @@ function ProductTable() {
             });
     }, []);
 
-    // Delete product by ID
     const deleteProduct = (id) => {
         fetch(`http://localhost:8000/api/products/delete/${id}`, {
             method: 'DELETE',

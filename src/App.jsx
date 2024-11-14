@@ -66,10 +66,12 @@ import UpdateProduct from './admin/product/UpdateProduct';
 import AddTags from './admin/tags/AddTags';
 import ShowTags from './admin/tags/ShowTags';
 import UpdateTag from './admin/tags/UpdateTag';
+import ShowProductTag from './admin/tags/ShowProductTag';
 import AddBrand from './admin/brand/AddBrand';
 import ShowBrand from './admin/brand/ShowBrand';
 import UpdateBrand from './admin/brand/UpdateBrand';
 import ShowContactUs from './admin/countact_us/ShowContactUs';
+import ViewCategoryProducts from './admin/category/ViewCategoryProducts ';
 
 export const MyContext = createContext();
 
@@ -213,9 +215,12 @@ export default function App() {
           <Route path='/update_product/:id' element={<UpdateProduct/>} />
           <Route path='/add_tag' element={<AddTags/>} />
           <Route path='/show_tags' element={<ShowTags/>} />
+          <Route path='/show_product_tag/:id' element={<ShowProductTag/>} />
           <Route path='/update_tag/:id' element={<UpdateTag/>} />
+          <Route path='/view_category_product/:id' element={<ViewCategoryProducts/>} />
           <Route path='/add_brand' element={<AddBrand/>} />
           <Route path='/show_brands' element={<ShowBrand/>} />
+          <Route path='/update_brand/:id' element={<UpdateBrand/>} />
           <Route path='/update_brand/:id' element={<UpdateBrand/>} />
           <Route path='/show_contact_us' element={<ShowContactUs/>} />
 
