@@ -30,7 +30,9 @@ const ShowBrand = () => {
             alert("Failed to delete brand. Please try again.");
         }
     };
-
+    const handleViewProducts = (id) => {
+        navigate(`/view_brand_product/${id}`);
+    };
     const handleUpdate = (id) => {
         navigate(`/update_brand/${id}`);
     };
@@ -57,6 +59,8 @@ const ShowBrand = () => {
                             <td>
                                 <button className='edit-button' onClick={() => handleUpdate(brand.id)}>Update</button>
                                 <button className='delete-button' onClick={() => handleDelete(brand.id)}>Delete</button>
+                                <button className="view-button" onClick={() => handleViewProducts(brand.id)}>View Products</button> {/* Yeni düymə */}
+
                             </td>
                         </tr>
                     ))}

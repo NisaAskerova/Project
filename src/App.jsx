@@ -72,6 +72,7 @@ import ShowBrand from './admin/brand/ShowBrand';
 import UpdateBrand from './admin/brand/UpdateBrand';
 import ShowContactUs from './admin/countact_us/ShowContactUs';
 import ViewCategoryProducts from './admin/category/ViewCategoryProducts ';
+import ViewBrandProducts from './admin/brand/ViewBrandProducts';
 
 export const MyContext = createContext();
 
@@ -222,7 +223,9 @@ export default function App() {
           <Route path='/show_brands' element={<ShowBrand/>} />
           <Route path='/update_brand/:id' element={<UpdateBrand/>} />
           <Route path='/update_brand/:id' element={<UpdateBrand/>} />
-          <Route path='/show_contact_us' element={<ShowContactUs/>} />
+          <Route path='/view_brand_product/:id' element={<ViewBrandProducts/>} />
+          <Route path='/show_contact_us/:id' element={<ShowContactUs/>} />
+       
 
 
 

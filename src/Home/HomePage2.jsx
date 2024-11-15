@@ -1,30 +1,105 @@
-import React from 'react'
-import homePage2 from '../JSON/homePage2.json'
-export default function HomePage2() {
-    return (
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-        <div id='homepage2' className='padding'>
-            <div id="homePage2Left">
-            <div id='titleDiv'>
-                <span className='same'>WHO WE ARE</span>
-                <h2>Private Security Authorised by the Police to Take Care of Your Security </h2>
-                <p className='same'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+export default function HomePage2() {
+  const [aboutUs, setAboutUs] = useState([]);
+  const [services, setServices] = useState([]);
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+
+  // Data fetch functions
+  const fetchAboutUs = async () => {
+    try {
+      const response = await axios.get('http://localhost:8000/api/who_we_are/show_main_info');
+      setAboutUs(response.data);
+    } catch (error) {
+      console.error('Error fetching About Us data:', error);
+      setMessage('Error fetching About Us data: ' + (error.response?.data.message || error.message));
+    }
+  };
+
+  const fetchServices = async () => {
+    try {
+      const response = await axios.get('http://localhost:8000/api/who_we_are/show_service_info');
+      setServices(response.data);
+    } catch (error) {
+      console.error('Error fetching services:', error);
+      setMessage('Error fetching services: ' + (error.response?.data.message || error.message));
+    }
+  };
+  useEffect(() => {
+    const fetchData = async () => {
+      await Promise.all([fetchAboutUs(), fetchServices()]);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
+  // Delete handler
+  const handleDelete = async (id, type) => {
+    if (window.confirm(`Are you sure you want to delete this ${type === 'main_info' ? 'About Us' : 'Service'}?`)) {
+      try {
+        await axios.delete(`http://localhost:8000/api/who_we_are/${type}/${id}`);
+        setMessage(`${type === 'main_info' ? 'About Us' : 'Service'} deleted successfully!`);
+        type === 'main_info' ? fetchAboutUs() : fetchServices();
+      } catch (error) {
+        console.error('Error deleting:', error);
+        setMessage('Error deleting: ' + (error.response?.data.message || error.message));
+      }
+    }
+  };
+
+  return (
+    <div id='homepage2' className='padding'>
+      <div  id="homePage2Left">
+      {loading ? <p>Loading data...</p> : null}
+      {message && <p className="message">{message}</p>}
+
+      {/* About Us Section */}
+      {aboutUs.length > 0 ? (
+        aboutUs.map((item) => (
+            <div key={item.id} id='titleDiv'>
+              <span className='same'>{item.type}</span>
+              <h2>{item.main_title}</h2>
+              <p className='same'>{item.main_description}</p>
             </div>
-                <div id="boxes">
-                {homePage2.map((e, index) => (
-                    <div className='homeBox' key={index} style={{ backgroundColor: e.color, border: e.border }}>
-                        <div className='iconsBox' style={{ backgroundColor: e.iconDivColor }}>
-                            <img src={e.icon} alt="" />
-                        </div>
-                        <h4>{e.title}</h4>
-                        <span className='same'>{e.description}</span>
-                    </div>
-                ))}
-                </div>
+        ))
+    ) : (
+        <p>No About Us data available.</p>
+    )}
+
+      <div id="boxes">
+        {services.length > 0 ? (
+          services.map((service) => (
+            <div key={service.id} className='homeBox' style={{ backgroundColor: service.color }}>
+              <div className='iconsBox'>
+                {service.icon ? (
+                  <img src={`http://localhost:8000/storage/${service.icon}`} alt="Service Icon" />
+                ) : (
+                  'No icon available'
+                )}
+              </div>
+              <h4>{service.title}</h4>
+              <span className='same'>{service.description}</span>
             </div>
-            <div id="homePage2Right">
-                <img src="..//Rectangle 34624213.png" alt="" />
+          ))
+        ) : (
+          <p>No Services data available.</p>
+        )}
+      </div>
+      </div>
+      <div id="homePage2Right">
+      {aboutUs.length > 0 ? (
+        aboutUs.map((item) => (
+            <img src={`http://localhost:8000/storage/${item.image}`} alt="Image"/>
+        
+        ))
+    ) : (
+        <p>No About Us data available.</p>
+    )}
             </div>
-        </div>
-    )
+    </div>
+  );
 }

@@ -36,7 +36,6 @@ const ShowCategories = () => {
     };
 
     const handleViewProducts = (id) => {
-        // Navigate to the page where products of the selected category will be shown
         navigate(`/view_category_product/${id}`);
     };
 

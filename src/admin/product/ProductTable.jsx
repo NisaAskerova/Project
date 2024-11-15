@@ -138,6 +138,7 @@ function ProductTable() {
                                 <td>
                                     <button className='edit-button' onClick={() => deleteProduct(product.id)}>Delete</button>
                                     <button className='delete-button' onClick={() => navigate(`/update_product/${product.id}`)}>Update</button>
+                                    <button className='edit-button' onClick={() => navigate(`/add_review/${product.id}`)}>Add Review</button>
                                 </td>
                             </tr>
                         ))}

@@ -63,8 +63,8 @@ function HeroSlider() {
               </button>
             </div>
             <div id="heroRight">
-              <img className='security' src={`http://localhost:8000/storage/${slide.heroImage}`} alt="Line Decoration" />
-              <img className='yellowLine' src={`http://localhost:8000/storage/${slide.image}`} alt="Security Guard" />
+              <img className='security' src={`http://localhost:8000/storage/${slide.image}`} alt="Line Decoration" />
+              <img className='yellowLine' src={`http://localhost:8000/storage/${slide.heroImage}`} alt="Security Guard" />
             </div>
           </div>
         </SwiperSlide>
