@@ -13,7 +13,6 @@ const ShowOurJourney = () => {
         fetchCounterData();
     }, []);
 
-    // Fetch main data
     const fetchMainData = async () => {
         try {
             const response = await axios.get('http://127.0.0.1:8000/api/our_journey/get_main_info');
@@ -23,7 +22,6 @@ const ShowOurJourney = () => {
         }
     };
 
-    // Fetch counter data
     const fetchCounterData = async () => {
         try {
             const response = await axios.get('http://127.0.0.1:8000/api/our_journey/get_counter_info');
@@ -33,7 +31,6 @@ const ShowOurJourney = () => {
         }
     };
 
-    // Handle delete for main info
     const deleteMainInfo = async (id) => {
         try {
             await axios.delete(`http://127.0.0.1:8000/api/our_journey/main_info/${id}`);
@@ -43,7 +40,6 @@ const ShowOurJourney = () => {
         }
     };
 
-    // Handle delete for counter info
     const deleteCounterInfo = async (id) => {
         try {
             await axios.delete(`http://127.0.0.1:8000/api/our_journey/counter_info/${id}`);

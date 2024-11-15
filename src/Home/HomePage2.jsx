@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 export default function HomePage2() {
   const [aboutUs, setAboutUs] = useState([]);
   const [services, setServices] = useState([]);
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
 
-  // Data fetch functions
   const fetchAboutUs = async () => {
     try {
       const response = await axios.get('http://localhost:8000/api/who_we_are/show_main_info');
@@ -37,19 +34,8 @@ export default function HomePage2() {
     fetchData();
   }, []);
 
-  // Delete handler
-  const handleDelete = async (id, type) => {
-    if (window.confirm(`Are you sure you want to delete this ${type === 'main_info' ? 'About Us' : 'Service'}?`)) {
-      try {
-        await axios.delete(`http://localhost:8000/api/who_we_are/${type}/${id}`);
-        setMessage(`${type === 'main_info' ? 'About Us' : 'Service'} deleted successfully!`);
-        type === 'main_info' ? fetchAboutUs() : fetchServices();
-      } catch (error) {
-        console.error('Error deleting:', error);
-        setMessage('Error deleting: ' + (error.response?.data.message || error.message));
-      }
-    }
-  };
+  
+
 
   return (
     <div id='homepage2' className='padding'>
