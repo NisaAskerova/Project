@@ -1,22 +1,75 @@
-import React from 'react'
-import team from '../JSON/team.json'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 export default function Team() {
+    const [mainInfo, setMainInfo] = useState([]);
+    const [serviceInfo, setServiceInfo] = useState([]);
+    const [message, setMessage] = useState('');
+
+    useEffect(() => {
+        fetchMainInfo();
+        fetchServiceInfo();
+    }, []);
+
+    const fetchMainInfo = async () => {
+        try {
+            const response = await axios.get('http://localhost:8000/api/our_team/get_main_info');
+            setMainInfo(response.data);
+        } catch (error) {
+            setMessage('Error fetching main information: ' + (error.response?.data.message || error.message));
+        }
+    };
+
+    const fetchServiceInfo = async () => {
+        try {
+            const response = await axios.get('http://localhost:8000/api/our_team/get_service_info');
+            setServiceInfo(response.data);
+        } catch (error) {
+            setMessage('Error fetching service information: ' + (error.response?.data.message || error.message));
+        }
+    };
+
     return (
-        <div id='team'>
-            <span className="same">OUR Team</span>
-            <h2 className='thick'>Meet Our Professional’s Team</h2>
-            <p className='same'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-            <div id='teamBoxes'>
-                {team.map((e, index) => (
-                    <div className='teamBox' key={index}>
-                        <img src={e.image} alt="" />
-                        <div>
-                            <h4>{e.name}</h4>
-                            <span>{e.title}</span>
+        <div id="team">
+            {/* Main Info (Baş hissə) */}
+            {mainInfo.length > 0 ? (
+                mainInfo.map((main) => (
+                    <React.Fragment key={main.id}>
+                        <span className="same">{main.type}</span>
+                        <h2 className="thick">{main.title}</h2>
+                        <p className="same">{main.description}</p>
+                    </React.Fragment>
+                ))
+            ) : (
+                <p>Loading main information...</p>
+            )}
+
+            {/* Service Info (Komanda üzvləri) */}
+            <div id="teamBoxes">
+                {serviceInfo.length > 0 ? (
+                    serviceInfo.map((member) => (
+                        <div className="teamBox" key={member.id}>
+                            {member.image ? (
+                                <img
+                                    src={`http://localhost:8000/storage/${member.image}`}
+                                    alt={member.name}
+                                />
+                            ) : (
+                                <p>No image available</p>
+                            )}
+                            <div>
+                                <h4>{member.name}</h4>
+                                <span>{member.title}</span>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))
+                ) : (
+                    <p>Loading team members...</p>
+                )}
             </div>
+
+            {/* Xətalar və Mesajlar */}
+            {message && <p className="error-message">{message}</p>}
         </div>
-    )
+    );
 }

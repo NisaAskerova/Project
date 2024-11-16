@@ -1,26 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import homeBlogs from '../JSON/homeBlogs.json';
+import axios from 'axios'; 
 
 export default function DetailHero() {
-    const { id } = useParams();
-    const [blog, setBlog] = useState(null);
+    const { id } = useParams(); 
+    const [blog, setBlog] = useState(null); 
     const navigate = useNavigate();
 
     useEffect(() => {
-        const foundBlog = homeBlogs.find(blog => blog.id === id);
-        setBlog(foundBlog);
-    }, [id]);
+        const fetchBlogDetails = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8000/api/blogs/get_blog/${id}`);
+                setBlog(response.data); 
+            } catch (error) {
+                console.error('Error fetching blog details:', error);
+            }
+        };
+
+        fetchBlogDetails(); 
+    }, [id]); 
 
     if (!blog) {
-        return <div>Loading...</div>;
+        return <div>Loading...</div>; 
     }
 
     return (
         <div
             id='bdetail'
             style={{
-                backgroundImage: `url(${blog.image})`,
+                backgroundImage: `url(http://localhost:8000/storage/${blog.image})`,
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
@@ -29,32 +37,32 @@ export default function DetailHero() {
                 justifyContent: 'center',
                 width: '100%',
                 height: '550px',
-                position: 'relative'
+                position: 'relative',
             }}
         >
-            <div className='overlay'></div> 
+            <div className='overlay'></div>
             <div className='heroTitle'>
                 <div className='navigation'>
-                    <span 
-                        onClick={() => navigate('/home')} 
+                    <span
+                        onClick={() => navigate('/home')}
                         className='navLink'
                     >
                         Home
-                    <img src="../../arrows.svg" alt="Arrow" className='arrow' />
+                        <img src="../../arrows.svg" alt="Arrow" className='arrow' />
                     </span>
-                    <span 
-                        onClick={() => navigate('/blog')} 
+                    <span
+                        onClick={() => navigate('/blog')}
                         className='navLink'
                     >
                         Blog
-                    <img src="../../arrows.svg" alt="Arrow" className='arrow' />
+                        <img src="../../arrows.svg" alt="Arrow" className='arrow' />
                     </span>
                     <span className='navLink'>
-                        {blog.title}
+                        {blog.title} 
                     </span>
                 </div>
                 <div id='blTitle'>
-                <h2 className='thick wh'>{blog.title}</h2>
+                    <h2 className='thick wh'>{blog.title}</h2> 
                 </div>
             </div>
         </div>

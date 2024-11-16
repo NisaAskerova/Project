@@ -10,7 +10,6 @@ function ShowBlog() {
     const [isSuccess, setIsSuccess] = useState(false);
     const navigate = useNavigate();
 
-    // Function to fetch regular blogs
     const fetchBlogs = async () => {
         try {
             const response = await axios.get('http://localhost:8000/api/blogs/show');
@@ -20,7 +19,6 @@ function ShowBlog() {
         }
     };
 
-    // Function to fetch main blogs
     const fetchMainBlogs = async () => {
         try {
             const response = await axios.get('http://localhost:8000/api/blogs/main_info');
@@ -30,7 +28,6 @@ function ShowBlog() {
         }
     };
 
-    // Function to handle delete action for regular blogs
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:8000/api/blogs/delete/${id}`);
@@ -43,7 +40,6 @@ function ShowBlog() {
         }
     };
 
-    // Function to handle delete action for main blogs
     const handleMainDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:8000/api/blogs/main_info/${id}`);
@@ -57,12 +53,10 @@ function ShowBlog() {
         }
     };
 
-    // Function to handle updating a blog
     const handleUpdate = (id) => {
         navigate(`/update_blog/${id}`);
     };
 
-    // Effect to fetch blogs on component mount
     useEffect(() => {
         fetchBlogs();
         fetchMainBlogs();
