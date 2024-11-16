@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { MyContext } from '../App';
@@ -6,23 +6,60 @@ import { MyContext } from '../App';
 export default function ProductPage() {
     const { setProducts, products } = useContext(MyContext);
     const [loading, setLoading] = useState(true);
-    const [shot, setShot] = useState(true);
-    const [shot2, setShot2] = useState(true);
-    const [shot3, setShot3] = useState(true);
-    const [filters, setFilters] = useState({ category: [], brand: [], minPrice: 0, maxPrice: 2000 });
+    const [filters, setFilters] = useState({
+        category: '', // Tək bir kateqoriya seçmək üçün
+        brand: '',    // Tək bir brend seçmək üçün
+        minPrice: 0,
+        maxPrice: 2000,
+        hasStock: true, // Yalnız anbarda olan məhsullar üçün süzgəc
+    });
+    const [categories, setCategories] = useState([]);
+    const [brands, setBrands] = useState([]);
     const [categoryCounts, setCategoryCounts] = useState({});
     const [brandCounts, setBrandCounts] = useState({});
+    const [shot, setShot] = useState(false);
+    const [shot2, setShot2] = useState(false);
+    const [shot3, setShot3] = useState(false);
 
+    // Məlumatları serverdən çəkmək
     const fetchData = async () => {
+        setLoading(true);
         try {
-            const response = await axios.get('/json/products.json');
-            const productsWithQuantity = response.data.products.map(product => ({
-                ...product,
-                quantity: 1 
-            }));
-            setProducts(productsWithQuantity);
+            const response = await axios.get('http://127.0.0.1:8000/api/products/filter', {
+                params: filters,
+            });
+            setProducts(response.data.products);
+
+            // Unikal kategoriyalar və brendlər çıxar
+            const uniqueCategories = [
+                ...new Set(response.data.products.flatMap((p) => p.categories.map((c) => c.name))),
+            ];
+            const uniqueBrands = [
+                ...new Set(response.data.products.flatMap((p) => p.brands.map((b) => b.name))),
+            ];
+
+            setCategories(uniqueCategories);
+            setBrands(uniqueBrands);
+
+            // Kateqoriya və brend sayını hesablamaq
+            const newCategoryCounts = uniqueCategories.reduce((acc, category) => {
+                acc[category] = response.data.products.filter((product) =>
+                    product.categories.some((c) => c.name === category)
+                ).length;
+                return acc;
+            }, {});
+
+            const newBrandCounts = uniqueBrands.reduce((acc, brand) => {
+                acc[brand] = response.data.products.filter((product) =>
+                    product.brands.some((b) => b.name === brand)
+                ).length;
+                return acc;
+            }, {});
+
+            setCategoryCounts(newCategoryCounts);
+            setBrandCounts(newBrandCounts);
         } catch (error) {
-            console.error(error);
+            console.error('Məlumat alınarkən xəta baş verdi:', error);
         } finally {
             setLoading(false);
         }
@@ -30,48 +67,36 @@ export default function ProductPage() {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [filters]);
 
-    useEffect(() => {
-        const calculateCounts = () => {
-            const categoryCounts = {};
-            const brandCounts = {};
-
-            products.forEach(product => {
-                if (categoryCounts[product.category]) {
-                    categoryCounts[product.category]++;
-                } else {
-                    categoryCounts[product.category] = 1;
-                }
-
-                if (brandCounts[product.brand]) {
-                    brandCounts[product.brand]++;
-                } else {
-                    brandCounts[product.brand] = 1;
-                }
-            });
-
-            setCategoryCounts(categoryCounts);
-            setBrandCounts(brandCounts);
-        };
-
-        calculateCounts();
-    }, [products]);
-
+    // Filter dəyişikliklərini idarə etmək
     const handleFilterChange = (filterType, value) => {
-        setFilters(prevFilters => {
-            const newFilters = { ...prevFilters };
-            newFilters[filterType] = value;
-            return newFilters;
-        });
+        setFilters((prevFilters) => ({
+            ...prevFilters,
+            [filterType]: value, // Birbaşa yeni dəyəri təyin edir
+        }));
     };
 
-    const filteredProducts = products.filter(product => {
-        const matchesCategory = filters.category.length === 0 || filters.category.includes(product.category);
-        const matchesBrand = filters.brand.length === 0 || filters.brand.includes(product.brand);
-        const matchesPrice = product.price >= filters.minPrice && product.price <= filters.maxPrice;
-        return matchesCategory && matchesBrand && matchesPrice;
-    });
+    // Filterlənmiş məhsulları hesablamaq
+    const filteredProducts = useMemo(() => {
+        return products.filter((product) => {
+            const matchesCategory =
+                !filters.category || 
+                product.categories.some((c) => c.name === filters.category);
+
+            const matchesBrand =
+                !filters.brand ||
+                product.brands.some((b) => b.name === filters.brand);
+
+            const matchesPrice =
+                parseFloat(product.price) >= filters.minPrice &&
+                parseFloat(product.price) <= filters.maxPrice;
+
+            const matchesStock = filters.hasStock ? product.has_stock : true;
+
+            return matchesCategory && matchesBrand && matchesPrice && matchesStock;
+        });
+    }, [filters, products]);
 
     const defaultDisplayProducts = filteredProducts.slice(0, 12);
 
@@ -83,7 +108,7 @@ export default function ProductPage() {
                         <h3>Categories</h3>
                         <img src="down.svg" alt="" />
                     </div>
-                    {['Carbon Alarm', 'Leakage Detector', 'Security System', 'Smart Home', 'Smoke Alarm'].map((category) => (
+                    {categories.map((category) => (
                         <div key={category} style={{ height: shot ? "100%" : "0", overflow: "hidden" }} className='filterCatecory'>
                             <div>
                                 <input type="radio" id={category} value={category} name="category" onChange={() => handleFilterChange('category', category)} />
@@ -92,7 +117,7 @@ export default function ProductPage() {
                             <span>({categoryCounts[category] || 0})</span>
                         </div>
                     ))}
-               
+
                     <div className='filterTitle ft' onClick={() => setShot2(!shot2)} >
                         <h3>Price</h3>
                         <img src="down.svg" alt="" />
@@ -119,12 +144,12 @@ export default function ProductPage() {
                             />
                         </div>
                     </div>
-               
+
                     <div className='filterTitle ft' onClick={() => setShot3(!shot3)}>
                         <h3>Brands</h3>
                         <img src="down.svg" alt="" />
                     </div>
-                    {['Igloohome', 'HIK Vision', 'Ezvir', 'D-Link', 'Samsung', 'CP Plus'].map((brand) => (
+                    {brands.map((brand) => (
                         <div style={{ height: shot3 ? "100%" : "0", overflow: "hidden" }} key={brand} className='filterCatecory'>
                             <div>
                                 <input type="radio" id={brand} value={brand} name='brand' onChange={() => handleFilterChange('brand', brand)} />
@@ -152,27 +177,34 @@ export default function ProductPage() {
                         <h2>YÜKLƏNİR...</h2>
                     ) : defaultDisplayProducts.length > 0 ? (
                         defaultDisplayProducts.map((product) => (
-                            <Link to={`/product/${product.id}`}>
-                            <div className='shopBox' key={product.id}>
-                                <div className='imgDiv'><img src={product.image} alt={product.name} /></div>
-                                <div>
-                                    <span className='same'>{product.brand}</span>
-                                    <h3>{product.name}</h3>
-                                    <span className='same'>{product.price}</span>
-                                </div>
-                                <div className='shopIcons'>
-                                    <div className='shopIcon1'>
-                                        <img src="/star2.svg" alt="Star" />
+                            <Link to={`/product/${product.id}`} key={product.id}>
+                                <div className='shopBox'>
+                                    <div className='imgDiv'><img src={`http://localhost:8000/storage/${product.image}`} alt={product.name} /></div>
+                                    <div>
+                                        {/* Brands */}
+                                    {product.brands && product.brands.length > 0 ? (
+                                        product.brands.map((brand) => (
+                                            <span className='same' key={brand.id}>{brand.name}</span>
+                                        ))
+                                    ) : (
+                                        <p>No brands</p>
+                                    )}
+                                        <h3>{product.title}</h3>
+                                        <span className='same'>{product.price}</span>
                                     </div>
-                                    <div className='shopIcon1'>
-                                        <img src="/arrow.svg" alt="Arrow" />
-                                    </div>
-                                    <div className='shopIcon1'>
+                                    <div className='shopIcons'>
+                                        <div className='shopIcon1'>
+                                            <img src="/star2.svg" alt="Star" />
+                                        </div>
+                                        <div className='shopIcon1'>
+                                            <img src="/arrow.svg" alt="Arrow" />
+                                        </div>
+                                        <div className='shopIcon1'>
                                             <img src="eye.svg" alt="Eye" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                                        </Link>
+                            </Link>
                         ))
                     ) : (
                         <h2>Mehsul tapılmadı</h2>
