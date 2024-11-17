@@ -11,13 +11,14 @@
 }
 
 /* ////////////////////////////ADMIN//////////////////////////////// */
-#nav{
+#nav {
   position: fixed;
   border: 1px solid #15140F;
   z-index: 1999;
 
 }
-#nav>a>button{
+
+#nav>a>button {
   width: 133px;
   height: 56px;
   border-radius: 10px;
@@ -38,18 +39,22 @@
   background-color: #fee747;
   padding: 90px 0 0 0;
   position: fixed;
-  z-index: 0; /* Bu dəyəri daha aşağı edin */
+  z-index: 0;
+  /* Bu dəyəri daha aşağı edin */
 }
-#dashboard>ul{
+
+#dashboard>ul {
   width: 100%;
 }
-#dashboard>ul>li{
+
+#dashboard>ul>li {
   line-height: 35px;
   padding: 0 20px;
   border: 1px solid #ddd7d7;
-  
+
 }
-.adminHero{
+
+.adminHero {
   width: 100%;
   height: 100vh;
   padding: 120px 25px 0 280px;
@@ -189,57 +194,76 @@
 }
 
 h2 {
-  color: #333; /* Dark text color for headings */
+  color: #333;
+  /* Dark text color for headings */
   margin-bottom: 15px;
 }
 
 form {
-  margin-bottom: 30px; /* Spacing between forms */
+  margin-bottom: 30px;
+  /* Spacing between forms */
 }
 
 label {
-  font-weight: bold; /* Bold labels */
+  font-weight: bold;
+  /* Bold labels */
   margin-bottom: 5px;
-  display: block; /* Make labels block elements */
+  display: block;
+  /* Make labels block elements */
 }
 
 input[type="text"],
 input[type="color"],
 textarea {
-  width: 100%; /* Full width inputs */
-  padding: 10px; /* Padding inside inputs */
-  margin-bottom: 15px; /* Spacing below inputs */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 4px; /* Rounded corners */
-  transition: border-color 0.3s; /* Smooth border color transition */
+  width: 100%;
+  /* Full width inputs */
+  padding: 10px;
+  /* Padding inside inputs */
+  margin-bottom: 15px;
+  /* Spacing below inputs */
+  border: 1px solid #ccc;
+  /* Light border */
+  border-radius: 4px;
+  /* Rounded corners */
+  transition: border-color 0.3s;
+  /* Smooth border color transition */
 }
 
 input[type="text"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  border-color: #007bff; /* Change border color on focus */
-  outline: none; /* Remove default outline */
+  border-color: #007bff;
+  /* Change border color on focus */
+  outline: none;
+  /* Remove default outline */
 }
 
 
 button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
+  /* Darker blue on hover */
 }
 
 button:disabled {
-  background-color: #c0c0c0; /* Grey color for disabled buttons */
-  cursor: not-allowed; /* Not allowed cursor for disabled buttons */
+  background-color: #c0c0c0;
+  /* Grey color for disabled buttons */
+  cursor: not-allowed;
+  /* Not allowed cursor for disabled buttons */
 }
 
 .message {
-  margin-top: 20px; /* Space above messages */
-  color: #d9534f; /* Red color for error messages */
+  margin-top: 20px;
+  /* Space above messages */
+  color: #d9534f;
+  /* Red color for error messages */
 }
 
 .loading {
-  color: #5bc0de; /* Light blue for loading message */
+  color: #5bc0de;
+  /* Light blue for loading message */
 }
-.view-button{
+
+.view-button {
   background-color: #0f83aa;
   color: white;
   border: none;
@@ -248,13 +272,16 @@ button:disabled {
   cursor: pointer;
   margin-right: 5px;
 }
+
 /* ///////////////////////////////////////////////////////////////// */
 .site {
   width: 100%;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
   background-color: #FEE747;
 }
+
 /* *****************LOGIN********************** */
 
 #login,
@@ -517,7 +544,8 @@ header {
   align-items: center;
   gap: 31px;
 }
-#information{
+
+#information {
   display: flex;
   width: 100%;
 
@@ -675,6 +703,7 @@ footer {
 #footerLeft {
   width: 35%;
 }
+
 #footerLeft>p {
   color: #15140F;
   font-size: 14px;
@@ -819,10 +848,12 @@ footer h3 {
   right: 12.5%;
 
 }
-.security{
+
+.security {
   z-index: 999;
 }
-.counterRow{
+
+.counterRow {
   display: flex;
   flex-wrap: wrap;
 }
@@ -1033,9 +1064,11 @@ footer h3 {
   flex-direction: column;
   padding: 0 30px;
 }
-.separatorLine{
-border-right: 1px solid rgba(21, 20, 15, 0.20);
+
+.separatorLine {
+  border-right: 1px solid rgba(21, 20, 15, 0.20);
 }
+
 .joyrneyBox>div {
   width: 100%;
   height: 100%;
@@ -1445,6 +1478,21 @@ strong {
   line-height: 24px;
   /* 120% */
   margin: 20px 0 10px;
+}
+
+.tagButton {
+  padding:  10px;
+  border-radius: 5px;
+  background:  #FEE747;
+  border: none;
+  cursor:pointer;
+}
+.tagCategory {
+  margin-top:20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 /* ************************************************************************ */
@@ -3727,9 +3775,11 @@ table {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 30px;
   }
-  .blogBox .fDiv>img{
+
+  .blogBox .fDiv>img {
     width: 100%;
   }
+
   /* ***************CLIENT*********************** */
   #client {
     display: none;
@@ -3777,237 +3827,293 @@ table {
   #rightContact>div>button {
     width: 100px;
   }
+
   #boxes {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 262px);
 
-      padding: 30px 40px 30px 30px;
-    
+    padding: 30px 40px 30px 30px;
+
   }
 }
 
 /* *****************************MOBILE****************** */
 @media (max-width: 710px) {
-  #headerLeft{
+  #headerLeft {
     width: 100px;
     border: 2px solid red;
   }
+
   #navBar {
     width: 50%;
     height: 120vh;
   }
-  #blogBoxes{
+
+  #blogBoxes {
     grid-template-columns: 1fr;
     /* grid-template-rows: repeat(2, 440px); */
   }
-  #footerCenter1>ul>li>a, #footerCenter2>ul>li>a,
-    #footerLeft>p,
-    .footerInfo>span,
-    #footerRight .same,
-    #end>span,
-    #leftContact>span, #leftContact>p{
+
+  #footerCenter1>ul>li>a,
+  #footerCenter2>ul>li>a,
+  #footerLeft>p,
+  .footerInfo>span,
+  #footerRight .same,
+  #end>span,
+  #leftContact>span,
+  #leftContact>p {
     font-size: 12px;
   }
-  #homeBlogs{
+
+  #homeBlogs {
     height: 260vh;
   }
-  #contactUs>div{
+
+  #contactUs>div {
     display: block;
   }
-  #leftContact>h2{
+
+  #leftContact>h2 {
     font-size: 26px;
     line-height: 30px;
   }
+
   #rightContact>div>input,
-  #rightContact>div>button{
+  #rightContact>div>button {
     height: 36px;
-  
+
   }
-  #rightContact>div>input::placeholder{
+
+  #rightContact>div>input::placeholder {
     font-size: 12px;
   }
-  #contactUs>div{
-    padding:10px 20px ;
+
+  #contactUs>div {
+    padding: 10px 20px;
 
   }
-.same,
-#heroLeft>p
-{
-  font-size: 12px;
-}
-.homeBox>h4{
-  font-size: 14px;
-}
-.thick{
-  font-size: 20px;
-}
-#journey{
-  display: block;
-  height: 100%;
-  padding-top: 10px ;
-}
-#journeyLeft{
-  width: 100%;
-}
-#journeyRight{
-  width: 100%;
-  display: block;
-}
-#heroLeft>h3{
-  font-size: 20px;
-  line-height: 30px;
-}
-#heroLeft{
-  /* width: 100%; */
-  /* background-color: #B4B2AD; */
-}
-#homeHero{
-  padding: 2%;
-}
-#workLeft{
-  gap: 10px;
-}
-#headerButtons button:first-child{
-  display: none;
-}
-#headerButtons>button{
-width: 100px;
-height: 46px;
-}
-#headerButtons{
-  width: 100%;
-}
-.headerIcon {
-  display: flex;
-  width: 36px;
-  height: 36px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  border-radius: 10px;
-  background: #FEE747;
-}
 
-.headerRight {
-  display: block;
-  align-items: center;
-  /* gap: 20px; */
-}
+  .same,
+  #heroLeft>p {
+    font-size: 12px;
+  }
 
-.contact {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.info span:nth-of-type(2){
-  font-size: 12px;
-}
-.info .same{
-  display: none;
-}
-#lg{
-  width: 100px;
-}
-.headerRight{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-}
-#heroRight{
-  display: none;
-}
-#titleDiv>h2{
-  font-size: 26px;
-  line-height: 30px;
-  
-}
-#boxes{
-  padding: 0;
-}
-.iconsBox{
-  width: 60px;
-  height: 60px;
-}
-.same{
-  line-height: 20px;
-}
-.homeBox>h4 {
-  line-height: 20px;
-}
-.serviceBox>div button{
-  width: 100px;
-  height: 46px;
-  margin-bottom: 10px;
-}
-.serviceBox>div{
-  margin-bottom: 40px;
-padding: 0 20px;
-}
-.serviceBox{
-  height: 100%;
-}
-#HomeServices{
-  height: 245vh;
-}
-.blogBox .fDiv>img{
-  width: 100%;
-}
-.workBox{
-  width: 100%;
-}
+  .homeBox>h4 {
+    font-size: 14px;
+  }
 
-.firstDivServices{
-  height: 35%;
-}
+  .thick {
+    font-size: 20px;
+  }
 
-.workiconDiv{
-  width: 50px;
-  height: 50px;
-}
-#work{
-  padding: 3% 5.5%;
-}
-#serviceBoxes{
-  margin-top: 0;
-}
-#homepage2{
-  height: 135vh;
-}
-#rightContact>div>input{
-width: 200px;
-}
-#rightContact>div>button{
-  width: 80px;
-}
-#rightContact>div{
-  width: 200px;
-}
-#rightContact{
-  display: block;
-  margin-top: 10px;
-}
-#foot{
-height: 80vh;}
-#wirkRight>img{
-  height: 70vh;
-}
-#footerLogo{
-  width: 100px;
-}
-footer{
-  width: 100%;
-  padding: 5.5%
-}
+  #journey {
+    display: block;
+    height: 100%;
+    padding-top: 10px;
+  }
 
-#foot{
-  width: 100%;
-  height: 110vh;
-}
-#footerLeft, #footerCenter1,
-#footerCenter2, #footerRight{
-  width: 50%;
-}
+  #journeyLeft {
+    width: 100%;
+  }
+
+  #journeyRight {
+    width: 100%;
+    display: block;
+  }
+
+  #heroLeft>h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  #heroLeft {
+    /* width: 100%; */
+    /* background-color: #B4B2AD; */
+  }
+
+  #homeHero {
+    padding: 2%;
+  }
+
+  #workLeft {
+    gap: 10px;
+  }
+
+  #headerButtons button:first-child {
+    display: none;
+  }
+
+  #headerButtons>button {
+    width: 100px;
+    height: 46px;
+  }
+
+  #headerButtons {
+    width: 100%;
+  }
+
+  .headerIcon {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    background: #FEE747;
+  }
+
+  .headerRight {
+    display: block;
+    align-items: center;
+    /* gap: 20px; */
+  }
+
+  .contact {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .info span:nth-of-type(2) {
+    font-size: 12px;
+  }
+
+  .info .same {
+    display: none;
+  }
+
+  #lg {
+    width: 100px;
+  }
+
+  .headerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  #heroRight {
+    display: none;
+  }
+
+  #titleDiv>h2 {
+    font-size: 26px;
+    line-height: 30px;
+
+  }
+
+  #boxes {
+    padding: 0;
+  }
+
+  .iconsBox {
+    width: 60px;
+    height: 60px;
+  }
+
+  .same {
+    line-height: 20px;
+  }
+
+  .homeBox>h4 {
+    line-height: 20px;
+  }
+
+  .serviceBox>div button {
+    width: 100px;
+    height: 46px;
+    margin-bottom: 10px;
+  }
+
+  .serviceBox>div {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .serviceBox {
+    height: 100%;
+  }
+
+  #HomeServices {
+    height: 245vh;
+  }
+
+  .blogBox .fDiv>img {
+    width: 100%;
+  }
+
+  .workBox {
+    width: 100%;
+  }
+
+  .firstDivServices {
+    height: 35%;
+  }
+
+  .workiconDiv {
+    width: 50px;
+    height: 50px;
+  }
+
+  #work {
+    padding: 3% 5.5%;
+  }
+
+  #serviceBoxes {
+    margin-top: 0;
+  }
+
+  #homepage2 {
+    height: 135vh;
+  }
+
+  #rightContact>div>input {
+    width: 200px;
+  }
+
+  #rightContact>div>button {
+    width: 80px;
+  }
+
+  #rightContact>div {
+    width: 200px;
+  }
+
+  #rightContact {
+    display: block;
+    margin-top: 10px;
+  }
+
+  #foot {
+    height: 80vh;
+  }
+
+  #wirkRight>img {
+    height: 70vh;
+  }
+
+  #footerLogo {
+    width: 100px;
+  }
+
+  footer {
+    width: 100%;
+    padding: 5.5%
+  }
+
+  #foot {
+    width: 100%;
+    height: 110vh;
+  }
+
+  #footerLeft,
+  #footerCenter1,
+  #footerCenter2,
+  #footerRight {
+    width: 50%;
+  }
 }
