@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HomePage2 from './HomePage2'
 import HomeServices from './HomeServices'
 import Work from './Work'
@@ -8,7 +8,6 @@ import HomeBlogs from './HomeBlogs'
 import Hero from './Hero'
 import Header from '../Pages/Header'
 import Footer from '../Pages/Footer'
-
 export default function Home() {
   return (
     <>

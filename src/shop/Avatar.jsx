@@ -11,7 +11,7 @@ const getRandomColor = () => {
 
 const Avatar = ({ name, avatar }) => {
     if (avatar) {
-        return <img src={avatar} alt={name} style={{ width: '50px', height: '50px' }} />;
+        return <img src={avatar} alt={name} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />;
     } else {
         return (
             <div
@@ -25,11 +25,11 @@ const Avatar = ({ name, avatar }) => {
                     justifyContent: 'center',
                     color: '#fff',
                     fontWeight: 'bold',
+                    fontSize: '20px',
                     textAlign: 'center',
-                    lineHeight: '50px'
                 }}
             >
-                {name.charAt(0)}
+                {name ? name.charAt(0).toUpperCase() : '?'}
             </div>
         );
     }

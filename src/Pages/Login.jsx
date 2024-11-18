@@ -8,40 +8,40 @@ export default function Login() {
     password: "",
   });
   const [errors, setErrors] = useState({}); 
+
   const handleSubmit = (event) => {
     event.preventDefault(); 
+
     fetch("http://127.0.0.1:8000/api/user/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     })
     .then((res) => {
-        if (!res.ok) {
-            return res.json().then(errData => {
-                throw new Error(errData.message || 'Bir hata oluştu.');
-            });
-        }
-        return res.json();
+      if (!res.ok) {
+        return res.json().then(errData => {
+          setErrors(errData.errors || { message: 'Bir hata oluştu.' });
+          throw new Error(errData.message || 'Bir hata oluştu.');
+        });
+      }
+      return res.json();
     })
     .then((data) => {
-        if (data.success) {
-            localStorage.setItem('token', data.token);
-            if (data.role === 'admin') { 
-              window.open('/admin' );
-          } else { 
-                navigate('/home'); 
-            }        
-        }
+      if (data.success) {
+        localStorage.setItem('token', data.token);            
+        if (data.role === 'admin') { 
+          window.open('/admin');
+        } else { 
+          navigate('/home'); 
+        }        
+      }
     })
     .catch((error) => {
-        setErrors({ email: error.message });
+      setErrors({ message: error.message });
     });
-
-}
-
-  
+  };
 
   return (
     <div id='login'>
@@ -79,6 +79,7 @@ export default function Login() {
                 {Array.isArray(errors.password) ? errors.password[0] : errors.password}
               </p>
             )}
+
             <div id='remember'>
               <div>
                 <input type="checkbox" name="check" id="check" />
@@ -88,6 +89,10 @@ export default function Login() {
             </div>
             <button type='submit'>Login</button>
           </form>
+
+          {errors.message && (
+            <p style={{ color: 'red' }}>{errors.message}</p>
+          )}
         </div>
       </div>
     </div>

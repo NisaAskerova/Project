@@ -1,71 +1,86 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import Avatar from './Avatar'; 
-import Comment from "./Comment";
+import Avatar from './Avatar';
+import Comment from './Comment';
+
 export default function Review() {
-    const { id } = useParams();
+    const { id } = useParams();  // Get the product ID from the URL
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    useEffect(() => {
+        fetchReviews();
+    }, [id]);
+    
     const fetchReviews = async () => {
         try {
-            const response = await axios.get('/json/products.json');
-            const product = response.data.products.find(p => p.id === parseInt(id));
-            setReviews(product ? product.customerReviews : []);
+            const response = await axios.get(`http://127.0.0.1:8000/api/reviews/${id}`);
+            setReviews(response.data);
         } catch (error) {
-            console.error(error);
+            console.error("Error fetching reviews:", error);
         } finally {
             setLoading(false);
         }
     };
-
-    useEffect(() => {
-        fetchReviews();
-    }, [id]);
-
+    
     if (loading) return <div>Loading...</div>;
 
     return (
-        <div className='review'>
+        <div className="review">
             <h3>Customer Reviews</h3>
             {reviews.length === 0 ? (
                 <div>No reviews available</div>
             ) : (
                 reviews.map((review, index) => (
-                    <div key={index} className="reviewCard" >
-                        <div className='reviewTitle'>
-                        <div>
-                            <Avatar name={review.name} avatar={review.avatar} />
-                        </div>
-                        <div>
-                            <span>{review.name}</span>
+                    <div key={index} className="reviewCard">
+                        <div className="reviewTitle">
                             <div>
-                            {Array.from({ length: review.rating }).map((_, i) => (
-                                <img key={i} src="/yellowStar.svg" alt="star" />
-                            ))}
-                            {review.rating % 1 !== 0 && <img src="/halfStar.svg" alt="half star" />}
-                            {Array.from({ length: 5 - Math.ceil(review.rating) }).map((_, i) => (
-                                <img key={i} src="/emptyStar.svg" alt="empty star" />
-                            ))}
-
+                                <Avatar name={review.user.first_name} avatar={review.user.avatar} />
+                            </div>
+                            <div>
+                                <span>{review.user.first_name} {review.user.last_name}</span>
+                                <div className='ratingReviewStars'>
+                                    {/* Display yellow stars based on the rating */}
+                                    {Array.from({ length: Math.floor(review.rating.rating) }).map((_, i) => (
+                                        <img key={i} src="/yellowStar.svg" alt="yellow star" />
+                                    ))}
+                                    {/* Display empty stars for the remaining stars to make up 5 */}
+                                    {Array.from({ length: 5 - Math.floor(review.rating.rating) }).map((_, i) => (
+                                        <img key={i} src="/blackEmptyStar.svg" alt="empty star" />
+                                    ))}
+                                </div>
                             </div>
                         </div>
-                        </div>
+
                         <div>
-                            <strong style={{marginTop:"10px", display:"block"}} >{review.comment}</strong>
-                            <p className="same">{review.rev}</p>
+                            {(() => {
+                                const sentences = review.review_comment.split('.'); // Cümlələri ayırır
+                                const firstSentence = sentences[0]; // İlk cümləni seçir
+                                const restOfComment = sentences.slice(1).join('.'); // Qalan hissələri birləşdirir
+                                return (
+                                    <p className="same">
+                                        <strong style={{ display: 'block' }}>{firstSentence}.</strong>
+                                        {restOfComment}
+                                    </p>
+                                );
+                            })()}
                         </div>
-                        <div className="reviewDate"> 
+
+                        <div className="reviewDate">
                             <span className="gray">Review by </span>
-                            <span>Secura</span>
-                            <span className='gray'>Posted on</span>
-                            <span>{review.date}</span>
+                            <span>Security</span>
+                            <span className="gray">Posted on </span>
+                            <span>{new Date(review.review_date).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric',
+                            })}</span>
                         </div>
                     </div>
                 ))
             )}
-            <Comment/>
+            {/* Integrating the Comment component */}
+            <Comment productId={id} />
         </div>
     );
 }

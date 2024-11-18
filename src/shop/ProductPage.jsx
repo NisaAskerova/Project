@@ -12,19 +12,16 @@ export default function ProductPage() {
         minPrice: 0,
         maxPrice: 2000,
         hasStock: true, // Yalnız anbarda olan məhsullar üçün süzgəc
-        tag: '',        // Tək bir tag seçmək üçün
     });
     const [categories, setCategories] = useState([]);
     const [brands, setBrands] = useState([]);
-    const [tags, setTags] = useState([]);
     const [categoryCounts, setCategoryCounts] = useState({});
     const [brandCounts, setBrandCounts] = useState({});
-    const [tagCounts, setTagCounts] = useState({});
     const [shot, setShot] = useState(false);
     const [shot2, setShot2] = useState(false);
     const [shot3, setShot3] = useState(false);
-    const [shot4, setShot4] = useState(false); // Tag üçün yeni shot state
 
+    // Məlumatları serverdən çəkmək
     const fetchData = async () => {
         setLoading(true);
         try {
@@ -33,20 +30,18 @@ export default function ProductPage() {
             });
             setProducts(response.data.products);
 
+            // Unikal kategoriyalar və brendlər çıxar
             const uniqueCategories = [
                 ...new Set(response.data.products.flatMap((p) => p.categories.map((c) => c.name))),
             ];
             const uniqueBrands = [
                 ...new Set(response.data.products.flatMap((p) => p.brands.map((b) => b.name))),
             ];
-            const uniqueTags = [
-                ...new Set(response.data.products.flatMap((p) => p.tags.map((t) => t.name))),
-            ];
 
             setCategories(uniqueCategories);
             setBrands(uniqueBrands);
-            setTags(uniqueTags);
 
+            // Kateqoriya və brend sayını hesablamaq
             const newCategoryCounts = uniqueCategories.reduce((acc, category) => {
                 acc[category] = response.data.products.filter((product) =>
                     product.categories.some((c) => c.name === category)
@@ -61,16 +56,8 @@ export default function ProductPage() {
                 return acc;
             }, {});
 
-            const newTagCounts = uniqueTags.reduce((acc, tag) => {
-                acc[tag] = response.data.products.filter((product) =>
-                    product.tags.some((t) => t.name === tag)
-                ).length;
-                return acc;
-            }, {});
-
             setCategoryCounts(newCategoryCounts);
             setBrandCounts(newBrandCounts);
-            setTagCounts(newTagCounts);
         } catch (error) {
             console.error('Məlumat alınarkən xəta baş verdi:', error);
         } finally {
@@ -82,17 +69,19 @@ export default function ProductPage() {
         fetchData();
     }, [filters]);
 
+    // Filter dəyişikliklərini idarə etmək
     const handleFilterChange = (filterType, value) => {
         setFilters((prevFilters) => ({
             ...prevFilters,
-            [filterType]: value,
+            [filterType]: value, // Birbaşa yeni dəyəri təyin edir
         }));
     };
 
+    // Filterlənmiş məhsulları hesablamaq
     const filteredProducts = useMemo(() => {
         return products.filter((product) => {
             const matchesCategory =
-                !filters.category ||
+                !filters.category || 
                 product.categories.some((c) => c.name === filters.category);
 
             const matchesBrand =
@@ -105,11 +94,7 @@ export default function ProductPage() {
 
             const matchesStock = filters.hasStock ? product.has_stock : true;
 
-            const matchesTag =
-                !filters.tag ||
-                product.tags.some((t) => t.name === filters.tag);
-
-            return matchesCategory && matchesBrand && matchesPrice && matchesStock && matchesTag;
+            return matchesCategory && matchesBrand && matchesPrice && matchesStock;
         });
     }, [filters, products]);
 
@@ -119,8 +104,7 @@ export default function ProductPage() {
         <div id='productPage'>
             <div className='filterProduct'>
                 <div className='filter-section'>
-                    {/* Categories Filter */}
-                    <div className='filterTitle' onClick={() => setShot(!shot)}>
+                    <div className='filterTitle ' onClick={() => setShot(!shot)}>
                         <h3>Categories</h3>
                         <img src="down.svg" alt="" />
                     </div>
@@ -134,7 +118,6 @@ export default function ProductPage() {
                         </div>
                     ))}
 
-                    {/* Price Filter */}
                     <div className='filterTitle ft' onClick={() => setShot2(!shot2)} >
                         <h3>Price</h3>
                         <img src="down.svg" alt="" />
@@ -162,7 +145,6 @@ export default function ProductPage() {
                         </div>
                     </div>
 
-                    {/* Brands Filter */}
                     <div className='filterTitle ft' onClick={() => setShot3(!shot3)}>
                         <h3>Brands</h3>
                         <img src="down.svg" alt="" />
@@ -176,23 +158,6 @@ export default function ProductPage() {
                             <span>({brandCounts[brand] || 0})</span>
                         </div>
                     ))}
-
-                    {/* Tags Filter */}
-                    <div className='filterTitle ft' onClick={() => setShot4(!shot4)}>
-                        <h3>Tags</h3>
-                        <img src="down.svg" alt="" />
-                    </div>
-                    <div className='tagCategory'>
-                    {tags.map((tag) => (
-                        <div style={{ height: shot4 ? "100%" : "0", overflow: "hidden" }} key={tag}>
-                          
-                                <div className='tagButton' onClick={() => handleFilterChange('tag', tag)}>
-                                    {tag}
-                                </div>
-            
-                        </div>
-                    ))}
-</div>
                 </div>
             </div>
             <div id='products'>
@@ -216,21 +181,33 @@ export default function ProductPage() {
                                 <div className='shopBox'>
                                     <div className='imgDiv'><img src={`http://localhost:8000/storage/${product.image}`} alt={product.name} /></div>
                                     <div>
-                                        {product.brands && product.brands.length > 0 ? (
-                                            product.brands.map((brand) => (
-                                                <span className='sameBrand' key={brand.name}>{brand.name}</span>
-                                            ))
-                                        ) : (
-                                            <span>No brand</span>
-                                        )}
+                                        {/* Brands */}
+                                    {product.brands && product.brands.length > 0 ? (
+                                        product.brands.map((brand) => (
+                                            <span className='same' key={brand.id}>{brand.name}</span>
+                                        ))
+                                    ) : (
+                                        <p>No brands</p>
+                                    )}
+                                        <h3>{product.title}</h3>
+                                        <span className='same'>{product.price}</span>
                                     </div>
-                                    <div><span>{product.name}</span></div>
-                                    <div><span>${product.price}</span></div>
+                                    <div className='shopIcons'>
+                                        <div className='shopIcon1'>
+                                            <img src="/star2.svg" alt="Star" />
+                                        </div>
+                                        <div className='shopIcon1'>
+                                            <img src="/arrow.svg" alt="Arrow" />
+                                        </div>
+                                        <div className='shopIcon1'>
+                                            <img src="eye.svg" alt="Eye" />
+                                        </div>
+                                    </div>
                                 </div>
                             </Link>
                         ))
                     ) : (
-                        <div><span>No products found</span></div>
+                        <h2>Mehsul tapılmadı</h2>
                     )}
                 </div>
             </div>

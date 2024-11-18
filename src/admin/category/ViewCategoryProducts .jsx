@@ -12,7 +12,6 @@ const ViewCategoryProducts = () => {
         const fetchCategoryProducts = async () => {
             try {
                 const response = await axios.get(`http://127.0.0.1:8000/api/categories/${id}/products`);
-                console.log(response.data); // Serverdən gələn məlumatları yoxlayın
                 setCategoryProducts(response.data);
             } catch (error) {
                 console.error("Error fetching products for Category:", error);

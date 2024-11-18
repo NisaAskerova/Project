@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
@@ -7,6 +7,7 @@ import About from './about/About';
 import Services from './sevices/Services';
 import Blog from './blog/Blog';
 import Shop from './shop/Shop';
+import Comment from './shop/Comment';
 import ProductDetail from './shop/ProductDetail';
 import Description from './shop/Description';
 import Review from './shop/Review';
@@ -83,7 +84,7 @@ export default function App() {
   const [quantities, setQuantities] = useState({});
   const [activeStep, setActiveStep] = useState('');
   const [orderCart, setOrderCart] = useState(false);
-
+  
   const updateQuantity = (productId, newQuantity) => {
     setQuantities(prevQuantities => ({
       ...prevQuantities,
@@ -224,6 +225,7 @@ export default function App() {
           <Route path='/update_brand/:id' element={<UpdateBrand/>} />
           <Route path='/view_brand_product/:id' element={<ViewBrandProducts/>} />
           <Route path='/show_contact_us/:id' element={<ShowContactUs/>} />
+          <Route path='/products/:productId' element={<Comment/>} />
        
 
 

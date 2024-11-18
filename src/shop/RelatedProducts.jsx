@@ -49,7 +49,7 @@ export default function RelatedProducts() {
                 {products.length > 0 ? (
                     products.map(product => (
                         <Link to={`/product/${product.id}`} key={product.id}>
-                            { console.log(product)}
+                            {/* { console.log(product)} */}
                             <div className="shopBox">
                                 <div className='imgDiv'>
                                     <img src={`http://localhost:8000/storage/${product.image}`} alt={product.name} />

@@ -204,7 +204,7 @@ form {
   /* Spacing between forms */
 }
 
-label {
+.adminHero label {
   font-weight: bold;
   /* Bold labels */
   margin-bottom: 5px;
@@ -212,9 +212,7 @@ label {
   /* Make labels block elements */
 }
 
-input[type="text"],
-input[type="color"],
-textarea {
+.adminHero input, .adminHero textarea {
   width: 100%;
   /* Full width inputs */
   padding: 10px;
@@ -239,10 +237,7 @@ textarea:focus {
 }
 
 
-button:hover {
-  background-color: #0056b3;
-  /* Darker blue on hover */
-}
+
 
 button:disabled {
   background-color: #c0c0c0;
@@ -2565,7 +2560,7 @@ tr td:first-of-type,
   justify-content: flex-start;
 }
 
-#reviewForm>form>label {
+#reviewForm>label {
   color: #15140F;
   font-size: 12px;
   font-style: normal;
@@ -2574,8 +2569,8 @@ tr td:first-of-type,
   margin-top: 20px;
 }
 
-#reviewForm>form>input,
-#reviewForm>form>textarea {
+#reviewForm>input,
+#reviewForm>textarea {
   width: 100%;
   height: 56px;
   padding: 16px;
@@ -2584,12 +2579,13 @@ tr td:first-of-type,
   outline: none;
 }
 
-#reviewForm>form>textarea {
+#reviewForm>textarea {
   height: 104px;
   resize: none;
 }
 
-#reviewForm>form>input::placeholder {
+#reviewForm>input::placeholder,
+#reviewForm>textarea::placeholder {
   color: rgba(180, 178, 173, 0.80);
   font-size: 16px;
   font-style: normal;
@@ -2613,7 +2609,18 @@ tr td:first-of-type,
   gap: 30px;
   margin-top: 50px;
 }
-
+.productTitle{
+  color:  #15140F;
+font-family: Epilogue;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+/* line-height: 30px; 187.5% */
+}
+.ratingReviewStars{
+  display: flex;
+  align-items: center;
+}
 /* ******************ProductCategories***************************** */
 .filterProduct {
   width: 23%;

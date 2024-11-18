@@ -30,6 +30,7 @@ export default function Product() {
     try {
       const response = await axios.get(`http://127.0.0.1:8000/api/products/show_product/${id}`);
       const apiProduct = response.data;
+      
       const formattedProduct = {
         id: apiProduct.id,
         name: apiProduct.title,
@@ -39,17 +40,22 @@ export default function Product() {
         categories: apiProduct.categories?.map((cat) => cat.name) || [],
         description: apiProduct.description,
         stock: apiProduct.has_stock,
-        review: {
-          rating: apiProduct.review?.rating || 0,
-          customerReviews: apiProduct.review?.comments || [],
+        reviews: {
+          rating: apiProduct.reviews?.[0]?.rating || 0,  // Assuming the first rating is the overall rating.
+          customerReviews: apiProduct.reviews || [],
         },
+        ratings: apiProduct.ratings || [],
         sosial: apiProduct.social_links || [], 
         SKU: apiProduct.sku || 'N/A', 
         tags: apiProduct.tags || [], 
         images: apiProduct.images || [], 
       };
 
-      setProduct(formattedProduct);
+      // Calculate the average rating if ratings exist
+      const totalRating = formattedProduct.ratings.reduce((acc, rating) => acc + rating.rating, 0);
+      const averageRating = formattedProduct.ratings.length > 0 ? (totalRating / formattedProduct.ratings.length).toFixed(1) : 0;
+
+      setProduct({ ...formattedProduct, averageRating });
       setLocalQuantity(id, 1);
     } catch (error) {
       console.error(error);
@@ -66,8 +72,8 @@ export default function Product() {
   if (loading) return <div>Loading...</div>;
   if (!product) return <div>Product not found</div>;
 
-  const fullStars = Math.floor(product.review.rating);
-  const hasHalfStar = product.review.rating % 1 !== 0;
+  const fullStars = Math.floor(product.averageRating);
+  const hasHalfStar = product.averageRating % 1 !== 0;
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
@@ -85,7 +91,6 @@ export default function Product() {
             ))}
           </div>
         </div>
-
         <div id="rightProduct">
           <div>
             <div id='stockDiv'>
@@ -99,21 +104,21 @@ export default function Product() {
             <h3 className='productName'>{product.name}</h3>
             <div className='productRating'>
               {Array.from({ length: fullStars }).map((_, i) => (
-                <img key={i} src={product.star} alt="star" />
+                <img key={i} src='/yellowStar.svg' alt="star" />
               ))}
-              {hasHalfStar && <img src={product.halfStar} alt="half star" />}
+              {hasHalfStar && <img src='/halfDtar.svg' alt="half star" />}
               {Array.from({ length: emptyStars }).map((_, i) => (
-                <img key={i} src={product.emptyStar} alt="empty star" />
+                <img key={i} src='/emptyStar.svg' alt="empty star" />
               ))}
               <div>
-                <span>{product.review.rating}</span>
-                <span>({product.review.customerReviews.length} Reviews)</span>
+                <span>{product.averageRating}</span>
+                <span>({product.reviews.customerReviews.length} Reviews)</span>
               </div>
             </div>
           </div>
           <span className='productPrice'>${product.price}</span>
           <div className='productDescription'>
-            <p className='same'>{product.description.slice(0, 200)}...</p>
+            <p className='same'>{product.description}...</p>
           </div>
           <table>
             <tbody>
@@ -124,7 +129,7 @@ export default function Product() {
               <tr>
                 <td><h4>Categories</h4></td>
                 <td>
-                  {product.categories && product.categories.length > 0 ? (
+                  {product.categories.length > 0 ? (
                     product.categories.map((category, index) => (
                       <span key={index}>
                         {category}
@@ -132,23 +137,22 @@ export default function Product() {
                       </span>
                     ))
                   ) : (
-                    <span>No categories</span> 
+                    <span>No categories</span>
                   )}
                 </td>
               </tr>
-
               <tr>
                 <td><h4>Tags</h4></td>
                 <td>
-                  {product.tags && product.tags.length > 0 ? (
+                  {product.tags.length > 0 ? (
                     product.tags.map((tag, index) => (
                       <span key={index}>
                         {tag.name || tag}
-                        {index < product.tags.length - 1 && ', '} 
+                        {index < product.tags.length - 1 && ', '}
                       </span>
                     ))
                   ) : (
-                    <span>No tags</span> 
+                    <span>No tags</span>
                   )}
                 </td>
               </tr>
@@ -167,16 +171,17 @@ export default function Product() {
           </div>
           <div id='shereMedia'>
             <h3 id='shere'>Share</h3>
-            {product.sosial?.map((e, i) => (
-              <div className='media' key={i}>
-                <div>{e.facebook && <img src={e.facebook} alt="Facebook" />}</div>
-                <div>{e.instagram && <img src={e.instagram} alt="Instagram" />}</div>
-                <div>{e.twitter && <img src={e.twitter} alt="Twitter" />}</div>
+            
+              <div className='media' >
+                <div><img src='/face.svg' alt="Facebook" /></div>
+                <div> <img src='/instagram.svg' alt="Instagram" /></div>
+                <div> <img src='/twitter.svg' alt="Twitter" /></div>
               </div>
-            ))}
+          
           </div>
         </div>
       </div>
+
       <div id='comments'>
         <div>
           <NavLink to="description" className={({ isActive }) => (isActive ? 'active-link' : '')}>
@@ -190,7 +195,6 @@ export default function Product() {
         </div>
       </div>
 
-      {/* Provide product context here */}
       <Outlet context={{ product }} />
     </div>
   );
