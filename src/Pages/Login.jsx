@@ -30,12 +30,15 @@ export default function Login() {
     })
     .then((data) => {
       if (data.success) {
-        localStorage.setItem('token', data.token);            
+        localStorage.setItem('token', data.token);  // Tokeni localStorage-a qeyd et
+        localStorage.setItem('role', data.role);    // Rolü də qeyd et
+
+        // Rola görə yönləndirmə
         if (data.role === 'admin') { 
-          window.open('/admin');
+          window.location.href = '/admin'; // Admin səhifəsinə yönləndir
         } else { 
-          navigate('/home'); 
-        }        
+          window.location.href = '/home'; // Digər istifadəçilər üçün ana səhifəyə yönləndir
+        }
       }
     })
     .catch((error) => {

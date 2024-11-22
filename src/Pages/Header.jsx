@@ -6,37 +6,37 @@ export default function Header() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
   const { cart, setVisibleCard } = useContext(MyContext);
   const navigate = useNavigate();
-  const token = localStorage.getItem("token");
-  const [user, setUser] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+  // const token = localStorage.getItem("token");
+  // const [user, setUser] = useState({});
+  // const [isLoading, setIsLoading] = useState(true);
 
-  if (!token) {
-    return (window.location.href = "/login");
-  }
+  // if (!token) {
+  //   return (window.location.href = "/login");
+  // }
 
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/me", {
-      headers: {
-        Authorization: `Bearer ${token}`,
+  // useEffect(() => {
+  //   fetch("http://127.0.0.1:8000/api/me", {
+  //     headers: {
+  //       Authorization: `Bearer ${token}`,
         
-      },
-    })
+  //     },
+  //   })
   
     
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.status) {
-          setUser(data.data);
-        } else {
-          return (window.location.href = "/login");
-        }
-        setIsLoading(false);
-      });
-  }, []);
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if (data.status) {
+  //         setUser(data.data);
+  //       } else {
+  //         return (window.location.href = "/login");
+  //       }
+  //       setIsLoading(false);
+  //     });
+  // }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
   const handleLogout = () => {
     // Tokeni silirik və istifadəçini login səhifəsinə yönləndiririk
     localStorage.removeItem('token');

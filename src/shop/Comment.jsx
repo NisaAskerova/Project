@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 
 export default function Comment({ addReview, productId }) {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
-  const [comment, setComment] = useState(""); // Şərh mətni
-  const [user, setUser] = useState(null); // İstifadəçi məlumatları
-  const [isLoading, setIsLoading] = useState(true); // Yükləmə vəziyyəti
-  const [successMessage, setSuccessMessage] = useState(""); // Uğur mesajı
+  const [comment, setComment] = useState(""); 
+  const [user, setUser] = useState(null); 
+  const [isLoading, setIsLoading] = useState(true);
+  const [successMessage, setSuccessMessage] = useState(""); 
 
-  const authToken = localStorage.getItem("token"); // Tokeni localStorage-dən alırıq
+  const authToken = localStorage.getItem("token"); 
+  const navigate = useNavigate(); // Initialize navigate function
 
-  // Tokeni yoxla və istifadəçi məlumatlarını əldə et
   useEffect(() => {
     if (!authToken) {
-      window.location.href = "/login"; // Token yoxdursa, loginə yönləndir
+      window.location.href = "/login"; 
       return;
     }
 
@@ -27,22 +28,21 @@ export default function Comment({ addReview, productId }) {
         });
 
         if (response.data.status) {
-          setUser(response.data.data); // İstifadəçi məlumatlarını saxla
+          setUser(response.data.data);
         } else {
-          window.location.href = "/login"; // Autentifikasiyadan keçməyibsə, loginə yönləndir
+          window.location.href = "/login";
         }
       } catch (error) {
         console.error("Error fetching user data:", error);
         window.location.href = "/login";
       } finally {
-        setIsLoading(false); // Yükləmə vəziyyətini bitir
+        setIsLoading(false); 
       }
     };
 
     fetchUser();
   }, [authToken]);
 
-  // Reytinq funksiyası
   const handleRating = (count) => {
     setRating(count);
   };
@@ -55,7 +55,6 @@ export default function Comment({ addReview, productId }) {
     { count: 5, label: [1, 2, 3, 4, 5] },
   ];
 
-  // Şərh əlavə etmə funksiyası
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -78,18 +77,20 @@ export default function Comment({ addReview, productId }) {
         }
       );
 
-      // Şərhi UI-ya əlavə et
-      addReview(response.data.review); // Add review to the UI
-      setRating(0); // Reset rating
-      setComment(""); // Reset comment
-      setSuccessMessage("Your review has been successfully added!"); // Success message
+      addReview(response.data.review); 
+      setRating(0); 
+      setComment(""); 
+      setSuccessMessage("Your review has been successfully added!"); 
+
+      // Redirect to the review page after successful submission
+      navigate(`/reviews/${productId}`); // Update this URL to match your actual review page route
     } catch (error) {
       console.error("Error submitting review:", error.response?.data || error.message);
     }
   };
 
   if (isLoading) {
-    return <div>Loading...</div>; // Yükləmə zamanı göstərilən mesaj
+    return <div>Loading...</div>;
   }
 
   return (
@@ -123,7 +124,6 @@ export default function Comment({ addReview, productId }) {
         ))}
       </div>
 
-      {/* Form olmadan yalnız React-controlled submit button */}
       <label htmlFor="name">Name</label>
       <input
         className='same'
@@ -151,7 +151,6 @@ export default function Comment({ addReview, productId }) {
       ></textarea>
       <button type="submit" onClick={handleSubmit}>Submit Review</button>
 
-      {/* Müvəffəqiyyət mesajı */}
       {successMessage && <div className="successMessage">{successMessage}</div>}
     </div>
   );

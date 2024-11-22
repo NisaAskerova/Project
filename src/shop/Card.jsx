@@ -19,7 +19,7 @@ export default function Card() {
 
   return (
     <div id='cardWrapper' onClick={() => setVisibleCard(false)}>
-      <div id='card' onClick={(e) => e.stopPropagation()}>
+      {/* <div id='card' onClick={(e) => e.stopPropagation()}>
         <div id='productsCard' >
           <span className='same'>You have <h3>{cart.length} items</h3> in your cart</span>
           {cart.map((product) => (
@@ -48,7 +48,7 @@ export default function Card() {
           <button className='same'>View Cart</button>
           <button className='same' onClick={handleCheckout}>Checkout</button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -10,58 +10,74 @@ export default function Product() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const addCart = (product) => {
-    if (!product.stock) {
-      toast.error('Product is out of stock');
+  // Token and user ID from localStorage
+  const token = localStorage.getItem('token');
+  const userId = localStorage.getItem('user_id');
+  const headers = token ? { Authorization: `Bearer ${token}` } : {}; 
+
+  // Add product to cart
+  const addCart = async () => {
+    if (!userId) {
+      toast.error('User is not logged in');
       return;
     }
 
-    const existingProduct = cart.find((prd) => prd.id === product.id);
-    if (existingProduct) {
-      toast.error('Product is already in the cart');
+    if (!product?.id) {
+      console.error('Product ID is missing');
       return;
-    } else {
-      setCart([...cart, { ...product, quantity: localQuantity[id] || 1 }]);
+    }
+
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/basket/store', {
+        product_id: product.id,
+        user_id: userId,
+        quantity: 1,
+      }, { headers });
+
+      setCart((prevCart) => [...prevCart, response.data.product]);
       toast.success('Product added to cart');
+    } catch (error) {
+      console.error('Error adding product to cart:', error);
+      toast.error('Failed to add product to cart');
     }
   };
 
+  // Fetch product data from API
   const fetchData = async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/products/show_product/${id}`);
-      const apiProduct = response.data;
-      
-      const formattedProduct = {
-        id: apiProduct.id,
-        name: apiProduct.title,
-        price: apiProduct.price,
-        image: `http://localhost:8000/storage/${apiProduct.image}`,
-        brand: apiProduct.brands?.[0]?.name || 'No Brand',
-        categories: apiProduct.categories?.map((cat) => cat.name) || [],
-        description: apiProduct.description,
-        stock: apiProduct.has_stock,
-        reviews: {
-          rating: apiProduct.reviews?.[0]?.rating || 0,  // Assuming the first rating is the overall rating.
-          customerReviews: apiProduct.reviews || [],
-        },
-        ratings: apiProduct.ratings || [],
-        sosial: apiProduct.social_links || [], 
-        SKU: apiProduct.sku || 'N/A', 
-        tags: apiProduct.tags || [], 
-        images: apiProduct.images || [], 
-      };
+      const response = await axios.get(`http://127.0.0.1:8000/api/products/show_product/${id}`, { headers });
 
-      // Calculate the average rating if ratings exist
-      const totalRating = formattedProduct.ratings.reduce((acc, rating) => acc + rating.rating, 0);
-      const averageRating = formattedProduct.ratings.length > 0 ? (totalRating / formattedProduct.ratings.length).toFixed(1) : 0;
+      if (response.status === 200) {
+        const apiProduct = response.data;
+        const formattedProduct = {
+          id: apiProduct.id,
+          name: apiProduct.title,
+          price: apiProduct.price,
+          image: `http://localhost:8000/storage/${apiProduct.image}`,
+          brand: apiProduct.brands?.[0]?.name || 'No Brand',
+          categories: apiProduct.categories?.map((cat) => cat.name) || [],
+          description: apiProduct.description,
+          stock: apiProduct.has_stock,
+          reviews: {
+            rating: apiProduct.reviews?.[0]?.rating || 0,
+            customerReviews: apiProduct.reviews || [],
+          },
+          ratings: apiProduct.ratings || [],
+          social: apiProduct.social_links || [],
+          SKU: apiProduct.sku || 'N/A',
+          tags: apiProduct.tags || [],
+          images: apiProduct.images || [],
+        };
 
-      setProduct({ ...formattedProduct, averageRating });
-      setLocalQuantity(id, 1);
-    } catch (error) {
-      console.error(error);
-      toast.error('Failed to load product');
-    } finally {
+        setProduct(formattedProduct);
+        setLoading(false);
+      } else {
+        throw new Error('Product not found');
+      }
+    } catch (err) {
       setLoading(false);
+      console.error('Error fetching product:', err);
+      toast.error('Failed to load product');
     }
   };
 
@@ -69,6 +85,26 @@ export default function Product() {
     fetchData();
   }, [id]);
 
+  // Update quantity in cart
+  const updateQuantity = async (productId, action) => {
+    try {
+      const response = await axios.post(`http://127.0.0.1:8000/api/basket/updateQuantity/${action}`, {
+        product_id: productId,
+      }, { headers });
+
+      if (response.data.success) {
+        toast.success(response.data.message);
+        if (action === 'increase') incrementQuantity(productId);
+        if (action === 'decrease') decrementQuantity(productId);
+      } else {
+        toast.error(response.data.error);
+      }
+    } catch (error) {
+      toast.error('Failed to update quantity');
+    }
+  };
+
+  // Loading state or product not found
   if (loading) return <div>Loading...</div>;
   if (!product) return <div>Product not found</div>;
 
@@ -106,7 +142,7 @@ export default function Product() {
               {Array.from({ length: fullStars }).map((_, i) => (
                 <img key={i} src='/yellowStar.svg' alt="star" />
               ))}
-              {hasHalfStar && <img src='/halfDtar.svg' alt="half star" />}
+              {hasHalfStar && <img src='/halfStar.svg' alt="half star" />}
               {Array.from({ length: emptyStars }).map((_, i) => (
                 <img key={i} src='/emptyStar.svg' alt="empty star" />
               ))}
@@ -143,13 +179,15 @@ export default function Product() {
               </tr>
               <tr>
                 <td><h4>Tags</h4></td>
-                <td>
+                <td>console.log(tags);
                   {product.tags.length > 0 ? (
                     product.tags.map((tag, index) => (
                       <span key={index}>
                         {tag.name || tag}
                         {index < product.tags.length - 1 && ', '}
                       </span>
+                      
+                      
                     ))
                   ) : (
                     <span>No tags</span>
@@ -160,24 +198,31 @@ export default function Product() {
           </table>
           <div className='productButtons'>
             <div>
-              <button onClick={() => decrementQuantity(id)} disabled={!product.stock}><img src="/minus.svg" alt="" /></button>
-              <input className='same' type="text" readOnly value={localQuantity[id] || 1} />
-              <button onClick={() => incrementQuantity(id)} disabled={!product.stock}><img src="/plus.svg" alt="" /></button>
+              <button 
+                onClick={() => updateQuantity(product.id, 'decrease')} 
+                disabled={!product.stock}
+              >
+                <img src="/minus.svg" alt="" />
+              </button>
+              <input 
+                className='same' 
+                type="text" 
+                readOnly 
+                value={localQuantity[id] || 1} 
+              />
+              <button 
+                onClick={() => updateQuantity(product.id, 'increase')} 
+                disabled={!product.stock}
+              >
+                <img src="/plus.svg" alt="" />
+              </button>
             </div>
-            <button className='addButton' onClick={() => addCart(product)}>Add to Cart</button>
+            <button className='addButton' onClick={addCart}>
+              Add to Cart
+            </button>
             <div className='favoriteButton'>
               <img src="/favory.svg" alt="" />
             </div>
-          </div>
-          <div id='shereMedia'>
-            <h3 id='shere'>Share</h3>
-            
-              <div className='media' >
-                <div><img src='/face.svg' alt="Facebook" /></div>
-                <div> <img src='/instagram.svg' alt="Instagram" /></div>
-                <div> <img src='/twitter.svg' alt="Twitter" /></div>
-              </div>
-          
           </div>
         </div>
       </div>
@@ -194,8 +239,8 @@ export default function Product() {
           </NavLink>
         </div>
       </div>
-
       <Outlet context={{ product }} />
-    </div>
+      </div>
+    
   );
 }

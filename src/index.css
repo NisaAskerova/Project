@@ -2642,6 +2642,7 @@ font-weight: 700;
 
 .filterCatecory {
   display: flex;
+
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -2650,6 +2651,12 @@ font-weight: 700;
 .filterRange {
   flex-direction: column;
 
+}
+.filterTag{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
 }
 
 .filterCatecory>div {

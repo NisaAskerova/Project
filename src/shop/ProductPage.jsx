@@ -7,11 +7,12 @@ export default function ProductPage() {
     const { setProducts, products } = useContext(MyContext);
     const [loading, setLoading] = useState(true);
     const [filters, setFilters] = useState({
-        category: '', // Tək bir kateqoriya seçmək üçün
-        brand: '',    // Tək bir brend seçmək üçün
+        category: '',
+        brand: '',
         minPrice: 0,
         maxPrice: 2000,
-        hasStock: true, // Yalnız anbarda olan məhsullar üçün süzgəc
+        hasStock: true,
+        tags: [],
     });
     const [categories, setCategories] = useState([]);
     const [brands, setBrands] = useState([]);
@@ -20,8 +21,10 @@ export default function ProductPage() {
     const [shot, setShot] = useState(false);
     const [shot2, setShot2] = useState(false);
     const [shot3, setShot3] = useState(false);
+    const [shot4, setShot4] = useState(false);
+    const [tags, setTags] = useState([]);
 
-    // Məlumatları serverdən çəkmək
+    // Fetch products and categories
     const fetchData = async () => {
         setLoading(true);
         try {
@@ -30,18 +33,20 @@ export default function ProductPage() {
             });
             setProducts(response.data.products);
 
-            // Unikal kategoriyalar və brendlər çıxar
             const uniqueCategories = [
                 ...new Set(response.data.products.flatMap((p) => p.categories.map((c) => c.name))),
             ];
             const uniqueBrands = [
                 ...new Set(response.data.products.flatMap((p) => p.brands.map((b) => b.name))),
             ];
+            const uniqueTags = [
+                ...new Set(response.data.products.flatMap((p) => p.tags.map((t) => t.name))),
+            ];
 
             setCategories(uniqueCategories);
             setBrands(uniqueBrands);
+            setTags(uniqueTags);
 
-            // Kateqoriya və brend sayını hesablamaq
             const newCategoryCounts = uniqueCategories.reduce((acc, category) => {
                 acc[category] = response.data.products.filter((product) =>
                     product.categories.some((c) => c.name === category)
@@ -69,32 +74,41 @@ export default function ProductPage() {
         fetchData();
     }, [filters]);
 
-    // Filter dəyişikliklərini idarə etmək
+    // Handle filter change
     const handleFilterChange = (filterType, value) => {
         setFilters((prevFilters) => ({
             ...prevFilters,
-            [filterType]: value, // Birbaşa yeni dəyəri təyin edir
+            [filterType]: value,
         }));
     };
 
-    // Filterlənmiş məhsulları hesablamaq
+    // Handle tag click for filtering
+    const handleTagClick = (tag) => {
+        setFilters((prevFilters) => {
+            const newTags = prevFilters.tags.includes(tag)
+                ? prevFilters.tags.filter((t) => t !== tag)
+                : [...prevFilters.tags, tag];
+            return { ...prevFilters, tags: newTags };
+        });
+    };
+
+    // Filter products
     const filteredProducts = useMemo(() => {
         return products.filter((product) => {
             const matchesCategory =
-                !filters.category || 
-                product.categories.some((c) => c.name === filters.category);
-
+                !filters.category || product.categories.some((c) => c.name === filters.category);
             const matchesBrand =
-                !filters.brand ||
-                product.brands.some((b) => b.name === filters.brand);
-
+                !filters.brand || product.brands.some((b) => b.name === filters.brand);
             const matchesPrice =
                 parseFloat(product.price) >= filters.minPrice &&
                 parseFloat(product.price) <= filters.maxPrice;
-
             const matchesStock = filters.hasStock ? product.has_stock : true;
+            const matchesTags =
+                filters.tags.length === 0 || filters.tags.every((tag) =>
+                    product.tags.some((t) => t.name === tag)
+                );
 
-            return matchesCategory && matchesBrand && matchesPrice && matchesStock;
+            return matchesCategory && matchesBrand && matchesPrice && matchesStock && matchesTags;
         });
     }, [filters, products]);
 
@@ -104,9 +118,10 @@ export default function ProductPage() {
         <div id='productPage'>
             <div className='filterProduct'>
                 <div className='filter-section'>
-                    <div className='filterTitle ' onClick={() => setShot(!shot)}>
+                    {/* Categories Filter */}
+                    <div className='filterTitle' onClick={() => setShot(!shot)}>
                         <h3>Categories</h3>
-                        <img src="down.svg" alt="" />
+                        <img src="down.svg" alt="Toggle" />
                     </div>
                     {categories.map((category) => (
                         <div key={category} style={{ height: shot ? "100%" : "0", overflow: "hidden" }} className='filterCatecory'>
@@ -118,9 +133,10 @@ export default function ProductPage() {
                         </div>
                     ))}
 
-                    <div className='filterTitle ft' onClick={() => setShot2(!shot2)} >
+                    {/* Price Filter */}
+                    <div className='filterTitle ft' onClick={() => setShot2(!shot2)}>
                         <h3>Price</h3>
-                        <img src="down.svg" alt="" />
+                        <img src="down.svg" alt="Toggle" />
                     </div>
                     <div style={{ height: shot2 ? "100%" : "0", overflow: "hidden" }} className='filterCatecory filterRange'>
                         <span>Price: ${filters.minPrice} - ${filters.maxPrice}</span>
@@ -145,9 +161,10 @@ export default function ProductPage() {
                         </div>
                     </div>
 
+                    {/* Brands Filter */}
                     <div className='filterTitle ft' onClick={() => setShot3(!shot3)}>
                         <h3>Brands</h3>
-                        <img src="down.svg" alt="" />
+                        <img src="down.svg" alt="Toggle" />
                     </div>
                     {brands.map((brand) => (
                         <div style={{ height: shot3 ? "100%" : "0", overflow: "hidden" }} key={brand} className='filterCatecory'>
@@ -158,8 +175,27 @@ export default function ProductPage() {
                             <span>({brandCounts[brand] || 0})</span>
                         </div>
                     ))}
+
+                    {/* Tags Filter */}
+                    <div className='filterTitle ft' onClick={() => setShot4(!shot4)}>
+                        <h3>Tags</h3>
+                        <img src="down.svg" alt="Toggle" />
+                    </div>
+                    <div style={{ height: shot4 ? "100%" : "0", overflow: "hidden" }} className='tagCategory'>
+                        {tags.map((tag) => (
+                            <button
+                                key={tag}
+                                className={`tagButton same ${filters.tags.includes(tag) ? 'selected' : ''}`}
+                                onClick={() => handleTagClick(tag)}
+                            >
+                                {tag}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
+
+            {/* Product List */}
             <div id='products'>
                 <div id='shopTitle'>
                     <div>

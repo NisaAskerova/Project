@@ -74,6 +74,8 @@ import UpdateBrand from './admin/brand/UpdateBrand';
 import ShowContactUs from './admin/countact_us/ShowContactUs';
 import ViewCategoryProducts from './admin/category/ViewCategoryProducts ';
 import ViewBrandProducts from './admin/brand/ViewBrandProducts';
+import { AuthProvider } from './AuthContext';
+
 export const MyContext = createContext();
 
 export default function App() {
@@ -84,7 +86,7 @@ export default function App() {
   const [quantities, setQuantities] = useState({});
   const [activeStep, setActiveStep] = useState('');
   const [orderCart, setOrderCart] = useState(false);
-  
+
   const updateQuantity = (productId, newQuantity) => {
     setQuantities(prevQuantities => ({
       ...prevQuantities,
@@ -144,97 +146,100 @@ export default function App() {
 
   return (
     <MyContext.Provider value={data}>
-      <Router>
-        {visibleCard && <Card />}
-        {orderCart && <Order />}
+      <AuthProvider>
+        <Router>
+          {visibleCard && <Card />}
+          {orderCart && <Order />}
 
-        {/* Toaster komponentini əlavə edirik */}
-        <Toaster position="top-right" reverseOrder={false} />
+          {/* Toaster komponentini əlavə edirik */}
+          <Toaster position="top-right" reverseOrder={false} />
 
-        <Routes>
-          <Route path='/' element={<Signup />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/services' element={<Services />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/checkout' element={<Payment />} />
-          <Route path='/shop' element={<Shop />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
-          <Route path="/product/:id" element={<ProductDetail />}>
-            <Route path='description' element={<Description />} />
-            <Route path='review' element={<Review />} />
-          </Route>
-          <Route path='/shoppingAddress' element={<ShoppingAddressPage />}>
-            <Route path='address' element={<Address />} index={true} />
-            <Route path='payment' element={<PaymentMethod />} />
-            <Route path='reviews' element={<ReviwPage />} />
-          </Route>
-          <Route path='/privacy_policy' element={<PrivacyPolicy />} />
-          <Route path='/terms_conditions' element={<TermsConditions />} />
-          <Route path='/admin' element={<Admin />} />
-          <Route path='/who_we_are' element={<AddServiceForm />} />
-          <Route path='/show_who_we_are' element={<ShowWhoWeAre />} />
-          <Route path="/update_who_we_are_main/:id" element={<UpdateMainWhoWeAre />} />
-          <Route path="/update_who_we_are_service/:id" element={<UpdateServiceWhoWeAre />} />
-          <Route path="/how_we_works" element={<AddHowWeWorks />} />
-          <Route path='/show_how_we_works' element={<ShowHowWeWorks/>}/>
-          <Route path="/update_how_we_works_main/:id" element={<UpdateHowWeWorks />} />
-          <Route path="/update_how_we_works_service/:id" element={<UpdateServiceHowWeWorks />} />
-          <Route path='/add_about_secura' element={<AddAboutSecura/>} />
-          <Route path='/show_about_secura' element={<ShowAboutSecura/>} />
-          <Route path='/update_about_secura/:id' element={<UpdateAboutSecura/>} />
-          <Route path='/add_hero_slide' element={<AddHeroSlide/>} />
-          <Route path='/show_hero_slide' element={<ShowHeroSlide/>} />
-          <Route path='/update_hero_slider/:id' element={<UpdateHerSlider/>} />
-          <Route path='/add_our_vision_mission' element={<AddOurVision/>} />
-          <Route path='/our_vision_mission' element={<ShowOurVision/>} />
-          <Route path='/update_main_our_vision/:id' element={<UpdateMainOurVision/>} />
-          <Route path='/update_service_our_vision/:id' element={<UpdateServiceOurVision/>} />
-          <Route path='/add_our_team' element={<AddOurTeam/>} />
-          <Route path='/our_team' element={<ShowOurTeam/>} />
-          <Route path='/update_main_our_team/:id' element={<UpdateMainOurTeam/>} />
-          <Route path='/update_service_our_team/:id' element={<UpdateServiceOurTeam/>} />
-          <Route path='/add_about_hero' element={<AddAboutHero/>} />
-          <Route path='/show_about_hero' element={<ShowAboutHero/>} />
-          <Route path='/update_about_hero/:id' element={<UpdateAboutHero/>} />
-          <Route path='/add_main_blog' element={<MainBlog/>} />
-          <Route path='/update_main_blog/:id' element={<UpdateMainBlog/>} />
-          <Route path='/add_blog' element={<AddBlog/>} />
-          <Route path='/show_blog' element={<ShowBlog/>} />
-          <Route path='/update_blog/:id' element={<UpdateBlog/>} />
-          <Route path='/add_category' element={<AddCategoies/>} />
-          <Route path='/show_categories' element={<ShowCategories/>} />
-          <Route path='/update_categories/:id' element={<UpdateCategories/>} />
-          <Route path='/add_our_journey' element={<AddOurJourney/>} />
-          <Route path='/show_our_journey' element={<ShowOurJourney/>} />
-          <Route path='/update_main/:id' element={<UpdateMainOurJourney/>} />
-          <Route path='/update_counter/:id' element={<UpdateCounterOurJourney/>} />
-          <Route path='/add_product' element={<AddProduct/>} />
-          <Route path='/show_product' element={<ProductTable/>} />
-          <Route path='/update_product/:id' element={<UpdateProduct/>} />
-          <Route path='/add_tag' element={<AddTags/>} />
-          <Route path='/show_tags' element={<ShowTags/>} />
-          <Route path='/show_product_tag/:id' element={<ShowProductTag/>} />
-          <Route path='/update_tag/:id' element={<UpdateTag/>} />
-          <Route path='/view_category_product/:id' element={<ViewCategoryProducts/>} />
-          <Route path='/add_brand' element={<AddBrand/>} />
-          <Route path='/show_brands' element={<ShowBrand/>} />
-          <Route path='/update_brand/:id' element={<UpdateBrand/>} />
-          <Route path='/update_brand/:id' element={<UpdateBrand/>} />
-          <Route path='/view_brand_product/:id' element={<ViewBrandProducts/>} />
-          <Route path='/show_contact_us/:id' element={<ShowContactUs/>} />
-          <Route path='/products/:productId' element={<Comment/>} />
-       
-
-
+          <Routes>
+            <Route path='/' element={<Signup />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/services' element={<Services />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/checkout' element={<Payment />} />
+            <Route path='/shop' element={<Shop />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
+            <Route path="/product/:id" element={<ProductDetail />}>
+              <Route path='description' element={<Description />} />
+              <Route path='review' element={<Review />} />
+            </Route>
+            <Route path='/shoppingAddress' element={<ShoppingAddressPage />}>
+              <Route path='address' element={<Address />} index={true} />
+              <Route path='payment' element={<PaymentMethod />} />
+              <Route path='reviews' element={<ReviwPage />} />
+            </Route>
+            <Route path='/privacy_policy' element={<PrivacyPolicy />} />
+            <Route path='/terms_conditions' element={<TermsConditions />} />
+            <Route path='/admin' element={<Admin />} />
+            <Route path='/who_we_are' element={<AddServiceForm />} />
+            <Route path='/show_who_we_are' element={<ShowWhoWeAre />} />
+            <Route path="/update_who_we_are_main/:id" element={<UpdateMainWhoWeAre />} />
+            <Route path="/update_who_we_are_service/:id" element={<UpdateServiceWhoWeAre />} />
+            <Route path="/how_we_works" element={<AddHowWeWorks />} />
+            <Route path='/show_how_we_works' element={<ShowHowWeWorks />} />
+            <Route path="/update_how_we_works_main/:id" element={<UpdateHowWeWorks />} />
+            <Route path="/update_how_we_works_service/:id" element={<UpdateServiceHowWeWorks />} />
+            <Route path='/add_about_secura' element={<AddAboutSecura />} />
+            <Route path='/show_about_secura' element={<ShowAboutSecura />} />
+            <Route path='/update_about_secura/:id' element={<UpdateAboutSecura />} />
+            <Route path='/add_hero_slide' element={<AddHeroSlide />} />
+            <Route path='/show_hero_slide' element={<ShowHeroSlide />} />
+            <Route path='/update_hero_slider/:id' element={<UpdateHerSlider />} />
+            <Route path='/add_our_vision_mission' element={<AddOurVision />} />
+            <Route path='/our_vision_mission' element={<ShowOurVision />} />
+            <Route path='/update_main_our_vision/:id' element={<UpdateMainOurVision />} />
+            <Route path='/update_service_our_vision/:id' element={<UpdateServiceOurVision />} />
+            <Route path='/add_our_team' element={<AddOurTeam />} />
+            <Route path='/our_team' element={<ShowOurTeam />} />
+            <Route path='/update_main_our_team/:id' element={<UpdateMainOurTeam />} />
+            <Route path='/update_service_our_team/:id' element={<UpdateServiceOurTeam />} />
+            <Route path='/add_about_hero' element={<AddAboutHero />} />
+            <Route path='/show_about_hero' element={<ShowAboutHero />} />
+            <Route path='/update_about_hero/:id' element={<UpdateAboutHero />} />
+            <Route path='/add_main_blog' element={<MainBlog />} />
+            <Route path='/update_main_blog/:id' element={<UpdateMainBlog />} />
+            <Route path='/add_blog' element={<AddBlog />} />
+            <Route path='/show_blog' element={<ShowBlog />} />
+            <Route path='/update_blog/:id' element={<UpdateBlog />} />
+            <Route path='/add_category' element={<AddCategoies />} />
+            <Route path='/show_categories' element={<ShowCategories />} />
+            <Route path='/update_categories/:id' element={<UpdateCategories />} />
+            <Route path='/add_our_journey' element={<AddOurJourney />} />
+            <Route path='/show_our_journey' element={<ShowOurJourney />} />
+            <Route path='/update_main/:id' element={<UpdateMainOurJourney />} />
+            <Route path='/update_counter/:id' element={<UpdateCounterOurJourney />} />
+            <Route path='/add_product' element={<AddProduct />} />
+            <Route path='/show_product' element={<ProductTable />} />
+            <Route path='/update_product/:id' element={<UpdateProduct />} />
+            <Route path='/add_tag' element={<AddTags />} />
+            <Route path='/show_tags' element={<ShowTags />} />
+            <Route path='/show_product_tag/:id' element={<ShowProductTag />} />
+            <Route path='/update_tag/:id' element={<UpdateTag />} />
+            <Route path='/view_category_product/:id' element={<ViewCategoryProducts />} />
+            <Route path='/add_brand' element={<AddBrand />} />
+            <Route path='/show_brands' element={<ShowBrand />} />
+            <Route path='/update_brand/:id' element={<UpdateBrand />} />
+            <Route path='/update_brand/:id' element={<UpdateBrand />} />
+            <Route path='/view_brand_product/:id' element={<ViewBrandProducts />} />
+            <Route path='/show_contact_us' element={<ShowContactUs />} />
+            <Route path='/products/:productId' element={<Comment />} />
 
 
- 
 
-        </Routes>
-      </Router>
+
+
+
+
+
+          </Routes>
+        </Router>
+      </AuthProvider>
     </MyContext.Provider>
   );
 }
