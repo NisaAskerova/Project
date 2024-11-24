@@ -21,19 +21,18 @@ export default function Product() {
       toast.error('User is not logged in');
       return;
     }
-
+  
     if (!product?.id) {
       console.error('Product ID is missing');
       return;
     }
-
+  
     try {
       const response = await axios.post('http://127.0.0.1:8000/api/basket/store', {
         product_id: product.id,
-        user_id: userId,
         quantity: 1,
       }, { headers });
-
+  
       setCart((prevCart) => [...prevCart, response.data.product]);
       toast.success('Product added to cart');
     } catch (error) {
@@ -41,6 +40,7 @@ export default function Product() {
       toast.error('Failed to add product to cart');
     }
   };
+  
 
   // Fetch product data from API
   const fetchData = async () => {
@@ -94,8 +94,6 @@ export default function Product() {
 
       if (response.data.success) {
         toast.success(response.data.message);
-        if (action === 'increase') incrementQuantity(productId);
-        if (action === 'decrease') decrementQuantity(productId);
       } else {
         toast.error(response.data.error);
       }
@@ -179,7 +177,7 @@ export default function Product() {
               </tr>
               <tr>
                 <td><h4>Tags</h4></td>
-                <td>console.log(tags);
+                <td>
                   {product.tags.length > 0 ? (
                     product.tags.map((tag, index) => (
                       <span key={index}>

@@ -1,51 +1,49 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { MyContext } from '../App';
+import axios from 'axios';
 
 export default function Header() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
-  const { cart, setVisibleCard } = useContext(MyContext);
+  const { cart, setCart, setVisibleCard } = useContext(MyContext);
+  const [basketQuantity, setBasketQuantity] = useState(0);
   const navigate = useNavigate();
-  // const token = localStorage.getItem("token");
-  // const [user, setUser] = useState({});
-  // const [isLoading, setIsLoading] = useState(true);
 
-  // if (!token) {
-  //   return (window.location.href = "/login");
-  // }
-
-  // useEffect(() => {
-  //   fetch("http://127.0.0.1:8000/api/me", {
-  //     headers: {
-  //       Authorization: `Bearer ${token}`,
-        
-  //     },
-  //   })
-  
-    
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       if (data.status) {
-  //         setUser(data.data);
-  //       } else {
-  //         return (window.location.href = "/login");
-  //       }
-  //       setIsLoading(false);
-  //     });
-  // }, []);
-
-  // if (isLoading) {
-  //   return <div>Loading...</div>;
-  // }
-  const handleLogout = () => {
-    // Tokeni silirik və istifadəçini login səhifəsinə yönləndiririk
-    localStorage.removeItem('token');
-    navigate('/login');
+  // Çıxış funksiyası (logout)
+  const handleLogout = async () => {
+    try {
+      await axios.post('http://127.0.0.1:8000/api/logout'); // Backend-ə logout sorğusu göndəririk
+      navigate('/login'); // Logoutdan sonra login səhifəsinə yönləndiririk
+    } catch (error) {
+      console.error('Logout failed', error);
+    }
   };
+
+  // NavBar-ı açıb-bağlama funksiyası
   const toggleNavBar = () => {
     setIsNavBarOpen(!isNavBarOpen);
   };
 
+  // Basketin sayını backend-dən çəkmək üçün API çağırışı
+  useEffect(() => {
+    const fetchBasketQuantity = async () => {
+      try {
+        const token = localStorage.getItem('token');  // Assuming the token is stored in localStorage
+        const response = await axios.get('http://127.0.0.1:8000/api/basket/quantity', {
+          headers: {
+            Authorization: `Bearer ${token}`,  // Include token in headers
+          }
+        });
+        setBasketQuantity(response.data.total_items);  // Fərqli məhsulların sayını təyin et
+      } catch (error) {
+        console.error("Basket quantity fetch failed", error);
+      }
+    };
+  
+    fetchBasketQuantity();
+  }, [cart]);
+  
+  
   return (
     <header>
       <div id='hed'>
@@ -93,7 +91,7 @@ export default function Header() {
             <img src="/favory.svg" alt="favorite" />
             <div id='cartCount' onClick={() => setVisibleCard(true)}>
               <img src="/shopCar.svg" alt="shop car" />
-              <div><span>{cart.length}</span></div>
+              <div><span>{basketQuantity}</span></div>
             </div>
           </div>
           <div id='headerButtons'>
