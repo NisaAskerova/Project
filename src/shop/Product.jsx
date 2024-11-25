@@ -13,7 +13,7 @@ export default function Product() {
   // Token and user ID from localStorage
   const token = localStorage.getItem('token');
   const userId = localStorage.getItem('user_id');
-  const headers = token ? { Authorization: `Bearer ${token}` } : {}; 
+  const headers = token ? { Authorization: `Bearer ${token}` } : {};
 
   // Add product to cart
   const addCart = async () => {
@@ -28,12 +28,30 @@ export default function Product() {
     }
   
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/basket/store', {
-        product_id: product.id,
-        quantity: 1,
-      }, { headers });
+      const response = await axios.post(
+        'http://127.0.0.1:8000/api/basket/store',
+        {
+          product_id: product.id,
+          quantity: 1,
+        },
+        { headers }
+      );
   
-      setCart((prevCart) => [...prevCart, response.data.product]);
+      setCart((prevCart) => {
+        // Ensure prevCart is always an array
+        const currentCart = Array.isArray(prevCart) ? prevCart : [];
+        // Avoid duplicate products in the cart (optional)
+        const productExists = currentCart.find((item) => item.id === product.id);
+        if (productExists) {
+          return currentCart.map((item) =>
+            item.id === product.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          );
+        }
+        return [...currentCart, response.data.product];
+      });
+  
       toast.success('Product added to cart');
     } catch (error) {
       console.error('Error adding product to cart:', error);
@@ -41,6 +59,7 @@ export default function Product() {
     }
   };
   
+
 
   // Fetch product data from API
   const fetchData = async () => {
@@ -88,19 +107,40 @@ export default function Product() {
   // Update quantity in cart
   const updateQuantity = async (productId, action) => {
     try {
-      const response = await axios.post(`http://127.0.0.1:8000/api/basket/updateQuantity/${action}`, {
-        product_id: productId,
-      }, { headers });
+      const response = await axios.post(
+        `http://127.0.0.1:8000/api/basket/updateQuantity/${action}`,
+        { product_id: productId },
+        { headers }
+      );
 
       if (response.data.success) {
+        const updatedQuantity = response.data.basket_quantity;
+
+        // Update localQuantity with the new basket_quantity
+        setLocalQuantity((prev) => ({
+          ...prev,
+          [productId]: updatedQuantity,
+        }));
+
+        // Optionally update the cart if necessary
+        setCart((prevCart) => {
+          return prevCart.map((item) =>
+            item.id === productId
+              ? { ...item, quantity: updatedQuantity }
+              : item
+          );
+        });
+
         toast.success(response.data.message);
       } else {
         toast.error(response.data.error);
       }
     } catch (error) {
       toast.error('Failed to update quantity');
+      console.error('Error updating quantity:', error);
     }
   };
+
 
   // Loading state or product not found
   if (loading) return <div>Loading...</div>;
@@ -184,8 +224,8 @@ export default function Product() {
                         {tag.name || tag}
                         {index < product.tags.length - 1 && ', '}
                       </span>
-                      
-                      
+
+
                     ))
                   ) : (
                     <span>No tags</span>
@@ -196,20 +236,22 @@ export default function Product() {
           </table>
           <div className='productButtons'>
             <div>
-              <button 
-                onClick={() => updateQuantity(product.id, 'decrease')} 
+              <button
+                onClick={() => updateQuantity(product.id, 'decrease')}
                 disabled={!product.stock}
               >
                 <img src="/minus.svg" alt="" />
               </button>
-              <input 
-                className='same' 
-                type="text" 
-                readOnly 
-                value={localQuantity[id] || 1} 
+
+              {/* Display basket_quantity in the input field */}
+              <input
+                type="text"
+                readOnly
+                value={localQuantity[product.id] || 0}
               />
-              <button 
-                onClick={() => updateQuantity(product.id, 'increase')} 
+
+              <button
+                onClick={() => updateQuantity(product.id, 'increase')}
                 disabled={!product.stock}
               >
                 <img src="/plus.svg" alt="" />
@@ -222,6 +264,7 @@ export default function Product() {
               <img src="/favory.svg" alt="" />
             </div>
           </div>
+
         </div>
       </div>
 
@@ -238,7 +281,7 @@ export default function Product() {
         </div>
       </div>
       <Outlet context={{ product }} />
-      </div>
-    
+    </div>
+
   );
 }
