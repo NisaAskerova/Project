@@ -93,19 +93,22 @@ export default function App() {
       [productId]: newQuantity,
     }));
 
+
     setCart((prevCart) => {
       console.log("prevCart dəyəri:", prevCart);
-      if (Array.isArray(prevCart)) {
+            if (Array.isArray(prevCart)) {
         return prevCart.map((item) => {
-          return { ...item, quantity: item.quantity + 1 };
+          return {
+            ...item,
+            quantity: item.quantity ? item.quantity + 1 : 1,
+          };
         });
       }
+      
       return [];
     });
     
-
     setCheckoutCart(prevCheckoutCart => {
-      // Əgər prevCheckoutCart array deyil və ya boşdursa, default olaraq boş array qaytar
       if (!Array.isArray(prevCheckoutCart)) {
         console.error("prevCheckoutCart array formatında deyil və ya undefined:", prevCheckoutCart);
         return [];
@@ -117,6 +120,9 @@ export default function App() {
           : product
       );
     });
+    
+    
+    
     
   };
 

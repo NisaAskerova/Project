@@ -14,22 +14,22 @@ export default function Header() {
     try {
       const token = localStorage.getItem('token');
       if (token) {
-        await axios.post(
+        await axios.delete(
           'http://127.0.0.1:8000/api/logout',
-          {},
           {
             headers: {
-              Authorization: `Bearer ${token}`, // Token-i göndər
+              Authorization: `Bearer ${token}`,
             },
           }
         );
         localStorage.removeItem('token'); // Token-i sil
-        navigate('/login','/'); // Login səhifəsinə yönləndir
+        navigate('/login', '/'); // Login səhifəsinə yönləndir
       }
     } catch (error) {
       console.error('Logout failed', error);
     }
   };
+  
 
   // NavBar-ı açıb-bağlama funksiyası
   const toggleNavBar = () => {

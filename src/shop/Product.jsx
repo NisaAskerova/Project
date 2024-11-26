@@ -5,7 +5,7 @@ import { MyContext } from '../App';
 import toast from 'react-hot-toast';
 
 export default function Product() {
-  const { cart, setCart, localQuantity, incrementQuantity, decrementQuantity, setLocalQuantity } = useContext(MyContext);
+  const { cart, setCart, localQuantity, setLocalQuantity } = useContext(MyContext);
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -15,57 +15,11 @@ export default function Product() {
   const userId = localStorage.getItem('user_id');
   const headers = token ? { Authorization: `Bearer ${token}` } : {};
 
-  // Add product to cart
-  const addCart = async () => {
-    if (!userId) {
-      toast.error('User is not logged in');
-      return;
-    }
-  
-    if (!product?.id) {
-      console.error('Product ID is missing');
-      return;
-    }
-  
-    try {
-      const response = await axios.post(
-        'http://127.0.0.1:8000/api/basket/store',
-        {
-          product_id: product.id,
-          quantity: 1,
-        },
-        { headers }
-      );
-  
-      setCart((prevCart) => {
-        // Ensure prevCart is always an array
-        const currentCart = Array.isArray(prevCart) ? prevCart : [];
-        // Avoid duplicate products in the cart (optional)
-        const productExists = currentCart.find((item) => item.id === product.id);
-        if (productExists) {
-          return currentCart.map((item) =>
-            item.id === product.id
-              ? { ...item, quantity: item.quantity + 1 }
-              : item
-          );
-        }
-        return [...currentCart, response.data.product];
-      });
-  
-      toast.success('Product added to cart');
-    } catch (error) {
-      console.error('Error adding product to cart:', error);
-      toast.error('Failed to add product to cart');
-    }
-  };
-  
-
-
   // Fetch product data from API
   const fetchData = async () => {
+    setLoading(true);
     try {
       const response = await axios.get(`http://127.0.0.1:8000/api/products/show_product/${id}`, { headers });
-
       if (response.status === 200) {
         const apiProduct = response.data;
         const formattedProduct = {
@@ -87,22 +41,60 @@ export default function Product() {
           tags: apiProduct.tags || [],
           images: apiProduct.images || [],
         };
-
         setProduct(formattedProduct);
-        setLoading(false);
       } else {
-        throw new Error('Product not found');
+        toast.error('Product not found');
       }
     } catch (err) {
-      setLoading(false);
-      console.error('Error fetching product:', err);
       toast.error('Failed to load product');
+      console.error('Error fetching product:', err);
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     fetchData();
   }, [id]);
+
+  // Add product to cart
+  const addCart = async () => {
+    if (!userId) {
+      toast.error('User is not logged in');
+      return;
+    }
+
+    if (!product?.id) {
+      console.error('Product ID is missing');
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        'http://127.0.0.1:8000/api/basket/store',
+        { product_id: product.id, quantity: 1 },
+        { headers }
+      );
+      setCart((prevCart) => {
+        const currentCart = Array.isArray(prevCart) ? prevCart : [];
+        const productExists = currentCart.find((item) => item.id === product.id);
+
+        if (productExists) {
+          return currentCart.map((item) =>
+            item.id === product.id
+              ? { ...item, quantity: (item.quantity || 0) + 1 }
+              : item
+          );
+        }
+
+        return [...currentCart, { ...response.data.product, quantity: 1 }];
+      });
+      toast.success('Product added to cart');
+    } catch (error) {
+      console.error('Error adding product to cart:', error);
+      toast.error('Failed to add product to cart');
+    }
+  };
 
   // Update quantity in cart
   const updateQuantity = async (productId, action) => {
@@ -115,22 +107,18 @@ export default function Product() {
 
       if (response.data.success) {
         const updatedQuantity = response.data.basket_quantity;
-
-        // Update localQuantity with the new basket_quantity
         setLocalQuantity((prev) => ({
           ...prev,
           [productId]: updatedQuantity,
         }));
 
-        // Optionally update the cart if necessary
-        setCart((prevCart) => {
-          return prevCart.map((item) =>
+        setCart((prevCart) =>
+          prevCart.map((item) =>
             item.id === productId
               ? { ...item, quantity: updatedQuantity }
               : item
-          );
-        });
-
+          )
+        );
         toast.success(response.data.message);
       } else {
         toast.error(response.data.error);
@@ -141,20 +129,18 @@ export default function Product() {
     }
   };
 
-
-  // Loading state or product not found
   if (loading) return <div>Loading...</div>;
   if (!product) return <div>Product not found</div>;
 
-  const fullStars = Math.floor(product.averageRating);
-  const hasHalfStar = product.averageRating % 1 !== 0;
+  const fullStars = Math.floor(product.reviews.rating);
+  const hasHalfStar = product.reviews.rating % 1 !== 0;
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
     <div>
-      <div id='product'>
+      <div id="product">
         <div id="leftProduct">
-          <div id='bigImg'>
+          <div id="bigImg">
             <img src={product.image} alt={product.name} />
           </div>
           <div className="productImageBox">
@@ -167,83 +153,86 @@ export default function Product() {
         </div>
         <div id="rightProduct">
           <div>
-            <div id='stockDiv'>
+            <div id="stockDiv">
               {product.stock ? (
-                <div className='greenDiv'><span>In Stock</span></div>
+                <div className="greenDiv">
+                  <span>In Stock</span>
+                </div>
               ) : (
-                <div className='redDiv'><span>Out Of Stock</span></div>
+                <div className="redDiv">
+                  <span>Out Of Stock</span>
+                </div>
               )}
             </div>
-            <span className='brand'>{product.brand}</span>
-            <h3 className='productName'>{product.name}</h3>
-            <div className='productRating'>
+            <span className="brand">{product.brand}</span>
+            <h3 className="productName">{product.name}</h3>
+            <div className="productRating">
               {Array.from({ length: fullStars }).map((_, i) => (
-                <img key={i} src='/yellowStar.svg' alt="star" />
+                <img key={i} src="/yellowStar.svg" alt="star" />
               ))}
-              {hasHalfStar && <img src='/halfStar.svg' alt="half star" />}
+              {hasHalfStar && <img src="/halfStar.svg" alt="half star" />}
               {Array.from({ length: emptyStars }).map((_, i) => (
-                <img key={i} src='/emptyStar.svg' alt="empty star" />
+                <img key={i} src="/emptyStar.svg" alt="empty star" />
               ))}
               <div>
-                <span>{product.averageRating}</span>
+                <span>{product.reviews.rating}</span>
                 <span>({product.reviews.customerReviews.length} Reviews)</span>
               </div>
             </div>
           </div>
-          <span className='productPrice'>${product.price}</span>
-          <div className='productDescription'>
-            <p className='same'>{product.description}...</p>
+          <span className="productPrice">${product.price}</span>
+          <div className="productDescription">
+            <p className="same">{product.description}...</p>
           </div>
           <table>
             <tbody>
               <tr>
-                <td><h4>SKU</h4></td>
+                <td>
+                  <h4>SKU</h4>
+                </td>
                 <td>{product.SKU}</td>
               </tr>
               <tr>
-                <td><h4>Categories</h4></td>
                 <td>
-                  {product.categories.length > 0 ? (
-                    product.categories.map((category, index) => (
-                      <span key={index}>
-                        {category}
-                        {index < product.categories.length - 1 && ', '}
-                      </span>
-                    ))
-                  ) : (
-                    <span>No categories</span>
-                  )}
+                  <h4>Categories</h4>
+                </td>
+                <td>
+                  {product.categories.length > 0
+                    ? product.categories.map((category, index) => (
+                        <span key={index}>
+                          {category}
+                          {index < product.categories.length - 1 && ', '}
+                        </span>
+                      ))
+                    : 'No categories'}
                 </td>
               </tr>
               <tr>
-                <td><h4>Tags</h4></td>
                 <td>
-                  {product.tags.length > 0 ? (
-                    product.tags.map((tag, index) => (
-                      <span key={index}>
-                        {tag.name || tag}
-                        {index < product.tags.length - 1 && ', '}
-                      </span>
-
-
-                    ))
-                  ) : (
-                    <span>No tags</span>
-                  )}
+                  <h4>Tags</h4>
+                </td>
+                <td>
+                  {product.tags.length > 0
+                    ? product.tags.map((tag, index) => (
+                        <span key={index}>
+                          {tag.name || tag}
+                          {index < product.tags.length - 1 && ', '}
+                        </span>
+                      ))
+                    : 'No tags'}
                 </td>
               </tr>
             </tbody>
           </table>
-          <div className='productButtons'>
+          <div className="productButtons">
             <div>
               <button
                 onClick={() => updateQuantity(product.id, 'decrease')}
                 disabled={!product.stock}
               >
-                <img src="/minus.svg" alt="" />
+                <img src="/minus.svg" alt="Decrease" />
               </button>
 
-              {/* Display basket_quantity in the input field */}
               <input
                 type="text"
                 readOnly
@@ -254,21 +243,20 @@ export default function Product() {
                 onClick={() => updateQuantity(product.id, 'increase')}
                 disabled={!product.stock}
               >
-                <img src="/plus.svg" alt="" />
+                <img src="/plus.svg" alt="Increase" />
               </button>
             </div>
-            <button className='addButton' onClick={addCart}>
+            <button className="addButton" onClick={addCart}>
               Add to Cart
             </button>
-            <div className='favoriteButton'>
-              <img src="/favory.svg" alt="" />
+            <div className="favoriteButton">
+              <img src="/favory.svg" alt="Favorite" />
             </div>
           </div>
-
         </div>
       </div>
 
-      <div id='comments'>
+      <div id="comments">
         <div>
           <NavLink to="description" className={({ isActive }) => (isActive ? 'active-link' : '')}>
             <span>Description</span>
@@ -280,8 +268,7 @@ export default function Product() {
           </NavLink>
         </div>
       </div>
-      <Outlet context={{ product }} />
+      <Outlet />
     </div>
-
   );
 }
