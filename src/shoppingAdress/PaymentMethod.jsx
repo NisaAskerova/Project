@@ -1,24 +1,47 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { MyContext } from '../App';
 
 const PaymentMethod = () => {
-  const [expiryDate, setExpiryDate] = useState('09/26');
-  const [cvv, setCvv] = useState('...');
+  const navigate = useNavigate();
+  const { cartTotal } = useContext(MyContext);
+  
+  // State variables
+  const [expiryDate, setExpiryDate] = useState('');
+  const [cvv, setCvv] = useState('');
+  const [cardNumber, setCardNumber] = useState('');
+  const [cardName, setCardName] = useState('');
+  const [paymentMethod, setPaymentMethod] = useState('');
   const [error, setError] = useState('');
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  // Load data from localStorage if exists
+  useEffect(() => {
+    const savedPaymentData = localStorage.getItem('paymentData');
+    if (savedPaymentData) {
+      const data = JSON.parse(savedPaymentData);
+      setPaymentMethod(data.paymentMethod);
+      setCardNumber(data.cardNumber);
+      setCardName(data.cardName);
+      setExpiryDate(data.expiryDate);
+      setCvv(data.cvv);
+    }
+  }, []);
 
   const handleExpiryDateChange = (event) => {
-    const value = event.target.value;
+    let value = event.target.value;
 
-    if (value.length <= 5) {
-      if (/^(0[1-9]|1[0-2])\/\d{2}$/.test(value) || value === '') {
-        setExpiryDate(value);
-        setError('');
-      } else {
-        setError('Expiry date format is MM/YY.');
-      }
-    } else {
-      setError('Expiry date must be at most 5 characters long.');
+    if (/[^0-9/]/.test(value)) return;
+
+    if (value.length === 2 && !value.includes('/')) {
+      value = value + '/';
     }
+
+    if (value.length > 5) return;
+
+    setExpiryDate(value);
+    setError('');
   };
 
   const handleCvvChange = (event) => {
@@ -31,57 +54,187 @@ const PaymentMethod = () => {
       setError('CVV must be a maximum of 3 digits.');
     }
   };
-  const handleSubmit = (e) => {
+
+  const handleCardNumberChange = (event) => {
+    const value = event.target.value;
+
+    if (/[^0-9]/.test(value)) return; // Only allow numbers
+    setCardNumber(value);
+    setError('');
+  };
+
+  const handleCardNameChange = (event) => {
+    setCardName(event.target.value);
+    setError('');
+  };
+
+  const handlePaymentMethodChange = (event) => {
+    setPaymentMethod(event.target.value);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setActiveStep('reviews'); 
+  
+    // Validate form fields
+    if (!paymentMethod) {
+      setError('Please select a payment method.');
+      return;
+    }
+  
+    // Save the selected payment method to localStorage
+    const paymentData = { paymentMethod };
+    localStorage.setItem('paymentData', JSON.stringify(paymentData));
+  
+    // Only store the other card data if 'card' method is selected
+    if (paymentMethod === 'card') {
+      if (!cardNumber || cardNumber.length !== 16) {
+        setError('Please enter a valid card number.');
+        return;
+      }
+  
+      if (!cardName) {
+        setError('Please enter the cardholder name.');
+        return;
+      }
+  
+      if (!expiryDate || expiryDate.length !== 5) {
+        setError('Please enter a valid expiry date (MM/YY).');
+        return;
+      }
+  
+      if (!cvv || cvv.length !== 3) {
+        setError('Please enter a valid CVV.');
+        return;
+      }
+  
+      // Save all card information to localStorage
+      const cardData = {
+        cardNumber,
+        cardName,
+        expiryDate,
+        cvv,
+      };
+      localStorage.setItem('cardData', JSON.stringify(cardData));
+    }
+  
+    // Navigate to next page without submitting payment
     navigate('/shoppingAddress/reviews');
   };
+  
+  
   return (
     <div>
       <h2>Select a payment method</h2>
-      <form id='method' onSubmit={handleSubmit} action="" method='POST'>
-        <div id='debet'>
-          <input className='radio' type="checkbox" name="dcCard" id="dcCard" />
+      <form id="method" onSubmit={handleSubmit}>
+        <div id="debet">
+          <input
+            className="radio"
+            type="radio"
+            name="paymentMethod"
+            value="card"
+            checked={paymentMethod === 'Debit Cart'}
+            onChange={handlePaymentMethodChange}
+          />
           <label htmlFor="dcCard"><h2>Debit/Credit Card</h2></label>
         </div>
-        <div>
-          <label htmlFor="cardNumber">Card Number</label>
-          <input className='same' type="number" name="cardNumber" id="cardNumber" />
-        </div>
-        <div>
-          <label htmlFor="cardName">Card Name</label>
-          <input className='same' type="text" name="cardName" id="cardName" />
-        </div>
-        <div id='date'>
-          <div>
-            <label htmlFor="expiryDate">Expiry Date</label>
-            <input className='same' type="text" name="expiryDate" id="expiryDate" value={expiryDate} onChange={handleExpiryDateChange} />
-          </div>
-          <div>
-            <label htmlFor="cvv">CVV</label>
-            <input className='same' type="text" name="cvv" id="cvv" value={cvv} onChange={handleCvvChange} />
-          </div>
-        </div>
+        {paymentMethod === 'card' && (
+          <>
+            <div>
+              <label htmlFor="cardNumber">Card Number</label>
+              <input
+                className="same"
+                type="text"
+                name="cardNumber"
+                id="cardNumber"
+                value={cardNumber}
+                onChange={handleCardNumberChange}
+                maxLength="16"
+              />
+            </div>
+            <div>
+              <label htmlFor="cardName">Card Name</label>
+              <input
+                className="same"
+                type="text"
+                name="cardName"
+                id="cardName"
+                value={cardName}
+                onChange={handleCardNameChange}
+              />
+            </div>
+            <div id="date">
+              <div>
+                <label htmlFor="expiryDate">Expiry Date</label>
+                <input
+                  className="same"
+                  type="text"
+                  name="expiryDate"
+                  id="expiryDate"
+                  value={expiryDate}
+                  onChange={handleExpiryDateChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="cvv">CVV</label>
+                <input
+                  className="same"
+                  type="text"
+                  name="cvv"
+                  id="cvv"
+                  value={cvv}
+                  onChange={handleCvvChange}
+                  maxLength="3"
+                />
+              </div>
+            </div>
+          </>
+        )}
+
         {error && <p style={{ color: 'red' }}>{error}</p>}
 
-        <button className="same deliverBtn">Add Card</button>
+        <button className="same deliverBtn" type="submit" disabled={isProcessing}>
+          Add Card
+        </button>
+
         <div>
-          <div className='dbcard'>
-            <input className='radio' type="radio" name="pay" id="googlePay" />
-            <label htmlFor="googlePay"> <h2>Google Pay</h2></label>
+          <div className="dbcard">
+            <input
+              className="radio"
+              type="radio"
+              name="paymentMethod"
+              value="googlePay"
+              checked={paymentMethod === 'googlePay'}
+              onChange={handlePaymentMethodChange}
+            />
+            <label htmlFor="googlePay"><h2>Google Pay</h2></label>
           </div>
-          <div className='dbcard'>
-            <input className='radio' type="radio" name="pay" id="paypal" />
-            <label htmlFor="paypal"> <h2>Paypal</h2></label>
+          <div className="dbcard">
+            <input
+              className="radio"
+              type="radio"
+              name="paymentMethod"
+              value="paypal"
+              checked={paymentMethod === 'paypal'}
+              onChange={handlePaymentMethodChange}
+            />
+            <label htmlFor="paypal"><h2>Paypal</h2></label>
           </div>
-          <div className='dbcard'>
-            <input className='radio' type="radio" name="pay" id="cashOnDelivery" />
-            <label htmlFor="cashOnDelivery"> <h2>Cash on Delivery</h2></label>
+          <div className="dbcard">
+            <input
+              className="radio"
+              type="radio"
+              name="paymentMethod"
+              value="cashOnDelivery"
+              checked={paymentMethod === 'cashOnDelivery'}
+              onChange={handlePaymentMethodChange}
+            />
+            <label htmlFor="cashOnDelivery"><h2>Cash on Delivery</h2></label>
           </div>
         </div>
-        <Link to="/shoppingAddress/reviews" className="same deliverBtn">
-        Continue
-        </Link>
+
+        <button type="submit" className="same deliverBtn" disabled={isProcessing}>
+          Continue
+        </button>
       </form>
     </div>
   );

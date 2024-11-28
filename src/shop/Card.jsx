@@ -115,10 +115,6 @@ export default function Card() {
             <span>Subtotal</span>
             <span>${totalPrice.toFixed(2)}</span>
           </div>
-          <div>
-            <span>Total Quantity</span>
-            <span>{totalQuantity} items</span>
-          </div>
           <button className="same">View Cart</button>
           <button className="same" onClick={handleCheckout}>
             Checkout

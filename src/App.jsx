@@ -75,6 +75,13 @@ import ShowContactUs from './admin/countact_us/ShowContactUs';
 import ViewCategoryProducts from './admin/category/ViewCategoryProducts ';
 import ViewBrandProducts from './admin/brand/ViewBrandProducts';
 import { AuthProvider } from './AuthContext';
+import AddState from './admin/state/AddState';
+import ShowState from './admin/state/ShowState';
+import UpdateState from './admin/state/UpdateState';
+import AllAddress from './admin/address/AllAddress';
+import AddCity from './admin/city/AddCity';
+import ShowCities from './admin/city/ShowCities';
+import UpdateCity from './admin/city/UpdateCity';
 
 export const MyContext = createContext();
 
@@ -96,7 +103,7 @@ export default function App() {
 
     setCart((prevCart) => {
       console.log("prevCart dəyəri:", prevCart);
-            if (Array.isArray(prevCart)) {
+      if (Array.isArray(prevCart)) {
         return prevCart.map((item) => {
           return {
             ...item,
@@ -104,26 +111,26 @@ export default function App() {
           };
         });
       }
-      
+
       return [];
     });
-    
+
     setCheckoutCart(prevCheckoutCart => {
       if (!Array.isArray(prevCheckoutCart)) {
         console.error("prevCheckoutCart array formatında deyil və ya undefined:", prevCheckoutCart);
         return [];
       }
-    
+
       return prevCheckoutCart.map(product =>
         product.id === productId
           ? { ...product, quantity: newQuantity }
           : product
       );
     });
-    
-    
-    
-    
+
+
+
+
   };
 
   const incrementQuantity = (productId) => {
@@ -247,8 +254,16 @@ export default function App() {
             <Route path='/update_brand/:id' element={<UpdateBrand />} />
             <Route path='/update_brand/:id' element={<UpdateBrand />} />
             <Route path='/view_brand_product/:id' element={<ViewBrandProducts />} />
-            <Route path='/show_contact_us' element={<ShowContactUs />} />
             <Route path='/products/:productId' element={<Comment />} />
+            <Route path='/show_contact_us' element={<ShowContactUs />} /> 
+            <Route path='/all_address' element={<AllAddress />} /> 
+            <Route path="/show_state" element={<ShowState />} />
+            <Route path="/add_state" element={<AddState />} />
+            <Route path="/update_state/:id" element={<UpdateState />} />
+            <Route path="/add_city" element={<AddCity />} />
+            <Route path="/show_cities" element={<ShowCities />} />
+            <Route path="/update_city/:id" element={<UpdateCity />} />
+
 
 
 

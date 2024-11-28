@@ -18,9 +18,8 @@ export default function Dashboard() {
         <li><a className='same' href="/show_tags">Tag</a></li>
         <li><a className='same' href="/show_product">Products</a></li>
         <li><a className='same' href="show_contact_us">Contact Us</a></li>
-        <li><a className='same' href="">Secura Content</a></li>
-        <li><a className='same' href="">Privacy Policy</a></li>
-        <li><a className='same' href="">Terms and Conditions</a></li>
+        <li><a className='same' href="/all_address">Address</a></li>
+
       </ul>
     </div>
   )

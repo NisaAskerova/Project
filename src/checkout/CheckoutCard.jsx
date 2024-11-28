@@ -1,15 +1,21 @@
-import React, { useState, useContext } from 'react';
-import { MyContext } from '../App';
+import React, { useState } from 'react'; // Ensure only one useState import
 
-const CheckoutCard = ({ checkoutCart, showButton = true, buttonLabel = "Proceed to Checkout" }) => {
+const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Proceed to Checkout" }) => {
+  // Check if checkoutCart is an array and return a loading message if not
+  if (!Array.isArray(checkoutCart)) {
+    return <div>Loading...</div>; // Handle the case where checkoutCart is not an array
+  }
+
   const [discountCode, setDiscountCode] = useState('');
   const [discount, setDiscount] = useState(0);
   const deliveryCharge = 10.00;
 
+  // Calculate subtotal, discounted subtotal, and grand total
   const subtotal = checkoutCart.reduce((acc, item) => acc + item.product.price * (item.quantity || 1), 0);
   const discountedSubtotal = subtotal * (1 - discount / 100);
   const grandTotal = discountedSubtotal + deliveryCharge;
 
+  // Handle applying the discount code
   const handleDiscountCode = () => {
     if (discountCode === 'FLAT50') {
       setDiscount(50);
@@ -49,7 +55,7 @@ const CheckoutCard = ({ checkoutCart, showButton = true, buttonLabel = "Proceed 
       {showButton && (
         <button
           className="same"
-          onClick={() => console.log("Proceed to checkout")}
+          onClick={() => window.location.href = '/shoppingAddress'}
           disabled={checkoutCart.length === 0}
         >
           {buttonLabel}

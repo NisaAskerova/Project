@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { MyContext } from '../App';
-import CheckoutCard from './CheckoutCard';
+import CheckoutCard from './CheckoutCard';  // Correct import
 import { toast } from 'react-hot-toast';
 
 export default function Checkout() {
   const { checkoutCart, setCheckoutCart, localQuantity, setLocalQuantity } = useContext(MyContext);
 
-  // Basket məlumatını gətirir
+  // Fetching basket data
   const fetchBasket = async () => {
     try {
       const response = await axios.get('http://127.0.0.1:8000/api/basket/index', {
@@ -28,29 +28,23 @@ export default function Checkout() {
     }
   };
 
-  // Məhsul sayını artırmaq və azaltmaq
+  // Update quantity for products
   const updateQuantity = async (productId, action, stock) => {
     try {
       let newQuantity = localQuantity[productId] || 1;
       
-      // Sayı artırmaq
       if (action === 'increase') {
         newQuantity += 1;
-
-        // Stok limitini kontrol edin
         if (newQuantity > stock) {
           toast.error(`Max stock is ${stock} for this product!`);
-          return; // Stok limitini aşmasına izin verme
+          return;
         }
-      } 
-      // Sayı azaltmaq
-      else if (action === 'decrease') {
+      } else if (action === 'decrease') {
         if (newQuantity > 1) {
           newQuantity -= 1;
         }
       }
 
-      // API-ya yenilənmiş miqdarı göndər
       const response = await axios.post(
         `http://127.0.0.1:8000/api/basket/updateQuantity/${action}`,
         { product_id: productId },
@@ -63,8 +57,6 @@ export default function Checkout() {
 
       if (response.status === 200) {
         toast.success('Quantity updated successfully');
-
-        // Yeni miqdar ilə local vəziyyəti yenilə
         setLocalQuantity((prevQuantities) => {
           const newQuantities = { ...prevQuantities };
           newQuantities[productId] = newQuantity;
@@ -80,7 +72,7 @@ export default function Checkout() {
     }
   };
 
-  // Məhsul silmək
+  // Remove product from basket
   const removeProduct = async (basketId, productId) => {
     try {
       const response = await axios.delete(
@@ -94,7 +86,7 @@ export default function Checkout() {
 
       if (response.status === 200) {
         toast.success('Product removed from basket');
-        fetchBasket(); // Basketi yenidən yüklə
+        fetchBasket(); // Reload basket
       }
     } catch (error) {
       console.error('Error removing product:', error);
@@ -102,12 +94,11 @@ export default function Checkout() {
     }
   };
 
-  // Başlanğıcda basketi yükləyirik
+  // Fetch basket initially
   useEffect(() => {
     fetchBasket();
   }, []);
 
-  // Yüklənməyibsə, loading mesajı göstəririk
   if (!Array.isArray(checkoutCart)) {
     return <div>Loading...</div>;
   }
@@ -156,11 +147,11 @@ export default function Checkout() {
                         className="same"
                         type="text"
                         readOnly
-                        value={localQuantity[product.product.id] || 1} // Only shows the quantity
+                        value={localQuantity[product.product.id] || 1} // Shows quantity
                       />
                       <button
                         onClick={() => updateQuantity(product.product.id, 'increase', product.product.stock)}
-                        disabled={localQuantity[product.product.id] >= product.product.stock} // Disable if stock limit reached
+                        disabled={localQuantity[product.product.id] >= product.product.stock}
                       >
                         <img src="/plus.svg" alt="Increase quantity" />
                       </button>
