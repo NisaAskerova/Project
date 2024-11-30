@@ -6,11 +6,11 @@ export default function TermsConditionsHero() {
         <>  <div id='termsConditions'>
             <div className='heroTitle'>
                 <div>
-                    <span>Home</span>
+                    <span>Ana səhifə</span>
                     <img src="./arrows.svg" alt="" />
-                    <span>Terms & Conditions</span>
+                    <span>Şərtlər və Qaydalar</span>
                 </div>
-                <h2>Terms & Conditions</h2>
+                <h2>Şərtlər və Qaydalar</h2>
             </div>
         </div>
             <Inform />

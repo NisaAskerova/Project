@@ -6,11 +6,11 @@ export default function PrivacyPolicyHero() {
     <>  <div id='privacyPolicy'>
     <div className='heroTitle'>
       <div>
-        <span>Home</span>
+        <span>Ana səhifə</span>
         <img src="./arrows.svg" alt="" />
-        <span>Privacy Policy</span>
+        <span>Məxfilik Siyasəti</span>
       </div>
-      <h2>Privacy Policy</h2>
+      <h2>Məxfilik Siyasəti</h2>
     </div>
   </div>
   <Information/>

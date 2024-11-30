@@ -14,12 +14,12 @@ export default function  ContactAs() {
                 onClick={() => navigate('/home')}
                 className='navLink'
               >
-                Home
+                Ana səhifə
                 <img src="../../arrows.svg" alt="Arrow" className='arrow' />
               </span>
-              <span>Contact Us</span>
+              <span>Əlaqə</span>
             </div>
-            <h2>Contact Us</h2>
+            <h2>Əlaqə</h2>
           </div>
         </div>
         <Touch />

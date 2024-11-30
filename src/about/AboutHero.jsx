@@ -11,12 +11,12 @@ export default function AboutHero() {
             onClick={() => navigate('/home')}
             className='navLink'
           >
-            Home
+            Ana səhifə
             <img src="../../arrows.svg" alt="Arrow" className='arrow' />
           </span>
-          <span>About Us</span>
+          <span>Haqqımızda</span>
         </div>
-        <h2>About Us</h2>
+        <h2>Haqqımızda</h2>
       </div>
     </div>
   )

@@ -31,22 +31,17 @@ const PaymentMethod = () => {
 
   const handleExpiryDateChange = (event) => {
     let value = event.target.value;
-
     if (/[^0-9/]/.test(value)) return;
-
     if (value.length === 2 && !value.includes('/')) {
       value = value + '/';
     }
-
     if (value.length > 5) return;
-
     setExpiryDate(value);
     setError('');
   };
 
   const handleCvvChange = (event) => {
     const value = event.target.value;
-
     if (value.length <= 3 && /^[0-9]*$/.test(value)) {
       setCvv(value);
       setError('');
@@ -57,8 +52,7 @@ const PaymentMethod = () => {
 
   const handleCardNumberChange = (event) => {
     const value = event.target.value;
-
-    if (/[^0-9]/.test(value)) return; // Only allow numbers
+    if (/[^0-9]/.test(value)) return; 
     setCardNumber(value);
     setError('');
   };
@@ -75,12 +69,12 @@ const PaymentMethod = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    // Validate form fields
-    if (!paymentMethod) {
-      setError('Please select a payment method.');
+    // Validate payment method
+    if (!paymentMethod || !['cashOnDelivery', 'card'].includes(paymentMethod)) {
+      setError('Please select a valid payment method (cash or card).');
       return;
     }
-  
+
     // Save the selected payment method to localStorage
     const paymentData = { paymentMethod };
     localStorage.setItem('paymentData', JSON.stringify(paymentData));
@@ -121,7 +115,6 @@ const PaymentMethod = () => {
     navigate('/shoppingAddress/reviews');
   };
   
-  
   return (
     <div>
       <h2>Select a payment method</h2>
@@ -132,7 +125,7 @@ const PaymentMethod = () => {
             type="radio"
             name="paymentMethod"
             value="card"
-            checked={paymentMethod === 'Debit Cart'}
+            checked={paymentMethod === 'card'}
             onChange={handlePaymentMethodChange}
           />
           <label htmlFor="dcCard"><h2>Debit/Credit Card</h2></label>

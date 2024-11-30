@@ -3,19 +3,19 @@ import React from 'react'
 export default function Inform() {
     return (
         <div className='informarion'>
-            <h2 className='thick'>Privacy Policy</h2>
+            <h2 className='thick'>Gizlilik Siyasəti</h2>
             <div className='text'>
                 <div>
-                    <span>The standard Lorem Ipsum passage, used since the 1500s</span>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <span>Bizim gizlilik siyasətimiz, şəxsi məlumatların qorunmasına dair əsas prinsipləri təsvir edir.</span>
+                    <p>Şəxsi məlumatlarınızın toplanması, istifadə edilməsi və saxlanması yalnız qanunla müəyyən edilmiş məqsədlərlə həyata keçirilir. Biz sizin məlumatlarınıza hörmətlə yanaşırıq və onların təhlükəsizliyini təmin etmək üçün lazımi tədbirləri görürük. Bu siyasət, istifadəçilərin şəxsi məlumatlarının toplanması və istifadəsi ilə bağlı hər hansı bir mübahisə və ya anlaşılmazlığı aradan qaldırmağa kömək edir.</p>
                 </div>
                 <div>
-                    <span>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</span>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                    <span>Şəxsi məlumatların işlənməsi və qorunması ilə bağlı hüquqlarınız</span>
+                    <p>Sizə aid olan məlumatların doğru və müasir olmasına zəmanət veririk. Bu məlumatları yalnız sizin icazənizlə və ya qanuni əsaslarla toplayır və istifadə edirik. Hər hansı bir zaman məlumatlarınızı güncəlləmək, silmək və ya məhdudlaşdırmaq hüququna maliksiniz.</p>
                 </div>
                 <div>
-                    <span>1914 translation by H. Rackham</span>
-                    <p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+                    <span>Məlumatların paylaşılması və üçüncü tərəflərə ötürülməsi</span>
+                    <p>Şəxsi məlumatlarınız yalnız qanuni məqsədlər üçün və yalnız uyğun üçüncü tərəflərə ötürüləcəkdir. Biz heç bir halda məlumatlarınızı reklam məqsədi ilə satmırıq və ya paylaşmırıq.</p>
                 </div>
             </div>
         </div>

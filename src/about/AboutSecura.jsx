@@ -43,7 +43,7 @@ export default function AboutSecura() {
                             <span className="same">{item.type}</span>
                             <h3 className='thick'>{item.title}</h3>
                             <p className='same'>{item.description}</p>
-                            <button><span>Explore</span> {item.icon && <img src={`http://localhost:8000/storage/${item.icon}`} alt="Icon" />}</button>
+                            <button><span>Araşdırın</span> {item.icon && <img src={`http://localhost:8000/storage/${item.icon}`} alt="Icon" />}</button>
                         </div>
                         <div> {item.image && <img src={`http://localhost:8000/storage/${item.image}`} alt="Image" />}</div>
                     </>

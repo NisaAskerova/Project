@@ -58,7 +58,7 @@ function HeroSlider() {
               <h3>{slide.title}</h3>
               <p>{slide.description}</p>
               <button>
-                <span className='same'>Get Started</span>
+                <span className='same'>Başlayın</span>
                 <img src={`http://localhost:8000/storage/${slide.icon}`} alt="Left Icon" />
               </button>
             </div>

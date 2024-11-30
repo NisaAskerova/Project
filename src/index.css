@@ -497,8 +497,8 @@ button[type='submit'] {
 
 }
 
-#question>label>a {
-  color: var(--Primary-500, #FEE747);
+#question>label>a , .logRe{
+  color:  #FEE747;
 
   /* Body-1 Bold */
 
@@ -507,7 +507,13 @@ button[type='submit'] {
   font-weight: 700;
   line-height: 30px;
 }
+.logRe:hover{
+  text-decoration: underline;
+}
 
+.clientRew{
+  height: 115px;
+}
 /* ****************************HEADER************************ */
 header {
   z-index: 999;

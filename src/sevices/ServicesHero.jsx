@@ -9,12 +9,12 @@ export default function ServicesHero() {
                 onClick={() => navigate('/home')}
                 className='navLink'
               >
-                Home
+                Ana səhifə
                 <img src="../../arrows.svg" alt="Arrow" className='arrow' />
               </span>
-          <span>Services</span>
+          <span>Xidmətlər</span>
         </div>
-        <h2>Services</h2>
+        <h2>Xidmətlər</h2>
       </div>
     </div>
   )

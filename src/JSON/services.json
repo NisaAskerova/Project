@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "title": "Personal Protection",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.",
+    "title": "Şəxsi Müdafiə",
+    "description": "Fərdi qorunma ilə bağlı əsas tədbirlər və üsullar təqdim edilir.",
     "image": "../Rectangle 34624239.png",
     "show": true,
     "underLine": true,
@@ -10,16 +10,16 @@
   },
   {
     "id": 2,
-    "title": "Security Consulting",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.",
+    "title": "Təhlükəsizlik Məsləhətləri",
+    "description": "Təhlükəsizlik analizləri və məsləhətlər ilə iş yerində qorunma təmin olunur.",
     "image": "../Rectangle 34624243.png",
     "show": true,
     "color": "white"
   },
   {
     "id": 3,
-    "title": "Commercial Security",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.",
+    "title": "Ticarət Təhlükəsizliyi",
+    "description": "Ticarət obyektləri üçün yüksək səviyyəli təhlükəsizlik xidmətləri.",
     "image": "../Rectangle 34624241.png",
     "show": false,
     "color": "#FEE747",
@@ -29,16 +29,16 @@
   },
   {
     "id": 4,
-    "title": "Transport Security",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.",
+    "title": "Nəqliyyat Təhlükəsizliyi",
+    "description": "Nəqliyyat vasitələrinin və yüklərin təhlükəsizliyini təmin edirik.",
     "image": "../Rectangle 34624244.png",
     "show": false,
     "color": "white"
   },
   {
     "id": 5,
-    "title": "Object Protected",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.",
+    "title": "Əşyaların Qorunması",
+    "description": "Fərqli obyektlərin qorunmasını təmin edən müasir təhlükəsizlik sistemləri.",
     "image": "../Rectangle 34624242.png",
     "show": true,
     "color": "white",
@@ -46,8 +46,8 @@
   },
   {
     "id": 6,
-    "title": "CCTV Monitoring",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.",
+    "title": "CCTV Nəzarət",
+    "description": "Müşahidə kameraları ilə 24/7 təhlükəsizlik təmin edirik.",
     "image": "../Rectangle 34624245.png",
     "show": true,
     "color": "white"

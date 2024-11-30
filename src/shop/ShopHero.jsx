@@ -12,12 +12,12 @@ export default function ShopHero() {
             onClick={() => navigate('/home')}
             className='navLink'
           >
-            Home
+            Ana səhifə
             <img src="../../arrows.svg" alt="Arrow" className='arrow' />
           </span>
-          <span>Shop</span>
+          <span>Mağaza</span>
         </div>
-        <h2>Shop</h2>
+        <h2>Mağaza</h2>
       </div>
     </div>
   )

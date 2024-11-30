@@ -35,16 +35,16 @@ export default function Register() {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          console.log("Registration successful:", data);
+          console.log("Qeydiyyat uğurlu oldu:", data);
           navigate('/login'); 
         } else {
        
-          console.log("Error during registration:", data);
+          console.log("Qeydiyyat zamanı xəta:", data);
           setErrors(data.errors); 
         }
       })
       .catch((error) => {
-        console.error("Error:", error); 
+        console.error("Xəta:", error); 
       });
   };
 
@@ -54,11 +54,11 @@ export default function Register() {
       <div id='asingRight'>
         <div className='rightBox'>
           <div>
-            <h2 className='title'>Create New Account</h2>
-            <span className='same'>Please enter details</span>
+            <h2 className='title'>Yeni Hesab Yarat</h2>
+            <span className='same'>Zəhmət olmasa məlumatları daxil edin</span>
           </div>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="firstName">First Name</label>
+            <label htmlFor="firstName">Ad</label>
             <input 
               onChange={(e) => setData({ ...data, first_name: e.target.value })}
               type="text" 
@@ -69,7 +69,7 @@ export default function Register() {
               <p style={{ color: 'red' }}>{errors.first_name[0]}</p>
             )}
 
-            <label htmlFor="lastName">Last Name</label>
+            <label htmlFor="lastName">Soyad</label>
             <input 
               onChange={(e) => setData({ ...data, last_name: e.target.value })}
               type="text" 
@@ -80,7 +80,7 @@ export default function Register() {
               <p style={{ color: 'red' }}>{errors.last_name[0]}</p>
             )}
 
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="email">E-poçt Ünvanı</label>
             <input 
               onChange={(e) => setData({ ...data, email: e.target.value })}
               type="email" 
@@ -91,7 +91,7 @@ export default function Register() {
               <p style={{ color: 'red' }}>{errors.email[0]}</p>
             )}
 
-            <label className='same' htmlFor="password">Password</label>
+            <label className='same' htmlFor="password">Şifrə</label>
             <input 
               onChange={(e) => setData({ ...data, password: e.target.value })}
               type="password" 
@@ -105,10 +105,13 @@ export default function Register() {
             <div id='question'>
               <input type="checkbox" name="check" id="check" />
               <label className='same' htmlFor='check'>
-                I agree to the <a href="">Terms & Conditions</a>
+                Mən <a href="">Şərt və Qaydalar</a> ilə razıyam
               </label>
             </div>
-            <button type='submit'>Signup</button>
+            <div>
+              <span className='same'>Artıq hesabınız var? <a className='logRe' href="/login"> Daxil ol</a></span>
+            </div>
+            <button type='submit'>Qeydiyyat</button>
           </form>
         </div>
       </div>

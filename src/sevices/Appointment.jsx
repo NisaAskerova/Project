@@ -1,41 +1,40 @@
-import React from 'react'
+import React from 'react';
 
 export default function Appointment() {
     return (
         <div id='appointment'>
             <div id="appointmentLeft">
-                <span className="same">MAKE APPOINTMENT</span>
-                <h2 className="thick">The Perfect Solution For All Service</h2>
-                <p className="same">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                     The point of using Lorem Ipsum.</p>
+                <span className="same">TƏYİNAT YARADIN</span>
+                <h2 className="thick">Hər Xidmət Üçün Mükəmməl Həll</h2>
+                <p className="same">Oxucu bir səhifənin dizaynını yoxlarkən, mətndəki oxunaqlı məzmunun diqqətini yayındırması uzun müddətdir təsdiq olunmuş bir faktdır. Lorem Ipsum istifadəsinin məqsədi budur.</p>
             </div>
             <div id="appointmentRight">
                 <form action="#" method='POST'>
                     <div id='formDivTop'>
                         <div>
-                        <label htmlFor="name">Name</label>
-                        <input className='same' type="text" name="name" id="name" placeholder='Name' />
+                            <label htmlFor="name">Ad</label>
+                            <input className='same' type="text" name="name" id="name" placeholder='Adınızı daxil edin' />
                         </div>
                         <div>
-                        <label htmlFor="email">Email</label>
-                        <input className='same' type="email" name="email" id="email" placeholder='Email'/>
+                            <label htmlFor="email">Email</label>
+                            <input className='same' type="email" name="email" id="email" placeholder='Emailinizi daxil edin' />
                         </div>
                         <div>
-                        <label htmlFor="number">Mobil Number</label>
-                        <input className='same' type="number" name="number" id="number" placeholder='Mobil Number'/>
+                            <label htmlFor="number">Mobil Nömrə</label>
+                            <input className='same' type="number" name="number" id="number" placeholder='Mobil nömrənizi daxil edin' />
                         </div>
                         <div>
-                        <label htmlFor="services">Services</label>
-                        <input className='same' type="text" name="services" id="services" placeholder='Select' />
+                            <label htmlFor="services">Xidmətlər</label>
+                            <input className='same' type="text" name="services" id="services" placeholder='Seçin' />
                         </div>
                     </div>
                     <div id='formDivBottom'>
-                        <label htmlFor="message">Message</label>
-                        <textarea className='same' name="message" id="message" placeholder='Message'></textarea>
-                        <button>Make Appointment</button>
+                        <label htmlFor="message">Mesaj</label>
+                        <textarea className='same' name="message" id="message" placeholder='Mesajınızı yazın'></textarea>
+                        <button>Yaradın</button>
                     </div>
                 </form>
             </div>
         </div>
-    )
+    );
 }

@@ -1,26 +1,25 @@
 [
     {
-        "name": "Leslie Alexander",
-        "title": "Founder",
+        "name": "Lesli Ələskərli",
+        "title": "Təsisçi",
         "rating": 5,
-        "review": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "review": "Bu, istifadəçilərin çoxunun həm funksionallıq, həm də estetik baxımından məmnun olduğu bir təcrübədir. Hər şey yerli yerindədir.",
         "image": "../Oval.jpg",
         "icon": "../star.svg"
-        
     },
     {
-        "name": "Jacob Jones",
-        "title": "Co-Founder",
+        "name": "Yaqub Cəfərli",
+        "title": "Həm Təsisçi",
         "rating": 5,
-        "review": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "review": "Hər zaman peşəkar yanaşma, sürətli dəstək və yüksək keyfiyyətli xidmət göstərir. Bizim işimizdə hər zaman etibarlı bir tərəfdaş oldular.",
         "image": "../Oval (1).jpg",
         "icon": "../star.svg"
     },
     {
-        "name": "Jenny Wilson",
-        "title": "Chief Marketing Officer",
+        "name": "Cənnət Məmmədova",
+        "title": "Baş Marketinq Mütəxəssisi",
         "rating": 5,
-        "review": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "review": "Hər zaman müştərilərin ehtiyaclarına diqqət yetirir və ən müasir həlləri təqdim edir. Onlarla işləmək həmişə bir zövqdür.",
         "image": "../Oval (2).jpg",
         "icon": "../star.svg"
     }

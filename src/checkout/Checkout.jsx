@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { MyContext } from '../App';
-import CheckoutCard from './CheckoutCard';  // Correct import
+import CheckoutCard from './CheckoutCard';
 import { toast } from 'react-hot-toast';
 
 export default function Checkout() {
-  const { checkoutCart, setCheckoutCart, localQuantity, setLocalQuantity } = useContext(MyContext);
+  const { checkoutCart, setCheckoutCart } = useContext(MyContext);
 
   // Fetching basket data
   const fetchBasket = async () => {
@@ -16,60 +16,17 @@ export default function Checkout() {
         },
       });
       setCheckoutCart(response.data.products || []);
-      const initialQuantities = {};
-      (response.data.products || []).forEach((item) => {
-        initialQuantities[item.product.id] = item.quantity;
-      });
-      setLocalQuantity(initialQuantities);
-      localStorage.setItem('localQuantities', JSON.stringify(initialQuantities));
     } catch (error) {
       console.error('Error fetching basket:', error);
       toast.error('Failed to fetch basket data');
     }
   };
 
-  // Update quantity for products
-  const updateQuantity = async (productId, action, stock) => {
-    try {
-      let newQuantity = localQuantity[productId] || 1;
-      
-      if (action === 'increase') {
-        newQuantity += 1;
-        if (newQuantity > stock) {
-          toast.error(`Max stock is ${stock} for this product!`);
-          return;
-        }
-      } else if (action === 'decrease') {
-        if (newQuantity > 1) {
-          newQuantity -= 1;
-        }
-      }
-
-      const response = await axios.post(
-        `http://127.0.0.1:8000/api/basket/updateQuantity/${action}`,
-        { product_id: productId },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem('token')}`,
-          },
-        }
-      );
-
-      if (response.status === 200) {
-        toast.success('Quantity updated successfully');
-        setLocalQuantity((prevQuantities) => {
-          const newQuantities = { ...prevQuantities };
-          newQuantities[productId] = newQuantity;
-          localStorage.setItem('localQuantities', JSON.stringify(newQuantities));
-          return newQuantities;
-        });
-      } else {
-        toast.error(response.data.error || 'Failed to update quantity');
-      }
-    } catch (error) {
-      console.error('Error updating quantity:', error);
-      toast.error('Failed to update quantity');
-    }
+  // Calculate total price
+  const calculateTotal = () => {
+    const total = checkoutCart.reduce((acc, item) => acc + item.product.price * (item.quantity || 1), 0);
+    localStorage.setItem('total', total.toFixed(2));  // Save total price to localStorage
+    return total;
   };
 
   // Remove product from basket
@@ -139,7 +96,7 @@ export default function Checkout() {
                     <div>
                       <button
                         onClick={() => updateQuantity(product.product.id, 'decrease', product.product.stock)}
-                        disabled={localQuantity[product.product.id] === 1}
+                        disabled={product.quantity === 1}
                       >
                         <img src="/minus.svg" alt="Decrease quantity" />
                       </button>
@@ -147,17 +104,17 @@ export default function Checkout() {
                         className="same"
                         type="text"
                         readOnly
-                        value={localQuantity[product.product.id] || 1} // Shows quantity
+                        value={product.quantity || 1}
                       />
                       <button
                         onClick={() => updateQuantity(product.product.id, 'increase', product.product.stock)}
-                        disabled={localQuantity[product.product.id] >= product.product.stock}
+                        disabled={product.quantity >= product.product.stock}
                       >
                         <img src="/plus.svg" alt="Increase quantity" />
                       </button>
                     </div>
                   </td>
-                  <td>${(product.product.price * (localQuantity[product.product.id] || 1)).toFixed(2)}</td>
+                  <td>${(product.product.price * (product.quantity || 1)).toFixed(2)}</td>
                   <td>
                     <div
                       className="deleteIcon"
@@ -172,7 +129,7 @@ export default function Checkout() {
           </table>
         </div>
         <div id="checkoutTotal">
-          <CheckoutCard checkoutCart={checkoutCart} />
+          <CheckoutCard checkoutCart={checkoutCart} totalPrice={calculateTotal()} />
         </div>
       </div>
     </div>

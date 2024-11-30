@@ -23,13 +23,20 @@ export default function Header() {
           }
         );
         localStorage.removeItem('token'); // Token-i sil
+
+        // Bütün localStorage məlumatlarını silmək
+        localStorage.clear(); // Bütün məlumatları sil
+
+        // React state-lərini sıfırlamaq
+        setCart([]); // Cart-ı təmizləyin
+        setBasketQuantity(0); // Basketin sayını sıfırlayın
+
         navigate('/login', '/'); // Login səhifəsinə yönləndir
       }
     } catch (error) {
-      console.error('Logout failed', error);
+      console.error('Çıxış alınmadı', error);
     }
   };
-  
 
   // NavBar-ı açıb-bağlama funksiyası
   const toggleNavBar = () => {
@@ -53,7 +60,7 @@ export default function Header() {
           setBasketQuantity(response.data.total_items);
         }
       } catch (error) {
-        console.error('Basket quantity fetch failed', error);
+        console.error('Basketin sayı çəkilmədi', error);
       }
     };
 
@@ -76,7 +83,7 @@ export default function Header() {
               <img src="/call.svg" alt="call" />
             </div>
             <div className="info">
-              <span className="same">Make Call Anytime</span>
+              <span className="same">Hər zaman zəng edə bilərsiniz</span>
               <span>(219) 555-0114</span>
             </div>
           </div>
@@ -85,7 +92,7 @@ export default function Header() {
               <img src="/calendar.svg" alt="calendar" />
             </div>
             <div className="info">
-              <span className="same">Appointment Time</span>
+              <span className="same">Təqvim vaxtı</span>
               <span>10:00am - 07:00pm</span>
             </div>
           </div>
@@ -94,23 +101,22 @@ export default function Header() {
       <nav>
         <div id="navLeft">
           {/* Burger menyu */}
-          <div id="burgerDiv" onClick={toggleNavBar} aria-label="Toggle Navigation">
+          <div id="burgerDiv" onClick={toggleNavBar} aria-label="Nav-u açıb-bağlama">
             <img src="/burger.svg" alt="burger" />
           </div>
           {/* Menyu elementləri */}
           <ul className="navUl">
-            <li><NavLink to="/home">Home</NavLink></li>
-            <li><NavLink to="/about">About Us</NavLink></li>
-            <li><NavLink to="/services">Services</NavLink></li>
-            <li><NavLink to="/shop">Shop</NavLink></li>
-            <li><NavLink to="/blog">Blog</NavLink></li>
-            <li><NavLink to="/contact">Contact Us</NavLink></li>
+            <li><NavLink to="/home">Ana səhifə</NavLink></li>
+            <li><NavLink to="/about">Haqqımızda</NavLink></li>
+            <li><NavLink to="/services">Xidmətlər</NavLink></li>
+            <li><NavLink to="/shop">Mağaza</NavLink></li>
+            <li><NavLink to="/blog">Bloq</NavLink></li>
+            <li><NavLink to="/contact">Əlaqə</NavLink></li>
           </ul>
         </div>
         <div id="navRight">
           {/* İkonlar */}
           <div id="navIcon">
-            <img src="/search.svg" alt="search" />
             <img src="/favory.svg" alt="favorite" />
             <div id="cartCount" onClick={() => setVisibleCard(true)}>
               <img src="/shopCar.svg" alt="shop car" />
@@ -119,8 +125,8 @@ export default function Header() {
           </div>
           {/* Logout və digər düymələr */}
           <div id="headerButtons">
-            <button className="same">Get a Quote</button>
-            <button className="same" onClick={handleLogout}>Logout</button>
+            <button className="same">Təklif al</button>
+            <button className="same" onClick={handleLogout}>Çıxış</button>
           </div>
         </div>
         {/* Mobil üçün açılıb-bağlanan menyu */}
@@ -129,12 +135,12 @@ export default function Header() {
             <img src="/close.svg" alt="close" />
           </div>
           <ul>
-            <li><NavLink to="/home">Home</NavLink></li>
-            <li><NavLink to="/about">About Us</NavLink></li>
-            <li><NavLink to="/services">Services</NavLink></li>
-            <li><NavLink to="/shop">Shop</NavLink></li>
-            <li><NavLink to="/blog">Blog</NavLink></li>
-            <li><NavLink to="/contact">Contact Us</NavLink></li>
+            <li><NavLink to="/home">Ana səhifə</NavLink></li>
+            <li><NavLink to="/about">Haqqımızda</NavLink></li>
+            <li><NavLink to="/services">Xidmətlər</NavLink></li>
+            <li><NavLink to="/shop">Mağaza</NavLink></li>
+            <li><NavLink to="/blog">Bloq</NavLink></li>
+            <li><NavLink to="/contact">Əlaqə</NavLink></li>
           </ul>
         </div>
       </nav>

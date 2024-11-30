@@ -10,60 +10,59 @@ export default function Footer() {
         <div id='information'>
           <div id="footerLeft">
             <img src="/miniLogo.svg" alt="footerLogo" />
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p>Bir səhifənin tərtibatına baxarkən oxucunun oxumağa marağını itirəcəyinə dair uzun müddətdir təsdiq edilmiş bir faktdır.</p>
             <div >
               <div className='footerInfo'>
                 <img src="/call.svg" alt="footer-fone" />
-                <span>(505) 555-0125</span>
+                <span>(012) 555-0115</span>
               </div>
               <div className='footerInfo'>
                 <img src="/location.svg" alt="" />
-                <span className='same'>2715 Ash Dr. San Jose, South Dakota 83475</span>
+                <span className='same'>Bakı şəhəri, Nərimanov rayonu</span>
               </div>
             </div>
           </div>
 
           <div id="footerCenter1">
-            <h3>Information</h3>
+            <h3>Ətraflı Məlumat</h3>
             <ul>
-              <li><NavLink to="/home">Home</NavLink></li>
-              <li><NavLink to="/about">About Us</NavLink></li>
-              <li><NavLink to="/services">Services</NavLink></li>
-              <li><NavLink to="/shop">Shop</NavLink></li>
-              <li><NavLink to="/blog">Blog</NavLink></li>
+              <li><NavLink to="/home">Ana Səhifə</NavLink></li>
+              <li><NavLink to="/about">Haqqımızda</NavLink></li>
+              <li><NavLink to="/services">Xidmətlər</NavLink></li>
+              <li><NavLink to="/shop">Mağaza</NavLink></li>
+              <li><NavLink to="/blog">Bloq</NavLink></li>
             </ul>
           </div>
 
           <div id="footerCenter2">
-            <h3>Help & Support</h3>
+            <h3>Yardım və Dəstək</h3>
             <ul>
-              <li><NavLink to="/contact">Contact Us</NavLink></li>
-              <li><NavLink to="/privacy_policy">Privacy Policy</NavLink></li>
-              <li><NavLink to="/terms_conditions">Terms & Conditions</NavLink></li>
-              <li><NavLink to="">FAQ’S</NavLink></li>
-              <li><NavLink to="">Disclaimer</NavLink></li>
+              <li><NavLink to="/contact">Əlaqə</NavLink></li>
+              <li><NavLink to="/privacy_policy">Məxfilik Siyasəti</NavLink></li>
+              <li><NavLink to="/terms_conditions">Şərtlər və Qaydalar</NavLink></li>
+              <li><NavLink to="">Tez-tez Verilən Suallar (FAQ’S)</NavLink></li>
+              <li><NavLink to="">İstisnalar</NavLink></li>
             </ul>
           </div>
 
           <div id="footerRight">
-            <h3>Social Media</h3>
-            <span className='same'>Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit.</span>
-            <div id='mediaIcons'>
-              <img src="/facebook.svg" alt="faceIcon" />
-              <img src="/instagram.svg" alt="instaIcon" />
-              <img src="/twitter.svg" alt="twitterIcon" />
-            </div>
-          </div>
+  <h3>Sosial Şəbəkələr</h3>
+  <span className='same'>Bizim sosial şəbəkələrdə bizi izləyin və ən son yeniliklərdən xəbərdar olun.</span>
+  <div id='mediaIcons'>
+    <img src="/facebook.svg" alt="faceIcon" />
+    <img src="/instagram.svg" alt="instaIcon" />
+    <img src="/twitter.svg" alt="twitterIcon" />
+  </div>
+</div>
+
         </div>
         <div id='footerEnd'>
           <div id='line'></div>
           <div id='end'>
-            <span>©2023 Secura All Rights are reserved️ </span>
+            <span>©2024 Secura Bütün Hüquqlar Qorunur</span>
           </div>
         </div>
       </footer>
-
     </div>
   )
 }

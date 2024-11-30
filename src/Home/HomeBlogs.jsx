@@ -28,12 +28,10 @@ export default function HomeBlogs() {
 
   return (
     <div id="homeBlogs">
-      <span className="same">OUR BLOG</span>
-      <h2 className="thick">Our Latest Blogs</h2>
+      <span className="same">BLOQUMUZ</span>
+      <h2 className="thick">Son Bloqlarımız</h2>
       <p className="same">
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum.
+      Bizim bloqlarımızda müştərilərimizə faydalı məlumatlar, təcrübələr və tövsiyələr təqdim edirik. Ən son yeniliklər və mövzular haqqında məlumatları burada tapa bilərsiniz.
       </p>
       <div id="blogBoxes">
         {message && <p style={{ color: 'red' }}>{message}</p>}

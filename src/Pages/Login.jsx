@@ -22,16 +22,16 @@ export default function Login() {
     .then((res) => {
       if (!res.ok) {
         return res.json().then(errData => {
-          setErrors(errData.errors || { message: 'Bir hata oluştu.' });
-          throw new Error(errData.message || 'Bir hata oluştu.');
+          setErrors(errData.errors || { message: 'Bir xəta baş verdi.' });
+          throw new Error(errData.message || 'Bir xəta baş verdi.');
         });
       }
       return res.json();
     })
     .then((data) => {
       if (data.success) {
-        localStorage.setItem('token', data.token);  // Tokeni localStorage-a qeyd et
-        localStorage.setItem('role', data.role);    // Rolü də qeyd et
+        localStorage.setItem('token', data.token);  // Token-i localStorage-a saxla
+        localStorage.setItem('role', data.role);    // Rolü də saxla
 
         // Rola görə yönləndirmə
         if (data.role === 'admin') { 
@@ -53,11 +53,11 @@ export default function Login() {
         <div className='rightBox'>
           <div>
             <img src="./logo.svg" alt="" />
-            <h2 className='title'>Welcome 👋 </h2>
-            <span className='same'>Please login here</span>
+            <h2 className='title'>Xoş Gəlmisiniz 👋 </h2>
+            <span className='same'>Zəhmət olmasa buradan daxil olun</span>
           </div>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="email">Email Ünvanı</label>
             <input
               onChange={(e) => setData({ ...data, email: e.target.value })}
               type="email"
@@ -70,7 +70,7 @@ export default function Login() {
               </p>
             )}
 
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Şifrə</label>
             <input
               onChange={(e) => setData({ ...data, password: e.target.value })}
               type="password"
@@ -86,11 +86,14 @@ export default function Login() {
             <div id='remember'>
               <div>
                 <input type="checkbox" name="check" id="check" />
-                <label className='same' htmlFor='check'>Remember Me</label>
+                <label className='same' htmlFor='check'>Məni xatırla</label>
               </div>
-              <div><a href="">Forgot Password?</a></div>
+              <div><a href="">Şifrənizi unutdunuz?</a></div>
             </div>
-            <button type='submit'>Login</button>
+            <div>
+              <span className='same'>Hesabınız yoxdursa <a className='logRe' href="/"> Qeydiyyatdan keçin</a></span>
+            </div>
+            <button type='submit'>Daxil ol</button>
           </form>
 
           {errors.message && (

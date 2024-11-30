@@ -12,12 +12,12 @@ export default function BlogHero() {
             onClick={() => navigate('/home')}
             className='navLink'
           >
-            Home
+            Ana səhifə
             <img src="../../arrows.svg" alt="Arrow" className='arrow' />
           </span>
-          <span>Blog</span>
+          <span>Bloq</span>
         </div>
-        <h2>Blog</h2>
+        <h2>Bloq</h2>
       </div>
     </div>
   )

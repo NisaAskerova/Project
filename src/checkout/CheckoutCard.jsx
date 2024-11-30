@@ -1,13 +1,13 @@
-import React, { useState } from 'react'; // Ensure only one useState import
+import React, { useState } from 'react';
 
-const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Proceed to Checkout" }) => {
-  // Check if checkoutCart is an array and return a loading message if not
+const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Proceed to Checkout", isReviewPage = false }) => {
   if (!Array.isArray(checkoutCart)) {
     return <div>Loading...</div>; // Handle the case where checkoutCart is not an array
   }
 
   const [discountCode, setDiscountCode] = useState('');
   const [discount, setDiscount] = useState(0);
+  const [loading, setLoading] = useState(false); // For handling button state
   const deliveryCharge = 10.00;
 
   // Calculate subtotal, discounted subtotal, and grand total
@@ -15,12 +15,62 @@ const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Pro
   const discountedSubtotal = subtotal * (1 - discount / 100);
   const grandTotal = discountedSubtotal + deliveryCharge;
 
-  // Handle applying the discount code
   const handleDiscountCode = () => {
     if (discountCode === 'FLAT50') {
-      setDiscount(50);
+      setDiscount(50); // Apply 50% discount
     } else {
-      setDiscount(0);
+      setDiscount(0); // No discount if code is not valid
+    }
+  };
+
+  const handlePlaceOrder = async () => {
+    setLoading(true);
+  
+    try {
+        // LocalStorage-dən məlumatları oxuyun
+        const addressData = JSON.parse(localStorage.getItem('addressData') || '{}');
+        const paymentData = JSON.parse(localStorage.getItem('paymentData') || '{}');
+  
+        const token = localStorage.getItem('token');
+  
+        if (!token) {
+            alert('Authentication error: No token found!');
+            setLoading(false); // Loading state-ini dayandırmaq
+            return; // Token olmadıqda dayandırmaq
+        }
+  
+        // Serverə sorğu göndərmək
+        const response = await fetch('http://localhost:8000/api/orders/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+                checkoutCart: checkoutCart,  // Checkout cart data
+                addressData: addressData,    // Address data
+                paymentData: paymentData,    // Payment data
+                discountCode: discountCode,  // Discount code if applicable
+                discount: discount,          // Discount percentage
+                deliveryCharge: deliveryCharge, // Delivery charge
+                total: grandTotal,           // Send the grand total with discount and delivery charge
+            }),
+        });
+  
+        // Handle server response
+        const data = await response.json();
+        if (data && response.ok) {
+            alert('Order placed successfully: ' + data.message);
+            window.location.href = '/order-success';
+        } else {
+            alert('Error placing order: ' + data.message || 'Unknown error');
+        }
+  
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An unexpected error occurred: ' + error.message);
+    } finally {
+        setLoading(false); // Loading state-ni dayandırırıq
     }
   };
 
@@ -55,10 +105,10 @@ const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Pro
       {showButton && (
         <button
           className="same"
-          onClick={() => window.location.href = '/shoppingAddress'}
-          disabled={checkoutCart.length === 0}
+          onClick={isReviewPage ? handlePlaceOrder : () => window.location.href = '/shoppingAddress'}
+          disabled={loading || checkoutCart.length === 0}
         >
-          {buttonLabel}
+          {loading ? 'Processing...' : isReviewPage ? "Place Order" : buttonLabel}
         </button>
       )}
     </div>
