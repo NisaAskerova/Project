@@ -7,7 +7,7 @@ import { toast } from 'react-hot-toast';
 export default function Checkout() {
   const { checkoutCart, setCheckoutCart } = useContext(MyContext);
 
-  // Fetching basket data
+  // Səbət məlumatlarını əldə etmək
   const fetchBasket = async () => {
     try {
       const response = await axios.get('http://127.0.0.1:8000/api/basket/index', {
@@ -17,19 +17,19 @@ export default function Checkout() {
       });
       setCheckoutCart(response.data.products || []);
     } catch (error) {
-      console.error('Error fetching basket:', error);
-      toast.error('Failed to fetch basket data');
+      console.error('Səbət məlumatlarını əldə edərkən xəta:', error);
+      toast.error('Səbət məlumatlarını əldə etmək mümkün olmadı');
     }
   };
 
-  // Calculate total price
+  // Ümumi qiyməti hesablamaq
   const calculateTotal = () => {
     const total = checkoutCart.reduce((acc, item) => acc + item.product.price * (item.quantity || 1), 0);
-    localStorage.setItem('total', total.toFixed(2));  // Save total price to localStorage
+    localStorage.setItem('total', total.toFixed(2));  // Ümumi qiyməti localStorage-da saxlamaq
     return total;
   };
 
-  // Remove product from basket
+  // Məhsulu səbətdən silmək
   const removeProduct = async (basketId, productId) => {
     try {
       const response = await axios.delete(
@@ -42,36 +42,36 @@ export default function Checkout() {
       );
 
       if (response.status === 200) {
-        toast.success('Product removed from basket');
-        fetchBasket(); // Reload basket
+        toast.success('Məhsul səbətdən silindi');
+        fetchBasket(); // Səbəti yenidən yükləmək
       }
     } catch (error) {
-      console.error('Error removing product:', error);
-      toast.error('Failed to remove product');
+      console.error('Məhsulu silərkən xəta:', error);
+      toast.error('Məhsulu silmək mümkün olmadı');
     }
   };
 
-  // Fetch basket initially
+  // İlk dəfə səbəti əldə etmək
   useEffect(() => {
     fetchBasket();
   }, []);
 
   if (!Array.isArray(checkoutCart)) {
-    return <div>Loading...</div>;
+    return <div>Yüklənir...</div>;
   }
 
   return (
     <div id="checkoutWrapper">
-      <h2 className="thick">Checkout</h2>
+      <h2 className="thick">Ödəmə</h2>
       <div id="checkout_hero">
         <div id="checkoutItems">
           <table>
             <thead>
               <tr>
-                <th className="same">Products</th>
-                <th className="same">Price</th>
-                <th className="same">Quantity</th>
-                <th className="same">Subtotal</th>
+                <th className="same">Məhsullar</th>
+                <th className="same">Qiymət</th>
+                <th className="same">Miqdar</th>
+                <th className="same">Aralıq Cəm</th>
                 <th></th>
               </tr>
             </thead>
@@ -98,7 +98,7 @@ export default function Checkout() {
                         onClick={() => updateQuantity(product.product.id, 'decrease', product.product.stock)}
                         disabled={product.quantity === 1}
                       >
-                        <img src="/minus.svg" alt="Decrease quantity" />
+                        <img src="/minus.svg" alt="Miqdarı azalt" />
                       </button>
                       <input
                         className="same"
@@ -110,7 +110,7 @@ export default function Checkout() {
                         onClick={() => updateQuantity(product.product.id, 'increase', product.product.stock)}
                         disabled={product.quantity >= product.product.stock}
                       >
-                        <img src="/plus.svg" alt="Increase quantity" />
+                        <img src="/plus.svg" alt="Miqdarı artır" />
                       </button>
                     </div>
                   </td>
@@ -120,7 +120,7 @@ export default function Checkout() {
                       className="deleteIcon"
                       onClick={() => removeProduct(product.basket_id, product.product.id)}
                     >
-                      <img src="/delete.svg" alt="Delete" />
+                      <img src="/delete.svg" alt="Sil" />
                     </div>
                   </td>
                 </tr>

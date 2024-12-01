@@ -9,7 +9,7 @@ export default function Card() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // Calculate total price and quantity
+  // Ümumi qiymət və miqdarın hesablanması
   const calculateTotal = () => {
     if (!cart || !Array.isArray(cart.products)) return { totalPrice: 0, totalQuantity: 0 };
     const totalPrice = cart.products.reduce((sum, product) => sum + product.product.price * product.quantity, 0);
@@ -17,7 +17,7 @@ export default function Card() {
     return { totalPrice, totalQuantity };
   };
 
-  // Fetch cart data from backend
+  // Backenddən kart məlumatlarını əldə etmək
   useEffect(() => {
     const fetchCartData = async () => {
       try {
@@ -25,23 +25,41 @@ export default function Card() {
         if (!token) {
           navigate('/login');
         }
+  
         const response = await axios.get('http://127.0.0.1:8000/api/basket/index', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
-        setCart(response.data);
-        setLoading(false);
+  
+        console.log('Tam cavab:', response.data); // Cavab strukturu yoxlanılır
+  
+        // Cavabda basket_id və məhsulların olub-olmaması yoxlanır
+        if (response.data && response.data.products && Array.isArray(response.data.products)) {
+          setCart(response.data);
+          
+          // Basket ID yoxlanır
+          const basketId = response.data.basket_id || 'default_basket_id'; // Burada backend cavabında basket_id yoxlanır
+          localStorage.setItem('basket_id', basketId); // Basket ID-ni localStorage-a yaz
+  
+          console.log('Basket ID saxlanıldı:', basketId); // Basket ID konsolda izlənir
+          setLoading(false);
+        } else {
+          setError('Basket ID və ya məhsullar mövcud deyil');
+          setLoading(false);
+        }
       } catch (err) {
-        setError(err.response ? err.response.data.error : 'Something went wrong');
+        console.error('Kart məlumatları əldə edərkən xəta:', err);
+        setError(err.response ? err.response.data.error : 'Bir şey səhv getdi');
         setLoading(false);
       }
     };
-
+  
     fetchCartData();
   }, [setCart, navigate]);
+  
 
-  // Remove product from cart and backend
+  // Məhsulu kartdan və backenddən silmək
   const removeProduct = async (basketId, productId) => {
     try {
       const response = await axios.delete(
@@ -56,10 +74,12 @@ export default function Card() {
       if (response.status === 200) {
         const updatedCart = Array.isArray(cart.products) ? cart.products.filter((e) => e.product.id !== productId) : [];
         setCart({ ...cart, products: updatedCart });
+        // Basket ID-ni localStorage-a yeniləmək
+        localStorage.setItem('basket_id', basketId);
       }
     } catch (error) {
-      console.error('Error removing product from cart:', error.response?.data?.message || error.message);
-      setError(error.response ? error.response.data.message : 'Something went wrong');
+      console.error('Kartdan məhsulu silərkən xəta:', error.response?.data?.message || error.message);
+      setError(error.response ? error.response.data.message : 'Bir şey səhv getdi');
     }
   };
 
@@ -69,13 +89,13 @@ export default function Card() {
     setVisibleCard(false);
   };
 
-  // If loading or error
+  // Əgər yüklənir və ya xəta varsa
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Yüklənir...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div>Xəta: {error}</div>;
   }
 
   const { totalPrice, totalQuantity } = calculateTotal();
@@ -85,7 +105,7 @@ export default function Card() {
       <div id="card" onClick={(e) => e.stopPropagation()}>
         <div id="productsCard">
           <span className="same">
-            You have <h3>{cart.products.length} items</h3> in your cart
+            Səbətinizdə <h3>{cart.products.length} məhsul var</h3>
           </span>
           {Array.isArray(cart.products) && cart.products.map((basketProduct) => (
             <div id="cardProducts" key={basketProduct.id}>
@@ -100,9 +120,9 @@ export default function Card() {
                   <span>{basketProduct.product.title}</span>
                   <strong>${parseFloat(basketProduct.product.price).toFixed(2)}</strong>
                   <div>
-                    <span>QTY: {basketProduct.quantity}</span>
+                    <span>Miqdarı: {basketProduct.quantity}</span>
                     <div className="deleteIcon" onClick={() => removeProduct(basketProduct.basket_id, basketProduct.product.id)}>
-                      <img src="/delete.svg" alt="Delete" />
+                      <img src="/delete.svg" alt="Sil" />
                     </div>
                   </div>
                 </div>
@@ -112,12 +132,12 @@ export default function Card() {
         </div>
         <div id="cartBottom">
           <div>
-            <span>Subtotal</span>
+            <span>Toplam</span>
             <span>${totalPrice.toFixed(2)}</span>
           </div>
-          <button className="same">View Cart</button>
+          <button className="same">Səbətə bax</button>
           <button className="same" onClick={handleCheckout}>
-            Checkout
+            Ödənişə keç
           </button>
         </div>
       </div>

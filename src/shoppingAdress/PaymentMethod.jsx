@@ -7,7 +7,7 @@ const PaymentMethod = () => {
   const navigate = useNavigate();
   const { cartTotal } = useContext(MyContext);
   
-  // State variables
+  // Dövlət dəyişənləri
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
   const [cardNumber, setCardNumber] = useState('');
@@ -16,7 +16,7 @@ const PaymentMethod = () => {
   const [error, setError] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
 
-  // Load data from localStorage if exists
+  // Əgər varsa, localStorage-dan məlumatı yükləyin
   useEffect(() => {
     const savedPaymentData = localStorage.getItem('paymentData');
     if (savedPaymentData) {
@@ -46,7 +46,7 @@ const PaymentMethod = () => {
       setCvv(value);
       setError('');
     } else {
-      setError('CVV must be a maximum of 3 digits.');
+      setError('CVV maksimum 3 rəqəm olmalıdır.');
     }
   };
 
@@ -69,39 +69,39 @@ const PaymentMethod = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    // Validate payment method
+    // Ödəmə metodunu yoxlayın
     if (!paymentMethod || !['cashOnDelivery', 'card'].includes(paymentMethod)) {
-      setError('Please select a valid payment method (cash or card).');
+      setError('Zəhmət olmasa keçərli ödəmə metodu seçin (nağd və ya kart).');
       return;
     }
 
-    // Save the selected payment method to localStorage
+    // Seçilmiş ödəmə metodunu localStorage-da saxlayın
     const paymentData = { paymentMethod };
     localStorage.setItem('paymentData', JSON.stringify(paymentData));
   
-    // Only store the other card data if 'card' method is selected
+    // Yalnız 'kart' metodu seçildikdə digər kart məlumatlarını saxlayın
     if (paymentMethod === 'card') {
       if (!cardNumber || cardNumber.length !== 16) {
-        setError('Please enter a valid card number.');
+        setError('Zəhmət olmasa düzgün kart nömrəsi daxil edin.');
         return;
       }
   
       if (!cardName) {
-        setError('Please enter the cardholder name.');
+        setError('Zəhmət olmasa kart sahibinin adını daxil edin.');
         return;
       }
   
       if (!expiryDate || expiryDate.length !== 5) {
-        setError('Please enter a valid expiry date (MM/YY).');
+        setError('Zəhmət olmasa düzgün son istifadə tarixini (AA/YY) daxil edin.');
         return;
       }
   
       if (!cvv || cvv.length !== 3) {
-        setError('Please enter a valid CVV.');
+        setError('Zəhmət olmasa düzgün CVV daxil edin.');
         return;
       }
   
-      // Save all card information to localStorage
+      // Bütün kart məlumatlarını localStorage-da saxlayın
       const cardData = {
         cardNumber,
         cardName,
@@ -110,14 +110,22 @@ const PaymentMethod = () => {
       };
       localStorage.setItem('cardData', JSON.stringify(cardData));
     }
-  
-    // Navigate to next page without submitting payment
+
+    // "Kartı əlavə et" düyməsinə basıldıqda, sadəcə məlumatları saxlayırıq, amma səhifəyə keçməyəcəyik
+    setIsProcessing(true);
     navigate('/shoppingAddress/reviews');
+  };
+
+  const handleAddCard = () => {
+    // "Kartı əlavə et" düyməsi ilə məlumatları saxlayırıq, amma səhifəyə keçmirik
+    const cardData = { cardNumber, cardName, expiryDate, cvv };
+    localStorage.setItem('cardData', JSON.stringify(cardData));
+    alert('Kart məlumatları yadda saxlanıldı!');
   };
   
   return (
     <div>
-      <h2>Select a payment method</h2>
+      <h2>Ödəmə metodunu seçin</h2>
       <form id="method" onSubmit={handleSubmit}>
         <div id="debet">
           <input
@@ -128,12 +136,12 @@ const PaymentMethod = () => {
             checked={paymentMethod === 'card'}
             onChange={handlePaymentMethodChange}
           />
-          <label htmlFor="dcCard"><h2>Debit/Credit Card</h2></label>
+          <label htmlFor="dcCard"><h2>Debet/Kredit Kartı</h2></label>
         </div>
         {paymentMethod === 'card' && (
           <>
             <div>
-              <label htmlFor="cardNumber">Card Number</label>
+              <label htmlFor="cardNumber">Kart Nömrəsi</label>
               <input
                 className="same"
                 type="text"
@@ -145,7 +153,7 @@ const PaymentMethod = () => {
               />
             </div>
             <div>
-              <label htmlFor="cardName">Card Name</label>
+              <label htmlFor="cardName">Kart Sahibi</label>
               <input
                 className="same"
                 type="text"
@@ -157,7 +165,7 @@ const PaymentMethod = () => {
             </div>
             <div id="date">
               <div>
-                <label htmlFor="expiryDate">Expiry Date</label>
+                <label htmlFor="expiryDate">Son İstifadə Tarixi</label>
                 <input
                   className="same"
                   type="text"
@@ -185,8 +193,8 @@ const PaymentMethod = () => {
 
         {error && <p style={{ color: 'red' }}>{error}</p>}
 
-        <button className="same deliverBtn" type="submit" disabled={isProcessing}>
-          Add Card
+        <button className="same deliverBtn" type="button" onClick={handleAddCard} disabled={isProcessing}>
+          Kartı əlavə et
         </button>
 
         <div>
@@ -221,12 +229,12 @@ const PaymentMethod = () => {
               checked={paymentMethod === 'cashOnDelivery'}
               onChange={handlePaymentMethodChange}
             />
-            <label htmlFor="cashOnDelivery"><h2>Cash on Delivery</h2></label>
+            <label htmlFor="cashOnDelivery"><h2>Nağd Ödəmə</h2></label>
           </div>
         </div>
 
         <button type="submit" className="same deliverBtn" disabled={isProcessing}>
-          Continue
+          Davam et
         </button>
       </form>
     </div>

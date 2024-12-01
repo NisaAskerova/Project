@@ -5,11 +5,9 @@ import { Link } from "react-router-dom";
 const Address = () => {
   return (
     <div id="addressHero">
-      <h2>Select a delivery address</h2>
+      <h2>Təslim ünvanını seçin</h2>
       <p className="same sm">
-        Is the address you'd like to use displayed below? If so, click the
-        corresponding "Deliver to this address" button. Or you can enter a new
-        delivery address.
+        Aşağıda göstərilən ünvanı istifadə etmək istəyirsinizmi? Əgər belədirsə, müvafiq "Bu ünvana təslim et" düyməsini sıxın. Yoxsa yeni bir təslim ünvanı daxil edə bilərsiniz.
       </p>
       <div id="addressCards">
         <div className="addressCart">
@@ -25,11 +23,11 @@ const Address = () => {
           <div className="addressButtons">
             <button>
               <img src="/edit.svg" alt="" />
-              <span>Edit</span>
+              <span>Dəyişdir</span>
             </button>
             <button>
               <img src="/delete.svg" alt="" />
-              <span>Delete</span>
+              <span>Silmək</span>
             </button>
           </div>
         </div>
@@ -46,17 +44,17 @@ const Address = () => {
           <div className="addressButtons">
             <button>
               <img src="/edit.svg" alt="" />
-              <span>Edit</span>
+              <span>Dəyişdir</span>
             </button>
             <button>
               <img src="/delete.svg" alt="" />
-              <span>Delete</span>
+              <span>Silmək</span>
             </button>
           </div>
         </div>
       </div>
       <Link to="/shoppingAddress/payment" className="same deliverBtn">
-        Deliver Here
+        Buraya Təslim Et
       </Link>
       <NewAddress />
     </div>

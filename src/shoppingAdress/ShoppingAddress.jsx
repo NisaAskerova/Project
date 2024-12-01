@@ -58,7 +58,7 @@ const ShoppingAddress = () => {
 
   return (
     <div id="shopAddress">
-      <h2 className="thick">Shopping Cart</h2>
+      <h2 className="thick">Səbət</h2>
       <div className="address">
         <div id="addressHero">
           <div className="right-page">
@@ -69,9 +69,9 @@ const ShoppingAddress = () => {
             >
               <div>
                 <div className="shopIcon">
-                  <img src="/home3.svg" alt="Address Icon" />
+                  <img src="/home3.svg" alt="Ünvan İkonu" />
                 </div>
-                <span className="same">Address</span>
+                <span className="same">Ünvan</span>
               </div>
             </Link>
             <Link
@@ -83,10 +83,10 @@ const ShoppingAddress = () => {
                 <div className="steps">
                   <div className="line"></div>
                   <div className="shopIcon">
-                    <img src="/ecommers2.svg" alt="Payment Icon" />
+                    <img src="/ecommers2.svg" alt="Ödəniş İkonu" />
                   </div>
                 </div>
-                <span className="same">Payment Method</span>
+                <span className="same">Ödəniş Metodu</span>
               </div>
             </Link>
             <Link
@@ -98,10 +98,10 @@ const ShoppingAddress = () => {
                 <div className="steps">
                   <div className="line2"></div>
                   <div className="shopIcon">
-                    <img src="/editor.svg" alt="Review Icon" />
+                    <img src="/editor.svg" alt="Rəy İkonu" />
                   </div>
                 </div>
-                <span className="same">Review</span>
+                <span className="same">Rəy</span>
               </div>
             </Link>
           </div>
@@ -114,10 +114,9 @@ const ShoppingAddress = () => {
         <CheckoutCard
           checkoutCart={checkoutCart}
           showButton={activeStep === "reviews"}
-          buttonLabel="Proceed to Checkout"
+          buttonLabel="Ödənişi Tamamla"
           isReviewPage={activeStep === "reviews"}
         />
-
 
         {message && (
           <div className={`message ${orderPlaced ? "success" : "error"}`}>

@@ -2,18 +2,17 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MyContext } from '../App';
 
-
 export default function Order() {
   const { setOrderCart } = useContext(MyContext);
   const navigate = useNavigate();
 
   const handleViewOrder = () => {
-    setOrderCart(false)
+    setOrderCart(false);
     navigate('/shop');
   };
 
   const handleBackToHome = () => {
-    setOrderCart(false)
+    setOrderCart(false);
     navigate('/home'); 
   };
 
@@ -21,20 +20,19 @@ export default function Order() {
     <div id='orders'>
       <div id='order'>
         <div id='yDiv'>
-          <img src="../shopbag.svg" alt="" />
+          <img src="../shopbag.svg" alt="Səbət" />
         </div>
         <div>
-          <h3>Your order is confirmed</h3>
-          <span className='same'>Thanks for shopping!</span>
-          <span className='same'>Your order hasn’t shipped yet,</span>
-          <span className='same'>but we will send you an email when it’s done.</span>
+          <h3>Sifarişiniz təsdiqləndi</h3>
+          <span className='same'>Bizimlə alış-veriş etdiyiniz üçün təşəkkür edirik!</span>
+          <span className='same'>Sifarişiniz hələ göndərilməyib,</span>
+          <span className='same'>amma göndərildikdə sizə email göndərəcəyik.</span>
         </div>
         <div id='orBtn'>
-          <button onClick={handleViewOrder} className="same ybtn">View Order</button>
-          <button onClick={handleBackToHome} className="same whiteBtn">Back to Home</button>
+          <button onClick={handleViewOrder} className="same ybtn">Sifarişə bax</button>
+          <button onClick={handleBackToHome} className="same whiteBtn">Ana səhifəyə qayıt</button>
         </div>
       </div>
     </div>
-    
   );
 }

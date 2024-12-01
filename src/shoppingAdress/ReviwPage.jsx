@@ -8,8 +8,8 @@ export default function ReviewsPage() {
   const [shippingAddress, setShippingAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState(null);
   const [cartData, setCartData] = useState(null);
-  const [totalQuantity, setTotalQuantity] = useState(0); // For total quantity
-  const [totalPrice, setTotalPrice] = useState(0); // For total price
+  const [totalQuantity, setTotalQuantity] = useState(0); // Ümumi say üçün
+  const [totalPrice, setTotalPrice] = useState(0); // Ümumi qiymət üçün
   const navigate = useNavigate(); 
 
   useEffect(() => {
@@ -20,17 +20,17 @@ export default function ReviewsPage() {
       return;  
     }
 
-    // Get shipping address from local storage
+    // Yerləşdirmə ünvanını local storage-dən götürmək
     const storedShipping = localStorage.getItem('addressData');
     if (storedShipping) {
       setShippingAddress(JSON.parse(storedShipping));
     }
 
-    // Get payment data (paymentMethod and cardData) from local storage
+    // Ödəniş məlumatlarını (paymentMethod və cardData) local storage-dən götürmək
     const storedPayment = localStorage.getItem('paymentData');
     if (storedPayment) {
-      setPaymentMethod(JSON.parse(storedPayment).paymentMethod);  // Set paymentMethod
-      setCartData(JSON.parse(storedPayment).cardData);  // Set cardData (if available)
+      setPaymentMethod(JSON.parse(storedPayment).paymentMethod);  // Ödəniş üsulunu təyin et
+      setCartData(JSON.parse(storedPayment).cardData);  // Kart məlumatlarını təyin et (mövcudsa)
     }
 
     const cartData = localStorage.getItem('cardData');
@@ -38,19 +38,19 @@ export default function ReviewsPage() {
       setCartData(JSON.parse(cartData));
     }
     
-    // Fetch cart data from API
+    // API-dən kart məlumatlarını əldə etmək
     axios.get('http://127.0.0.1:8000/api/basket/index', {
       headers: { 'Authorization': `Bearer ${token}` }
     })
     .then(response => {
       if (response.data) {
-        setCheckoutCart(response.data.products); // Set products in the cart
-        setTotalQuantity(response.data.total_quantity); // Set total quantity
-        setTotalPrice(response.data.total_price); // Set total price
+        setCheckoutCart(response.data.products); // Kartdakı məhsulları təyin et
+        setTotalQuantity(response.data.total_quantity); // Ümumi sayını təyin et
+        setTotalPrice(response.data.total_price); // Ümumi qiyməti təyin et
       }
     })
     .catch(error => {
-      console.error('Error fetching data from API:', error);
+      console.error('API-dən məlumat əldə edərkən xəta baş verdi:', error);
     });
   }, [setCheckoutCart, navigate]);
 
@@ -64,7 +64,7 @@ console.log(checkoutCart);
       <div id='productsCard'>
         {checkoutCart.map((product) => (
           <div key={product.id}>
-            <h3>Estimated delivery: 23 July 2023</h3>
+            <h3>Təxmini çatdırılma: 23 İyul 2023</h3>
             <div id='cardProducts'>
               <div className='cardBox'>
                 <div className='cardImgDiv'>
@@ -74,9 +74,9 @@ console.log(checkoutCart);
                   <span>{product.product.title}</span>
                   <strong>{product.product.price}</strong>
                   <div>
-                    <span>QTY: {product.product.quantity || 1}</span>
+                    <span>Ədəd: {product.product.quantity || 1}</span>
                     <div className='deleteIcon' onClick={() => removeProduct(product.product.id)}>
-                      {/* Delete Icon */}
+                      {/* Silmək ikonu */}
                     </div>
                   </div>
                 </div>
@@ -89,41 +89,41 @@ console.log(checkoutCart);
       {checkoutCart?.length > 0 && (
         <>
           <div id='sa'>
-            <h3>Shipping Address</h3>
+            <h3>Çatdırılma Ünvanı</h3>
             {shippingAddress ? (
               <>
                 <h4>{shippingAddress.name}</h4>
                 <span className='same'>{shippingAddress.address_line}</span>
               </>
             ) : (
-              <p>No shipping address provided.</p>
+              <p>Çatdırılma ünvanı təqdim edilməyib.</p>
             )}
             <div className='edit'>
-              <img src="../edit.svg" alt="Edit" />
+              <img src="../edit.svg" alt="Dəyişdir" />
             </div>
           </div>
 
           <div id="sa">
-            <h3>Payment Method</h3>
+            <h3>Ödəniş Metodu</h3>
             {paymentMethod ? (
               <div>
                 {paymentMethod === 'card' ? (
                   cartData ? (
                     <h4>
-                      Debit Card (.... .... .... ..{cartData.cardNumber.slice(-2)})
+                      Debet Kartı (.... .... .... ..{cartData.cardNumber.slice(-2)})
                     </h4>
                   ) : (
-                    <p>Card details are not available.</p>
+                    <p>Kart məlumatları mövcud deyil.</p>
                   )
                 ) : (
-                  <h4>Cash on Delivery</h4>
+                  <h4>Nağd ödəniş</h4>
                 )}
                 <div className='edit'>
-                  <img src="../edit.svg" alt="Edit" />
+                  <img src="../edit.svg" alt="Dəyişdir" />
                 </div>
               </div>
             ) : (
-              <p>No payment method selected.</p>
+              <p>Ödəniş metodu seçilməyib.</p>
             )}
           </div>
         </>

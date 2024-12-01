@@ -2809,7 +2809,9 @@ font-weight: 700;
   background: #FEE747;
 
 }
-
+#workRight >div>img{
+  display: none;
+}
 /* *************************CHECKOUT**************************** */
 #checkoutWrapper {
   width: 100%;
@@ -3639,7 +3641,9 @@ table {
     position: fixed;
 
   }
-
+  .homeBox{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
   #navBar>ul>li a {
     line-height: 20px;
     display: block;
@@ -3714,6 +3718,7 @@ table {
   }
 
 
+  
 
   #homePage2Right {
     display: none;
@@ -3789,10 +3794,11 @@ table {
     height: 250vh;
   }
 
-
   #blogBoxes {
     /* width: 100%; */
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+
     row-gap: 30px;
   }
 
@@ -3872,7 +3878,7 @@ table {
 
   #blogBoxes {
     grid-template-columns: 1fr;
-    /* grid-template-rows: repeat(2, 440px); */
+    grid-template-rows: repeat(3, 1fr);
   }
 
   #footerCenter1>ul>li>a,
@@ -3885,7 +3891,9 @@ table {
   #leftContact>p {
     font-size: 12px;
   }
-
+#footerLeft>img{
+  width: 100px;
+}
   #homeBlogs {
     height: 260vh;
   }
@@ -3922,7 +3930,9 @@ table {
   .homeBox>h4 {
     font-size: 14px;
   }
-
+.homeBox{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
   .thick {
     font-size: 20px;
   }
@@ -4135,5 +4145,21 @@ table {
   #footerCenter2,
   #footerRight {
     width: 50%;
+  }
+  #workRight >div>img{
+    display: none;
+  }
+  #HomeServices{
+    display: none;
+  }
+  .workBox{
+    margin-top: 10px;
+  }
+  .workiconDiv>img{
+    width: 30px;
+    height: 30px;
+  }
+  #rightContact>div>button>img{
+    display: none;
   }
 }

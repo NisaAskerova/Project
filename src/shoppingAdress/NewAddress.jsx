@@ -37,8 +37,8 @@ export default function NewAddress() {
           }))
         );
       } catch (error) {
-        console.error('Error fetching cities or states:', error);
-        setError('Failed to load cities or states.');
+        console.error('Şəhərlər və ya ştatlar yüklənərkən xəta baş verdi:', error);
+        setError('Şəhərlər və ya ştatları yükləmək mümkün olmadı.');
       }
     };
 
@@ -48,105 +48,105 @@ export default function NewAddress() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-  
-    // Check for null values
+
+    // Null dəyərləri yoxlayırıq
     if (!selectedCity || !selectedState) {
-      setError('Please select both city and state.');
+      setError('Zəhmət olmasa, həm şəhəri, həm də ştatı seçin.');
       setIsLoading(false);
       return;
     }
-  
+
     const addressData = {
       name: e.target.name.value,
-      mobile_number: e.target.num.value, // Form input name was 'num', not 'mobile_number'
+      mobile_number: e.target.num.value, // Formda input adı 'num' idi
       address_line: e.target.address.value,
       area: e.target.area.value,
-      city_id: selectedCity?.value || null, // Use optional chaining to safely access 'value'
+      city_id: selectedCity?.value || null, // Dəyəri təhlükəsiz şəkildə əldə etmək üçün opsional zəncir istifadə edilir
       pin_code: e.target.pincode.value,
-      state_id: selectedState?.value || null, // Use optional chaining
+      state_id: selectedState?.value || null, // Opsional zəncir
       default_address: e.target.default_address.checked,
     };
-  
-    // Store address data in localStorage
+
+    // Ünvan məlumatlarını localStorage-da saxlayırıq
     localStorage.setItem('addressData', JSON.stringify(addressData));
-  
-    // Navigate to the next page
-    navigate('/shoppingAddress/payment'); // Navigate to the next page where payment details are filled
+
+    // Növbəti səhifəyə yönləndiririk
+    navigate('/shoppingAddress/payment'); // Ödəniş məlumatları daxil ediləcək səhifəyə keçirik
   };
-  
+
   return (
     <div id="newAddress">
       <form onSubmit={handleSubmit}>
-        <h2>Add New Address</h2>
+        <h2>Yeni Ünvan Əlavə Et</h2>
 
-        {/* Name */}
+        {/* Ad */}
         <div>
-          <label htmlFor="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="Enter Name" required disabled={isLoading} />
+          <label htmlFor="name">Ad</label>
+          <input type="text" name="name" id="name" placeholder="Adınızı daxil edin" required disabled={isLoading} />
         </div>
 
-        {/* Mobile Number */}
+        {/* Telefon Nömrəsi */}
         <div>
-          <label htmlFor="num">Mobile Number</label>
-          <input type="text" name="num" id="num" placeholder="Enter Mobile Number" required disabled={isLoading} />
+          <label htmlFor="num">Telefon Nömrəsi</label>
+          <input type="text" name="num" id="num" placeholder="Telefon nömrənizi daxil edin" required disabled={isLoading} />
         </div>
 
-        {/* Address Line */}
+        {/* Ünvan */}
         <div>
-          <label htmlFor="address">Flat, House no., Building</label>
+          <label htmlFor="address">Düzəldilmiş, Ev nömrəsi, Bina</label>
           <input type="text" name="address" id="address" required disabled={isLoading} />
         </div>
 
-        {/* Area */}
+        {/* Sahə */}
         <div>
-          <label htmlFor="area">Area, Colony, Street</label>
+          <label htmlFor="area">Sahə, Koloniya, Küçə</label>
           <input type="text" name="area" id="area" required disabled={isLoading} />
         </div>
 
-        {/* City Select */}
+        {/* Şəhər Seçimi */}
         <div>
-          <label htmlFor="city">City</label>
+          <label htmlFor="city">Şəhər</label>
           <Select
             className="custom-select"
             options={isLoading ? [] : cities}
-            placeholder={isLoading ? 'Loading Cities...' : 'Select City'}
+            placeholder={isLoading ? 'Şəhərlər Yüklənir...' : 'Şəhər Seçin'}
             onChange={(values) => setSelectedCity(values[0])}
             value={selectedCity}
             disabled={isLoading}
           />
         </div>
 
-        {/* Pin Code */}
+        {/* Poçt Kodu */}
         <div>
-          <label htmlFor="pincode">Pin Code</label>
-          <input type="text" name="pincode" id="pincode" placeholder="Enter Pin Code" required disabled={isLoading} />
+          <label htmlFor="pincode">Poçt Kodu</label>
+          <input type="text" name="pincode" id="pincode" placeholder="Poçt Kodunu daxil edin" required disabled={isLoading} />
         </div>
 
-        {/* State Select */}
+        {/* Ştat Seçimi */}
         <div>
-          <label htmlFor="state">State</label>
+          <label htmlFor="state">Ştat</label>
           <Select
             className="custom-select"
             options={isLoading ? [] : states}
-            placeholder={isLoading ? 'Loading States...' : 'Select State'}
+            placeholder={isLoading ? 'Ştatlar Yüklənir...' : 'Ştat Seçin'}
             onChange={(values) => setSelectedState(values[0])}
             value={selectedState}
             disabled={isLoading}
           />
         </div>
 
-        {/* Default Address Checkbox */}
+        {/* Default Ünvan Seçimi */}
         <div id="dfAddress">
           <input type="checkbox" name="default_address" id="default_address" disabled={isLoading} />
-          <span id="address">Use as my default address</span>
+          <span id="address">Bu ünvana əsas ünvan kimi istifadə et</span>
         </div>
 
-        {/* Error Messages */}
+        {/* Xəta Mesajları */}
         {error && <p style={{ color: 'red' }}>{error}</p>}
 
-        {/* Submit Button */}
+        {/* Göndərmə Düyməsi */}
         <button type="submit" disabled={isLoading}>
-          {isLoading ? 'Adding...' : 'Add New Address'}
+          {isLoading ? 'Əlavə edilir...' : 'Yeni Ünvan Əlavə Et'}
         </button>
       </form>
     </div>
