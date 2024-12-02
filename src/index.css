@@ -212,7 +212,8 @@ form {
   /* Make labels block elements */
 }
 
-.adminHero input, .adminHero textarea {
+.adminHero input,
+.adminHero textarea {
   width: 100%;
   /* Full width inputs */
   padding: 10px;
@@ -497,8 +498,9 @@ button[type='submit'] {
 
 }
 
-#question>label>a , .logRe{
-  color:  #FEE747;
+#question>label>a,
+.logRe {
+  color: #FEE747;
 
   /* Body-1 Bold */
 
@@ -507,13 +509,15 @@ button[type='submit'] {
   font-weight: 700;
   line-height: 30px;
 }
-.logRe:hover{
+
+.logRe:hover {
   text-decoration: underline;
 }
 
-.clientRew{
+.clientRew {
   height: 115px;
 }
+
 /* ****************************HEADER************************ */
 header {
   z-index: 999;
@@ -909,7 +913,8 @@ footer h3 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.iconsBox {
+.iconsBox,
+.specialIconsBox {
   width: 80px;
   height: 80px;
   flex-shrink: 0;
@@ -917,6 +922,14 @@ footer h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.iconsBox {
+  background-color: rgba(180, 178, 173, 0.10);
+}
+
+.specialIconsBox {
+  background-color: #fff !important;
 }
 
 #iconsBoxYellow {
@@ -1482,14 +1495,15 @@ strong {
 }
 
 .tagButton {
-  padding:  10px;
+  padding: 10px;
   border-radius: 5px;
-  background:  #FEE747;
+  background: #FEE747;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
 }
+
 .tagCategory {
-  margin-top:20px;
+  margin-top: 20px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -2615,18 +2629,21 @@ tr td:first-of-type,
   gap: 30px;
   margin-top: 50px;
 }
-.productTitle{
-  color:  #15140F;
-font-family: Epilogue;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-/* line-height: 30px; 187.5% */
+
+.productTitle {
+  color: #15140F;
+  font-family: Epilogue;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  /* line-height: 30px; 187.5% */
 }
-.ratingReviewStars{
+
+.ratingReviewStars {
   display: flex;
   align-items: center;
 }
+
 /* ******************ProductCategories***************************** */
 .filterProduct {
   width: 23%;
@@ -2658,7 +2675,8 @@ font-weight: 700;
   flex-direction: column;
 
 }
-.filterTag{
+
+.filterTag {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -2809,9 +2827,9 @@ font-weight: 700;
   background: #FEE747;
 
 }
-#workRight >div>img{
-  display: none;
-}
+
+
+
 /* *************************CHECKOUT**************************** */
 #checkoutWrapper {
   width: 100%;
@@ -3225,7 +3243,7 @@ table {
   gap: 20px;
 }
 
-#method>div>input:not(input[type='checkbox']) {
+#method>div>input:not(input[type='radio']) {
   width: 100%;
   height: 56px;
   padding: 16px 20px;
@@ -3294,7 +3312,7 @@ table {
 
 #debet {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 18px;
   margin-top: 30px;
 }
@@ -3622,7 +3640,9 @@ table {
   #navLeft>.navUl {
     display: none;
   }
-
+  #workRight>div>img {
+    display: none;
+  }
   #navBar {
     width: 50%;
     height: 100vh;
@@ -3641,9 +3661,11 @@ table {
     position: fixed;
 
   }
-  .homeBox{
+
+  .homeBox {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
+
   #navBar>ul>li a {
     line-height: 20px;
     display: block;
@@ -3718,7 +3740,7 @@ table {
   }
 
 
-  
+
 
   #homePage2Right {
     display: none;
@@ -3891,9 +3913,11 @@ table {
   #leftContact>p {
     font-size: 12px;
   }
-#footerLeft>img{
-  width: 100px;
-}
+
+  #footerLeft>img {
+    width: 100px;
+  }
+
   #homeBlogs {
     height: 260vh;
   }
@@ -3930,9 +3954,11 @@ table {
   .homeBox>h4 {
     font-size: 14px;
   }
-.homeBox{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
+
+  .homeBox {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
   .thick {
     font-size: 20px;
   }
@@ -4146,20 +4172,25 @@ table {
   #footerRight {
     width: 50%;
   }
-  #workRight >div>img{
+
+  #workRight>div>img {
     display: none;
   }
-  #HomeServices{
+
+  #HomeServices {
     display: none;
   }
-  .workBox{
+
+  .workBox {
     margin-top: 10px;
   }
-  .workiconDiv>img{
+
+  .workiconDiv>img {
     width: 30px;
     height: 30px;
   }
-  #rightContact>div>button>img{
+
+  #rightContact>div>button>img {
     display: none;
   }
 }

@@ -1,245 +1,166 @@
 [
     {
         "id": "1",
-        "title": "Security Research than Get Better Protection",
-        "date": "August 16, 2023",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "desc2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "context": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "title": "Təhlükəsizlik Araşdırması və Daha Yaxşı Müdafiə əldə etmək",
         "image": "../Rectangle11.png",
-        "buttonText": "Read More",
-        "buttonLink": "#",
-        "icon": "../calendar.svg",
-        "buttonIcon": "../leftIcon.svg",
-        "category": " Private Security",
+        "category": "Şəxsi Təhlükəsizlik",
         "comment": [
             {
-                "name": "Robert Fox",
-                "date": "07 July, 2023",
-                "rev": "I found this article extremely informative and well-written. The deep dive into security research provided me with insights that I hadn't considered before. The historical context provided about security measures was particularly enlightening. I appreciate the balanced approach taken by the author, offering both technical and practical perspectives on improving protection. Looking forward to more articles like this!"
+                "name": "Rüfət Qasımov",
+                "date": "07 İyul, 2023",
+                "rev": "Bu məqaləni çox faydalı və yaxşı yazılmış tapdım. Təhlükəsizlik araşdırmalarına dərin bir baxış mənə əvvəllər nəzərdən qaçırdığım fikirlər verdi. Təhlükəsizlik tədbirləri haqqında verilən tarixi kontekst xüsusilə aydınlaşdırıcı oldu. Müəllifin həm texniki, həm də praktik baxış açılarını təqdim edərək balanslı yanaşma göstərməsini qiymətləndirirəm. Bu kimi məqalələri gələcəkdə daha çox görmək istəyirəm!"
             },
             {
-                "name": "Jenny Wilson",
-                "date": "10 July, 2023",
-                "rev": "This blog post was a great read. I was especially interested in the sections covering the evolution of security technologies. The author did a fantastic job breaking down complex concepts into understandable segments. It's clear a lot of research went into this, and it really helped me understand how far we've come in this field. Can't wait to apply some of these insights in my work."
+                "name": "Ceyran Həsənova",
+                "date": "10 İyul, 2023",
+                "rev": "Bu bloq postu çox maraqlı idi. Xüsusilə təhlükəsizlik texnologiyalarının inkişafı ilə bağlı hissələr mənim üçün çox maraqlı oldu. Müəllif kompleks anlayışları başa düşülən hissələrə bölərək çox yaxşı iş görüb. Aydın olur ki, çox araşdırma aparılıb və bu, sahəmizdə nə qədər irəliləyiş əldə etdiyimizi başa düşməyə kömək etdi. Bu fikirləri işimdə tətbiq etməyi səbirsizliklə gözləyirəm."
             }
         ]
     },
     {
         "id": "2",
-        "title": "Professional Team Member with Latest Equipment",
-        "date": "August 16, 2023",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "desc2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "context": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "title": "Peşəkar Komanda Üzvü və Ən Son Avadanlıqlar",
         "image": "../Rectangle111.png",
-        "buttonText": "Read More",
-        "buttonLink": "#",
-        "icon": "../calendar.svg",
-        "buttonIcon": "../leftIcon.svg",
-        "category":"Private Security",
+        "category": "Şəxsi Təhlükəsizlik",
         "comment": [
             {
-                "name": "Cameron Williamson",
-                "date": "12 July, 2023",
-                "rev": "The insights provided in this article about the importance of professional team members equipped with the latest tools are spot on. As someone who works in a similar field, I can attest to how critical it is to stay updated with the latest technology. The author’s detailed explanations made it easy to understand why this is so vital. The only thing I would have liked more of is case studies or real-world examples, but overall, a very solid piece."
+                "name": "Kamran Məmmədov",
+                "date": "12 İyul, 2023",
+                "rev": "Bu məqalədə peşəkar komanda üzvlərinin ən son avadanlıqlarla təchiz edilməsinin vacibliyi haqqında verilən fikirlər çox doğrudur. Eyni sahədə çalışan biri olaraq, ən son texnologiyalarla əlaqədar qalmağın nə qədər vacib olduğunu təsdiq edə bilərəm. Müəllifin detallı izahları, bunun niyə bu qədər vacib olduğunu başa düşməkdə mənə kömək etdi. Yeganə istəyim daha çox real dünya nümunələrinin olması idi, amma ümumilikdə çox yaxşı bir məqalədir."
             },
             {
-                "name": "Arlene McCoy",
-                "date": "15 July, 2023",
-                "rev": "This blog perfectly encapsulates the importance of having a well-equipped team in any professional setting. The attention to detail in describing the latest equipment was very much appreciated. It gave me a better understanding of the tools that are essential in our industry today. This was a well-researched and informative read, and I’m eager to see what other topics the author will cover in the future."
+                "name": "Arzu Əliyeva",
+                "date": "15 İyul, 2023",
+                "rev": "Bu bloq hər hansı peşəkar mühitdə yaxşı təchiz olunmuş bir komandanın vacibliyini mükəmməl şəkildə izah edir. Ən son avadanlıqların təfərrüatlı şəkildə təsvir edilməsi çox qiymətləndirildi. Bu, bizim sahəmizdə bu gün istifadə olunan alətlər haqqında daha yaxşı bir anlayış əldə etməyimə kömək etdi. Bu məqalə yaxşı araşdırılmış və məlumatlı bir oxu idi və müəllifin gələcəkdə hansı mövzulara toxunacağını maraqla gözləyirəm."
             }
         ]
     },
     {
         "id": "3",
-        "title": "A Wonderful Security has Taken Present Moment",
-        "date": "August 16, 2023",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "desc2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "context": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "title": "Möhtəşəm Təhlükəsizlik Bu Günümüzdə",
         "image": "../Rectangle112.png",
-        "buttonText": "Read More",
-        "buttonLink": "#",
-        "icon": "../calendar.svg",
-        "buttonIcon": "../leftIcon.svg",
-        "category":"Transport Security'",
+        "category": "Nəqliyyat Təhlükəsizliyi",
         "comment": [
             {
-                "name": "Leslie Alexander",
-                "date": "14 July, 2023",
-                "rev": "This article resonated with me on a professional level. The discussion about the advancements in security technology was particularly relevant to the challenges we face today. I appreciated the way the author linked past developments to current trends. The writing style was engaging, and the content was packed with valuable information. I’ll definitely be sharing this with my colleagues."
+                "name": "Leyla Əliyeva",
+                "date": "14 İyul, 2023",
+                "rev": "Bu məqalə mənim peşəkar səviyyəmdə çox təsir etdi. Təhlükəsizlik texnologiyalarındakı irəliləyişlər haqqında müzakirə xüsusilə bu günümüzün çətinliklərinə çox uyğundur. Müəllifin keçmiş inkişafları indiki tendensiyalarla əlaqələndirməsini qiymətləndirirəm. Yazı üslubu cəlbedici idi və məzmun qiymətli məlumatlarla dolu idi. Mən bu məqaləni mütləq həmkarlarımla bölüşəcəyəm."
             },
             {
-                "name": "Marvin McKinney",
-                "date": "18 July, 2023",
-                "rev": "An insightful read! The blog provided a comprehensive overview of how security measures have evolved and why they are crucial in the present moment. I found the examples given to be particularly helpful in illustrating the points made. The article struck a perfect balance between technical details and broader industry trends. Highly recommend it to anyone interested in security topics."
+                "name": "Mikayıl Rəhimov",
+                "date": "18 İyul, 2023",
+                "rev": "Çox dəyərli bir oxu! Bloq təhlükəsizlik tədbirlərinin necə inkişaf etdiyini və bu tədbirlərin indiki vaxtda nə qədər vacib olduğunu əhatəli şəkildə izah etdi. Verilən nümunələr məzmunu aydınlaşdırmaqda xüsusilə faydalı oldu. Məqalə texniki təfərrüatlar və geniş sənaye tendensiyaları arasında mükəmməl bir tarazlıq qurmuşdu. Təhlükəsizlik mövzularına marağı olan hər kəsə şiddətlə tövsiyə edirəm."
             }
         ]
     },
     {
         "id": "4",
-        "title": "Private Security and New Methods Against Intrusions",
-        "date": "August 16, 2023",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "desc2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "context": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "title": "Şəxsi Təhlükəsizlik və Yeni Yöntəmlər Qarşısında Hərəkət Edərək",
         "image": "../Rectangle113.png",
-        "buttonText": "Read More",
-        "buttonLink": "#",
-        "icon": "../calendar.svg",
-        "buttonIcon": "../leftIcon.svg",
-        "category":"Private Security",
+        "category": "Şəxsi Təhlükəsizlik",
         "comment": [
             {
-                "name": "Guy Hawkins",
-                "date": "20 July, 2023",
-                "rev": "The exploration of private security measures in this blog was both timely and informative. The author effectively highlighted the importance of staying ahead of potential intrusions with new methods and technologies. The detailed analysis of different approaches to private security was particularly helpful for someone in my field. This article has inspired me to rethink our current strategies and possibly implement some of the discussed methods."
+                "name": "Gülnarə Həsənova",
+                "date": "20 İyul, 2023",
+                "rev": "Bu bloqda şəxsi təhlükəsizlik tədbirlərinin araşdırılması həm vaxtında, həm də faydalı idi. Müəllif potensial müdaxilələrdən qabaq qalmaq üçün yeni metod və texnologiyaların vacibliyini çox yaxşı vurğulayıb. Şəxsi təhlükəsizlik yanaşmalarını detallı şəkildə təhlil etməsi, mənim sahəmdə işləyən biri üçün xüsusilə faydalı oldu. Bu məqalə mənə cari strategiyalarımızı yenidən düşünmək və bəlkə də bəhs edilən metodları tətbiq etmək ilhamı verdi."
             },
             {
-                "name": "Savannah Nguyen",
-                "date": "22 July, 2023",
-                "rev": "A fantastic read for anyone interested in private security! The blog does an excellent job of outlining the latest methods being used to prevent intrusions. I appreciated the practical advice provided, which is applicable not only to large organizations but also to smaller entities. The writing was clear, and the examples were relevant, making complex concepts easy to grasp. I’ll be sharing this with my team as a valuable resource."
+                "name": "Səbinə İsmayılova",
+                "date": "22 İyul, 2023",
+                "rev": "Şəxsi təhlükəsizliklə maraqlanan hər kəs üçün fantastik bir oxu! Bu bloq müdaxilələrin qarşısını almaq üçün istifadə olunan ən son metodları çox yaxşı təqdim edir. Böyük təşkilatlarla yanaşı, kiçik müəssisələr üçün də tətbiq oluna bilən praktik tövsiyələri çox bəyəndim. Yazı sadə və nümunələr mövzuya uyğun idi, bu da kompleks anlayışları başa düşülən edir. Mən bu məqaləni komanda ilə qiymətli bir resurs kimi bölüşəcəyəm."
             }
         ]
     },
     {
         "id": "5",
-        "title": "The Best Cameras with IP and Presence Sensor",
-        "date": "August 16, 2023",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "desc2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "context": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "title": "IP və Mövcudluq Sensoru ilə Ən Yaxşı Kameralar",
         "image": "../Rectangle114.png",
-        "buttonText": "Read More",
-        "buttonLink": "#",
-        "icon": "../calendar.svg",
-        "buttonIcon": "../leftIcon.svg",
-        "category":"Home Security",
+        "category": "Ev Təhlükəsizliyi",
         "comment": [
             {
-                "name": "Kathryn Murphy",
-                "date": "24 July, 2023",
-                "rev": "This blog post offers a thorough analysis of data security practices in the current landscape. The author’s approach to explaining the complexities of data protection was incredibly effective. I found the sections on encryption and multi-factor authentication particularly enlightening. As someone who handles sensitive information regularly, I will definitely be incorporating some of these strategies into my daily operations. An excellent resource for anyone concerned about data security!"
+                "name": "Kəmalə Məmmədova",
+                "date": "24 İyul, 2023",
+                "rev": "Bu bloq yazısı cari məlumat təhlükəsizliyi təcrübələrinin dərindən analizini təqdim edir. Müəllifin məlumat qorunması məsələlərinin mürəkkəbliyini izah etmə üsulu çox effektiv oldu. Şifrələmə və çox faktorlu doğrulama ilə bağlı hissələr xüsusilə işıqlı oldu. Həssas məlumatlarla işləyən biri olaraq, bu strategiyaları gündəlik əməliyyatlarıma daxil edəcəyəm. Məlumat təhlükəsizliyi ilə maraqlanan hər kəs üçün mükəmməl bir resurs!"
             },
             {
-                "name": "Wade Warren",
-                "date": "26 July, 2023",
-                "rev": "I was impressed by the depth of knowledge shared in this article about data security. The blog covered everything from basic principles to advanced techniques in a way that was both accessible and comprehensive. The insights on emerging threats and how to counter them were especially valuable. This is a must-read for professionals in the field of data security, as well as anyone interested in safeguarding their digital assets."
+                "name": "Vüsalə Hacıyeva",
+                "date": "26 İyul, 2023",
+                "rev": "Bu məqalədə paylaşılmış məlumat təhlükəsizliyi sahəsindəki dərin biliklərdən təəccübləndim. Bloq əsas prinsiplərdən tutmuş müasir texnikalara qədər hər şeyi həm əlçatan, həm də əhatəli bir şəkildə izah etdi. Yeni təhlükələr və onlarla necə mübarizə aparılacağına dair məlumatlar xüsusilə dəyərlidir. Bu, məlumat təhlükəsizliyinə dair mütəxəssislər və öz rəqəmsal aktivlərini qorumaq istəyənlər üçün mütləq oxunmalı olan bir məqalədir."
             }
         ]
     },
-    {
-        "id": "6",
-        "title": "Police and Security Guard News Podcast",
-        "date": "August 17, 2023",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "desc2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "context": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "image": "../Rectangle115.png",
-        "buttonText": "Read More",
-        "buttonLink": "#",
-        "icon": "../calendar.svg",
-        "buttonIcon": "../leftIcon.svg",
-        "category":"Protocol Duties",
-        "comment": [
-            {
-                "name": "Leslie Alexander",
-                "date": "28 July, 2023",
-                "rev": "This blog is an eye-opener for anyone involved in cybersecurity. The trends discussed are not just predictions but are grounded in current industry developments. The section on AI-driven attacks was particularly thought-provoking. It’s clear that businesses need to be proactive in adapting to these emerging threats. This article is a must-read for anyone looking to stay ahead in the cybersecurity field."
-            },
-            {
-                "name": "Courtney Henry",
-                "date": "30 July, 2023",
-                "rev": "A well-written and informative piece on upcoming cybersecurity trends. The author's insights into the importance of zero-trust security models were especially enlightening. As someone working in IT, I found the discussion on data privacy and the need for enhanced protection measures very relevant. This blog is an excellent resource for understanding where the industry is headed in 2024."
-            }
-        ]
-    },
-    {
-        "id": "7",
-        "title": "What We Like About Our Bodyguard Service",
-        "date": "August 18, 2023",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "desc2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "context": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "image": "../Rectangle116.png",
-        "buttonText": "Read More",
-        "buttonLink": "#",
-        "icon": "../calendar.svg",
-        "buttonIcon": "../leftIcon.svg",
-        "category":"Private Security",
-        "comment": [
-            {
-                "name": "Devon Lane",
-                "date": "1 August, 2023",
-                "rev": "An insightful exploration of blockchain's role in financial security. The author effectively breaks down complex concepts, making them accessible to a broader audience. I particularly appreciated the discussion on the challenges facing blockchain adoption. This blog provides a balanced view of both the opportunities and risks associated with blockchain in finance."
-            },
-            {
-                "name": "Arlene McCoy",
-                "date": "3 August, 2023",
-                "rev": "This article offers a comprehensive overview of how blockchain is being used to secure financial transactions. The analysis was thorough, covering not just the benefits but also the potential pitfalls of relying on blockchain technology. As someone involved in financial services, I found this blog both informative and thought-provoking. It’s a must-read for anyone interested in the future of finance."
-            }
-        ]
-    },
-    {
-        "id": "8",
-        "title": "Know Your Neighbour’s Behaviour By Using Cameras",
-        "date": "August 19, 2023",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "desc2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "context": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "image": "../Rectangle117.png",
-        "buttonText": "Read More",
-        "buttonLink": "#",
-        "icon": "../calendar.svg",
-        "buttonIcon": "../leftIcon.svg",
-       "category":"Home Security",
-        "comment": [
-            {
-                "name": "Guy Hawkins",
-                "date": "5 August, 2023",
-                "rev": "A deep dive into the intersection of AI and security. The author does an excellent job of explaining how AI is being used to improve security measures. I found the section on AI-driven threat detection particularly interesting. This blog is a great resource for anyone looking to understand the impact of AI on modern security practices."
-            },
-            {
-                "name": "Savannah Nguyen",
-                "date": "7 August, 2023",
-                "rev": "This article provides a clear and concise overview of how AI is being used in security. The author’s ability to explain complex topics in an understandable way is commendable. The discussion on the ethical implications of AI in security was also thought-provoking. Overall, a very informative read that highlights the growing importance of AI in the security industry."
-            }
-        ]
-    },
-    {
-        "id": "9",
-        "title": "When Do We Need to Hire A Bodyguard",
-        "date": "August 20, 2023",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "desc2": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "context": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "image": "../Rectangle118.png",
-        "buttonText": "Read More",
-        "buttonLink": "#",
-        "icon": "../calendar.svg",
-        "buttonIcon": "../leftIcon.svg",
-        "category":"Transport Security",
-        "comment": [
-            {
-                "name": "Eleanor Pena",
-                "date": "10 August, 2023",
-                "rev": "This article provides a comprehensive overview of the challenges in cloud security. As a cloud architect, I found the discussion on compliance issues particularly relevant. The author does a great job of not just identifying the risks but also offering practical solutions. This is a must-read for anyone responsible for managing cloud infrastructure."
-            },
-            {
-                "name": "Cameron Williamson",
-                "date": "12 August, 2023",
-                "rev": "A very informative piece on the security challenges associated with cloud computing. The blog covers a wide range of issues, from data breaches to access controls, and provides actionable advice on how to address these challenges. The author’s insights into the future of cloud security were particularly thought-provoking. Anyone working in IT or cloud management should definitely check this out."
-            }
-        ]
-    }
-]
+    [
+        {
+            "id": "6",
+            "title": "Polis və Təhlükəsizlik Keşikçisi Xəbər Podkasti",
+            "image": "../Rectangle115.png",
+            "category": "Protokol Vəzifələri",
+            "comment": [
+                {
+                    "name": "Elvin Əliyev",
+                    "date": "28 İyul, 2023",
+                    "rev": "Bu bloq, kibertəhlükəsizlik sahəsində çalışan hər kəs üçün açıcıdır. Müzakirə olunan meyllər yalnız proqnozlar deyil, hazırkı sənaye inkişaflarına əsaslanır. AI ilə idarə olunan hücumlar barədəki hissə xüsusilə düşündürücüdür. Aydındır ki, müəssisələr bu yaranan təhdidlərə uyğunlaşmaq üçün proaktiv olmalıdır. Bu məqalə, kibertəhlükəsizlik sahəsində irəlidə olmaq istəyən hər kəs üçün mütləq oxunmalıdır."
+                },
+                {
+                    "name": "Nigar Hüseynova",
+                    "date": "30 İyul, 2023",
+                    "rev": "Yaxşı yazılmış və məlumatlı bir məqalədir. Müəllifin sıfır etibar təhlükəsizlik modellərinin əhəmiyyətinə dair fikirləri xüsusilə işıqlıdır. Mən IT sahəsində işləyən biri olaraq, məlumatların məxfiliyi və təkmilləşdirilmiş qoruma tədbirlərinin zəruriliyi mövzusundakı müzakirəni çox müvafiq hesab etdim. Bu bloq, 2024-cü ildə sənayenin hara gedəcəyini başa düşmək üçün əla bir qaynaqdır."
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "title": "Bədənqoruma Xidmətimizi Bəyəndiyimiz Nələrdir",
+            "image": "../Rectangle116.png",
+            "category": "Şəxsi Təhlükəsizlik",
+            "comment": [
+                {
+                    "name": "Rüfət Məmmədov",
+                    "date": "1 Avqust, 2023",
+                    "rev": "Blokçeyn texnologiyasının maliyyə təhlükəsizliyindəki rolu haqqında düşündürücü bir araşdırma. Müəllif mürəkkəb anlayışları geniş auditoriyaya əlçatan edəcək şəkildə izah edir. Xüsusilə, blokçeyn qəbulunun qarşısındakı çətinliklərə dair müzakirə mənim üçün çox faydalı oldu. Bu bloq, maliyyə sahəsində blokçeyn texnologiyasının imkanları və riskləri barədə balanslı bir baxış təqdim edir."
+                },
+                {
+                    "name": "Leyla Hüseynova",
+                    "date": "3 Avqust, 2023",
+                    "rev": "Bu məqalə, blokçeyn texnologiyasının maliyyə əməliyyatlarını necə təmin etdiyini geniş bir şəkildə izah edir. Təhlil olduqca dərindir və yalnız faydaları deyil, həm də blokçeynin texnologiyası ilə bağlı potensial çətinlikləri də əhatə edir. Mən maliyyə xidmətləri sahəsində çalışdığım üçün bu bloq çox faydalı və düşündürücüdür. Maliyyə sahəsində gələcəyini düşünən hər kəs üçün mütləq oxunmalı bir məqalədir."
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "title": "Mühafizə Kameralarından İstifadə Edərək Qonşularınızın Davranışını Tanıyın",
+            "image": "../Rectangle117.png",
+            "category": "Evdə Təhlükəsizlik",
+            "comment": [
+                {
+                    "name": "Hüseyn Əhmədov",
+                    "date": "5 Avqust, 2023",
+                    "rev": "AI və təhlükəsizlik arasındakı kəsişməni dərindən araşdıran bir məqalədir. Müəllif, AI-nin təhlükəsizlik tədbirlərini necə yaxşılaşdırdığını çox yaxşı izah edir. Mənim üçün AI ilə idarə olunan təhdidlərin aşkar edilməsi barədəki hissə xüsusilə maraqlı oldu. Bu bloq, müasir təhlükəsizlik praktikasında AI-nin təsirini başa düşmək istəyən hər kəs üçün əla bir qaynaqdır."
+                },
+                {
+                    "name": "Səbinə Məmmədova",
+                    "date": "7 Avqust, 2023",
+                    "rev": "Bu məqalə, təhlükəsizlik sahəsində AI-nin necə istifadə olunduğuna dair aydın və qısa bir ümumi baxış təqdim edir. Müəllifin mürəkkəb mövzuları anlaşılan şəkildə izah etməsi diqqətəlayiqdir. Təhlükəsizlik sahəsində AI-nin etik tərəfləri barədəki müzakirə də düşündürücüdür. Ümumiyyətlə, təhlükəsizlik sənayesində AI-nin böyüyən əhəmiyyətini vurğulayan çox məlumatlı bir oxu idi."
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "title": "Bədənqoruma Xidmətini Nə Zaman İstifadə Etməliyik",
+            "image": "../Rectangle118.png",
+            "category": "Nəqliyyat Təhlükəsizliyi",
+            "comment": [
+                {
+                    "name": "Fərid Quliyev",
+                    "date": "10 Avqust, 2023",
+                    "rev": "Bu məqalə, bulud təhlükəsizliyi ilə bağlı çətinlikləri geniş şəkildə izah edir. Mən bulud memarı kimi, uyğunluq məsələləri barədəki müzakirəni xüsusilə müvafiq hesab etdim. Müəllif yalnız riskləri müəyyənləşdirmək deyil, həm də praktik həllər təklif edir. Bu, bulud infrastrukturunu idarə edən hər kəs üçün mütləq oxunmalıdır."
+                },
+                {
+                    "name": "Aysel Həsənova",
+                    "date": "12 Avqust, 2023",
+                    "rev": "Bulud hesablama ilə bağlı təhlükəsizlik çətinlikləri barədə çox məlumatlı bir məqalədir. Bloq, məlumat pozulmalarından giriş nəzarətinə qədər bir çox mövzunu əhatə edir və bu çətinlikləri necə həll edəcəyimizə dair praktiki məsləhətlər təqdim edir. Müəllifin bulud təhlükəsizliyinin gələcəyi haqqında fikirləri çox düşündürücüdür. IT və bulud idarəetməsi sahəsində işləyən hər kəs mütləq bunu oxumalıdır."
+                }
+            ]
+        }
+    ]
+]    

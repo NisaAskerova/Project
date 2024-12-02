@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { MyContext } from '../App';
 
 const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Ödənişi Tamamla", isReviewPage = false }) => {
   if (!Array.isArray(checkoutCart)) {
-    return <div>Yüklənir...</div>; // checkoutCart massiv olmadıqda halda işləmə
+    return <div>Yüklənir...</div>; // checkoutCart massiv olmadıqda işləmə
   }
 
+  const { setOrderCart } = useContext(MyContext);
   const [discountCode, setDiscountCode] = useState('');
   const [discount, setDiscount] = useState(0);
   const [loading, setLoading] = useState(false); // Button-un vəziyyətini idarə etmək üçün
+  const [error, setError] = useState(''); // Error vəziyyətinin idarə edilməsi
   const deliveryCharge = 10.00;
 
-  // Subtotal, endirimli subtotal və ümumi məbləği hesablamaq
   const subtotal = checkoutCart.reduce((acc, item) => acc + item.product.price * (item.quantity || 1), 0);
   const discountedSubtotal = subtotal * (1 - discount / 100);
   const grandTotal = discountedSubtotal + deliveryCharge;
@@ -25,75 +27,97 @@ const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Öd
 
   const handlePlaceOrder = async () => {
     setLoading(true);
+    setError(''); // Reset error message
   
     try {
-      // basket_id-ni localStorage-dən al
       const basket_id = localStorage.getItem('basket_id');
-      console.log("Basket ID:", basket_id);  // Debugging üçün konsolda çap et
+      const basketIdNumber = Number(basket_id);
   
-      if (!basket_id) {
-        alert('Basket ID yoxdur! Əvvəlcə səbətə məhsul əlavə edin.');
+      if (!basket_id || isNaN(basketIdNumber)) {
+        setError('Basket ID düzgün deyil! Əvvəlcə səbətə məhsul əlavə edin.');
         setLoading(false);
         return;
       }
   
-      // Ünvan və ödəniş məlumatlarını localStorage-dən al
       const addressData = JSON.parse(localStorage.getItem('addressData') || '{}');
       let paymentData = JSON.parse(localStorage.getItem('paymentData') || '{}');
       const token = localStorage.getItem('token');
   
       if (!token) {
-        alert('Təsdiq səhvi: Token tapılmadı!');
+        setError('Təsdiq səhfi: Token tapılmadı!');
         setLoading(false);
         return;
       }
   
-      // paymentData-da payment_type yoxdursa, 'cash' olaraq təyin et
+      // Ensure payment type is set
       if (!paymentData.payment_type) {
-        paymentData.payment_type = 'cash'; // Default olaraq 'cash' (nağd) seç
+        paymentData.payment_type = 'cash'; // Default to 'cash' if not available
       }
   
-      // Sifariş məlumatları üçün payload hazırlamaq
       const payload = {
         checkoutCart: checkoutCart.map(item => ({
           product_id: item.product.id,
-          quantity: item.quantity || 1,  // Əgər quantity verilməyibsə, 1 olaraq qəbul et
+          quantity: item.quantity || 1,
         })),
         addressData,
         paymentData,
-        total: grandTotal,  // Grand total burada hesablanır
-        basket_id,  // basket_id artıq burada alınmış və təyin olunmuşdur
-        discount,  // Endirim burada təyin edilir
-        deliveryCharge,  // Çatdırılma haqqı
+        total: grandTotal,
+        basket_id: basketIdNumber,
+        discount,
+        deliveryCharge,
       };
   
-      console.log('Göndərilən payload:', JSON.stringify(payload, null, 2));
-  
-      // Sifarişi backend-ə göndər
       const response = await fetch('http://127.0.0.1:8000/api/orders/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,  // Bearer token ilə autentifikasiya
+          'Authorization': `Bearer ${token}`,
         },
-        body: JSON.stringify(payload), // Payload-ı göndərmək üçün body olaraq göndər
+        body: JSON.stringify(payload),
       });
   
       const data = await response.json();
   
       if (response.ok) {
-        alert(`Sifariş uğurla yerləşdirildi: ${data.message}`);
-        window.location.href = '/order-success';  // Uğur səhifəsinə yönləndir
+        // Order placed successfully, now remove products from the basket
+        await removeProductsFromBasket(basketIdNumber, checkoutCart);
+        setOrderCart(true);
       } else {
-        alert(`Sifariş yerləşdirilərkən səhv: ${data.error || 'Bilinməyən səhv'}`);
+        setError(`Sifariş yerləşdirilərkən səhv: ${data.error || 'Bilinməyən səhv'}`);
       }
     } catch (error) {
       console.error('Xəta:', error);
-      alert(`Gözlənilməz bir səhv baş verdi: ${error.message}`);
+      setError(`Gözlənilməz bir səhv baş verdi: ${error.message}`);
     } finally {
-      setLoading(false);  // Yüklenme vəziyyətini dayandır
+      setLoading(false);
     }
   };
+  
+  // Function to remove products from the basket
+  const removeProductsFromBasket = async (basketId, checkoutCart) => {
+    try {
+      const token = localStorage.getItem('token');
+  
+      for (const item of checkoutCart) {
+        const productId = item.product.id;
+        
+        const response = await fetch(`http://127.0.0.1:8000/api/basket/${basketId}/product/${productId}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+  
+        if (!response.ok) {
+          console.error(`Product ${productId} removal failed`);
+        }
+      }
+    } catch (error) {
+      console.error('Error while removing basket items:', error);
+    }
+  };
+  
 
   return (
     <div id="shopCard">
@@ -123,6 +147,10 @@ const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Öd
         <h4>Ümumi Məbləğ</h4>
         <h4>${grandTotal.toFixed(2)}</h4>
       </div>
+
+      {/* Error mesajını göstər */}
+      {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
+
       {showButton && (
         <button
           className="same"

@@ -26,6 +26,7 @@ export default function HomePage2() {
       setMessage('Error fetching services: ' + (error.response?.data.message || error.message));
     }
   };
+
   useEffect(() => {
     const fetchData = async () => {
       await Promise.all([fetchAboutUs(), fetchServices()]);
@@ -34,58 +35,60 @@ export default function HomePage2() {
     fetchData();
   }, []);
 
-  
-
-
   return (
     <div id='homepage2' className='padding'>
-      <div  id="homePage2Left">
-      {loading ? <p>Loading data...</p> : null}
-      {message && <p className="message">{message}</p>}
+      <div id="homePage2Left">
+        {loading ? <p>Loading data...</p> : null}
+        {message && <p className="message">{message}</p>}
 
-      {/* About Us Section */}
-      {aboutUs.length > 0 ? (
-        aboutUs.map((item) => (
+        {/* About Us Section */}
+        {aboutUs.length > 0 ? (
+          aboutUs.map((item) => (
             <div key={item.id} id='titleDiv'>
               <span className='same'>{item.type}</span>
               <h2>{item.main_title}</h2>
               <p className='same'>{item.main_description}</p>
             </div>
-        ))
-    ) : (
-        <p>No About Us data available.</p>
-    )}
-
-      <div id="boxes">
-        {services.length > 0 ? (
-          services.map((service) => (
-            <div key={service.id} className='homeBox' style={{ backgroundColor: service.color }}>
-              <div className='iconsBox'>
-                {service.icon ? (
-                  <img src={`http://localhost:8000/storage/${service.icon}`} alt="Service Icon" />
-                ) : (
-                  'No icon available'
-                )}
-              </div>
-              <h4>{service.title}</h4>
-              <span className='same'>{service.description}</span>
-            </div>
           ))
         ) : (
-          <p>No Services data available.</p>
+          <p>No About Us data available.</p>
+        )}
+
+        <div id="boxes">
+          {services.length > 0 ? (
+            services.map((service) => (
+              <div
+                key={service.id}
+                className='homeBox'
+                style={{ backgroundColor: service.color }}
+              >
+                {/* Conditional className for iconsBox */}
+                <div className={service.id === 1 ? 'specialIconsBox' : 'iconsBox'}>
+                  {service.icon ? (
+                    <img src={`http://localhost:8000/storage/${service.icon}`} alt="Service Icon" />
+                  ) : (
+                    'No icon available'
+                  )}
+                </div>
+                <h4>{service.title}</h4>
+                <span className='same'>{service.description}</span>
+              </div>
+            ))
+          ) : (
+            <p>No Services data available.</p>
+          )}
+        </div>
+      </div>
+
+      <div id="homePage2Right">
+        {aboutUs.length > 0 ? (
+          aboutUs.map((item) => (
+            <img key={item.id} src={`http://localhost:8000/storage/${item.image}`} alt="Image" />
+          ))
+        ) : (
+          <p>No About Us data available.</p>
         )}
       </div>
-      </div>
-      <div id="homePage2Right">
-      {aboutUs.length > 0 ? (
-        aboutUs.map((item) => (
-            <img src={`http://localhost:8000/storage/${item.image}`} alt="Image"/>
-        
-        ))
-    ) : (
-        <p>No About Us data available.</p>
-    )}
-            </div>
     </div>
   );
 }

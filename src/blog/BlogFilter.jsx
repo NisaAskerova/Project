@@ -7,6 +7,7 @@ const BlogFilter = () => {
 
   const filteredBlogs = homeBlogs.filter(
     (blog) =>
+      blog.title && // blog.title mövcud olmalıdır
       blog.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
       (selectedCategory === 'All' || blog.category === selectedCategory)
   );
@@ -24,7 +25,7 @@ const BlogFilter = () => {
   return (
     <div id='blogFilter'>
       <div id='searchInput'>
-        <img src='../../search.svg' alt='' />
+        <img src='../../search.svg' alt='Search Icon' />
         <input
           className='same'
           type='text'
@@ -39,10 +40,10 @@ const BlogFilter = () => {
         {filteredBlogs.slice(0, 3).map((blog, index) => (
           <div className='blogBox2' key={index}>
             <div>
-              <img className='blogImage' src={blog.image} alt='' />
+              <img className='blogImage' src={blog.image} alt={blog.title} />
             </div>
             <div className='blogDateTitle'>
-              <h3>{blog.title.substring(0, 35)}...</h3>
+              <h3>{blog.title.slice(0, 35)}...</h3>
               <span>{blog.date}</span>
             </div>
           </div>

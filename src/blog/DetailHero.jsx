@@ -47,14 +47,14 @@ export default function DetailHero() {
                         onClick={() => navigate('/home')}
                         className='navLink'
                     >
-                        Home
+                        Ana səhifə
                         <img src="../../arrows.svg" alt="Arrow" className='arrow' />
                     </span>
                     <span
                         onClick={() => navigate('/blog')}
                         className='navLink'
                     >
-                        Blog
+                        Bloq
                         <img src="../../arrows.svg" alt="Arrow" className='arrow' />
                     </span>
                     <span className='navLink'>

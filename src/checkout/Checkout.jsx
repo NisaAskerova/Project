@@ -51,6 +51,37 @@ export default function Checkout() {
     }
   };
 
+  // Quantity update (increase or decrease)
+  const updateQuantity = async (productId, action, stock) => {
+    const headers = {
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
+    };
+    try {
+      const response = await axios.post(
+        `http://127.0.0.1:8000/api/basket/updateQuantity/${action}`,
+        { product_id: productId },
+        { headers }
+      );
+
+      if (response.data.success) {
+        // Update the quantity in the local state (checkoutCart)
+        setCheckoutCart((prevCart) =>
+          prevCart.map((item) =>
+            item.product.id === productId
+              ? { ...item, quantity: response.data.basket_quantity }
+              : item
+          )
+        );
+        toast.success(response.data.message);
+      } else {
+        toast.error(response.data.error);
+      }
+    } catch (error) {
+      console.error('Error updating quantity:', error);
+      toast.error('Miqdar yenilənərkən xəta baş verdi');
+    }
+  };
+
   // İlk dəfə səbəti əldə etmək
   useEffect(() => {
     fetchBasket();

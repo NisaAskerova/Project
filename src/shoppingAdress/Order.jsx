@@ -29,7 +29,8 @@ export default function Order() {
           <span className='same'>amma göndərildikdə sizə email göndərəcəyik.</span>
         </div>
         <div id='orBtn'>
-          <button onClick={handleViewOrder} className="same ybtn">Sifarişə bax</button>
+          {/* Change the button text here */}
+          <button onClick={handleViewOrder} className="same ybtn">Alış-verişə davam et</button>
           <button onClick={handleBackToHome} className="same whiteBtn">Ana səhifəyə qayıt</button>
         </div>
       </div>
