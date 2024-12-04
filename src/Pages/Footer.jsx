@@ -40,8 +40,6 @@ export default function Footer() {
               <li><NavLink to="/contact">Əlaqə</NavLink></li>
               <li><NavLink to="/privacy_policy">Məxfilik Siyasəti</NavLink></li>
               <li><NavLink to="/terms_conditions">Şərtlər və Qaydalar</NavLink></li>
-              <li><NavLink to="">Tez-tez Verilən Suallar (FAQ’S)</NavLink></li>
-              <li><NavLink to="">İstisnalar</NavLink></li>
             </ul>
           </div>
 

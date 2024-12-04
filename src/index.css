@@ -3733,6 +3733,7 @@ table {
     left: 0;
   }
 
+  
   #closeDiv {
     width: 30px;
     height: 30px;
@@ -3913,7 +3914,7 @@ table {
   }
 
   #rightContact>div>input {
-    width: 280px;
+    width: 100%;
   }
 
   #rightContact>div>button {
@@ -4172,20 +4173,23 @@ table {
   }
 
   #rightContact>div>input {
-    width: 200px;
+    width: 100%;
   }
 
   #rightContact>div>button {
-    width: 80px;
+    width: 60px;
   }
 
   #rightContact>div {
-    width: 200px;
+    width: 100%;
   }
 
   #rightContact {
-    display: block;
-    margin-top: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 10px; */
   }
 
   #foot {
@@ -4246,5 +4250,23 @@ table {
 }
 #footerLeft>p{
   display: none;
+}
+.thick{
+  line-height: 30px;
+}
+#contactUs{
+  height: 180px;
+}
+#footerCenter1>ul, #footerCenter2>ul {
+  gap: 0;
+}
+/* #footerRight>.same{
+  display: none;
+} */
+#mediaIcons{
+  gap: 10px;
+}
+#information{
+  flex-wrap: wrap;
 }
 }
