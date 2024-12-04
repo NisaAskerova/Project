@@ -10,13 +10,13 @@ export default function HomeBlogs() {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/blogs/show');
-      const fetchedBlogs = response.data.slice(0, 3); 
-      setBlogs(fetchedBlogs);
+      const response = await axios.get('http://localhost:8000/api/blogs/show_blog');
+      setBlogs(response.data); // 3 blog JSON cavabı
     } catch (error) {
       setMessage('Failed to fetch blogs. Please try again later.');
     }
   };
+  
 
   useEffect(() => {
     fetchBlogs();

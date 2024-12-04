@@ -73,6 +73,7 @@ export default function Checkout() {
           )
         );
         toast.success(response.data.message);
+        fetchBasket(); // Səbəti yenidən yükləmək
       } else {
         toast.error(response.data.error);
       }
@@ -135,7 +136,7 @@ export default function Checkout() {
                         className="same"
                         type="text"
                         readOnly
-                        value={product.quantity || 1}
+                        value={product.quantity}
                       />
                       <button
                         onClick={() => updateQuantity(product.product.id, 'increase', product.product.stock)}

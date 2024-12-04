@@ -1,26 +1,41 @@
-import React, { useState } from 'react';
-import homeBlogs from '../JSON/homeBlogs.json';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const BlogFilter = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [blogs, setBlogs] = useState([]); 
+  const [searchTerm, setSearchTerm] = useState(''); // Axtarış üçün state
+  const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
-  const filteredBlogs = homeBlogs.filter(
-    (blog) =>
-      blog.title && // blog.title mövcud olmalıdır
-      blog.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
-      (selectedCategory === 'All' || blog.category === selectedCategory)
-  );
-
-  const categories = [ ...new Set(homeBlogs.map((blog) => blog.category))];
-
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
+  // Blogları gətirən funksiyalar
+  const fetchBlogs = async (query = '') => {
+    try {
+      const url = query
+        ? `http://localhost:8000/api/blogs/search?search=${query}` // Axtarış nəticələri üçün
+        : `http://localhost:8000/api/blogs/show_blog`; // İlk 3 blog üçün
+      const response = await axios.get(url);
+      setBlogs(response.data);
+    } catch (error) {
+      setMessage('Failed to fetch blogs. Please try again later.');
+    }
   };
 
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
+  // Axtarış terminin dəyişməsinə görə yenilənir
+  const handleSearchChange = (e) => {
+    const query = e.target.value;
+    setSearchTerm(query);
+    fetchBlogs(query); // Axtarış funksiyasını çağırır
   };
+
+  const handleButtonClick = (id) => {
+    navigate(`/blog/${id}`);
+  };
+
+  // İlk yükləmə üçün ilk 3 blogu gətirir
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
 
   return (
     <div id='blogFilter'>
@@ -31,36 +46,33 @@ const BlogFilter = () => {
           type='text'
           placeholder='Search'
           value={searchTerm}
-          onChange={handleSearchChange}
+          onChange={handleSearchChange} // Axtarış inputunu izləyir
         />
       </div>
 
       <div id='blogList'>
-        <h3>Latest Post</h3>
-        {filteredBlogs.slice(0, 3).map((blog, index) => (
-          <div className='blogBox2' key={index}>
-            <div>
-              <img className='blogImage' src={blog.image} alt={blog.title} />
+        <h3>{searchTerm ? 'Search Results' : 'Latest Posts'}</h3>
+        {blogs.length > 0 ? (
+          blogs.map((blog) => (
+            <div
+              onClick={() => handleButtonClick(blog.id)}
+              key={blog.id}
+              className='blogBox2'
+            >
+              <img
+                className='blogImage'
+                src={`http://localhost:8000/storage/${blog.image}`}
+                alt={blog.title}
+              />
+              <div className='blogDateTitle'>
+                <h3>{blog.title.slice(0, 45)}...</h3>
+                <span>{new Date(blog.created_at).toLocaleDateString()}</span>
+              </div>
             </div>
-            <div className='blogDateTitle'>
-              <h3>{blog.title.slice(0, 35)}...</h3>
-              <span>{blog.date}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className='categories'>
-        <h3>Categories</h3>
-        {categories.map((category, index) => (
-          <div
-            key={index}
-            className={`categoryItem ${selectedCategory === category ? 'selected' : ''}`}
-            onClick={() => handleCategoryChange(category)}
-          >
-            {category}
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>{searchTerm ? 'No blogs found.' : 'No latest posts available.'}</p>
+        )}
       </div>
     </div>
   );

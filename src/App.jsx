@@ -82,6 +82,7 @@ import AllAddress from './admin/address/AllAddress';
 import AddCity from './admin/city/AddCity';
 import ShowCities from './admin/city/ShowCities';
 import UpdateCity from './admin/city/UpdateCity';
+import NotFound from './NotFound';
 
 export const MyContext = createContext();
 
@@ -255,23 +256,15 @@ export default function App() {
             <Route path='/update_brand/:id' element={<UpdateBrand />} />
             <Route path='/view_brand_product/:id' element={<ViewBrandProducts />} />
             <Route path='/products/:productId' element={<Comment />} />
-            <Route path='/show_contact_us' element={<ShowContactUs />} /> 
-            <Route path='/all_address' element={<AllAddress />} /> 
+            <Route path='/show_contact_us' element={<ShowContactUs />} />
+            <Route path='/all_address' element={<AllAddress />} />
             <Route path="/show_state" element={<ShowState />} />
             <Route path="/add_state" element={<AddState />} />
             <Route path="/update_state/:id" element={<UpdateState />} />
             <Route path="/add_city" element={<AddCity />} />
             <Route path="/show_cities" element={<ShowCities />} />
             <Route path="/update_city/:id" element={<UpdateCity />} />
-
-
-
-
-
-
-
-
-
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
       </AuthProvider>

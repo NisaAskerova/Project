@@ -5,31 +5,33 @@ import Avatar from './Avatar';
 import Comment from './Comment';
 
 export default function Review() {
-    const { id } = useParams();  // Get the product ID from the URL
+    const { id } = useParams();  // URL-dən məhsul ID-sini alırıq
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         fetchReviews();
     }, [id]);
-    
+
     const fetchReviews = async () => {
         try {
             const response = await axios.get(`http://127.0.0.1:8000/api/reviews/${id}`);
             setReviews(response.data);
         } catch (error) {
-            console.error("Error fetching reviews:", error);
+            console.error("Rəy alınarkən xəta baş verdi:", error);
         } finally {
             setLoading(false);
         }
     };
-    
-    if (loading) return <div>Loading...</div>;
+
+    // Səhifə yüklənirsə, yüklenmə mesajı göstəririk
+    if (loading) return <div>Yüklənir...</div>;
 
     return (
         <div className="review">
-            <h3>Customer Reviews</h3>
+            <h3>Müştəri Rəyləri</h3>
             {reviews.length === 0 ? (
-                <div>No reviews available</div>
+                <div>Rəy mövcud deyil</div>
             ) : (
                 reviews.map((review, index) => (
                     <div key={index} className="reviewCard">
@@ -40,13 +42,13 @@ export default function Review() {
                             <div>
                                 <span>{review.user.first_name} {review.user.last_name}</span>
                                 <div className='ratingReviewStars'>
-                                    {/* Display yellow stars based on the rating */}
+                                    {/* Reytinqə əsasən sarı ulduzları göstəririk */}
                                     {Array.from({ length: Math.floor(review.rating.rating) }).map((_, i) => (
-                                        <img key={i} src="/yellowStar.svg" alt="yellow star" />
+                                        <img key={i} src="/yellowStar.svg" alt="sarı ulduz" />
                                     ))}
-                                    {/* Display empty stars for the remaining stars to make up 5 */}
+                                    {/* 5 ulduz üçün boş ulduzları göstəririk */}
                                     {Array.from({ length: 5 - Math.floor(review.rating.rating) }).map((_, i) => (
-                                        <img key={i} src="/blackEmptyStar.svg" alt="empty star" />
+                                        <img key={i} src="/blackEmptyStar.svg" alt="boş ulduz" />
                                     ))}
                                 </div>
                             </div>
@@ -54,9 +56,9 @@ export default function Review() {
 
                         <div>
                             {(() => {
-                                const sentences = review.review_comment.split('.'); // Cümlələri ayırır
-                                const firstSentence = sentences[0]; // İlk cümləni seçir
-                                const restOfComment = sentences.slice(1).join('.'); // Qalan hissələri birləşdirir
+                                const sentences = review.review_comment.split('.'); // Cümlələri ayırırıq
+                                const firstSentence = sentences[0]; // İlk cümləni seçirik
+                                const restOfComment = sentences.slice(1).join('.'); // Qalan hissələri birləşdiririk
                                 return (
                                     <p className="same">
                                         <strong style={{ display: 'block' }}>{firstSentence}.</strong>
@@ -67,10 +69,10 @@ export default function Review() {
                         </div>
 
                         <div className="reviewDate">
-                            <span className="gray">Review by </span>
+                            <span className="gray">Rəy yazar: </span>
                             <span>Security</span>
-                            <span className="gray">Posted on </span>
-                            <span>{new Date(review.review_date).toLocaleDateString('en-US', {
+                            <span className="gray">Paylaşılma tarixi: </span>
+                            <span>{new Date(review.review_date).toLocaleDateString('az-AZ', {
                                 year: 'numeric',
                                 month: 'long',
                                 day: 'numeric',
@@ -79,8 +81,8 @@ export default function Review() {
                     </div>
                 ))
             )}
-            {/* Integrating the Comment component */}
-            <Comment productId={id} />
+            {/* Comment komponentini inteqrasiya edirik */}
+            <Comment productId={id} onNewReview={fetchReviews} />
         </div>
     );
 }

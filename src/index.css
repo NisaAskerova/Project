@@ -1900,6 +1900,7 @@ strong {
   display: flex;
   gap: 16px;
   align-items: center;
+  cursor: pointer;
 }
 
 #blogList .blogBox:not(#blogList .blogBox:last-of-type) {
@@ -3619,7 +3620,46 @@ table {
   justify-content: center;
 }
 
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.notFoundButton {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #FEE747;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+/* Ümumi scroll bar dizaynı */
+::-webkit-scrollbar {
+  width: 15px; /* Şaquli scrollbar genişliyi */
+  height: 15px; /* Yatay scrollbar hündürlüyü */
+}
+
+/* Scrollbar arxa fonunun rəngi */
+::-webkit-scrollbar-track {
+  background-color: #15140F; /* Track (arxa fon) rəngi */
+}
+
+/* Scrollbar tutacağının (thumb) rəngi */
+::-webkit-scrollbar-thumb {
+  background-color: #15140F; /* Tutacaq rəngi */
+   border-radius: 10px;
+  border: 3px solid #FEE747;
+  outline: 2px solid #15140F;
+}
+
+/* Hover zamanı tutacaq rəngini dəyişmək */
+::-webkit-scrollbar-thumb:hover {
+
+  background-color: #15140F; /* Hover zamanı tutacaq rəngi */
+}
 
 
 /* **************************************************************** */
@@ -3640,9 +3680,11 @@ table {
   #navLeft>.navUl {
     display: none;
   }
+
   #workRight>div>img {
     display: none;
   }
+
   #navBar {
     width: 50%;
     height: 100vh;
@@ -3789,6 +3831,9 @@ table {
 
   }
 
+  #leftContact>p{
+    display: none;
+  }
   /* *************WORK****************** */
   #work {
     padding: 50px;
@@ -3813,7 +3858,7 @@ table {
   #homeBlogs {
     width: 100%;
     padding: 0 5.5%;
-    height: 250vh;
+    height: 100%;
   }
 
   #blogBoxes {
@@ -3840,10 +3885,9 @@ table {
     margin-bottom: 0;
   }
 
-  #foot {
-    height: 50vh;
+  #journeyLeft>h2{
+    font-size: 26px;
   }
-
   #contactUs {
     padding: 0 50px;
     margin-top: 0;
@@ -4163,7 +4207,7 @@ table {
 
   #foot {
     width: 100%;
-    height: 110vh;
+    height: 85vh;
   }
 
   #footerLeft,
@@ -4193,4 +4237,14 @@ table {
   #rightContact>div>button>img {
     display: none;
   }
+#homeBlogs{
+  height: 100%;
+}
+.specialIconsBox{
+  width: 60px;
+  height: 60px;
+}
+#footerLeft>p{
+  display: none;
+}
 }

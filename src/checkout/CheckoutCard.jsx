@@ -28,7 +28,6 @@ const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Öd
   const handlePlaceOrder = async () => {
     setLoading(true);
     setError(''); // Reset error message
-  
     try {
       const basket_id = localStorage.getItem('basket_id');
       const basketIdNumber = Number(basket_id);
@@ -38,7 +37,6 @@ const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Öd
         setLoading(false);
         return;
       }
-  
       const addressData = JSON.parse(localStorage.getItem('addressData') || '{}');
       let paymentData = JSON.parse(localStorage.getItem('paymentData') || '{}');
       const token = localStorage.getItem('token');
@@ -48,12 +46,10 @@ const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Öd
         setLoading(false);
         return;
       }
-  
-      // Ensure payment type is set
+
       if (!paymentData.payment_type) {
-        paymentData.payment_type = 'cash'; // Default to 'cash' if not available
+        paymentData.payment_type = 'cash';
       }
-  
       const payload = {
         checkoutCart: checkoutCart.map(item => ({
           product_id: item.product.id,
@@ -66,7 +62,6 @@ const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Öd
         discount,
         deliveryCharge,
       };
-  
       const response = await fetch('http://127.0.0.1:8000/api/orders/add', {
         method: 'POST',
         headers: {
@@ -75,9 +70,7 @@ const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Öd
         },
         body: JSON.stringify(payload),
       });
-  
       const data = await response.json();
-  
       if (response.ok) {
         // Order placed successfully, now remove products from the basket
         await removeProductsFromBasket(basketIdNumber, checkoutCart);

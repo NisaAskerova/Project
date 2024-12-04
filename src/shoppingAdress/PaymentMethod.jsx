@@ -6,13 +6,13 @@ import { MyContext } from '../App';
 const PaymentMethod = () => {
   const navigate = useNavigate();
   const { cartTotal } = useContext(MyContext);
-  
+
   // Dövlət dəyişənləri
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
   const [cardNumber, setCardNumber] = useState('');
   const [cardName, setCardName] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState('');
+  const [payment_type, setPaymentType] = useState('');
   const [error, setError] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -21,7 +21,7 @@ const PaymentMethod = () => {
     const savedPaymentData = localStorage.getItem('paymentData');
     if (savedPaymentData) {
       const data = JSON.parse(savedPaymentData);
-      setPaymentMethod(data.paymentMethod);
+      setPaymentType(data.payment_type);
       setCardNumber(data.cardNumber);
       setCardName(data.cardName);
       setExpiryDate(data.expiryDate);
@@ -52,7 +52,7 @@ const PaymentMethod = () => {
 
   const handleCardNumberChange = (event) => {
     const value = event.target.value;
-    if (/[^0-9]/.test(value)) return; 
+    if (/[^0-9]/.test(value)) return;
     setCardNumber(value);
     setError('');
   };
@@ -62,45 +62,45 @@ const PaymentMethod = () => {
     setError('');
   };
 
-  const handlePaymentMethodChange = (event) => {
-    setPaymentMethod(event.target.value);
+  const handlePaymentTypeChange = (event) => {
+    setPaymentType(event.target.value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     // Ödəmə metodunu yoxlayın
-    if (!paymentMethod || !['cashOnDelivery', 'card'].includes(paymentMethod)) {
+    if (!payment_type || !['cashOnDelivery', 'card'].includes(payment_type)) {
       setError('Zəhmət olmasa keçərli ödəmə metodu seçin (nağd və ya kart).');
       return;
     }
 
     // Seçilmiş ödəmə metodunu localStorage-da saxlayın
-    const paymentData = { paymentMethod };
+    const paymentData = { payment_type };
     localStorage.setItem('paymentData', JSON.stringify(paymentData));
-  
+
     // Yalnız 'kart' metodu seçildikdə digər kart məlumatlarını saxlayın
-    if (paymentMethod === 'card') {
+    if (payment_type === 'card') {
       if (!cardNumber || cardNumber.length !== 16) {
         setError('Zəhmət olmasa düzgün kart nömrəsi daxil edin.');
         return;
       }
-  
+
       if (!cardName) {
         setError('Zəhmət olmasa kart sahibinin adını daxil edin.');
         return;
       }
-  
+
       if (!expiryDate || expiryDate.length !== 5) {
         setError('Zəhmət olmasa düzgün son istifadə tarixini (AA/YY) daxil edin.');
         return;
       }
-  
+
       if (!cvv || cvv.length !== 3) {
         setError('Zəhmət olmasa düzgün CVV daxil edin.');
         return;
       }
-  
+
       // Bütün kart məlumatlarını localStorage-da saxlayın
       const cardData = {
         cardNumber,
@@ -111,18 +111,16 @@ const PaymentMethod = () => {
       localStorage.setItem('cardData', JSON.stringify(cardData));
     }
 
-    // "Kartı əlavə et" düyməsinə basıldıqda, sadəcə məlumatları saxlayırıq, amma səhifəyə keçməyəcəyik
     setIsProcessing(true);
     navigate('/shoppingAddress/reviews');
   };
 
   const handleAddCard = () => {
-    // "Kartı əlavə et" düyməsi ilə məlumatları saxlayırıq, amma səhifəyə keçmirik
     const cardData = { cardNumber, cardName, expiryDate, cvv };
     localStorage.setItem('cardData', JSON.stringify(cardData));
     alert('Kart məlumatları yadda saxlanıldı!');
   };
-  
+
   return (
     <div>
       <h2>Ödəmə metodunu seçin</h2>
@@ -131,14 +129,14 @@ const PaymentMethod = () => {
           <input
             className="radio"
             type="radio"
-            name="paymentMethod"
+            name="payment_type"
             value="card"
-            checked={paymentMethod === 'card'}
-            onChange={handlePaymentMethodChange}
+            checked={payment_type === 'card'}
+            onChange={handlePaymentTypeChange}
           />
           <label htmlFor="dcCard"><h2>Debet/Kredit Kartı</h2></label>
         </div>
-        {paymentMethod === 'card' && (
+        {payment_type === 'card' && (
           <>
             <div>
               <label htmlFor="cardNumber">Kart Nömrəsi</label>
@@ -202,10 +200,10 @@ const PaymentMethod = () => {
             <input
               className="radio"
               type="radio"
-              name="paymentMethod"
+              name="payment_type"
               value="googlePay"
-              checked={paymentMethod === 'googlePay'}
-              onChange={handlePaymentMethodChange}
+              checked={payment_type === 'googlePay'}
+              onChange={handlePaymentTypeChange}
             />
             <label htmlFor="googlePay"><h2>Google Pay</h2></label>
           </div>
@@ -213,10 +211,10 @@ const PaymentMethod = () => {
             <input
               className="radio"
               type="radio"
-              name="paymentMethod"
+              name="payment_type"
               value="paypal"
-              checked={paymentMethod === 'paypal'}
-              onChange={handlePaymentMethodChange}
+              checked={payment_type === 'paypal'}
+              onChange={handlePaymentTypeChange}
             />
             <label htmlFor="paypal"><h2>Paypal</h2></label>
           </div>
@@ -224,10 +222,10 @@ const PaymentMethod = () => {
             <input
               className="radio"
               type="radio"
-              name="paymentMethod"
+              name="payment_type"
               value="cashOnDelivery"
-              checked={paymentMethod === 'cashOnDelivery'}
-              onChange={handlePaymentMethodChange}
+              checked={payment_type === 'cashOnDelivery'}
+              onChange={handlePaymentTypeChange}
             />
             <label htmlFor="cashOnDelivery"><h2>Nağd Ödəmə</h2></label>
           </div>

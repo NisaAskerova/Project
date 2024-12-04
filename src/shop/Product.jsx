@@ -31,6 +31,7 @@ export default function Product() {
           categories: apiProduct.categories?.map((cat) => cat.name) || [],
           description: apiProduct.description,
           stock: apiProduct.has_stock,
+          stock_count: apiProduct.stock_quantity,
           reviews: {
             rating: apiProduct.reviews?.[0]?.rating || 0,
             customerReviews: apiProduct.reviews || [],
@@ -146,7 +147,10 @@ export default function Product() {
           <div className="productImageBox">
             {product.images.map((image, index) => (
               <div className="fourImages" key={index}>
-                <img src={`http://localhost:8000/storage/${image}`} alt={`Product image ${index + 1}`} />
+                <img
+                  src={`http://localhost:8000/storage/${image}`}
+                  alt={`Məhsul şəkli ${index + 1}`}
+                />
               </div>
             ))}
           </div>
@@ -156,11 +160,11 @@ export default function Product() {
             <div id="stockDiv">
               {product.stock ? (
                 <div className="greenDiv">
-                  <span>In Stock</span>
+                  <span>Stokda mövcuddur</span>
                 </div>
               ) : (
                 <div className="redDiv">
-                  <span>Out Of Stock</span>
+                  <span>Stokda yoxdur</span>
                 </div>
               )}
             </div>
@@ -168,19 +172,19 @@ export default function Product() {
             <h3 className="productName">{product.name}</h3>
             <div className="productRating">
               {Array.from({ length: fullStars }).map((_, i) => (
-                <img key={i} src="/yellowStar.svg" alt="star" />
+                <img key={i} src="/yellowStar.svg" alt="Full Star" />
               ))}
-              {hasHalfStar && <img src="/halfStar.svg" alt="half star" />}
+              {hasHalfStar && <img src="/halfStar.svg" alt="Half Star" />}
               {Array.from({ length: emptyStars }).map((_, i) => (
-                <img key={i} src="/emptyStar.svg" alt="empty star" />
+                <img key={i} src="/emptyStar.svg" alt="Empty Star" />
               ))}
               <div>
                 <span>{product.reviews.rating}</span>
                 <span>({product.reviews.customerReviews.length} Reviews)</span>
               </div>
             </div>
-          </div>
-          <span className="productPrice">${product.price}</span>
+            </div>
+          <span className="productPrice">{product.price} ₼</span>
           <div className="productDescription">
             <p className="same">{product.description}...</p>
           </div>
@@ -194,7 +198,7 @@ export default function Product() {
               </tr>
               <tr>
                 <td>
-                  <h4>Categories</h4>
+                  <h4>Kateqoriyalar</h4>
                 </td>
                 <td>
                   {product.categories.length > 0
@@ -204,12 +208,12 @@ export default function Product() {
                           {index < product.categories.length - 1 && ', '}
                         </span>
                       ))
-                    : 'No categories'}
+                    : 'Kateqoriya yoxdur'}
                 </td>
               </tr>
               <tr>
                 <td>
-                  <h4>Tags</h4>
+                  <h4>Etiketlər</h4>
                 </td>
                 <td>
                   {product.tags.length > 0
@@ -219,7 +223,7 @@ export default function Product() {
                           {index < product.tags.length - 1 && ', '}
                         </span>
                       ))
-                    : 'No tags'}
+                    : 'Etiket yoxdur'}
                 </td>
               </tr>
             </tbody>
@@ -230,45 +234,52 @@ export default function Product() {
                 onClick={() => updateQuantity(product.id, 'decrease')}
                 disabled={!product.stock}
               >
-                <img src="/minus.svg" alt="Decrease" />
+                <img src="/minus.svg" alt="Azalt" />
               </button>
-
+  
               <input
                 type="text"
                 readOnly
                 value={localQuantity[product.id] || 0}
               />
-
+  
               <button
                 onClick={() => updateQuantity(product.id, 'increase')}
                 disabled={!product.stock}
               >
-                <img src="/plus.svg" alt="Increase" />
+                <img src="/plus.svg" alt="Artır" />
               </button>
             </div>
             <button className="addButton" onClick={addCart}>
-              Add to Cart
+              Səbətə əlavə et
             </button>
             <div className="favoriteButton">
-              <img src="/favory.svg" alt="Favorite" />
+              <img src="/favory.svg" alt="Sevimlilər" />
             </div>
           </div>
         </div>
       </div>
-
+  
       <div id="comments">
         <div>
-          <NavLink to="description" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            <span>Description</span>
+          <NavLink
+            to="description"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            <span>Təsvir</span>
           </NavLink>
         </div>
         <div>
-          <NavLink to="review" className={({ isActive }) => (isActive ? 'active-link' : '')}>
-            <span>Review</span>
+          <NavLink
+            to="review"
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            <span>Rəylər</span>
           </NavLink>
         </div>
       </div>
-      <Outlet />
+      <Outlet context={{ product }} />
     </div>
   );
+  
 }

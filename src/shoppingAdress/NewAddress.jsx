@@ -55,7 +55,6 @@ export default function NewAddress() {
       setIsLoading(false);
       return;
     }
-
     const addressData = {
       name: e.target.name.value,
       mobile_number: e.target.num.value, // Formda input adı 'num' idi
@@ -91,19 +90,16 @@ export default function NewAddress() {
           <input type="text" name="num" id="num" placeholder="Telefon nömrənizi daxil edin" required disabled={isLoading} />
         </div>
 
-        {/* Ünvan */}
         <div>
           <label htmlFor="address">Düzəldilmiş, Ev nömrəsi, Bina</label>
           <input type="text" name="address" id="address" required disabled={isLoading} />
         </div>
 
-        {/* Sahə */}
         <div>
           <label htmlFor="area">Sahə, Koloniya, Küçə</label>
           <input type="text" name="area" id="area" required disabled={isLoading} />
         </div>
 
-        {/* Şəhər Seçimi */}
         <div>
           <label htmlFor="city">Şəhər</label>
           <Select
@@ -115,14 +111,10 @@ export default function NewAddress() {
             disabled={isLoading}
           />
         </div>
-
-        {/* Poçt Kodu */}
         <div>
           <label htmlFor="pincode">Poçt Kodu</label>
           <input type="text" name="pincode" id="pincode" placeholder="Poçt Kodunu daxil edin" required disabled={isLoading} />
         </div>
-
-        {/* Ştat Seçimi */}
         <div>
           <label htmlFor="state">Ştat</label>
           <Select
@@ -134,17 +126,11 @@ export default function NewAddress() {
             disabled={isLoading}
           />
         </div>
-
-        {/* Default Ünvan Seçimi */}
         <div id="dfAddress">
           <input type="checkbox" name="default_address" id="default_address" disabled={isLoading} />
           <span id="address">Bu ünvana əsas ünvan kimi istifadə et</span>
         </div>
-
-        {/* Xəta Mesajları */}
         {error && <p style={{ color: 'red' }}>{error}</p>}
-
-        {/* Göndərmə Düyməsi */}
         <button type="submit" disabled={isLoading}>
           {isLoading ? 'Əlavə edilir...' : 'Yeni Ünvan Əlavə Et'}
         </button>
