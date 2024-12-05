@@ -521,6 +521,47 @@ button[type='submit'] {
 /* ****************************HEADER************************ */
 header {
   z-index: 999;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#searchResults {
+  top: 166px;
+  width: 75%;
+  position: absolute;
+  background-color: #FFF;
+  border: 1px solid #c0c0c0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+
+}
+
+#searchResults>table>tbody {
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+#searchResults>table>tbody>tr {
+  display: flex;
+  padding: 20px 0;
+  height: 70px;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #c0c0c0;
+  cursor: pointer;
+}
+
+#searchResults>table>tbody>tr>td>img {
+  width: 50px;
+  height: 50px;
+}
+
+.thSame {
+  display: flex;
 }
 
 #hed {
@@ -598,7 +639,7 @@ nav {
 
 #navLeft>ul {
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 #navLeft>ul>li>a {
@@ -622,15 +663,15 @@ nav {
 }
 
 #navIcon {
-  height: 24px;
+  height: 100%;
   display: flex;
   gap: 20px;
-  align-items: center;
   justify-content: center;
-}
+align-items: center;}
 
 #navIcon>img,
 #navIcon>div>img {
+  height: 24px;
   cursor: pointer;
 }
 
@@ -666,7 +707,7 @@ nav {
 }
 
 #headerButtons {
-  width: 284px;
+  width: 134px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -893,6 +934,37 @@ footer h3 {
   width: 560px;
 }
 
+#searchForm {
+  width: 300px;
+  height: 30px;
+  position: relative;
+  margin-bottom: 5px;
+    }
+  
+
+#searchForm>input {
+  width: 100%;
+  height: 30px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #15140F;  /* margin-bottom: 2px; */
+  background-color: transparent;
+}
+
+#searchForm>span {
+  font-size: 20px;
+  position: absolute;
+  font-weight: 400;
+  top: 3px;
+  right: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Yavaş açılıb bağlanma effekti */
+}
+.searchImg{
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Yavaş açılıb bağlanma effekti */
+}
 #boxes {
   display: grid;
   grid-template-columns: repeat(2, 270px);
@@ -2718,7 +2790,7 @@ tr td:first-of-type,
   display: flex;
   justify-content: flex-end;
   position: fixed;
-  z-index: 500;
+  z-index: 1000;
   transition: all 0.5s ease-in;
 }
 
@@ -2726,7 +2798,7 @@ tr td:first-of-type,
   width: 365px;
   height: 100vh;
   background-color: #fff;
-  z-index: 999;
+  z-index: 15555;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -3638,19 +3710,23 @@ table {
 
 /* Ümumi scroll bar dizaynı */
 ::-webkit-scrollbar {
-  width: 15px; /* Şaquli scrollbar genişliyi */
-  height: 15px; /* Yatay scrollbar hündürlüyü */
+  width: 15px;
+  /* Şaquli scrollbar genişliyi */
+  height: 15px;
+  /* Yatay scrollbar hündürlüyü */
 }
 
 /* Scrollbar arxa fonunun rəngi */
 ::-webkit-scrollbar-track {
-  background-color: #15140F; /* Track (arxa fon) rəngi */
+  background-color: #15140F;
+  /* Track (arxa fon) rəngi */
 }
 
 /* Scrollbar tutacağının (thumb) rəngi */
 ::-webkit-scrollbar-thumb {
-  background-color: #15140F; /* Tutacaq rəngi */
-   border-radius: 10px;
+  background-color: #15140F;
+  /* Tutacaq rəngi */
+  border-radius: 10px;
   border: 3px solid #FEE747;
   outline: 2px solid #15140F;
 }
@@ -3658,7 +3734,8 @@ table {
 /* Hover zamanı tutacaq rəngini dəyişmək */
 ::-webkit-scrollbar-thumb:hover {
 
-  background-color: #15140F; /* Hover zamanı tutacaq rəngi */
+  background-color: #15140F;
+  /* Hover zamanı tutacaq rəngi */
 }
 
 
@@ -3733,7 +3810,7 @@ table {
     left: 0;
   }
 
-  
+
   #closeDiv {
     width: 30px;
     height: 30px;
@@ -3832,9 +3909,10 @@ table {
 
   }
 
-  #leftContact>p{
+  #leftContact>p {
     display: none;
   }
+
   /* *************WORK****************** */
   #work {
     padding: 50px;
@@ -3886,9 +3964,10 @@ table {
     margin-bottom: 0;
   }
 
-  #journeyLeft>h2{
+  #journeyLeft>h2 {
     font-size: 26px;
   }
+
   #contactUs {
     padding: 0 50px;
     margin-top: 0;
@@ -4241,32 +4320,41 @@ table {
   #rightContact>div>button>img {
     display: none;
   }
-#homeBlogs{
-  height: 100%;
-}
-.specialIconsBox{
-  width: 60px;
-  height: 60px;
-}
-#footerLeft>p{
-  display: none;
-}
-.thick{
-  line-height: 30px;
-}
-#contactUs{
-  height: 180px;
-}
-#footerCenter1>ul, #footerCenter2>ul {
-  gap: 0;
-}
-/* #footerRight>.same{
+
+  #homeBlogs {
+    height: 100%;
+  }
+
+  .specialIconsBox {
+    width: 60px;
+    height: 60px;
+  }
+
+  #footerLeft>p {
+    display: none;
+  }
+
+  .thick {
+    line-height: 30px;
+  }
+
+  #contactUs {
+    height: 180px;
+  }
+
+  #footerCenter1>ul,
+  #footerCenter2>ul {
+    gap: 0;
+  }
+
+  /* #footerRight>.same{
   display: none;
 } */
-#mediaIcons{
-  gap: 10px;
-}
-#information{
-  flex-wrap: wrap;
-}
+  #mediaIcons {
+    gap: 10px;
+  }
+
+  #information {
+    flex-wrap: wrap;
+  }
 }

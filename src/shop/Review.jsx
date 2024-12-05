@@ -17,6 +17,7 @@ export default function Review() {
         try {
             const response = await axios.get(`http://127.0.0.1:8000/api/reviews/${id}`);
             setReviews(response.data);
+            console.log(response.data); // Backend-dən gələn məlumatı yoxlayın
         } catch (error) {
             console.error("Rəy alınarkən xəta baş verdi:", error);
         } finally {
@@ -41,13 +42,13 @@ export default function Review() {
                             </div>
                             <div>
                                 <span>{review.user.first_name} {review.user.last_name}</span>
-                                <div className='ratingReviewStars'>
+                                <div className="ratingReviewStars">
                                     {/* Reytinqə əsasən sarı ulduzları göstəririk */}
-                                    {Array.from({ length: Math.floor(review.rating.rating) }).map((_, i) => (
+                                    {Array.from({ length: Math.floor(review.rating_value) }).map((_, i) => (
                                         <img key={i} src="/yellowStar.svg" alt="sarı ulduz" />
                                     ))}
                                     {/* 5 ulduz üçün boş ulduzları göstəririk */}
-                                    {Array.from({ length: 5 - Math.floor(review.rating.rating) }).map((_, i) => (
+                                    {Array.from({ length: 5 - Math.floor(review.rating_value) }).map((_, i) => (
                                         <img key={i} src="/blackEmptyStar.svg" alt="boş ulduz" />
                                     ))}
                                 </div>
@@ -70,7 +71,7 @@ export default function Review() {
 
                         <div className="reviewDate">
                             <span className="gray">Rəy yazar: </span>
-                            <span>Security</span>
+                            <span>{review.user.first_name}</span>
                             <span className="gray">Paylaşılma tarixi: </span>
                             <span>{new Date(review.review_date).toLocaleDateString('az-AZ', {
                                 year: 'numeric',

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios"; // Axios istifadə edirik
+import axios from "axios";
 import NewAddress from "./NewAddress"; // Yeni ünvan əlavə etmək üçün komponent
 
 const Address = () => {
@@ -8,11 +8,17 @@ const Address = () => {
   const [loading, setLoading] = useState(true); // Yüklənmə vəziyyəti
   const [error, setError] = useState(""); // Hata mesajı
 
-  // Ünvanları backend-dən çəkirik
   useEffect(() => {
-    // Sorğu göndəririk
+    // Giriş məlumatlarını (token) alırıq
+    const token = localStorage.getItem("token"); // Tokeni localStorage-dan götürürük (əgər istifadəçi daxil olubsa)
+
+    // Ünvanları backend-dən çəkirik
     axios
-      .get("http://127.0.0.1:8000/api/orders/addresses") // Backend ünvanları çəkən API endpoint
+      .get("http://127.0.0.1:8000/api/orders/addresses", {
+        headers: {
+          Authorization: `Bearer ${token}`, // Tokeni Authorization başlığında göndəririk
+        },
+      })
       .then((response) => {
         setAddresses(response.data); // Ünvanları state-ə əlavə edirik
         setLoading(false); // Yüklənmə tamamlandı
@@ -21,12 +27,18 @@ const Address = () => {
         setError("Ünvanlar alınarkən xəta baş verdi");
         setLoading(false); // Yüklənmə tamamlandı
       });
-  }, []);
+  }, []); // Dependensiya boş olarsa, yalnız komponent yüklənəndə çalışır
 
   // Ünvan silmək funksiyası
   const deleteAddress = (addressId) => {
+    const token = localStorage.getItem("token"); // Tokeni alırıq
+
     axios
-      .delete(`http://127.0.0.1:8000/api/addresses/${addressId}`) // Ünvan silmək üçün API endpoint
+      .delete(`http://127.0.0.1:8000/api/addresses/${addressId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`, // Tokeni Authorization başlığında göndəririk
+        },
+      })
       .then(() => {
         // Silindikdən sonra ünvanları yeniləyirik
         setAddresses(addresses.filter((address) => address.id !== addressId));
@@ -35,7 +47,6 @@ const Address = () => {
         setError("Ünvan silinərkən xəta baş verdi");
       });
   };
-console.log(addresses);
 
   return (
     <div id="addressHero">

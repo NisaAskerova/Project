@@ -22,6 +22,11 @@ export default function Product() {
       const response = await axios.get(`http://127.0.0.1:8000/api/products/show_product/${id}`, { headers });
       if (response.status === 200) {
         const apiProduct = response.data;
+        const ratings = apiProduct.ratings || [];
+        const averageRating = apiProduct.average_rating 
+        ? parseFloat(apiProduct.average_rating).toFixed(1) // Yalnız rəqəm olduğu zaman
+        : "0.0"; // Əgər qiymət yoxdursa, default olaraq 0.0 qoy
+  
         const formattedProduct = {
           id: apiProduct.id,
           name: apiProduct.title,
@@ -33,7 +38,7 @@ export default function Product() {
           stock: apiProduct.has_stock,
           stock_count: apiProduct.stock_quantity,
           reviews: {
-            rating: apiProduct.reviews?.[0]?.rating || 0,
+            rating: averageRating,
             customerReviews: apiProduct.reviews || [],
           },
           ratings: apiProduct.ratings || [],
@@ -47,13 +52,12 @@ export default function Product() {
         toast.error('Product not found');
       }
     } catch (err) {
-      toast.error('Failed to load product');
       console.error('Error fetching product:', err);
     } finally {
       setLoading(false);
     }
   };
-
+  
   useEffect(() => {
     fetchData();
   }, [id]);
@@ -93,7 +97,7 @@ export default function Product() {
       toast.success('Product added to cart');
     } catch (error) {
       console.error('Error adding product to cart:', error);
-      toast.error('Failed to add product to cart');
+      // toast.error('Failed to add product to cart');
     }
   };
 
@@ -133,9 +137,9 @@ export default function Product() {
   if (loading) return <div>Loading...</div>;
   if (!product) return <div>Product not found</div>;
 
-  const fullStars = Math.floor(product.reviews.rating);
-  const hasHalfStar = product.reviews.rating % 1 !== 0;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+  const fullStars = Math.floor(product.reviews.rating); // Tam ulduz sayı
+  const hasHalfStar = product.reviews.rating % 1 !== 0; // Yarım ulduz olub-olmaması
+  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0); // Boş ulduzların sayı
 
   return (
     <div>
@@ -179,11 +183,11 @@ export default function Product() {
                 <img key={i} src="/emptyStar.svg" alt="Empty Star" />
               ))}
               <div>
-                <span>{product.reviews.rating}</span>
-                <span>({product.reviews.customerReviews.length} Reviews)</span>
+                <span>{product.reviews.rating}</span> {/* Ortalama reytinq */}
+                <span>({product.reviews.customerReviews.length} Reviews)</span> {/* Ümumi rəylərin sayı */}
               </div>
             </div>
-            </div>
+          </div>
           <span className="productPrice">{product.price} ₼</span>
           <div className="productDescription">
             <p className="same">{product.description}...</p>
@@ -203,11 +207,11 @@ export default function Product() {
                 <td>
                   {product.categories.length > 0
                     ? product.categories.map((category, index) => (
-                        <span key={index}>
-                          {category}
-                          {index < product.categories.length - 1 && ', '}
-                        </span>
-                      ))
+                      <span key={index}>
+                        {category}
+                        {index < product.categories.length - 1 && ', '}
+                      </span>
+                    ))
                     : 'Kateqoriya yoxdur'}
                 </td>
               </tr>
@@ -218,11 +222,11 @@ export default function Product() {
                 <td>
                   {product.tags.length > 0
                     ? product.tags.map((tag, index) => (
-                        <span key={index}>
-                          {tag.name || tag}
-                          {index < product.tags.length - 1 && ', '}
-                        </span>
-                      ))
+                      <span key={index}>
+                        {tag.name || tag}
+                        {index < product.tags.length - 1 && ', '}
+                      </span>
+                    ))
                     : 'Etiket yoxdur'}
                 </td>
               </tr>
@@ -236,13 +240,13 @@ export default function Product() {
               >
                 <img src="/minus.svg" alt="Azalt" />
               </button>
-  
+
               <input
                 type="text"
                 readOnly
                 value={localQuantity[product.id] || 0}
               />
-  
+
               <button
                 onClick={() => updateQuantity(product.id, 'increase')}
                 disabled={!product.stock}
@@ -250,7 +254,7 @@ export default function Product() {
                 <img src="/plus.svg" alt="Artır" />
               </button>
             </div>
-            <button className="addButton" onClick={addCart}>
+            <button className="addButton same" onClick={addCart}>
               Səbətə əlavə et
             </button>
             <div className="favoriteButton">
@@ -259,7 +263,7 @@ export default function Product() {
           </div>
         </div>
       </div>
-  
+
       <div id="comments">
         <div>
           <NavLink
@@ -281,5 +285,5 @@ export default function Product() {
       <Outlet context={{ product }} />
     </div>
   );
-  
+
 }

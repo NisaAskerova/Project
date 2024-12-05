@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, useRef } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { MyContext } from '../App';
 import axios from 'axios';
@@ -7,43 +7,66 @@ export default function Header() {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
   const { cart, setCart, setVisibleCard } = useContext(MyContext);
   const [basketQuantity, setBasketQuantity] = useState(0);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const searchInputRef = useRef(null);
+  const searchResultsRef = useRef(null);
   const navigate = useNavigate();
 
-  // Çıxış funksiyası (logout)
   const handleLogout = async () => {
     try {
       const token = localStorage.getItem('token');
       if (token) {
-        await axios.delete(
-          'http://127.0.0.1:8000/api/logout',
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-        localStorage.removeItem('token'); // Token-i sil
-
-        // Bütün localStorage məlumatlarını silmək
-        localStorage.clear(); // Bütün məlumatları sil
-
-        // React state-lərini sıfırlamaq
-        setCart([]); // Cart-ı təmizləyin
-        setBasketQuantity(0); // Basketin sayını sıfırlayın
-
-        navigate('/login', '/'); // Login səhifəsinə yönləndir
+        await axios.delete('http://127.0.0.1:8000/api/logout', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        localStorage.clear();
+        setCart([]);
+        setBasketQuantity(0);
+        navigate('/login');
       }
     } catch (error) {
-      console.error('Çıxış alınmadı', error);
+      console.error('Logout failed', error);
     }
   };
 
-  // NavBar-ı açıb-bağlama funksiyası
+  const handleSearchToggle = () => {
+    setIsSearchOpen(!isSearchOpen);
+    if (!isSearchOpen) {
+      setTimeout(() => searchInputRef.current?.focus(), 100);
+    } else {
+      setSearchTerm('');
+      setSearchResults([]);
+    }
+  };
+
   const toggleNavBar = () => {
+    console.log('Toggling NavBar'); // Check if this is printed on click
     setIsNavBarOpen(!isNavBarOpen);
   };
 
-  // Basketin sayını backend-dən çəkmək üçün API çağırışı
+  const handleSearchChange = async (e) => {
+    const searchQuery = e.target.value;
+    setSearchTerm(searchQuery);
+
+    if (searchQuery.trim() !== '') {
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/api/products/search-products', {
+          params: { query: searchQuery },
+        });
+        setSearchResults(response.data);
+      } catch (error) {
+        console.error('Search error:', error);
+      }
+    } else {
+      setSearchResults([]);
+    }
+  };
+
+
   useEffect(() => {
     const fetchBasketQuantity = async () => {
       try {
@@ -60,24 +83,42 @@ export default function Header() {
           setBasketQuantity(response.data.total_items);
         }
       } catch (error) {
-        console.error('Basketin sayı çəkilmədi', error);
+        console.error('Failed to fetch basket quantity', error);
       }
     };
 
     fetchBasketQuantity();
   }, [cart]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        searchResultsRef.current &&
+        !searchResultsRef.current.contains(event.target) &&
+        searchInputRef.current &&
+        !searchInputRef.current.contains(event.target)
+      ) {
+        setIsSearchOpen(false);
+        setSearchResults([]);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
     <header>
       <div id="hed">
         <div className="headerLeft">
-          {/* Logo */}
           <NavLink to="/home">
             <img id="lg" src="/miniLogo.svg" alt="miniLogo" />
           </NavLink>
         </div>
         <div className="headerRight">
-          {/* Əlaqə məlumatları */}
           <div className="contact">
             <div className="headerIcon">
               <img src="/call.svg" alt="call" />
@@ -115,21 +156,33 @@ export default function Header() {
           </ul>
         </div>
         <div id="navRight">
-          {/* İkonlar */}
           <div id="navIcon">
+          {isSearchOpen && (
+            <form id="searchForm">
+              <input
+                ref={searchInputRef}
+                type="text"
+                placeholder="Axtar..."
+                value={searchTerm}
+                onChange={handleSearchChange}
+              />
+              <span className='same' onClick={handleSearchToggle}>X</span>
+            </form>
+          )}
+          {!isSearchOpen && (
+            <img className='searchImg' src="/search.svg" alt="search" onClick={handleSearchToggle} />
+          )}
             <img src="/favory.svg" alt="favorite" />
             <div id="cartCount" onClick={() => setVisibleCard(true)}>
               <img src="/shopCar.svg" alt="shop car" />
               <div><span>{basketQuantity}</span></div>
             </div>
           </div>
-          {/* Logout və digər düymələr */}
           <div id="headerButtons">
-            <button className="same">Təklif al</button>
+            {/* <button className="same">Təklif al</button> */}
             <button className="same" onClick={handleLogout}>Çıxış</button>
           </div>
         </div>
-        {/* Mobil üçün açılıb-bağlanan menyu */}
         <div id="navBar" className={isNavBarOpen ? 'open' : ''}>
           <div id="closeDiv" onClick={toggleNavBar}>
             <img src="/close.svg" alt="close" />
@@ -144,6 +197,25 @@ export default function Header() {
           </ul>
         </div>
       </nav>
+
+      {searchResults.length > 0 && isSearchOpen && (
+        <div id="searchResults" ref={searchResultsRef}>
+          <table>
+            <tbody>
+              {searchResults.map(product => (
+                <tr key={product.id} onClick={() => navigate(`/product/${product.id}`)}>
+                  <td>
+                    <img src={`http://localhost:8000/storage/${product.image}`} alt={product.name} />
+                  </td>
+                  <td className='same thSame'>
+                    <strong>{product.brands ? product.brands[0]?.name : 'Brend yoxdur'} </strong>| {product.title}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </header>
   );
 }
