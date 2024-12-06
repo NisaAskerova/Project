@@ -83,6 +83,7 @@ import AddCity from './admin/city/AddCity';
 import ShowCities from './admin/city/ShowCities';
 import UpdateCity from './admin/city/UpdateCity';
 import NotFound from './NotFound';
+import Reply from './blog/Reply';
 
 export const MyContext = createContext();
 
@@ -264,6 +265,7 @@ export default function App() {
             <Route path="/add_city" element={<AddCity />} />
             <Route path="/show_cities" element={<ShowCities />} />
             <Route path="/update_city/:id" element={<UpdateCity />} />
+            <Route path="/blogs/:blogId/reply" element={<Reply />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>

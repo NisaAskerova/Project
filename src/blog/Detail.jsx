@@ -7,15 +7,15 @@ import BlogComment from './BlogComment';
 import Reply from './Reply';
 
 export default function Detail() {
-  const { id } = useParams(); 
-  const [blog, setBlog] = useState(null); 
-  const [message, setMessage] = useState(''); 
+  const { id } = useParams(); // URL parametrini alırıq
+  const [blog, setBlog] = useState(null);
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     const fetchBlogDetails = async () => {
       try {
         const response = await axios.get(`http://localhost:8000/api/blogs/get_blog/${id}`);
-        setBlog(response.data); 
+        setBlog(response.data);
       } catch (error) {
         setMessage('Failed to fetch blog details. Please try again later.');
       }
@@ -25,11 +25,11 @@ export default function Detail() {
   }, [id]);
 
   if (message) {
-    return <div style={{ color: 'red' }}>{message}</div>; 
+    return <div style={{ color: 'red' }}>{message}</div>;
   }
 
   if (!blog) {
-    return <div>Loading...</div>; 
+    return <div>Loading...</div>;
   }
 
   return (
@@ -47,7 +47,7 @@ export default function Detail() {
           <p className='desc'>{blog.detail_short_description}</p>
           <div>
             <BlogComment />
-            <Reply />
+            <Reply blogId={id} /> {/* Reply komponentinə id ötürülür */}
           </div>
         </div>
         <div className="BfilterRight">
