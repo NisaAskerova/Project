@@ -9,13 +9,14 @@ export default function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [basketQuantity, setBasketQuantity] = useState(1); // Yerli vəziyyət əlavə edildi
 
-  // Token and user ID from localStorage
+  // Token və user ID
   const token = localStorage.getItem('token');
   const userId = localStorage.getItem('user_id');
   const headers = token ? { Authorization: `Bearer ${token}` } : {};
 
-  // Fetch product data from API
+  // Məhsul məlumatlarını çəkmək
   const fetchData = async () => {
     setLoading(true);
     try {
@@ -23,10 +24,10 @@ export default function Product() {
       if (response.status === 200) {
         const apiProduct = response.data;
         const ratings = apiProduct.ratings || [];
-        const averageRating = apiProduct.average_rating 
-        ? parseFloat(apiProduct.average_rating).toFixed(1) // Yalnız rəqəm olduğu zaman
-        : "0.0"; // Əgər qiymət yoxdursa, default olaraq 0.0 qoy
-  
+        const averageRating = apiProduct.average_rating
+          ? parseFloat(apiProduct.average_rating).toFixed(1)
+          : "0.0";
+
         const formattedProduct = {
           id: apiProduct.id,
           name: apiProduct.title,
@@ -46,8 +47,11 @@ export default function Product() {
           SKU: apiProduct.sku || 'N/A',
           tags: apiProduct.tags || [],
           images: apiProduct.images || [],
+          basket_quantity: apiProduct.basket_quantity || 1, // Məhsulun səbət sayı burada saxlanılır
         };
+
         setProduct(formattedProduct);
+        setBasketQuantity(formattedProduct.basket_quantity); // Məhsul yüklənəndə basket_quantity-ni yeniləyirik
       } else {
         toast.error('Product not found');
       }
@@ -57,12 +61,12 @@ export default function Product() {
       setLoading(false);
     }
   };
-  
+
   useEffect(() => {
     fetchData();
   }, [id]);
 
-  // Add product to cart
+  // Məhsulu səbətə əlavə et
   const addCart = async () => {
     if (!userId) {
       toast.error('User is not logged in');
@@ -77,7 +81,7 @@ export default function Product() {
     try {
       const response = await axios.post(
         'http://127.0.0.1:8000/api/basket/store',
-        { product_id: product.id, quantity: 1 },
+        { product_id: product.id, quantity: basketQuantity }, // Yerli quantity istifadə olunur
         { headers }
       );
       setCart((prevCart) => {
@@ -87,59 +91,56 @@ export default function Product() {
         if (productExists) {
           return currentCart.map((item) =>
             item.id === product.id
-              ? { ...item, quantity: (item.quantity || 0) + 1 }
+              ? { ...item, quantity: basketQuantity } // Səbətə əlavə edərkən yeni quantity istifadə olunur
               : item
           );
         }
 
-        return [...currentCart, { ...response.data.product, quantity: 1 }];
+        return [...currentCart, { ...response.data.product, quantity: basketQuantity }];
       });
       toast.success('Product added to cart');
     } catch (error) {
       console.error('Error adding product to cart:', error);
-      // toast.error('Failed to add product to cart');
     }
   };
 
-  // Update quantity in cart
-  const updateQuantity = async (productId, action) => {
-    try {
-      const response = await axios.post(
-        `http://127.0.0.1:8000/api/basket/updateQuantity/${action}`,
-        { product_id: productId },
-        { headers }
-      );
-
+  // Səbətdə quantity-ni yenilə
+  const updateQuantity = (action) => {
+    let updatedQuantity = basketQuantity;
+  
+    if (action === 'increase') {
+      updatedQuantity = Math.min(updatedQuantity + 1, product.stock_count);
+    } else if (action === 'decrease') {
+      updatedQuantity = Math.max(updatedQuantity - 1, 1);
+    }
+  
+    setBasketQuantity(updatedQuantity); // Yerli vəziyyəti dərhal yeniləyirik
+  
+    // İstədiyiniz API sorğusunu göndərin
+    axios.post(
+      `http://127.0.0.1:8000/api/basket/updateQuantity/${action}`,
+      { product_id: product.id },
+      { headers }
+    )
+    .then((response) => {
       if (response.data.success) {
-        const updatedQuantity = response.data.basket_quantity;
-        setLocalQuantity((prev) => ({
-          ...prev,
-          [productId]: updatedQuantity,
-        }));
-
-        setCart((prevCart) =>
-          prevCart.map((item) =>
-            item.id === productId
-              ? { ...item, quantity: updatedQuantity }
-              : item
-          )
-        );
         toast.success(response.data.message);
       } else {
         toast.error(response.data.error);
       }
-    } catch (error) {
+    })
+    .catch((error) => {
       toast.error('Failed to update quantity');
       console.error('Error updating quantity:', error);
-    }
+    });
   };
 
   if (loading) return <div>Loading...</div>;
   if (!product) return <div>Product not found</div>;
 
-  const fullStars = Math.floor(product.reviews.rating); // Tam ulduz sayı
-  const hasHalfStar = product.reviews.rating % 1 !== 0; // Yarım ulduz olub-olmaması
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0); // Boş ulduzların sayı
+  const fullStars = Math.floor(product.reviews.rating);
+  const hasHalfStar = product.reviews.rating % 1 !== 0;
+  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
     <div>
@@ -183,8 +184,8 @@ export default function Product() {
                 <img key={i} src="/emptyStar.svg" alt="Empty Star" />
               ))}
               <div>
-                <span>{product.reviews.rating}</span> {/* Ortalama reytinq */}
-                <span>({product.reviews.customerReviews.length} Reviews)</span> {/* Ümumi rəylərin sayı */}
+                <span>{product.reviews.rating}</span>
+                <span>({product.reviews.customerReviews.length} Reviews)</span>
               </div>
             </div>
           </div>
@@ -233,27 +234,29 @@ export default function Product() {
             </tbody>
           </table>
           <div className="productButtons">
-            <div>
-              <button
-                onClick={() => updateQuantity(product.id, 'decrease')}
-                disabled={!product.stock}
-              >
-                <img src="/minus.svg" alt="Azalt" />
-              </button>
+          <div>
+    <button
+      onClick={() => updateQuantity('decrease')}
+      disabled={!product.stock || basketQuantity <= 1}
+    >
+      <img src="/minus.svg" alt="Azalt" />
+    </button>
 
-              <input
-                type="text"
-                readOnly
-                value={localQuantity[product.id] || 0}
-              />
+    
+    <input
+      type="text"
+      value={basketQuantity} 
+      onChange={(e) => setBasketQuantity(Number(e.target.value))}
+      className='same'
+    />
 
-              <button
-                onClick={() => updateQuantity(product.id, 'increase')}
-                disabled={!product.stock}
-              >
-                <img src="/plus.svg" alt="Artır" />
-              </button>
-            </div>
+    <button
+      onClick={() => updateQuantity('increase')}
+      disabled={!product.stock || basketQuantity >= product.stock_count}
+    >
+      <img src="/plus.svg" alt="Artır" />
+    </button>
+  </div>
             <button className="addButton same" onClick={addCart}>
               Səbətə əlavə et
             </button>
@@ -261,6 +264,7 @@ export default function Product() {
               <img src="/favory.svg" alt="Sevimlilər" />
             </div>
           </div>
+
         </div>
       </div>
 
@@ -285,5 +289,4 @@ export default function Product() {
       <Outlet context={{ product }} />
     </div>
   );
-
 }

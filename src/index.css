@@ -981,9 +981,6 @@ footer h3 {
   cursor: pointer;
 }
 
-.homeBox:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
 
 .iconsBox,
 .specialIconsBox {
@@ -2799,7 +2796,7 @@ tr td:first-of-type,
   height: 100vh;
   background-color: #fff;
   z-index: 15555;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2812,6 +2809,7 @@ tr td:first-of-type,
   flex-direction: column;
   gap: 20px;
   overflow: auto;
+  padding-right: 20px;
 }
 
 #productsCard>.same {
@@ -2840,7 +2838,30 @@ tr td:first-of-type,
   display: flex;
   flex-direction: column;
 }
+.homeBox:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#productsCard {
+  overflow-y: auto;
+  max-height: 500px; /* Məhsul listəsinin maksimum hündürlüyü */
+}
 
+/* Scroll tərtibi */
+#productsCard::-webkit-scrollbar {
+  width: 6px;
+  background-color: #0f83aa;
+}
+
+#productsCard::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: #b4b0b0;
+}
+
+#productsCard::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
 .cardInfo>div {
   width: 100%;
   display: flex;

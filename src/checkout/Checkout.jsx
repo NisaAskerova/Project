@@ -25,7 +25,7 @@ export default function Checkout() {
   // Ümumi qiyməti hesablamaq
   const calculateTotal = () => {
     const total = checkoutCart.reduce((acc, item) => acc + item.product.price * (item.quantity || 1), 0);
-    localStorage.setItem('total', total.toFixed(2));  // Ümumi qiyməti localStorage-da saxlamaq
+    localStorage.setItem('total', total.toFixed(2)); // Ümumi qiyməti localStorage-da saxlamaq
     return total;
   };
 
@@ -86,7 +86,7 @@ export default function Checkout() {
   // İlk dəfə səbəti əldə etmək
   useEffect(() => {
     fetchBasket();
-  }, []);
+  }, []); // Only call fetchBasket on mount
 
   if (!Array.isArray(checkoutCart)) {
     return <div>Yüklənir...</div>;

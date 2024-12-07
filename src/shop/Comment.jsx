@@ -1,46 +1,24 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+// Comment.jsx
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-export default function Comment({ addReview, productId }) {
+export default function Comment({ addReview, productId, onNewReview }) {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
-  const [comment, setComment] = useState(""); 
-  const [user, setUser] = useState(null); 
+  const [comment, setComment] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [successMessage, setSuccessMessage] = useState(""); 
 
-  const authToken = localStorage.getItem("token"); 
-  const navigate = useNavigate(); // Initialize navigate function
+  const authToken = localStorage.getItem("token");
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!authToken) {
-      window.location.href = "/login"; 
+      window.location.href = "/login";
       return;
     }
 
-    const fetchUser = async () => {
-      try {
-        const response = await axios.get("http://127.0.0.1:8000/api/me", {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-          },
-        });
-
-        if (response.data.status) {
-          setUser(response.data.data);
-        } else {
-          window.location.href = "/login";
-        }
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-        window.location.href = "/login";
-      } finally {
-        setIsLoading(false); 
-      }
-    };
-
-    fetchUser();
+    setIsLoading(false); // Assume user is loaded for simplicity
   }, [authToken]);
 
   const handleRating = (count) => {
@@ -77,13 +55,17 @@ export default function Comment({ addReview, productId }) {
         }
       );
 
-      addReview(response.data.review); 
-      setRating(0); 
-      setComment(""); 
-      setSuccessMessage("Your review has been successfully added!"); 
+      setRating(0); // Reset rating
+      setComment(""); // Reset comment field
 
-      // Redirect to the review page after successful submission
-      navigate(`/reviews/${productId}`); // Update this URL to match your actual review page route
+      // Call the addReview function passed from the parent to update the reviews state
+      addReview(response.data.review);
+
+      // Call the onNewReview to update the parent state (this will trigger a re-fetch)
+      onNewReview(); 
+
+      // Redirect to the product's review page
+      navigate(`/product/${productId}/review`);
     } catch (error) {
       console.error("Error submitting review:", error.response?.data || error.message);
     }
@@ -94,7 +76,7 @@ export default function Comment({ addReview, productId }) {
   }
 
   return (
-    <div id="reviewForm">
+    <form id="reviewForm" onSubmit={handleSubmit}>
       <h3>Add your Review</h3>
       <span className="same">Your Rating</span>
       <div className="ratingStars">
@@ -104,7 +86,7 @@ export default function Comment({ addReview, productId }) {
               onMouseEnter={() => setHover(group.count)}
               onMouseLeave={() => setHover(rating)}
               onClick={() => handleRating(group.count)}
-              style={{ cursor: 'pointer', display: 'inline-block', padding: '0 5px' }}
+              style={{ cursor: "pointer", display: "inline-block", padding: "0 5px" }}
             >
               {group.label.map((star, starIndex) => (
                 <img
@@ -112,9 +94,9 @@ export default function Comment({ addReview, productId }) {
                   src={hover >= group.count || rating >= group.count ? "/yellowStar.svg" : "/blackEmptyStar.svg"}
                   alt="star"
                   style={{
-                    width: '20px',
-                    height: '20px',
-                    margin: '0 2px',
+                    width: "20px",
+                    height: "20px",
+                    margin: "0 2px",
                   }}
                 />
               ))}
@@ -126,32 +108,30 @@ export default function Comment({ addReview, productId }) {
 
       <label htmlFor="name">Name</label>
       <input
-        className='same'
+        className="same"
         type="text"
         name="name"
         id="name"
-        placeholder='Enter Your Name'
+        placeholder="Enter Your Name"
       />
       <label htmlFor="email">Email</label>
       <input
-        className='same emailInput'
+        className="same emailInput"
         type="email"
         name="email"
         id="email"
-        placeholder='Enter Your Email'
+        placeholder="Enter Your Email"
       />
       <label htmlFor="review">Your Review</label>
       <textarea
-        className='same'
+        className="same"
         name="review"
         id="review"
-        placeholder='Enter Your Review'
+        placeholder="Enter Your Review"
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       ></textarea>
-      <button type="submit" onClick={handleSubmit}>Submit Review</button>
-
-      {successMessage && <div className="successMessage">{successMessage}</div>}
-    </div>
+      <button type="submit">Submit Review</button>
+    </form>
   );
 }
