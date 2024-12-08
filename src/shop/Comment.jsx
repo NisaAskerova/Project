@@ -1,4 +1,3 @@
-// Comment.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +6,8 @@ export default function Comment({ addReview, productId, onNewReview }) {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [comment, setComment] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
   const authToken = localStorage.getItem("token");
@@ -18,7 +19,7 @@ export default function Comment({ addReview, productId, onNewReview }) {
       return;
     }
 
-    setIsLoading(false); // Assume user is loaded for simplicity
+    setIsLoading(false);
   }, [authToken]);
 
   const handleRating = (count) => {
@@ -36,8 +37,8 @@ export default function Comment({ addReview, productId, onNewReview }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (comment.trim() === "" || rating <= 0) {
-      console.error("Please provide both a comment and a valid rating.");
+    if (name.trim() === "" || email.trim() === "" || comment.trim() === "" || rating <= 0) {
+      console.error("Please fill in all fields and provide a valid rating.");
       return;
     }
 
@@ -45,6 +46,8 @@ export default function Comment({ addReview, productId, onNewReview }) {
       const response = await axios.post(
         `http://127.0.0.1:8000/api/reviews/${productId}/store`,
         {
+          name: name,
+          email: email,
           review_comment: comment,
           rating: rating,
         },
@@ -55,16 +58,15 @@ export default function Comment({ addReview, productId, onNewReview }) {
         }
       );
 
-      setRating(0); // Reset rating
-      setComment(""); // Reset comment field
+      setName("");
+      setEmail("");
+      setRating(0); 
+      setComment("");
 
-      // Call the addReview function passed from the parent to update the reviews state
       addReview(response.data.review);
 
-      // Call the onNewReview to update the parent state (this will trigger a re-fetch)
-      onNewReview(); 
+      onNewReview();
 
-      // Redirect to the product's review page
       navigate(`/product/${productId}/review`);
     } catch (error) {
       console.error("Error submitting review:", error.response?.data || error.message);
@@ -78,7 +80,6 @@ export default function Comment({ addReview, productId, onNewReview }) {
   return (
     <form id="reviewForm" onSubmit={handleSubmit}>
       <h3>Add your Review</h3>
-      <span className="same">Your Rating</span>
       <div className="ratingStars">
         {starGroups.map((group, index) => (
           <React.Fragment key={index}>
@@ -105,23 +106,29 @@ export default function Comment({ addReview, productId, onNewReview }) {
           </React.Fragment>
         ))}
       </div>
-
-      <label htmlFor="name">Name</label>
+      <span className="same">Your Rating</span>
+      <label htmlFor="name">Your Name</label>
       <input
-        className="same"
         type="text"
-        name="name"
         id="name"
-        placeholder="Enter Your Name"
+        placeholder="Enter your name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
       />
-      <label htmlFor="email">Email</label>
+
+      <label htmlFor="email">Your Email</label>
       <input
-        className="same emailInput"
         type="email"
-        name="email"
         id="email"
-        placeholder="Enter Your Email"
+        placeholder="Enter your email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
       />
+
+
+
       <label htmlFor="review">Your Review</label>
       <textarea
         className="same"
@@ -131,6 +138,7 @@ export default function Comment({ addReview, productId, onNewReview }) {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       ></textarea>
+
       <button type="submit">Submit Review</button>
     </form>
   );

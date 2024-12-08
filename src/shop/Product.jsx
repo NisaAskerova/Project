@@ -107,32 +107,32 @@ export default function Product() {
   // Səbətdə quantity-ni yenilə
   const updateQuantity = (action) => {
     let updatedQuantity = basketQuantity;
-  
+
     if (action === 'increase') {
       updatedQuantity = Math.min(updatedQuantity + 1, product.stock_count);
     } else if (action === 'decrease') {
       updatedQuantity = Math.max(updatedQuantity - 1, 1);
     }
-  
+
     setBasketQuantity(updatedQuantity); // Yerli vəziyyəti dərhal yeniləyirik
-  
+
     // İstədiyiniz API sorğusunu göndərin
     axios.post(
       `http://127.0.0.1:8000/api/basket/updateQuantity/${action}`,
       { product_id: product.id },
       { headers }
     )
-    .then((response) => {
-      if (response.data.success) {
-        toast.success(response.data.message);
-      } else {
-        toast.error(response.data.error);
-      }
-    })
-    .catch((error) => {
-      toast.error('Failed to update quantity');
-      console.error('Error updating quantity:', error);
-    });
+      .then((response) => {
+        if (response.data.success) {
+          toast.success(response.data.message);
+        } else {
+          toast.error(response.data.error);
+        }
+      })
+      .catch((error) => {
+        toast.error('Failed to update quantity');
+        console.error('Error updating quantity:', error);
+      });
   };
 
   if (loading) return <div>Loading...</div>;
@@ -234,29 +234,29 @@ export default function Product() {
             </tbody>
           </table>
           <div className="productButtons">
-          <div>
-    <button
-      onClick={() => updateQuantity('decrease')}
-      disabled={!product.stock || basketQuantity <= 1}
-    >
-      <img src="/minus.svg" alt="Azalt" />
-    </button>
+            <div>
+              <button
+                onClick={() => updateQuantity('decrease')}
+                disabled={!product.stock || basketQuantity <= 1}
+              >
+                <img src="/minus.svg" alt="Azalt" />
+              </button>
 
-    
-    <input
-      type="text"
-      value={basketQuantity} 
-      onChange={(e) => setBasketQuantity(Number(e.target.value))}
-      className='same'
-    />
 
-    <button
-      onClick={() => updateQuantity('increase')}
-      disabled={!product.stock || basketQuantity >= product.stock_count}
-    >
-      <img src="/plus.svg" alt="Artır" />
-    </button>
-  </div>
+              <input
+                type="text"
+                value={basketQuantity}
+                onChange={(e) => setBasketQuantity(Number(e.target.value))}
+                className='same'
+              />
+
+              <button
+                onClick={() => updateQuantity('increase')}
+                disabled={!product.stock || basketQuantity >= product.stock_count}
+              >
+                <img src="/plus.svg" alt="Artır" />
+              </button>
+            </div>
             <button className="addButton same" onClick={addCart}>
               Səbətə əlavə et
             </button>

@@ -157,21 +157,22 @@ export default function Header() {
         </div>
         <div id="navRight">
           <div id="navIcon">
-          {isSearchOpen && (
-            <form id="searchForm">
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder="Axtar..."
-                value={searchTerm}
-                onChange={handleSearchChange}
-              />
-              <span className='same' onClick={handleSearchToggle}>X</span>
-            </form>
-          )}
-          {!isSearchOpen && (
-            <img className='searchImg' src="/search.svg" alt="search" onClick={handleSearchToggle} />
-          )}
+            {isSearchOpen && (
+              <form id="searchForm">
+                <input
+                  className='same'
+                  ref={searchInputRef}
+                  type="search"
+                  placeholder="Axtar..."
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                />
+                <div><span className='same' onClick={handleSearchToggle}>X</span></div>
+              </form>
+            )}
+            {!isSearchOpen && (
+              <img className='searchImg' src="/search.svg" alt="search" onClick={handleSearchToggle} />
+            )}
             <img src="/favory.svg" alt="favorite" />
             <div id="cartCount" onClick={() => setVisibleCard(true)}>
               <img src="/shopCar.svg" alt="shop car" />
@@ -179,7 +180,6 @@ export default function Header() {
             </div>
           </div>
           <div id="headerButtons">
-            {/* <button className="same">Təklif al</button> */}
             <button className="same" onClick={handleLogout}>Çıxış</button>
           </div>
         </div>
