@@ -43,7 +43,7 @@ export default function Checkout() {
 
       if (response.status === 200) {
         toast.success('Məhsul səbətdən silindi');
-        fetchBasket(); // Səbəti yenidən yükləmək
+        fetchBasket();
       }
     } catch (error) {
       console.error('Məhsulu silərkən xəta:', error);
@@ -73,7 +73,7 @@ export default function Checkout() {
           )
         );
         toast.success(response.data.message);
-        fetchBasket(); // Səbəti yenidən yükləmək
+        fetchBasket(); 
       } else {
         toast.error(response.data.error);
       }
@@ -89,7 +89,7 @@ export default function Checkout() {
   }, []); // Only call fetchBasket on mount
 
   if (!Array.isArray(checkoutCart)) {
-    return <div>Yüklənir...</div>;
+    return <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>;
   }
 
   return (

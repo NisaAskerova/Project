@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const BlogFilter = () => {
-  const [blogs, setBlogs] = useState([]); 
+  const [blogs, setBlogs] = useState([]);
   const [searchTerm, setSearchTerm] = useState(''); // Axtarış üçün state
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const BlogFilter = () => {
       const response = await axios.get(url);
       setBlogs(response.data);
     } catch (error) {
-      setMessage('Failed to fetch blogs. Please try again later.');
+      setMessage('Blogları yükləmək mümkün olmadı. Xahiş edirik, bir az sonra yenidən cəhd edin.');
     }
   };
 
@@ -32,7 +32,6 @@ const BlogFilter = () => {
     navigate(`/blog/${id}`);
   };
 
-  // İlk yükləmə üçün ilk 3 blogu gətirir
   useEffect(() => {
     fetchBlogs();
   }, []);
@@ -40,18 +39,18 @@ const BlogFilter = () => {
   return (
     <div id='blogFilter'>
       <div id='searchInput'>
-        <img src='../../search.svg' alt='Search Icon' />
+        <img src='../../search.svg' alt='Axtarış İkonu' />
         <input
           className='same'
           type='text'
-          placeholder='Search'
+          placeholder='Axtarış'
           value={searchTerm}
           onChange={handleSearchChange} // Axtarış inputunu izləyir
         />
       </div>
 
       <div id='blogList'>
-        <h3>{searchTerm ? 'Search Results' : 'Latest Posts'}</h3>
+        <h3>{searchTerm ? 'Axtarış nəticələri' : 'Son yazılar'}</h3>
         {blogs.length > 0 ? (
           blogs.map((blog) => (
             <div
@@ -71,7 +70,7 @@ const BlogFilter = () => {
             </div>
           ))
         ) : (
-          <p>{searchTerm ? 'No blogs found.' : 'No latest posts available.'}</p>
+          <p>{searchTerm ? 'Blog tapılmadı.' : 'Son yazılar mövcud deyil.'}</p>
         )}
       </div>
     </div>

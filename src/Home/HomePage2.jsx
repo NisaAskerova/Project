@@ -38,7 +38,7 @@ export default function HomePage2() {
   return (
     <div id='homepage2' className='padding'>
       <div id="homePage2Left">
-        {loading ? <p>Loading data...</p> : null}
+        {loading ? <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div> : null}
         {message && <p className="message">{message}</p>}
 
         {/* About Us Section */}

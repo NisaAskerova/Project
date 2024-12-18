@@ -57,7 +57,7 @@ function ShowOurVision() {
       <div className="adminHero">
         <button className="add-button" onClick={() => navigate('/add_our_vision_mission')}>Add</button>
         <h2>About Us</h2>
-        {loading ? <p>Loading data...</p> : null}
+        {loading ? <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div> : null}
         {message && <p className="message">{message}</p>}
 
         {aboutUs.length > 0 ? (

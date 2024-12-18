@@ -19,6 +19,14 @@ export default function Comment({ addReview, productId, onNewReview }) {
       return;
     }
 
+    // localStorage-dan ad və email məlumatlarını oxuyun
+    const firstName = localStorage.getItem('firstName') || "";
+    const lastName = localStorage.getItem('lastName') || "";
+    const userEmail = localStorage.getItem('email') || "";
+
+    setName(`${firstName} ${lastName}`);
+    setEmail(userEmail);
+
     setIsLoading(false);
   }, [authToken]);
 
@@ -37,8 +45,8 @@ export default function Comment({ addReview, productId, onNewReview }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (name.trim() === "" || email.trim() === "" || comment.trim() === "" || rating <= 0) {
-      console.error("Please fill in all fields and provide a valid rating.");
+    if (comment.trim() === "" || rating <= 0) {
+      console.error("Xahiş edirik, bütün xanaları doldurun və etibarlı reytinq əlavə edin.");
       return;
     }
 
@@ -58,9 +66,7 @@ export default function Comment({ addReview, productId, onNewReview }) {
         }
       );
 
-      setName("");
-      setEmail("");
-      setRating(0); 
+      setRating(0);
       setComment("");
 
       addReview(response.data.review);
@@ -69,17 +75,17 @@ export default function Comment({ addReview, productId, onNewReview }) {
 
       navigate(`/product/${productId}/review`);
     } catch (error) {
-      console.error("Error submitting review:", error.response?.data || error.message);
+      console.error("Rəy göndərilərkən səhv baş verdi:", error.response?.data || error.message);
     }
   };
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className='loadingDiv'><img src="../loading.gif" alt="Yüklənir..." /></div>;
   }
 
   return (
     <form id="reviewForm" onSubmit={handleSubmit}>
-      <h3>Add your Review</h3>
+      <h3>Rəyinizi əlavə edin</h3>
       <div className="ratingStars">
         {starGroups.map((group, index) => (
           <React.Fragment key={index}>
@@ -93,7 +99,7 @@ export default function Comment({ addReview, productId, onNewReview }) {
                 <img
                   key={starIndex}
                   src={hover >= group.count || rating >= group.count ? "/yellowStar.svg" : "/blackEmptyStar.svg"}
-                  alt="star"
+                  alt="ulduz"
                   style={{
                     width: "20px",
                     height: "20px",
@@ -106,40 +112,36 @@ export default function Comment({ addReview, productId, onNewReview }) {
           </React.Fragment>
         ))}
       </div>
-      <span className="same">Your Rating</span>
-      <label htmlFor="name">Your Name</label>
+      <span className="same">Sizin Reytinqiniz</span>
+      <label htmlFor="name">Adınız</label>
       <input
+       className='same'
         type="text"
         id="name"
-        placeholder="Enter your name"
         value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
+        readOnly
       />
 
-      <label htmlFor="email">Your Email</label>
+      <label htmlFor="email">Email Ünvanınız</label>
       <input
+       className='same'
         type="email"
         id="email"
-        placeholder="Enter your email"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
+        readOnly
       />
 
-
-
-      <label htmlFor="review">Your Review</label>
+      <label htmlFor="review">Rəyiniz</label>
       <textarea
         className="same"
         name="review"
         id="review"
-        placeholder="Enter Your Review"
+        placeholder="Rəyinizi daxil edin"
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       ></textarea>
 
-      <button type="submit">Submit Review</button>
+      <button type="submit">Rəyi Göndərin</button>
     </form>
   );
 }

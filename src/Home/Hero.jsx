@@ -27,7 +27,7 @@ function HeroSlider() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // Yüklənmə anında mesaj göstərin
+    return <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>;
   }
 
   if (error) {
@@ -35,41 +35,53 @@ function HeroSlider() {
   }
 
   return (
-    <Swiper
-      modules={[Autoplay, Pagination]}
-      spaceBetween={50}
-      slidesPerView={1}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
-      pagination={{ clickable: true }}
-      loop={true}
-    >
-      {sliders.map((slide, index) => (
-        <SwiperSlide key={index}>
-          <div 
-            id="homeHero" 
-            style={{ 
-              backgroundImage: `url(http://localhost:8000/storage/${slide.backImage})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              height: '100vh', // Height for the slider
-            }}
-          >
-            <div id='heroLeft'>
-              <h3>{slide.title}</h3>
-              <p>{slide.description}</p>
-              <button>
-                <span className='same'>Başlayın</span>
-                <img src={`http://localhost:8000/storage/${slide.icon}`} alt="Left Icon" />
-              </button>
-            </div>
-            <div id="heroRight">
-              <img className='security' src={`http://localhost:8000/storage/${slide.image}`} alt="Line Decoration" />
-              <img className='yellowLine' src={`http://localhost:8000/storage/${slide.heroImage}`} alt="Security Guard" />
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+<Swiper
+  className="custom-swiper"
+  modules={[Autoplay, Pagination]}
+  spaceBetween={50}
+  slidesPerView={1}
+  autoplay={{ delay: 3000, disableOnInteraction: false }}
+  pagination={{ clickable: true }}
+  loop={true}
+  onSlideChangeTransitionStart={() => {
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+      slide.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
+    });
+  }}
+  onSlideChangeTransitionEnd={() => {
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+      slide.style.transition = ''; // Keçiddən sonra transition-u silmək
+    });
+  }}
+>
+  {sliders.map((slide, index) => (
+    <SwiperSlide key={index}>
+      <div
+        id="homeHero"
+        style={{
+          backgroundImage: `url(http://localhost:8000/storage/${slide.backImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '100vh',
+        }}
+      >
+        <div id='heroLeft'>
+          <h3>{slide.title}</h3>
+          <p>{slide.description}</p>
+          <button>
+            <span className='same'>Başlayın</span>
+            <img src={`http://localhost:8000/storage/${slide.icon}`} alt="Left Icon" />
+          </button>
+        </div>
+        <div id="heroRight">
+          <img className='security' src={`http://localhost:8000/storage/${slide.image}`} alt="Line Decoration" />
+          <img className='yellowLine' src={`http://localhost:8000/storage/${slide.heroImage}`} alt="Security Guard" />
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
   );
 }
 

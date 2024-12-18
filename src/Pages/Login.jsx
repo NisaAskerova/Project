@@ -84,11 +84,11 @@ export default function Login() {
             )}
 
             <div id='remember'>
-              <div>
+              {/* <div>
                 <input type="checkbox" name="check" id="check" />
                 <label className='same' htmlFor='check'>Məni xatırla</label>
-              </div>
-              <div><a href="">Şifrənizi unutdunuz?</a></div>
+              </div> */}
+              {/* <div><a href="">Şifrənizi unutdunuz?</a></div> */}
             </div>
             <div>
               <span className='same'>Hesabınız yoxdursa <a className='logRe' href="/"> Qeydiyyatdan keçin</a></span>

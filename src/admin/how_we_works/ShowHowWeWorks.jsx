@@ -57,7 +57,7 @@ function ShowWhoWeAre() {
       <div className="adminHero">
         <button className="add-button" onClick={() => navigate('/how_we_works')}>Add About Us</button>
         <h2>About Us</h2>
-        {loading ? <p>Loading data...</p> : null}
+        {loading ? <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div> : null}
         {message && <p className="message">{message}</p>}
 
         {aboutUs.length > 0 ? (

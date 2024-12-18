@@ -46,7 +46,7 @@ export default function Review() {
     fetchReviews(); // Yeni rəy əlavə edildikdə rəyləri yenidən yükləyir
   };
 
-  if (loading) return <div>Yüklənir...</div>;
+  if (loading) return <div className='loadingDiv'><img  src="/loading.gif" alt="" /></div>;
 
   return (
     <div className="review">

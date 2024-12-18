@@ -5,16 +5,17 @@ import { MyContext } from '../App';
 import toast from 'react-hot-toast';
 
 export default function Product() {
-  const { cart, setCart, localQuantity, setLocalQuantity } = useContext(MyContext);
+  const { cart, setCart } = useContext(MyContext);
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [basketQuantity, setBasketQuantity] = useState(1); // Yerli vəziyyət əlavə edildi
-
-  // Token və user ID
+  const [basketQuantity, setBasketQuantity] = useState(1);
+  const [favorites, setFavorites] = useState([]); // Sevimli məhsulların ID-ləri
   const token = localStorage.getItem('token');
   const userId = localStorage.getItem('user_id');
   const headers = token ? { Authorization: `Bearer ${token}` } : {};
+  const [isFavorite, setIsFavorite] = useState(false); // Add state for favorite status
+
 
   // Məhsul məlumatlarını çəkmək
   const fetchData = async () => {
@@ -26,7 +27,7 @@ export default function Product() {
         const ratings = apiProduct.ratings || [];
         const averageRating = apiProduct.average_rating
           ? parseFloat(apiProduct.average_rating).toFixed(1)
-          : "0.0";
+          : '0.0';
 
         const formattedProduct = {
           id: apiProduct.id,
@@ -47,16 +48,17 @@ export default function Product() {
           SKU: apiProduct.sku || 'N/A',
           tags: apiProduct.tags || [],
           images: apiProduct.images || [],
-          basket_quantity: apiProduct.basket_quantity || 1, // Məhsulun səbət sayı burada saxlanılır
+          basket_quantity: apiProduct.basket_quantity || 1,
         };
 
         setProduct(formattedProduct);
-        setBasketQuantity(formattedProduct.basket_quantity); // Məhsul yüklənəndə basket_quantity-ni yeniləyirik
+        setBasketQuantity(formattedProduct.basket_quantity);
       } else {
         toast.error('Product not found');
       }
     } catch (err) {
       console.error('Error fetching product:', err);
+      toast.error('Failed to load product');
     } finally {
       setLoading(false);
     }
@@ -66,7 +68,6 @@ export default function Product() {
     fetchData();
   }, [id]);
 
-  // Məhsulu səbətə əlavə et
   const addCart = async () => {
     if (!userId) {
       toast.error('User is not logged in');
@@ -81,7 +82,7 @@ export default function Product() {
     try {
       const response = await axios.post(
         'http://127.0.0.1:8000/api/basket/store',
-        { product_id: product.id, quantity: basketQuantity }, // Yerli quantity istifadə olunur
+        { product_id: product.id, quantity: basketQuantity },
         { headers }
       );
       setCart((prevCart) => {
@@ -91,7 +92,7 @@ export default function Product() {
         if (productExists) {
           return currentCart.map((item) =>
             item.id === product.id
-              ? { ...item, quantity: basketQuantity } // Səbətə əlavə edərkən yeni quantity istifadə olunur
+              ? { ...item, quantity: basketQuantity }
               : item
           );
         }
@@ -101,10 +102,50 @@ export default function Product() {
       toast.success('Product added to cart');
     } catch (error) {
       console.error('Error adding product to cart:', error);
+      toast.error('Failed to add product to cart');
     }
   };
+  const fetchFavorites = async () => {
+    try {
+        const response = await axios.get('http://127.0.0.1:8000/api/favorites/get_favoritId', { headers });
+        if (response.status === 200) {
+            setFavorites(response.data); // Store the favorite product IDs
+        }
+    } catch (err) {
+        console.error('Error fetching favorites:', err);
+    }
+};
 
-  // Səbətdə quantity-ni yenilə
+  // Check if the product is in the favorites list
+  const isFavoriteProduct = (productId) => {
+    return favorites.includes(productId);
+  };
+
+
+  useEffect(() => {
+    fetchData();
+    if (userId) fetchFavorites(); // Sevimli məhsulları yalnız istifadəçi login edibsə çəkirik
+  }, [id]);
+
+  const handleFavoriteClick = async (productId, e, isFavorite) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+        const response = isFavorite
+            ? await axios.delete(`http://127.0.0.1:8000/api/favorites/${productId}`, { headers })
+            : await axios.post(`http://127.0.0.1:8000/api/favorites/add_favorite/${productId}`, {}, { headers });
+
+        if (response.status === 200) {
+            toast.success(
+                isFavorite ? 'Product removed from favorites' : 'Product added to favorites'
+            );
+            fetchFavorites();  // Refresh favorite list
+        }
+    } catch (error) {
+        console.error('Error occurred:', error);
+        toast.error('An error occurred');
+    }
+};
   const updateQuantity = (action) => {
     let updatedQuantity = basketQuantity;
 
@@ -114,14 +155,14 @@ export default function Product() {
       updatedQuantity = Math.max(updatedQuantity - 1, 1);
     }
 
-    setBasketQuantity(updatedQuantity); // Yerli vəziyyəti dərhal yeniləyirik
+    setBasketQuantity(updatedQuantity);
 
-    // İstədiyiniz API sorğusunu göndərin
-    axios.post(
-      `http://127.0.0.1:8000/api/basket/updateQuantity/${action}`,
-      { product_id: product.id },
-      { headers }
-    )
+    axios
+      .post(
+        `http://127.0.0.1:8000/api/basket/updateQuantity/${action}`,
+        { product_id: product.id },
+        { headers }
+      )
       .then((response) => {
         if (response.data.success) {
           toast.success(response.data.message);
@@ -135,7 +176,7 @@ export default function Product() {
       });
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className='loadingDiv'><img src="/loading.gif" alt="" /></div>;
   if (!product) return <div>Product not found</div>;
 
   const fullStars = Math.floor(product.reviews.rating);
@@ -185,7 +226,7 @@ export default function Product() {
               ))}
               <div>
                 <span>{product.reviews.rating}</span>
-                <span>({product.reviews.customerReviews.length} Reviews)</span>
+                <span>( Rəylər {product.reviews.customerReviews.length})</span>
               </div>
             </div>
           </div>
@@ -260,9 +301,11 @@ export default function Product() {
             <button className="addButton same" onClick={addCart}>
               Səbətə əlavə et
             </button>
-            <div className="favoriteButton">
-              <img src="/favory.svg" alt="Sevimlilər" />
+            <div className="shopIcon1" onClick={(e) => handleFavoriteClick(product.id, e, favorites.includes(product.id))}>
+              <img src={favorites.includes(product.id) ? "/favory-filled.svg" : "/favory.svg"} alt="Favorite" />
             </div>
+
+
           </div>
 
         </div>

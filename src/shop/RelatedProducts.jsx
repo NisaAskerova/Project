@@ -44,7 +44,7 @@ export default function RelatedProducts() {
 
     return (
         <div id="relatedProducts">
-            <h2>Related Products</h2>
+            <h2>Əlaqəli Məhsullar</h2>
             <div className="products-grid">
                 {products.length > 0 ? (
                     products.map(product => (

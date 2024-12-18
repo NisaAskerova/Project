@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
-export default function Reply({ blogId }) { // blogId-ni props ilə alırıq
+export default function Reply({ blogId }) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -10,7 +9,19 @@ export default function Reply({ blogId }) { // blogId-ni props ilə alırıq
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
-    // Form dəyişikliklərini izləmək üçün
+    useEffect(() => {
+        // LocalStorage-dan dəyərləri alıb formData-ya yazırıq
+        const firstName = localStorage.getItem('firstName') || '';
+        const lastName = localStorage.getItem('lastName') || '';
+        const email = localStorage.getItem('email') || '';
+
+        setFormData({
+            name: `${firstName} ${lastName}`,
+            email: email,
+            comment: '',
+        });
+    }, []);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -19,7 +30,6 @@ export default function Reply({ blogId }) { // blogId-ni props ilə alırıq
         });
     };
 
-    // Formu göndərmək üçün
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
@@ -47,18 +57,16 @@ export default function Reply({ blogId }) { // blogId-ni props ilə alırıq
 
             const result = await response.json();
             setSuccess('Şərhiniz uğurla göndərildi!');
-            setFormData({ name: '', email: '', comment: '' });
+            setFormData({ ...formData, comment: '' });
 
-            // Səhifəni yeniləyirik
-            window.location.reload(); // Bu funksiya səhifəni yeniləyir
-
+            window.location.reload();
         } catch (error) {
             setError(error.message);
         }
     };
 
     return (
-        <div id='reply'>
+        <div id="reply">
             <h3>Şərhinizi Burada Yazın</h3>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             {success && <p style={{ color: 'green' }}>{success}</p>}
@@ -66,30 +74,29 @@ export default function Reply({ blogId }) { // blogId-ni props ilə alırıq
                 <div>
                     <label htmlFor="name">Ad</label>
                     <input
+                        className='same'
                         type="text"
                         name="name"
                         id="name"
-                        placeholder="Adınızı Daxil Edin"
                         value={formData.name}
-                        onChange={handleChange}
-                        required
+                        readOnly // Input dəyişdirilməsinə icazə verilmir
                     />
                 </div>
                 <div>
                     <label htmlFor="email">Email Ünvanı</label>
                     <input
+                        className='same'
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="Email Ünvanınızı Daxil Edin"
                         value={formData.email}
-                        onChange={handleChange}
-                        required
+                        readOnly // Input dəyişdirilməsinə icazə verilmir
                     />
                 </div>
                 <div>
                     <label htmlFor="comment">Şərhlər</label>
                     <textarea
+                        className='same'
                         name="comment"
                         id="comment"
                         placeholder="Şərhinizi Daxil Edin"

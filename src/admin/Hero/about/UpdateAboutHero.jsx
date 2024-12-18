@@ -71,7 +71,7 @@ const UpdateAboutHero = () => {
             <div className="adminHero">
                 <h2>Update About Hero</h2>
                 {message && <p>{message}</p>}
-                {loading && <p>Loading...</p>}
+                {loading && <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>}
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Title:</label>

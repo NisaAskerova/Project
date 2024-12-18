@@ -55,7 +55,7 @@ const Address = () => {
         Aşağıda göstərilən ünvanı istifadə etmək istəyirsinizmi? Əgər belədirsə, müvafiq "Bu ünvana təslim et" düyməsini sıxın. Yoxsa yeni bir təslim ünvanı daxil edə bilərsiniz.
       </p>
       <div id="addressCards">
-        {loading && <p>Yüklənir...</p>} {/* Yüklənmə vəziyyəti */}
+        {loading && <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>} {/* Yüklənmə vəziyyəti */}
         {error && <p>{error}</p>} {/* Hata mesajı */}
 
         {addresses.length > 0 ? (

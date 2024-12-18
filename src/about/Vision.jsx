@@ -56,7 +56,7 @@ export default function Vision() {
   return (
     <div id="work">
       <div id="workLeft">
-        {loading && <p>Loading data...</p>}
+        {loading && <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>}
         {message && <p className="message">{message}</p>}
 
         {aboutUs?.length > 0 ? (

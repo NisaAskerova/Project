@@ -11,7 +11,6 @@ const UpdateState = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  // Mövcud məlumatı yüklə
   useEffect(() => {
     fetchState();
   }, []);
@@ -47,7 +46,7 @@ const UpdateState = () => {
     setStateData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  if (loading) return <p>Yüklənir...</p>;
+  if (loading) return <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>;
   if (error) return <p>{error}</p>;
 
   return (

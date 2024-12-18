@@ -21,7 +21,7 @@ export default function DetailHero() {
     }, [id]); 
 
     if (!blog) {
-        return <div>Loading...</div>; 
+        return <div className='loadingDiv'><img  src="../loading.gif" alt="" /></div>; 
     }
 
     return (

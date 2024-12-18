@@ -33,7 +33,7 @@ function ProductTable() {
     };
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>;
     }
 
     return (

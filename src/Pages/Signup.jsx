@@ -9,9 +9,8 @@ export default function Register() {
     email: '',
     password: '',
   });
-  const [errors, setErrors] = useState({}); // Xətaları saxlamaq üçün state
+  const [errors, setErrors] = useState({}); 
   
-  // Form məlumatlarının dəyişməsi zamanı state-i yeniləyən funksiya
   const handleChange = (e) => {
     setData({
       ...data,
@@ -19,9 +18,8 @@ export default function Register() {
     });
   };
 
-  // Formu submit etdikdə işə düşən funksiya
   const handleSubmit = (event) => {
-    event.preventDefault(); // Formun default davranışını bloklamaq
+    event.preventDefault(); 
 
     console.log('Sorğu göndərilir...');
 
@@ -30,7 +28,7 @@ export default function Register() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data), // Məlumatları JSON formatında göndəririk
+      body: JSON.stringify(data), 
     })
       .then((res) => res.json())
       .then((data) => {

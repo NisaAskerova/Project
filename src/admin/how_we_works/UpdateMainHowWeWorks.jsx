@@ -69,7 +69,7 @@ function UpdateHowWeWorks() {
             <div className="adminHero">
                 <h2>How We Works Main</h2>
                 {message && <p>{message}</p>}
-                {loading && <p>Loading...</p>}
+                {loading && <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>}
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Type:</label>

@@ -3,7 +3,7 @@ import { MyContext } from '../App';
 
 const CheckoutCard = ({ checkoutCart = [], showButton = true, buttonLabel = "Ödənişi Tamamla", isReviewPage = false }) => {
   if (!Array.isArray(checkoutCart)) {
-    return <div>Yüklənir...</div>; // checkoutCart massiv olmadıqda işləmə
+    return <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>;// checkoutCart massiv olmadıqda işləmə
   }
 
   const { setOrderCart } = useContext(MyContext);

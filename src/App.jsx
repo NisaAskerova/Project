@@ -84,6 +84,7 @@ import ShowCities from './admin/city/ShowCities';
 import UpdateCity from './admin/city/UpdateCity';
 import NotFound from './NotFound';
 import Reply from './blog/Reply';
+import Favorite from './favorite/Favorite';
 
 export const MyContext = createContext();
 
@@ -193,6 +194,7 @@ export default function App() {
             <Route path='/checkout' element={<Payment />} />
             <Route path='/shop' element={<Shop />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/favorite' element={<Favorite />} />
             <Route path="/blog/:id" element={<BlogDetail />} />
             <Route path="/product/:id" element={<ProductDetail />}>
               <Route path='description' element={<Description />} />

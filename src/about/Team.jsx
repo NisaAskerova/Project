@@ -41,7 +41,7 @@ export default function Team() {
                     </React.Fragment>
                 ))
             ) : (
-                <p>Loading main information...</p>
+                <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>
             )}
 
             {/* Service Info (Komanda üzvləri) */}
@@ -64,7 +64,7 @@ export default function Team() {
                         </div>
                     ))
                 ) : (
-                    <p>Loading team members...</p>
+                    <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>
                 )}
             </div>
 

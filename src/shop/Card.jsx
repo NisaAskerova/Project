@@ -89,9 +89,8 @@ export default function Card() {
     setVisibleCard(false);
   };
 
-  // Əgər yüklənir və ya xəta varsa
   if (loading) {
-    return <div>Yüklənir...</div>;
+    return <div className='loadingDiv'><img  src="./loading.gif" alt="" /></div>;
   }
 
   if (error) {

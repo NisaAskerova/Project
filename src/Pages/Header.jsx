@@ -173,7 +173,7 @@ export default function Header() {
             {!isSearchOpen && (
               <img className='searchImg' src="/search.svg" alt="search" onClick={handleSearchToggle} />
             )}
-            <img src="/favory.svg" alt="favorite" />
+            <img src="/favory.svg" alt="favorite" onClick={() => navigate(`/favorite`)}/>
             <div id="cartCount" onClick={() => setVisibleCard(true)}>
               <img src="/shopCar.svg" alt="shop car" />
               <div><span>{basketQuantity}</span></div>

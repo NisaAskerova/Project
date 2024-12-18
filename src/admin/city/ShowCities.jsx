@@ -38,7 +38,7 @@ const ShowCities = () => {
     }
   };
 
-  if (loading) return <p>Yüklənir...</p>;
+  if (loading) return <div className='loadingDiv'><img  src="loading.gif" alt="" /></div>;
   if (error) return <p>{error}</p>;
 
   return (

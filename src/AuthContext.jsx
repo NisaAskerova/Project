@@ -46,6 +46,9 @@ export const AuthProvider = ({ children }) => {
 
           // İstifadəçi id-ni localStorage-ə əlavə et
           localStorage.setItem("user_id", userData.id);
+          localStorage.setItem('firstName', userData.first_name);    
+          localStorage.setItem('lastName', userData.last_name);    
+          localStorage.setItem('email', userData.email);    
         } else {
           // Loginə yönləndir
           if (
@@ -74,7 +77,7 @@ export const AuthProvider = ({ children }) => {
 
   // Yükləmə vəziyyəti
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className="loadingDiv"><img src="./loading.gif" alt="" /></div>;
   }
 
   // Kontekst təminatı
